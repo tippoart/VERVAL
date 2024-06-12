@@ -16,7 +16,6 @@ function toggleImage() {
   let imgs = document.getElementsByClassName("img");
   let imgCard = document.getElementById("img-container");
 
-
   if (firstClick) {
     // Show the images on the first click
     for (let i = 0; i < imgs.length; i++) {
@@ -24,14 +23,9 @@ function toggleImage() {
       imgs[i].style.cursor = "default";
     }
     firstClick = false;
+  } else if (secondClick) {
+    imgCard.style.position = "relative";
+    imgCard.style.right = "2rem";
+    secondClick = false;
   }
-  else if (secondClick) {
-
-   
-      imgCard.style.position = "relative";
-      imgCard.style.right = "2rem";
-     secondClick = false;
-  }
-
 }
-

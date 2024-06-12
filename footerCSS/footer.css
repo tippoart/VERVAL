@@ -1,0 +1,13 @@
+footer{
+    padding: 6rem 8rem;
+}
+
+footer .footer-logo i {
+    color: rgb(121, 221, 129);
+    font-size: 20px;
+    
+}
+
+footer hr {
+    border: 1px solid black;
+}

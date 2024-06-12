@@ -40,7 +40,6 @@
   left: 20rem;
   width: 100%;
   height: 100vh;
- 
 }
 .verval2 img {
   display: none;
@@ -49,7 +48,6 @@
 }
 
 .verval2 #card-1 {
-  
   position: relative;
   left: 1.5rem;
   animation: slideInCard1 1s ease-in-out;
@@ -61,7 +59,7 @@
     transform: translateY(100%);
   }
   70% {
-    transform: translateY(0) ;
+    transform: translateY(0);
   }
 
   90% {
@@ -70,7 +68,7 @@
 }
 
 .verval2 #card-2 {
-    transform: rotate(11deg);
+  transform: rotate(11deg);
   position: relative;
   top: 2rem;
 
@@ -109,4 +107,59 @@
   90% {
     transform: translateY(4px) rotate(22deg);
   }
+}
+
+/* verval 3 */
+
+.verval3 {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(233, 239, 240);
+}
+
+.verval3 p {
+  font-size: 4rem;
+}
+.verval3 p span {
+  font-weight: 500;
+}
+
+/* verval 4 */
+
+.verval4 {
+  background-image: url("../img/bg-daun-sec3.png");
+  height: 100vh;
+}
+
+/* verval 5 */
+
+.verval5 {
+  background-image: url("../img/hutan-bambu.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+
+}
+
+.verval5 .container .card-img{
+    border-radius: 20px;
+}
+
+.verval5 .container .card-img img{
+    object-fit: cover;
+    height: 13rem;
+    border-radius: 10px;
+}
+.verval5 #card-utama {
+    background-color: rgba(0, 0, 0, 0.683);
+    padding: 3rem;
+    
+}
+
+.verval5 .container .card-img #user {
+    background-color: rgba(128, 153, 164, 0.063);
+    border-radius: 7px;
 }
