@@ -1,0 +1,112 @@
+/* verval 1 */
+
+.verval1 {
+  background-color: rgb(21, 20, 20);
+  padding: 13rem;
+  gap: 2rem;
+  color: white;
+  height: 120vh;
+}
+.verval1 .container .who-we-are {
+  color: rgb(255, 181, 44);
+  font-size: 3rem;
+}
+.verval1 .img1 {
+  width: 30rem;
+  height: 25rem;
+  overflow: hidden;
+}
+
+.verval1 .img1 img {
+  object-fit: cover;
+  width: 24rem;
+}
+
+/* verval 2 */
+
+.verval2 {
+  background-image: url("../img/img-card-sec2/uhu.png");
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  color: white;
+  overflow: hidden;
+}
+
+.verval2 .card-container {
+  position: relative;
+  left: 20rem;
+  width: 100%;
+  height: 100vh;
+ 
+}
+.verval2 img {
+  display: none;
+  height: 27rem;
+  object-fit: cover;
+}
+
+.verval2 #card-1 {
+  
+  position: relative;
+  left: 1.5rem;
+  animation: slideInCard1 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes slideInCard1 {
+  0% {
+    transform: translateY(100%);
+  }
+  70% {
+    transform: translateY(0) ;
+  }
+
+  90% {
+    transform: translateY(4px);
+  }
+}
+
+.verval2 #card-2 {
+    transform: rotate(11deg);
+  position: relative;
+  top: 2rem;
+
+  animation: slideInCard2 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+@keyframes slideInCard2 {
+  0% {
+    transform: translateY(100%) rotate(11deg);
+  }
+  70% {
+    transform: translateY(0) rotate(11deg);
+  }
+
+  90% {
+    transform: translateY(4px) rotate(11deg);
+  }
+}
+.verval2 #card-3 {
+  transform: rotate(22deg);
+  position: relative;
+  right: 2.3rem;
+  top: 9rem;
+  animation: slideInCard3 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
+@keyframes slideInCard3 {
+  0% {
+    transform: translateY(100%) rotate(22deg);
+  }
+  70% {
+    transform: translateY(0) rotate(22deg);
+  }
+
+  90% {
+    transform: translateY(4px) rotate(22deg);
+  }
+}

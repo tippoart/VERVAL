@@ -1,0 +1,46 @@
+nav {
+  background-color: rgb(34, 33, 33);
+  margin-top: 2.2rem;
+  width: 79%;
+  border-radius: 2rem;
+  display: flex;
+}
+
+nav .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+nav .container-fluid .navbar-brand {
+  font-weight: 500;
+}
+
+nav .container-fluid .contact-us {
+  background-color: rgb(117, 215, 117);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  color: white;
+  text-decoration: none;
+  width: 6rem;
+  text-align: center;
+}
+
+header .excel {
+  margin-top: 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  width: 30rem;
+}
+header .excel h1 {
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+header .scroll-down {
+  margin-top: 10rem;
+}
+
+header .scroll-down i {
+  font-size: 1.7rem;
+}
