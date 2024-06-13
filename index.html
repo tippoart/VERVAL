@@ -81,7 +81,9 @@
     <!-- section verval 1 -->
     <section class="verval1">
       <div class="siku">
-        <div class="siku-2 d-flex justify-content-center align-items-center gap-5">
+        <div
+          class="siku-2 d-flex justify-content-center align-items-center gap-5"
+        >
           <div class="img1">
             <img src="img/image.png" alt="" />
           </div>
@@ -124,81 +126,110 @@
     </section>
 
     <section class="verval4"></section>
-
-    <section class="verval5 d-flex justify-content-center p-3">
+    <section
+      class="verval5 d-flex justify-content-center align-items-center p-3"
+    >
       <div
-        id="card-utama"
-        class="container d-flex gap-2 align-items-center flex-column"
+        id="carouselExampleControls"
+        class="container d-flex gap-4 align-items-center flex-column carousel slide"
+        data-bs-ride="carousel"
       >
-        <div class="d-flex gap-4">
-          <h3>nice to now</h3>
-          <a href=""> see more</a>
+        <div
+          class="d-flex gap-4 nice-to-now align-items-center justify-content-between w-100"
+        >
+          <h3>Nice to Know</h3>
+          <a href="">See More</a>
         </div>
 
-        <div class="d-flex gap-4 justify-content-center">
-          <div class="card card-img p-2" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="img/img-card-sec5/hutan1.jpg"
-              alt=""
-            />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div id="user" class="card-body d-flex align-items-center gap-2">
-              <i class="bx bx-user-circle fs-4"></i>
-              <p class="card-text fw-bold">
-                Tippo <br />
-                <span class="fw-normal">May 23, 2024</span>
-              </p>
-            </div>
-          </div>
-
-          <div class="card card-img p-2" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="img/img-card-sec5/hutan1.jpg"
-              alt=""
-            />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
-            </div>
-            <div id="user" class="card-body d-flex align-items-center gap-2">
-              <i class="bx bx-user-circle fs-4"></i>
-              <p class="card-text fw-bold">
-                Tippo <br />
-                <span class="fw-normal">May 23, 2024</span>
-              </p>
+        <div class="carousel-inner d-flex gap-4 justify-content-center">
+          <div class="carousel-item active">
+            <div class="card card-img p-2" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="img/img-card-sec5/hutan1.jpg"
+                alt=""
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+              <div id="user" class="card-body d-flex align-items-center gap-2">
+                <i class="bx bx-user-circle fs-4"></i>
+                <p class="card-text fw-bold">
+                  Tippo <br />
+                  <span class="fw-normal">May 23, 2024</span>
+                </p>
+              </div>
             </div>
           </div>
 
-          <div class="card card-img p-2" style="width: 18rem">
-            <img
-              class="card-img-top"
-              src="img/img-card-sec5/hutan1.jpg"
-              alt=""
-            />
-            <div class="card-body">
-              <p class="card-text">
-                Some quick example text to build on the card title and make up
-                the bulk of the card's content.
-              </p>
+          <div class="carousel-item">
+            <div class="card card-img p-2" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="img/img-card-sec5/hutan1.jpg"
+                alt=""
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+              <div id="user" class="card-body d-flex align-items-center gap-2">
+                <i class="bx bx-user-circle fs-4"></i>
+                <p class="card-text fw-bold">
+                  Tippo <br />
+                  <span class="fw-normal">May 23, 2024</span>
+                </p>
+              </div>
             </div>
-            <div id="user" class="card-body d-flex align-items-center gap-2">
-              <i class="bx bx-user-circle fs-4"></i>
-              <p class="card-text fw-bold">
-                Tippo <br />
-                <span class="fw-normal">May 23, 2024</span>
-              </p>
+          </div>
+
+          <div class="carousel-item">
+            <div class="card card-img p-2" style="width: 18rem">
+              <img
+                class="card-img-top"
+                src="img/img-card-sec5/hutan1.jpg"
+                alt=""
+              />
+              <div class="card-body">
+                <p class="card-text">
+                  Some quick example text to build on the card title and make up
+                  the bulk of the card's content.
+                </p>
+              </div>
+              <div id="user" class="card-body d-flex align-items-center gap-2">
+                <i class="bx bx-user-circle fs-4"></i>
+                <p class="card-text fw-bold">
+                  Tippo <br />
+                  <span class="fw-normal">May 23, 2024</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
+
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
       </div>
     </section>
 
@@ -233,5 +264,15 @@
     <script>
       AOS.init();
     </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+      integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+      integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>

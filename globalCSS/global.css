@@ -11,7 +11,7 @@
   position: relative;
 }
 
-.verval1 .siku{
+.verval1 .siku {
   position: relative;
   padding-left: 3.5rem;
   padding-bottom: 2rem;
@@ -61,9 +61,6 @@
   right: -6rem;
   top: -4rem;
 }
-
-
-
 
 .verval1 .container .who-we-are {
   color: rgb(255, 181, 44);
@@ -191,6 +188,8 @@
   background-image: url("../img/bg-daun-sec3.png");
   background-repeat: no-repeat;
   height: 100vh;
+  background-position: center;
+  background-size: cover;
 }
 
 /* verval 5 */
@@ -200,7 +199,8 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 100vh;
+  height: 55rem;
+  padding: 5rem;
 }
 
 .verval5 .container .card-img {
@@ -212,11 +212,36 @@
   height: 13rem;
   border-radius: 10px;
 }
-.verval5 #card-utama {
-  background-color: rgba(0, 0, 0, 0.683);
-  padding: 3rem;
+.verval5 #carouselExampleControls {
+  margin-top: 1rem;
+  background-color: rgba(255, 255, 255, 0.165);
+  padding: 2rem;
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.17);
+  border-left: 1.5px solid rgba(255, 255, 255, 0.17);
+  border-right: 1.5px solid rgba(255, 255, 255, 0.17);
+  border-radius: 2rem;
+  width: 63rem;
+  height: 40rem;
 }
-
+.verval5 #carouselExampleControls .nice-to-now{
+  width: 55rem;
+}
+.verval5 #carouselExampleControls .nice-to-now h3 {
+  color: rgb(213, 186, 51);
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px); 
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 10px;
+  width: 12rem;
+  text-align: center;
+}
+.verval5 #carouselExampleControls .nice-to-now a {
+  text-decoration: none;
+  color: white;
+}
 .verval5 .container .card-img #user {
   background-color: rgba(128, 153, 164, 0.063);
   border-radius: 7px;
