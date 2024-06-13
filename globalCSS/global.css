@@ -2,11 +2,69 @@
 
 .verval1 {
   background-color: rgb(21, 20, 20);
-  padding: 13rem;
+  padding-left: 13rem;
+  padding-right: 13rem;
+  padding-top: 10rem;
   gap: 2rem;
   color: white;
   height: 120vh;
+  position: relative;
 }
+
+.verval1 .siku{
+  position: relative;
+  padding-left: 3.5rem;
+  padding-bottom: 2rem;
+}
+
+.verval1 .siku::before,
+.verval1 .siku::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+
+.verval1 .siku::before {
+  width: 2px;
+  height: 5.5rem;
+  left: -5rem;
+  bottom: 0;
+}
+
+.verval1 .siku::after {
+  width: 5.5rem;
+  height: 2px;
+  left: -5rem;
+  bottom: 0;
+}
+
+.verval1 .siku-2 {
+  position: relative;
+}
+.verval1 .siku-2::before,
+.verval1 .siku-2::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+
+.verval1 .siku-2::before {
+  width: 2px;
+  height: 5.5rem;
+  right: -6rem;
+  top: -4rem;
+}
+
+.verval1 .siku-2::after {
+  width: 5.5rem;
+  height: 2px;
+  right: -6rem;
+  top: -4rem;
+}
+
+
+
+
 .verval1 .container .who-we-are {
   color: rgb(255, 181, 44);
   font-size: 3rem;
@@ -19,7 +77,8 @@
 
 .verval1 .img1 img {
   object-fit: cover;
-  width: 24rem;
+  width: 22rem;
+  height: 27rem;
 }
 
 /* verval 2 */
@@ -130,6 +189,7 @@
 
 .verval4 {
   background-image: url("../img/bg-daun-sec3.png");
+  background-repeat: no-repeat;
   height: 100vh;
 }
 
@@ -141,25 +201,23 @@
   background-position: center;
   background-size: cover;
   height: 100vh;
-
 }
 
-.verval5 .container .card-img{
-    border-radius: 20px;
+.verval5 .container .card-img {
+  border-radius: 20px;
 }
 
-.verval5 .container .card-img img{
-    object-fit: cover;
-    height: 13rem;
-    border-radius: 10px;
+.verval5 .container .card-img img {
+  object-fit: cover;
+  height: 13rem;
+  border-radius: 10px;
 }
 .verval5 #card-utama {
-    background-color: rgba(0, 0, 0, 0.683);
-    padding: 3rem;
-    
+  background-color: rgba(0, 0, 0, 0.683);
+  padding: 3rem;
 }
 
 .verval5 .container .card-img #user {
-    background-color: rgba(128, 153, 164, 0.063);
-    border-radius: 7px;
+  background-color: rgba(128, 153, 164, 0.063);
+  border-radius: 7px;
 }

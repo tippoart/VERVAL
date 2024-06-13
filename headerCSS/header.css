@@ -1,3 +1,7 @@
+header {
+  background-color: rgba(19, 18, 18, 0.869);
+}
+
 nav {
   background-color: rgb(34, 33, 33);
   margin-top: 2.2rem;
@@ -24,15 +28,67 @@ nav .container-fluid .contact-us {
   text-align: center;
 }
 
+
 header .excel {
   margin-top: 14rem;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  width: 30rem;
+  width: 40rem;
+  position: relative;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-bottom: 3.5rem;
+
 }
-header .excel h1 {
+header .excel::before,
+header .excel::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+
+header .excel::before {
+  width: 2px;
+  height: 5.5rem;
+  right: -2rem;
+  top: -3.5rem;
+}
+
+header .excel::after {
+  width: 5.5rem;
+  height: 2px;
+  right: -2rem;
+  top: -3.5rem;
+}
+
+header .excel .exel-2 {
+  position: relative;
+}
+
+header .excel-2::before,
+header .excel-2::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+}
+
+header .excel-2::before {
+  width: 2px;
+  height: 5.5rem;
+  left: 0;
+  bottom: 0;
+}
+
+header .excel-2::after {
+  width: 5.5rem;
+  height: 2px;
+  left: 0;
+  bottom: 0;
+}
+
+header .excel-2 h1 {
   font-size: 5rem;
   font-weight: 400;
 }
