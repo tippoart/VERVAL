@@ -9,8 +9,6 @@ window.addEventListener("scroll", function () {
   img.style.transform = "translateY(" + movement + "px)";
 });
 
-
-
 let firstClick = true;
 let secondClick = true;
 
@@ -19,7 +17,6 @@ function toggleImage() {
   let imgCard = document.getElementById("img-container");
 
   if (firstClick) {
-    // Show the images on the first click
     for (let i = 0; i < imgs.length; i++) {
       imgs[i].style.display = "block";
       imgs[i].style.cursor = "default";
@@ -31,3 +28,8 @@ function toggleImage() {
     secondClick = false;
   }
 }
+
+
+  
+
+

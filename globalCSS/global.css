@@ -1,7 +1,7 @@
 /* verval 1 */
 
 .verval1 {
-  background-color: rgb(21, 20, 20);
+  background-color: rgb(12, 12, 12);
   padding-left: 13rem;
   padding-right: 13rem;
   padding-top: 10rem;
@@ -9,6 +9,7 @@
   color: white;
   height: 120vh;
   position: relative;
+  z-index: 0;
 }
 
 .verval1 .siku {
@@ -195,7 +196,7 @@
 /* verval 5 */
 
 .verval5 {
-  background-image: url("../img/hutan-bambu.jpg");
+  background-image: url("../img/bambu-bg-fix.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
