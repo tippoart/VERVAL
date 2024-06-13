@@ -9,6 +9,8 @@ window.addEventListener("scroll", function () {
   img.style.transform = "translateY(" + movement + "px)";
 });
 
+
+
 let firstClick = true;
 let secondClick = true;
 

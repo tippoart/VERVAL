@@ -229,7 +229,7 @@
   width: 55rem;
 }
 .verval5 #carouselExampleControls .nice-to-now h3 {
-  color: rgb(213, 186, 51);
+  color: rgba(255, 208, 0, 0.869);
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px); 
   -webkit-backdrop-filter: blur(10px);
@@ -241,6 +241,9 @@
 .verval5 #carouselExampleControls .nice-to-now a {
   text-decoration: none;
   color: white;
+  position: relative;
+  top: 0.5rem;
+  right: 0.5rem;
 }
 .verval5 .container .card-img #user {
   background-color: rgba(128, 153, 164, 0.063);
