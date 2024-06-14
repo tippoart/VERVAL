@@ -69,18 +69,19 @@ function verval3() {
     }, 1000);
   } else {
     if (clickCount - 1 < verval3CardImgs.length) {
+      if (clickCount > 1) {
+        verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
+      }
+
+      if (clickCount > 2) {
+        verval3CardImgs[clickCount - 3].style.transform = "scale(0.93)";
+      }
+
       verval3CardImgs[clickCount - 1].classList.add("show", "large");
-
-      verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
-
-    
-
-      // After the fourth click, move the first card down to maintain 3 cards visible
       if (clickCount >= 4) {
         verval3CardImgs[clickCount - 4].style.transform = `translateY(${
           6 * (clickCount - 2)
-        }%)`;
-        verval3CardImgs[clickCount - 4].style.transform = "scale(0.6)";
+        }%) scale(0.6)`;
       }
     } else {
       verval3[0].style.cursor = "auto";
