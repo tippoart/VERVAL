@@ -33,6 +33,7 @@ function toggleImage() {
 let clickCount = 0;
 
 function verval3() {
+  let verval3 = document.getElementsByClassName("verval3");
   let icon = document.getElementsByClassName("icon");
   let ourValues = document.getElementsByClassName("our-values");
   let iconImg = document.getElementsByClassName("bumi");
@@ -61,15 +62,15 @@ function verval3() {
       verval3CardImgs[0].classList.add("show");
     }
 
-    // Remove elements from DOM after fade-out transition
     setTimeout(() => {
       if (bumiIcon) bumiIcon.style.display = "none";
       if (our) our.style.display = "none";
-    }, 1000); // match this duration with the fade-out transition
+    }, 1000);
   } else {
-    // Subsequent clicks: show remaining cards one by one
     if (clickCount - 1 < verval3CardImgs.length) {
       verval3CardImgs[clickCount - 1].classList.add("show");
+    } else {
+      verval3[0].style.cursor = "auto";
     }
   }
 
