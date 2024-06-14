@@ -1,13 +1,35 @@
-footer{
-    padding: 6rem 8rem;
+footer {
+  padding: 6rem 8rem;
 }
 
 footer .footer-logo i {
-    color: rgb(121, 221, 129);
-    font-size: 20px;
-    
+  color: rgb(121, 221, 129);
+  font-size: 20px;
 }
 
-footer hr {
-    border: 1px solid black;
+footer .garis {
+  border: none;
+  border-top: 1px solid black;
+  width: 100%;
+  position: relative;
+  top: 2rem;
+}
+footer section .verval-logo-footer {
+  gap: 10px;
+}
+footer section .verval-logo-footer img {
+  width: 2.5rem;
+  object-fit: contain;
+}
+
+footer .footer {
+  height: 17rem;
+}
+
+footer  .footer-end .terms {
+  color: rgb(121, 221, 129);
+}
+
+footer  .footer-end .pripacy {
+  color: rgb(121, 221, 129);
 }

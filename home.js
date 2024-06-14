@@ -79,6 +79,31 @@ function verval3() {
 
 // verval 4
 
- function verval4() {
- }
+function verval4() {
+  let card = document.querySelector(".verval4 .verval4-card");
+  let carouselIcons = document.querySelectorAll(".verval4 .bx");
+  let nameCard = document.querySelector(".verval4 .name-card");
+  let testimoni = document.querySelector(".testimoni");
 
+  if (card) {
+    card.style.backgroundSize = "80rem";
+   
+  }
+
+  if (nameCard) {
+    nameCard.setAttribute("data-aos", "zoom-in");
+    nameCard.setAttribute("data-aos-once", "true");
+    nameCard.style.opacity = "1";
+  }
+  if (testimoni) {
+    testimoni.setAttribute("data-aos", "zoom-in");
+    testimoni.setAttribute("data-aos-once", "true");
+    testimoni.style.opacity = "1";
+  }
+
+  if (carouselIcons.length > 0) {
+    carouselIcons.forEach((icon) => {
+      icon.style.opacity = "1";
+    });
+  }
+}

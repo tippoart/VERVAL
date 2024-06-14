@@ -62,6 +62,11 @@ nav .container-fluid .contact-us {
   text-align: center;
 }
 
+header nav img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
 header .excel {
   margin-top: 14rem;
   display: flex;

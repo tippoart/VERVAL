@@ -45,10 +45,13 @@
           data-aos-delay="300"
           data-aos-duration="1900"
           data-aos-offset="0"
-          class="navbar navbar-expand-lg"
+          class="navbar navbar-expand-lg p-2"
         >
           <div class="container-fluid">
-            <a class="navbar-brand text-white" href="#">VERVAL</a>
+            <div>
+              <img src="img/logoverval/logo-verval.png" alt="" />
+              <a class="navbar-brand text-white" href="#">VERVAL</a>
+            </div>
 
             <ul class="navbar-nav gap-4">
               <li class="nav-item">
@@ -189,9 +192,6 @@
     </section>
 
     <!--  -->
-    <div class="testimoni">
-      <p>TESTIMONIAL</p>
-    </div>
 
     <!--  -->
 
@@ -206,18 +206,22 @@
       >
         <i class="bx bx-chevron-left"></i>
         <div
+          data-aos=""
           class="name-card d-flex flex-column justify-content-center align-items-center"
         >
+          <p class="testimoni">TESTIMONIAL</p>
           <img src="img/user.jpg" alt="" />
-          <p style="font-weight: 100" class="text-white text-center">
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Excepturi, rem tempora! Adipisci, quae fugiat exercitationem quos
-            asperiores eaque optio quam."
-          </p>
-          <h4 class="text-center user">Khabib Umar Husein Alidin</h4>
-          <p style="font-weight: 100" class="text-white text-center">
-            CEO Of Plan Based Eatery
-          </p>
+          <div style="position: relative; bottom: 2rem">
+            <p style="font-weight: 100" class="text-white text-center">
+              "Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Excepturi, rem tempora! Adipisci, quae fugiat exercitationem quos
+              asperiores eaque optio quam."
+            </p>
+            <h4 class="text-center user">Khabib Umar Husein Alidin</h4>
+            <p style="font-weight: 100" class="text-white text-center">
+              CEO Of Plan Based Eatery
+            </p>
+          </div>
         </div>
         <i class="bx bx-chevron-right"></i>
       </div>
@@ -415,29 +419,78 @@
 
     <!-- footer -->
 
-    <footer class="footer d-flex justify-content-between gap-5">
-      <section class="footer-logo d-flex flex-column gap-2">
-        <h1>VERVAL</h1>
-        <p>© 2022 Verval. All rights reserved.</p>
-        <div class="logo d-flex gap-3">
-          <i class="bx bxl-facebook"></i>
-          <i class="bx bxl-twitter"></i>
-          <i class="bx bxl-instagram-alt"></i>
-          <i class="bx bxl-linkedin"></i>
-          <i class="bx bxl-youtube"></i>
+    <footer>
+      <div class="footer d-flex justify-content-between gap-5">
+        <section class="footer-logo d-flex flex-column gap-2">
+          <div class="verval-logo-footer d-flex g-1">
+            <img src="img/logoverval/logo-verval.png" alt="" />
+            <h1>VERVAL</h1>
+          </div>
+          <p>
+            with inovation as our compass sustainability <br />
+            as our guide, let us navigate towards our <br />
+            commitment to preserve, protect, and prosper
+          </p>
+          <div class="logo d-flex gap-3">
+            <i class="bx bxl-facebook"></i>
+            <i class="bx bxl-twitter"></i>
+            <i class="bx bxl-instagram-alt"></i>
+            <i class="bx bxl-linkedin"></i>
+            <i class="bx bxl-youtube"></i>
+          </div>
+        </section>
+
+        <section>
+          <h5>Our Contact</h5>
+          <br />
+
+          <div class="d-flex align-items-center gap-1">
+            <i
+              style="position: relative; bottom: 5px; font-size: 17px"
+              class="bx bx-envelope"
+            ></i>
+            <p>verval@gmail.com</p>
+          </div>
+          <div class="d-flex align-items-center gap-1">
+            <i
+              style="position: relative; bottom: 5px; font-size: 17px"
+              class="bx bx-phone"
+            ></i>
+            <p>(021) 084729473</p>
+          </div>
+        </section>
+
+        <section>
+          <h5>Help & Support</h5>
+          <br />
+          <p>FAQ</p>
+        </section>
+
+        <section>
+          <h5>Our Location</h5>
+          <br />
+
+          <p>
+            Verval Office Jalan <br />
+            Raya Jakarta <br />
+            Jakarta Selatan <br />
+            Indonesia
+          </p>
+        </section>
+      </div> <br>
+
+      <hr class="garis" />
+
+      <div style="position: relative; top: 2rem;" class="d-flex justify-content-between" >
+        <p>Copyright &copy; 2024 Verval Nusantara Hijau</p>
+
+        <div class="footer-end">
+          <p>All Rights Reserved |<span class="terms"> Terms And Conditions </span>| <span class="pripacy">Pripacy Policy</span> </p>
         </div>
-      </section>
-
-      <section>
-        <h3>woi</h3>
-      </section>
-
-      <section>
-        <h3>haha</h3>
-      </section>
-
-      <hr />
+      </div>
     </footer>
+
+    <!-- js script -->
 
     <script src="home.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
