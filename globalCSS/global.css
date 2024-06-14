@@ -186,7 +186,7 @@
 /* verval 3 */
 
 .verval3 {
-  height: 105vh;
+  height: 115vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -228,14 +228,14 @@
 }
 
 .verval3 .verval3-card {
-  right: 15rem;
+  right: 10rem;
   position: absolute;
   top: 151rem;
 }
 
 .verval3 .verval3-card img {
   object-fit: cover;
-  width: 50rem;
+  width: 60rem;
   display: none;
   transition: transform 1s ease-in-out;
   animation: card-verval-animation 1s ease-in-out;
@@ -257,19 +257,19 @@
 }
 .verval3 .verval3-card .verval3-card-img-2 {
   position: absolute;
-  bottom: -1rem;
+  bottom: -2rem;
 }
 .verval3 .verval3-card .verval3-card-img-3 {
   position: absolute;
-  bottom: -2rem;
+  bottom: -4rem;
 }
 .verval3 .verval3-card .verval3-card-img-4 {
   position: absolute;
-  bottom: -3rem;
+  bottom: -6rem;
 }
 .verval3 .verval3-card .verval3-card-img-5 {
   position: absolute;
-  bottom: -4rem;
+  bottom: -8rem;
 }
 
 .verval3 .verval3-card img.show {
