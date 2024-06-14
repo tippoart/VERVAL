@@ -222,6 +222,73 @@
   transition: transform 1s ease-in-out;
 }
 
+.verval3 .verval3-card {
+  right: 15rem;
+  position: absolute;
+  top: 153rem;
+}
+
+.verval3 .verval3-card img {
+  object-fit: cover;
+  width: 50rem;
+  display: none;
+  transition: transform 1s ease-in-out;
+  animation: card-verval-animation 1s ease-in-out;
+}
+
+@keyframes card-verval-animation {
+  0% {
+    transform: translateY(100%);
+  }
+  70% {
+    transform: translateY(0);
+  }
+
+  90% {
+    transform: translateY(4px);
+  }
+}
+.verval3 .verval3-card .verval3-card-img-2{
+  position: relative;
+  bottom: 21rem;
+}
+.verval3 .verval3-card .verval3-card-img-3{
+  position: relative;
+  bottom: 42rem;
+}
+.verval3 .verval3-card .verval3-card-img-4{
+  position: relative;
+  bottom: 63rem;
+}
+.verval3 .verval3-card .verval3-card-img-5{
+  position: relative;
+  bottom: 84rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.verval3 .verval3-card img.show {
+  display: block;
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
+}
 
 /* verval 4 */
 
