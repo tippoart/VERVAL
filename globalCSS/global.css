@@ -239,7 +239,10 @@
   display: none;
   transition: transform 1s ease-in-out;
   animation: card-verval-animation 1s ease-in-out;
+  
 }
+
+
 
 @keyframes card-verval-animation {
   0% {
@@ -248,7 +251,6 @@
   70% {
     transform: translateY(0);
   }
-
   90% {
     transform: translateY(4px);
   }
