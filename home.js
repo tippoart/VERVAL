@@ -1,3 +1,10 @@
+
+// header
+
+
+
+
+
 window.addEventListener("scroll", function () {
   let imgContainer = document.querySelector(".img1");
   let img = document.querySelector(".img1 img");
