@@ -225,7 +225,8 @@
 .verval3 .verval3-card {
   right: 15rem;
   position: absolute;
-  top: 150rem;
+  top: 151rem;
+ 
 }
 
 .verval3 .verval3-card img {
@@ -249,20 +250,20 @@
   }
 }
 .verval3 .verval3-card .verval3-card-img-2{
-  position: relative;
-  bottom: 21rem;
+  position: absolute;
+  bottom: -1rem;
 }
 .verval3 .verval3-card .verval3-card-img-3{
-  position: relative;
-  bottom: 42rem;
+  position: absolute;
+  bottom: -2rem;
 }
 .verval3 .verval3-card .verval3-card-img-4{
-  position: relative;
-  bottom: 63rem;
+  position: absolute;
+  bottom: -3rem;
 }
 .verval3 .verval3-card .verval3-card-img-5{
-  position: relative;
-  bottom: 84rem;
+  position: absolute;
+  bottom: -4rem;
 }
 
 
