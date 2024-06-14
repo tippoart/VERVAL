@@ -226,7 +226,6 @@
   right: 15rem;
   position: absolute;
   top: 151rem;
- 
 }
 
 .verval3 .verval3-card img {
@@ -249,37 +248,22 @@
     transform: translateY(4px);
   }
 }
-.verval3 .verval3-card .verval3-card-img-2{
+.verval3 .verval3-card .verval3-card-img-2 {
   position: absolute;
   bottom: -1rem;
 }
-.verval3 .verval3-card .verval3-card-img-3{
+.verval3 .verval3-card .verval3-card-img-3 {
   position: absolute;
   bottom: -2rem;
 }
-.verval3 .verval3-card .verval3-card-img-4{
+.verval3 .verval3-card .verval3-card-img-4 {
   position: absolute;
   bottom: -3rem;
 }
-.verval3 .verval3-card .verval3-card-img-5{
+.verval3 .verval3-card .verval3-card-img-5 {
   position: absolute;
   bottom: -4rem;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .verval3 .verval3-card img.show {
   display: block;
@@ -291,6 +275,17 @@
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
 }
 
+.testimoni {
+  background-color: rgb(233, 239, 240);
+  height: 3rem;
+}
+.testimoni p {
+  color: rgb(245, 186, 24);
+  font-weight: 500;
+  position: relative;
+  text-align: center;
+  top: 7rem;
+}
 /* verval 4 */
 
 .verval4 {
@@ -301,6 +296,58 @@
   background-size: cover;
 }
 
+.verval4 i {
+  color: white;
+  font-size: 40px;
+  background-color: rgba(255, 255, 255, 0.102);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100%;
+  animation: 1s;
+}
+.verval4 .verval4-card {
+  width: 100%;
+  height: 120%;
+  background-image: url("../img/daun-jatuh.png");
+  background-repeat: no-repeat;
+  background-size: 80rem;
+  background-position: center;
+
+  transition: opacity 0.5s ease-in-out;
+}
+.verval4 .show {
+  transition: 1s ease-in-out;
+  opacity: 1;
+}
+
+.verval4 .verval4-card.show {
+  opacity: 1;
+}
+.verval4 .verval4-card .name-card {
+  background-color: rgba(255, 255, 255, 0.039);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 4rem;
+  border-radius: 2rem;
+  width: 30rem;
+  height: 16rem;
+  border: 2px solid rgba(255, 255, 255, 0.176);
+}
+.verval4 .show {
+  transition: 1s ease-in-out;
+}
+
+.verval4 .verval4-card .name-card img {
+  object-fit: cover;
+  width: 5rem;
+  border-radius: 50%;
+  border: 2px solid rgb(182, 180, 180);
+  position: relative;
+  bottom: 1rem;
+}
+.verval4 .verval4-card .name-card .user {
+  color: rgb(245, 186, 24);
+}
 /* verval 5 */
 
 .verval5 {

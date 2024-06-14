@@ -77,9 +77,8 @@ function verval3() {
   clickCount++;
 }
 
-// verval 4 
+// verval 4
 
-function verval4 () {
-  let verval4 = document.getElementsByClassName("verval4");
-  alert("yoyo")
-}
+ function verval4() {
+ }
+
