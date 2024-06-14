@@ -83,7 +83,7 @@
 
 .verval2 {
   background-image: url("../img/img-card-sec2/uhu.png");
-  height: 100vh;
+  height: 50rem;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -166,6 +166,18 @@
   }
 }
 
+.verval2 .card-container.centered {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 12rem;
+  rotate: -11deg;
+  left: 53%;
+  right: 50%;
+  animation: slideInCentered 1s ease-in-out;
+  transform: translate(-50%, -50%);
+}
+
 /* verval 3 */
 
 .verval3 {
@@ -174,14 +186,42 @@
   align-items: center;
   justify-content: center;
   background-color: rgb(233, 239, 240);
+  cursor: pointer;
 }
 
 .verval3 p {
   font-size: 4rem;
 }
-.verval3 p span {
+.verval3 .our-values {
   font-weight: 500;
+  transition: color 1s;
 }
+
+.verval3 .bumi-icon {
+  width: 13.5rem;
+  position: relative;
+  bottom: 3.5rem;
+  left: 0.5rem;
+}
+.verval3 .bumi-icon p {
+  font-size: 4rem;
+}
+.verval3 .bumi-icon .icon {
+  border: 2px solid black;
+  border-radius: 10rem;
+  position: relative;
+  top: 4px;
+  right: 7px;
+  transition: 1s;
+}
+
+.verval3 .bumi-icon img {
+  width: 2rem;
+  object-fit: cover;
+  animation: bumi-jalan 1s ease-in-out;
+  transition: transform 1s ease-in-out;
+}
+
 
 /* verval 4 */
 
@@ -217,7 +257,7 @@
   margin-top: 1rem;
   background-color: rgba(255, 255, 255, 0.165);
   padding: 2rem;
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-top: 1.5px solid rgba(255, 255, 255, 0.17);
   border-left: 1.5px solid rgba(255, 255, 255, 0.17);
@@ -226,13 +266,13 @@
   width: 63rem;
   height: 40rem;
 }
-.verval5 #carouselExampleControls .nice-to-now{
+.verval5 #carouselExampleControls .nice-to-now {
   width: 55rem;
 }
 .verval5 #carouselExampleControls .nice-to-now h3 {
   color: rgba(255, 208, 0, 0.869);
   background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px); 
+  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 30px;
   padding: 10px;
