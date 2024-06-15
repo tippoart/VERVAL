@@ -358,6 +358,17 @@
   color: rgb(245, 186, 24);
 }
 
+.verval4 #bx1{
+  position: relative;
+right: 3rem;
+top: 9rem;
+}
+.verval4 #bx2{
+  position: relative;
+left: 30.5rem;
+bottom: 9rem;
+}
+
 
 /* verval 5 */
 
