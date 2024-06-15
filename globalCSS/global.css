@@ -192,7 +192,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(233, 239, 240);
+  background-color: rgb(7, 7, 7);
   cursor: pointer;
 }
 
@@ -216,7 +216,7 @@
   text-align: center;
 }
 .verval3 .bumi-icon .icon {
-  border: 2px solid black;
+  border: 2px solid rgba(43, 47, 49, 0.915);
   border-radius: 10rem;
   position: relative;
   top: 4px;
@@ -227,9 +227,11 @@
 .verval3 .bumi-icon img {
   width: 2rem;
   object-fit: cover;
-  animation: bumi-jalan 1s ease-in-out;
-  transition: transform 1s ease-in-out;
+  animation: bumi-jalan 1.5s ease-in-out;
+  transition: transform 1.5s ease-in-out;
+  color: rgba(43, 47, 49, 0.915);;
 }
+
 
 .verval3 .verval3-card {
   right: 15rem;

@@ -35,11 +35,15 @@ function toggleImage() {
   }
 }
 
-
 //verval3
 let clickCount = 0;
 
 function verval3() {
+  let emb = document.getElementsByClassName("emb");
+  let emb2 = document.getElementsByClassName("emb2");
+  let emb3 = document.getElementsByClassName("emb3");
+
+
   let icon = document.querySelector(".icon");
   let ourValues = document.querySelector(".our-values");
   let iconImg = document.querySelector(".bumi");
@@ -50,16 +54,37 @@ function verval3() {
 
   // Initial animations on first scroll
   if (clickCount === 0) {
-    if (ourValues) {
-      ourValues.style.color = "rgb(130, 185, 68)";
-    }
     if (icon) {
-      icon.style.backgroundColor = "rgb(130, 185, 68)";
+      icon.style.backgroundColor = "white";
     }
     if (iconImg) {
       iconImg.style.transform = "translateX(2.9rem)";
+      iconImg.style.backgroundColor = "#3ABEF9";
+      iconImg.style.borderRadius = "50%";
     }
-  } else if (clickCount === 1) {
+    if (emb) {
+      emb[0].style.color ="white"
+      
+    }
+    if (emb2) {
+      emb2[0].style.color = "white";
+      
+    }
+    
+  }
+
+   else if (clickCount === 1) {
+    if (ourValues) {
+      ourValues.style.color = "rgb(130, 185, 68)";
+    }
+
+    if(emb3) {
+      emb3[0].style.color = "white";
+    }
+  } 
+
+  
+  else if (clickCount === 2) {
     // Fade out .bumi-icon and .our on second scroll
     if (bumiIcon) {
       bumiIcon.classList.add("fade-out");
