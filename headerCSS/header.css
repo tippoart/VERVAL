@@ -1,37 +1,37 @@
 header {
   background-image: url("../img/bg-header.png");
   background-repeat: no-repeat;
- background-size: 100rem;
+  background-size: 100rem;
   background-position: center;
-   background-position: center;
   animation: moveout 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
 }
 
 @keyframes moveout {
   from {
-    background-position: 50% center; 
+    background-position: center;
   }
   to {
-    background-size: 80rem;
+    background-size: 100%;
   }
 }
 
-
 header .paralax {
+
   background-image: url("../img/paralax1.png");
-  background-size: 100rem;
+  background-size: 110%;
   background-repeat: no-repeat;
-  background-position: center;
+ background-position: left;
   animation: moveLeft 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
+ 
 
 }
 @keyframes moveLeft {
   from {
-    background-position: 50% center; /* Mulai dari posisi tengah horizontal */
+    background-position: left;
+      
   }
   to {
-    background-position: calc(90% - 20px) center; 
-    background-size: 90rem;
+   background-position: right;
   }
 }
 

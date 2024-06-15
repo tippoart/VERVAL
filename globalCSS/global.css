@@ -83,7 +83,7 @@
 
 .verval2 {
   background-image: url("../img/img-card-sec2/uhu.png");
-  height: 50rem;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -167,8 +167,10 @@
 }
 
 .verval2 .card-container.centered {
-  position: relative;
-  top: 15rem;
+  position: fixed;
+  top: 109.5rem;
+  height: 100vh;
+  width: 100vw;
   justify-content: center;
   align-items: center;
   animation: slide-in 1s ease-in-out forwards;
@@ -186,7 +188,7 @@
 /* verval 3 */
 
 .verval3 {
-  height: 50rem;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,6 +198,7 @@
 
 .verval3 p {
   font-size: 4rem;
+  text-align: center;
 }
 .verval3 .our-values {
   font-weight: 500;
@@ -205,18 +208,19 @@
 .verval3 .bumi-icon {
   width: 13.5rem;
   position: relative;
-  bottom: 3.5rem;
-  left: 0.5rem;
+  top: 7rem;
+  left: 0.2rem;
 }
 .verval3 .bumi-icon p {
   font-size: 4rem;
+  text-align: center;
 }
 .verval3 .bumi-icon .icon {
   border: 2px solid black;
   border-radius: 10rem;
   position: relative;
   top: 4px;
-  right: 7px;
+  right: 10px;
   transition: 1s;
 }
 
@@ -228,14 +232,14 @@
 }
 
 .verval3 .verval3-card {
-  right: 10rem;
+  right: 15rem;
   position: absolute;
-  top: 149rem;
+  top: 5rem;
 }
 
 .verval3 .verval3-card img {
   object-fit: cover;
-  width: 60rem;
+  width: 50rem;
   display: none;
   transition: transform 1s ease-in-out;
   animation: card-verval-animation 1s ease-in-out;
@@ -299,7 +303,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 100%;
-  opacity: 0;
+
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -322,7 +326,7 @@
   width: 30rem;
   height: 16rem;
   border: 2px solid rgba(255, 255, 255, 0.176);
-  opacity: 0;
+
   transition: opacity 0.5s ease-in-out;
 }
 
@@ -332,7 +336,7 @@
   position: relative;
   text-align: center;
   bottom: 7rem;
-  opacity: 0;
+
   transition: opacity 0.5s ease-in-out;
   font-size: 2rem;
 }

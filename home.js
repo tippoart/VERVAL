@@ -1,21 +1,21 @@
 //verval 1
 
-window.addEventListener("scroll", function () {
-  let imgContainer = document.querySelector(".img1");
-  let img = document.querySelector(".img1 img");
+// window.addEventListener("scroll", function () {
+//   let imgContainer = document.querySelector(".img1");
+//   let img = document.querySelector(".img1 img");
 
-  // Check if imgContainer and img are found
-  if (imgContainer && img) {
-    let containerRect = imgContainer.getBoundingClientRect();
-    let scrollPosition =
-      this.window.pageYOffset || document.documentElement.scrollTop;
-    let movement = (scrollPosition - containerRect.top) * -0.1;
+//   // Check if imgContainer and img are found
+//   if (imgContainer && img) {
+//     let containerRect = imgContainer.getBoundingClientRect();
+//     let scrollPosition =
+//       this.window.pageYOffset || document.documentElement.scrollTop;
+//     let movement = (scrollPosition - containerRect.top) * -0.1;
 
-    img.style.transform = "translateY(" + movement + "px)";
-  }
-});
+//     img.style.transform = "translateY(" + movement + "px)";
+//   }
+// });
 
-
+// verval2
 let firstClick = true;
 let secondClick = true;
 
@@ -31,15 +31,13 @@ function toggleImage() {
     firstClick = false;
   } else if (secondClick) {
     imgCard.classList.add("centered");
-    secondClick = false;
+    secondClick = false; // Pastikan ini diatur agar logika tidak terus-menerus dieksekusi
   }
 }
 
 
 //verval3
 let clickCount = 0;
-
-
 
 function verval3() {
   let icon = document.querySelector(".icon");
