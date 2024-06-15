@@ -48,12 +48,12 @@ header .excel {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  width: 40rem;
+  width: 38rem;
   position: relative;
   padding-left: 4rem;
   padding-right: 4rem;
   padding-bottom: 3.5rem;
-  top: 10rem;
+  top: 8rem;
 }
 header .excel::before,
 header .excel::after {
