@@ -67,17 +67,33 @@
   color: rgb(255, 181, 44);
   font-size: 3rem;
 }
-.verval1 .img1 {
+/* .verval1 .img1 {
   width: 30rem;
   height: 25rem;
   overflow: hidden;
+  background-image: url("../img/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+} */
+
+.img1 {
+  width: 30rem;
+  height: 25rem;
+  /* overflow: hidden; */
+  background-image: url("../img/image.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
 }
 
-.verval1 .img1 img {
+/* .verval1 .img1 img {
   object-fit: cover;
   width: 22rem;
   height: 27rem;
-}
+} */
 
 /* verval 2 */
 
@@ -99,9 +115,9 @@
   position: absolute;
 }
 
-.verval2  .fp-auto-height {
+.verval2 .fp-auto-height {
   overflow-y: auto;
-   height: 100%;
+  height: 100%;
 }
 .extra-content {
   height: 200vh; /* Pastikan konten cukup panjang untuk memungkinkan pengguliran */
@@ -238,8 +254,8 @@
 
 .verval3 .verval3-card {
   width: 100%;
-  position:  absolute;
-  bottom:  9rem;
+  position: absolute;
+  bottom: 9rem;
   left: 16rem;
 }
 
@@ -297,7 +313,6 @@
   height: 100vh;
   background-position: center;
   background-size: cover;
-
 }
 
 .verval4 i {
@@ -307,7 +322,6 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 100%;
-
 }
 
 .verval4 .verval4-card {
@@ -317,7 +331,6 @@
   background-repeat: no-repeat;
   background-size: 93rem;
   background-position: center;
-
 }
 
 .verval4 .verval4-card .name-card {
@@ -331,7 +344,6 @@
   border: 2px solid rgba(255, 255, 255, 0.176);
   z-index: 1;
   transform: 3s;
-
 }
 
 .verval4 .verval4-card .name-card .testimoni {
@@ -341,7 +353,6 @@
   text-align: center;
   bottom: 7rem;
   font-size: 2rem;
-
 }
 
 .verval4 .verval4-card .name-card img {
@@ -351,7 +362,6 @@
   border: 2px solid rgb(182, 180, 180);
   position: relative;
   bottom: 4rem;
-
 }
 .verval4 .verval4-card .name-card .user {
   color: rgb(245, 186, 24);
@@ -371,7 +381,6 @@
 /* verval 5 */
 
 .verval5 {
-
   background-image: url("../img/bambu-bg-fix.png");
   background-repeat: no-repeat;
   background-position: center;
@@ -418,7 +427,6 @@
   font-size: 25px;
   position: relative;
   left: 1.5rem;
-
 }
 .verval5 #carouselExampleControls .nice-to-now a {
   text-decoration: none;
