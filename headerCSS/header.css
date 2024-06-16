@@ -1,8 +1,8 @@
 header {
-  height: 100vh;
+
   background-image: url("../img/bg-header.png");
   background-repeat: no-repeat;
-  background-size: 90rem;
+  background-size: 120%;
   background-position: center;
   animation: moveout 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
 }
@@ -17,23 +17,19 @@ header {
 }
 
 header .paralax {
-
   background-image: url("../img/paralax1.png");
   height: 100vh;
   background-size: 110%;
   background-repeat: no-repeat;
- background-position: left;
+  background-position: left;
   animation: moveLeft 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
- 
-
 }
 @keyframes moveLeft {
   from {
     background-position: left;
-      
   }
   to {
-   background-position: right;
+    background-position: right;
   }
 }
 
@@ -43,17 +39,16 @@ header nav img {
 }
 
 header .excel {
-  
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
   width: 38rem;
-  position: relative;
+  position: absolute;
   padding-left: 4rem;
   padding-right: 4rem;
   padding-bottom: 3.5rem;
-  top: 8rem;
+  top: 15rem;
 }
 header .excel::before,
 header .excel::after {
@@ -116,8 +111,8 @@ header .scroll-down i {
 
 nav {
   background-color: rgba(19, 18, 18, 0.791);
-position: relative;
-bottom: 3rem;
+  position: absolute;
+  bottom: 15rem;
   width: 79%;
   border-radius: 2rem;
   display: flex;
@@ -141,3 +136,7 @@ nav .container-fluid .contact-us {
   width: 6rem;
   text-align: center;
 }
+
+/* desktop version */
+
+

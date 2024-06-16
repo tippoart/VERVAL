@@ -94,9 +94,17 @@
 
 .verval2 .card-container {
   left: 20rem;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  position: relative;
+  position: absolute;
+}
+
+.verval2  .fp-auto-height {
+  overflow-y: auto;
+   height: 100%;
+}
+.extra-content {
+  height: 200vh; /* Pastikan konten cukup panjang untuk memungkinkan pengguliran */
 }
 .verval2 img {
   display: none;
@@ -167,21 +175,15 @@
 }
 
 .verval2 .card-container.centered {
-  position: fixed;
-  top: 102rem;
-  height: 100vh;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
   animation: slide-in 1s ease-in-out forwards;
 }
 @keyframes slide-in {
   0% {
-    transform: translateY(-38%);
+    transform: translateY(-7%);
   }
 
   100% {
-    transform: translate(-26%, -26%) rotate(-11deg);
+    transform: translate(-20rem, 5rem) rotate(-11deg);
   }
 }
 
@@ -229,9 +231,8 @@
   object-fit: cover;
   animation: bumi-jalan 1s ease-in-out;
   transition: transform 0.5s ease-in-out;
-  color: rgba(43, 47, 49, 0.915);;
+  color: rgba(43, 47, 49, 0.915);
 }
-
 
 .verval3 .verval3-card {
   right: 15rem;
@@ -245,10 +246,7 @@
   display: none;
   transition: transform 1s ease-in-out;
   animation: card-verval-animation 1s ease-in-out;
-  
 }
-
-
 
 @keyframes card-verval-animation {
   0% {
@@ -306,6 +304,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 100%;
+ 
 }
 
 .verval4 .verval4-card {
@@ -328,11 +327,9 @@
   height: 16rem;
   border: 2px solid rgba(255, 255, 255, 0.176);
   z-index: 1;
-  transform: 3s ;
- 
+  transform: 3s;
 
 }
-
 
 .verval4 .verval4-card .name-card .testimoni {
   color: rgb(245, 186, 24);
@@ -341,8 +338,8 @@
   text-align: center;
   bottom: 7rem;
   font-size: 2rem;
-}
 
+}
 
 .verval4 .verval4-card .name-card img {
   object-fit: cover;
@@ -351,22 +348,22 @@
   border: 2px solid rgb(182, 180, 180);
   position: relative;
   bottom: 4rem;
+
 }
 .verval4 .verval4-card .name-card .user {
   color: rgb(245, 186, 24);
 }
 
-.verval4 #bx1{
+.verval4 #bx1 {
   position: relative;
-right: 3rem;
-top: 9rem;
+  right: 3rem;
+  top: 9rem;
 }
-.verval4 #bx2{
+.verval4 #bx2 {
   position: relative;
-left: 30.5rem;
-bottom: 9.5rem;
+  left: 30.5rem;
+  bottom: 9.5rem;
 }
-
 
 /* verval 5 */
 
@@ -425,3 +422,5 @@ bottom: 9.5rem;
   background-color: rgba(128, 153, 164, 0.063);
   border-radius: 7px;
 }
+
+/*  */

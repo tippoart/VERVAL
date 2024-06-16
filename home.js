@@ -1,9 +1,75 @@
+// Fungsi untuk menampilkan gambar
+let firstClick = true;
+let secondClick = true;
+let waitingOnImgCard = true;
+
+async function toggleImage() {
+  await new Promise((resolve) => {
+    console.log("hore");
+    let imgs = document.getElementsByClassName("img");
+    let imgCard = document.getElementById("img-container");
+
+    if (firstClick) {
+      for (let i = 0; i < imgs.length; i++) {
+        imgs[i].style.display = "block";
+        imgs[i].style.cursor = "default";
+      }
+      firstClick = false;
+    } else if (secondClick) {
+      imgCard.classList.add("centered");
+      secondClick = false;
+      // resolve();
+      setTimeout(() => {
+        resolve();
+      }, 1000);
+    }
+  });
+
+  return true;
+
+  // try {
+  // } catch (error) {
+  //   console.error("error", error);
+  // }
+}
+
+// Initialize fullpage.js
+new fullpage("#fullpage", {
+  anchors: [
+    "firstPage",
+    "secondPage",
+    "3rdPage",
+    "4thPage",
+    "5thPage",
+    "6thPage",
+    "7thPage",
+    "8thPage",
+    "9thPage",
+    "10thPage",
+  ],
+
+  menu: "#menu",
+  lazyLoad: true,
+  credits: { enabled: false },
+  beforeLeave: async function (origin, destination, direction) {
+    // console.log(`Navigasi dari ${origin.anchor} ke ${destination.anchor}`);
+
+    const isOnSectionCard = origin.index == 2 && destination.index == 3;
+    if (isOnSectionCard && direction == "down") {
+      await toggleImage();
+    }
+    if (origin.index == 1) verval1();
+
+    if (origin.index == 3) verval3();
+   
+  },
+});
+
 //verval 1
 
-window.addEventListener("scroll", function () {
-  let imgContainer = document.querySelector(".img1");
-  let img = document.querySelector(".img1 img");
-
+let imgContainer = document.querySelector(".img1");
+let img = document.querySelector(".img1 img");
+function verval1() {
   // Check if imgContainer and img are found
   if (imgContainer && img) {
     let containerRect = imgContainer.getBoundingClientRect();
@@ -13,44 +79,23 @@ window.addEventListener("scroll", function () {
 
     img.style.transform = "translateY(" + movement + "px)";
   }
-});
+}
 
-
-//verval2
-// let firstClick = true;
-// let secondClick = true;
-
-// function toggleImage() {
-//   let imgs = document.getElementsByClassName("img");
-//   let imgCard = document.getElementById("img-container");
-
-//   if (firstClick) {
-//     for (let i = 0; i < imgs.length; i++) {
-//       imgs[i].style.display = "block";
-//       imgs[i].style.cursor = "default";
-//     }
-//     firstClick = false;
-//   } else if (secondClick) {
-//     imgCard.classList.add("centered");
-//     secondClick = false;
-//   }
-// }
 //verval3
 let clickCount = 0;
+let emb = document.getElementsByClassName("emb");
+let emb2 = document.getElementsByClassName("emb2");
+let emb3 = document.getElementsByClassName("emb3");
+
+let icon = document.querySelector(".icon");
+let ourValues = document.querySelector(".our-values");
+let iconImg = document.querySelector(".bumi");
+let verval3CardImgs = document.querySelectorAll(".verval3-card img");
+
+let bumiIcon = document.querySelector(".bumi-icon");
+let our = document.querySelector(".our");
 
 function verval3() {
-  let emb = document.getElementsByClassName("emb");
-  let emb2 = document.getElementsByClassName("emb2");
-  let emb3 = document.getElementsByClassName("emb3");
-
-  let icon = document.querySelector(".icon");
-  let ourValues = document.querySelector(".our-values");
-  let iconImg = document.querySelector(".bumi");
-  let verval3CardImgs = document.querySelectorAll(".verval3-card img");
-
-  let bumiIcon = document.querySelector(".bumi-icon");
-  let our = document.querySelector(".our");
-
   // Initial animations on first scroll
   if (clickCount === 0) {
     if (icon) {
@@ -126,15 +171,15 @@ function verval3() {
 }
 
 // verval 4
+// let card = document.querySelector(".verval4 .verval4-card");
+// let carouselIcons = document.querySelectorAll(".verval4 .bx");
+// let nameCard = document.querySelector(".verval4 .name-card");
+// let testimoni = document.querySelector(".testimoni");
 
 // function verval4() {
-//   let card = document.querySelector(".verval4 .verval4-card");
-//   let carouselIcons = document.querySelectorAll(".verval4 .bx");
-//   let nameCard = document.querySelector(".verval4 .name-card");
-//   let testimoni = document.querySelector(".testimoni");
-
 //   if (card) {
 //     card.style.backgroundSize = "80rem";
+//     card.style.opacity = "1"; // Tambahkan ini
 //   }
 
 //   if (nameCard) {
