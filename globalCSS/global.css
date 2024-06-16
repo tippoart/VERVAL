@@ -294,7 +294,7 @@
   height: 100vh;
   background-position: center;
   background-size: cover;
-  z-index: 0;
+
 }
 
 .verval4 i {
@@ -304,7 +304,7 @@
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-radius: 100%;
- 
+
 }
 
 .verval4 .verval4-card {
@@ -368,12 +368,14 @@
 /* verval 5 */
 
 .verval5 {
+
   background-image: url("../img/bambu-bg-fix.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   height: 55rem;
-  padding: 5rem;
+  padding-left: 9rem;
+  padding-right: 9rem;
 }
 
 .verval5 .container .card-img {
@@ -386,7 +388,7 @@
   border-radius: 10px;
 }
 .verval5 #carouselExampleControls {
-  margin-top: 1rem;
+  margin-top: 3rem;
   background-color: rgba(255, 255, 255, 0.165);
   padding: 2rem;
   backdrop-filter: blur(10px);
@@ -395,11 +397,11 @@
   border-left: 1.5px solid rgba(255, 255, 255, 0.17);
   border-right: 1.5px solid rgba(255, 255, 255, 0.17);
   border-radius: 2rem;
-  width: 63rem;
+
   height: 40rem;
 }
 .verval5 #carouselExampleControls .nice-to-now {
-  width: 55rem;
+  width: 40rem;
 }
 .verval5 #carouselExampleControls .nice-to-now h3 {
   color: rgba(255, 208, 0, 0.869);
@@ -410,13 +412,17 @@
   padding: 10px;
   width: 12rem;
   text-align: center;
+  font-size: 25px;
+  position: relative;
+  left: 1.5rem;
+
 }
 .verval5 #carouselExampleControls .nice-to-now a {
   text-decoration: none;
   color: white;
   position: relative;
   top: 0.5rem;
-  right: 0.5rem;
+  right: 3rem;
 }
 .verval5 .container .card-img #user {
   background-color: rgba(128, 153, 164, 0.063);
