@@ -48,7 +48,7 @@ header .excel {
   padding-left: 4rem;
   padding-right: 4rem;
   padding-bottom: 3.5rem;
-  top: 15rem;
+  top: 40%;
 }
 header .excel::before,
 header .excel::after {
@@ -112,7 +112,7 @@ header .scroll-down i {
 nav {
   background-color: rgba(19, 18, 18, 0.791);
   position: absolute;
-  bottom: 15rem;
+  bottom: 40%;
   width: 79%;
   border-radius: 2rem;
   display: flex;

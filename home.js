@@ -50,6 +50,11 @@ new fullpage("#fullpage", {
 
   menu: "#menu",
   lazyLoad: true,
+
+  scrollOverflow: true,
+  scrollOverflowReset: true,
+  scrollOverflowResetKey:
+    "MVVZV3gyWVhKdmRISnBaMjh1WTI5dEtNX25RVWMyTnliMnhzVDNabGNtWnNiM2RTWlhObGRBPT05SzI=",
   credits: { enabled: false },
   beforeLeave: async function (origin, destination, direction) {
     // console.log(`Navigasi dari ${origin.anchor} ke ${destination.anchor}`);
@@ -58,10 +63,9 @@ new fullpage("#fullpage", {
     if (isOnSectionCard && direction == "down") {
       await toggleImage();
     }
-    if (origin.index == 1 && direction == "down") verval1();
+    // if (origin.index == 1 && direction == "down") verval1();
 
-    if (origin.index == 3 && direction == "down") verval3();
-   
+    // if (origin.index == 3 && direction == "down") verval3();
   },
 });
 
