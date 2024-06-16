@@ -58,9 +58,9 @@ new fullpage("#fullpage", {
     if (isOnSectionCard && direction == "down") {
       await toggleImage();
     }
-    if (origin.index == 1) verval1();
+    if (origin.index == 1 && direction == "down") verval1();
 
-    if (origin.index == 3) verval3();
+    if (origin.index == 3 && direction == "down") verval3();
    
   },
 });
