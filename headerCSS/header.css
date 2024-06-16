@@ -1,11 +1,25 @@
 header {
+ position: fixed;
+  height: 50px;
+  display: block;
+  width: 100%;
+  z-index: 9;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
 
+}
+
+#section0 {
+ 
   background-image: url("../img/bg-header.png");
   background-repeat: no-repeat;
   background-size: 120%;
   background-position: center;
   animation: moveout 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
 }
+
+
 
 @keyframes moveout {
   from {
@@ -16,7 +30,7 @@ header {
   }
 }
 
-header .paralax {
+#section0 .paralax {
   background-image: url("../img/paralax1.png");
   height: 100vh;
   background-size: 110%;
@@ -33,12 +47,12 @@ header .paralax {
   }
 }
 
-header nav img {
+nav img {
   width: 1.5rem;
   object-fit: cover;
 }
 
-header .excel {
+.paralax .excel {
   display: flex;
   flex-direction: column;
   gap: 2rem;
@@ -50,73 +64,79 @@ header .excel {
   padding-bottom: 3.5rem;
   top: 40%;
 }
-header .excel::before,
-header .excel::after {
+.paralax .excel::before,
+.paralax .excel::after {
   content: "";
   position: absolute;
   background-color: white;
 }
 
-header .excel::before {
+.paralax .excel::before {
   width: 2px;
   height: 5.5rem;
   right: -2rem;
   top: -3.5rem;
 }
 
-header .excel::after {
+.paralax .excel::after {
   width: 5.5rem;
   height: 2px;
   right: -2rem;
   top: -3.5rem;
 }
 
-header .excel .exel-2 {
+.paralax .excel .exel-2 {
   position: relative;
 }
 
-header .excel-2::before,
-header .excel-2::after {
+.paralax .excel-2::before,
+.paralax .excel-2::after {
   content: "";
   position: absolute;
   background-color: white;
 }
 
-header .excel-2::before {
+.paralax .excel-2::before {
   width: 2px;
   height: 5.5rem;
   left: 0;
   bottom: 0;
 }
 
-header .excel-2::after {
+.paralax .excel-2::after {
   width: 5.5rem;
   height: 2px;
   left: 0;
   bottom: 0;
 }
 
-header .excel-2 h1 {
+.paralax .excel-2 h1 {
   font-size: 5rem;
   font-weight: 200;
 }
 
-header .scroll-down {
+.paralax .scroll-down {
   margin-top: 10rem;
 }
 
-header .scroll-down i {
+.paralax .scroll-down i {
   font-size: 1rem;
 }
 
 nav {
   background-color: rgba(19, 18, 18, 0.791);
-  position: absolute;
-  bottom: 40%;
-  width: 79%;
   border-radius: 2rem;
   display: flex;
   backdrop-filter: blur(5px);
+  position: sticky;
+  height: 50px;
+  top: 3%;
+  left: 15%;
+  display: block;
+  z-index: 9;
+  text-align: center;
+  padding: 20px 0 0 0;
+  width: 70%;
 }
 
 nav .container-fluid {
@@ -138,5 +158,3 @@ nav .container-fluid .contact-us {
 }
 
 /* desktop version */
-
-
