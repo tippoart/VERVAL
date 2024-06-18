@@ -1,91 +1,30 @@
-// Fungsi untuk menampilkan gambar
-let firstClick = true;
-let secondClick = true;
-let waitingOnImgCard = true;
+var firstClick = true;
+var secondClick = true;
+var isToggleImageRunning = false;
 
-async function toggleImage() {
-  await new Promise((resolve) => {
-    console.log("hore");
-    let imgs = document.getElementsByClassName("img");
-    let imgCard = document.getElementById("img-container");
+function toggleImage(callback) {
+  console.log("toggleImage dimulai");
+  let imgs = document.getElementsByClassName("img");
+  let imgCard = document.getElementById("img-container");
 
-    if (firstClick) {
-      for (let i = 0; i < imgs.length; i++) {
-        imgs[i].style.display = "block";
-        imgs[i].style.cursor = "default";
-      }
-      firstClick = false;
-    } else if (secondClick) {
-      imgCard.classList.add("centered");
-      secondClick = false;
-      // resolve();
-      setTimeout(() => {
-        resolve();
-      }, 1000);
+  if (firstClick) {
+    for (let i = 0; i < imgs.length; i++) {
+      imgs[i].style.display = "block";
+      imgs[i].style.cursor = "default";
     }
-  });
-
-  return true;
-
-  // try {
-  // } catch (error) {
-  //   console.error("error", error);
-  // }
-}
-
-// Initialize fullpage.js
-new fullpage("#fullpage", {
-  anchors: [
-    "firstPage",
-    "secondPage",
-    "3rdPage",
-    "4thPage",
-    "5thPage",
-    "6thPage",
-    "7thPage",
-    "8thPage",
-    "9thPage",
-    "10thPage",
-  ],
-
-  menu: "#menu",
-  lazyLoad: true,
-
-  scrollOverflow: true,
-  scrollOverflowReset: true,
-  scrollOverflowResetKey:
-    "MVVZV3gyWVhKdmRISnBaMjh1WTI5dEtNX25RVWMyTnliMnhzVDNabGNtWnNiM2RTWlhObGRBPT05SzI=",
-  credits: { enabled: false },
-  beforeLeave: async function (origin, destination, direction) {
-    // console.log(`Navigasi dari ${origin.anchor} ke ${destination.anchor}`);
-
-    const isOnSectionCard = origin.index == 2 && destination.index == 3;
-    if (isOnSectionCard && direction == "down") {
-      await toggleImage();
-    }
-    if (origin.index == 1 && direction == "down") verval1();
-
-    if (origin.index == 3 && direction == "down") verval3();
-  },
-});
-
-//verval 1
-
-let imgContainer = document.querySelector(".img1");
-let img = document.querySelector(".img1 img");
-function verval1() {
-  // Check if imgContainer and img are found
-  if (imgContainer && img) {
-    let containerRect = imgContainer.getBoundingClientRect();
-    let scrollPosition =
-      this.window.pageYOffset || document.documentElement.scrollTop;
-    let movement = (scrollPosition - containerRect.top) * -0.1;
-
-    img.style.transform = "translateY(" + movement + "px)";
+    firstClick = false;
+    console.log("toggleImage selesai (pertama kali)");
+    callback(); // Panggil callback setelah pertama kali
+  } else if (secondClick) {
+    imgCard.classList.add("centered");
+    secondClick = false;
+    console.log("toggleImage selesai (kedua kali)");
+    callback(); // Panggil callback setelah kedua kali
   }
 }
 
 //verval3
+let isVerval3Running = false;
 let clickCount = 0;
 let emb = document.getElementsByClassName("emb");
 let emb2 = document.getElementsByClassName("emb2");
@@ -98,8 +37,7 @@ let verval3CardImgs = document.querySelectorAll(".verval3-card img");
 
 let bumiIcon = document.querySelector(".bumi-icon");
 let our = document.querySelector(".our");
-
-function verval3() {
+function verval3(callback) {
   // Initial animations on first scroll
   if (clickCount === 0) {
     if (icon) {
@@ -116,6 +54,7 @@ function verval3() {
     if (emb2) {
       emb2[0].style.color = "white";
     }
+     callback();
   } else if (clickCount === 1) {
     if (ourValues) {
       ourValues.style.color = "rgb(130, 185, 68)";
@@ -124,6 +63,7 @@ function verval3() {
     if (emb3) {
       emb3[0].style.color = "white";
     }
+     callback();
   } else if (clickCount === 2) {
     // Fade out .bumi-icon and .our on second scroll
     if (bumiIcon) {
@@ -146,6 +86,7 @@ function verval3() {
         our.style.display = "none";
       }
     }, 1000);
+     callback();
   } else {
     // Handling subsequent scrolls to show more cards
     if (clickCount - 1 < verval3CardImgs.length) {
@@ -164,6 +105,7 @@ function verval3() {
           6 * (clickCount - 2)
         }%) scale(0.6)`;
       }
+       callback();
     } else {
       // Disable further scrolling when all cards are shown
       let verval3Section = document.querySelector(".verval3");
@@ -172,6 +114,71 @@ function verval3() {
   }
 
   clickCount++;
+}
+
+// Fungsi verval3 yang dibungkus dengan Promise
+
+
+new fullpage("#fullpage", {
+  anchors: [
+    "firstPage",
+    "secondPage",
+    "3rdPage",
+    "4thPage",
+    "5thPage",
+    "6thPage",
+    "7thPage",
+    "8thPage",
+    "9thPage",
+    "10thPage",
+  ],
+
+  menu: "#menu",
+  lazyLoad: true,
+
+  credits: { enabled: false },
+  beforeLeave: function (origin, destination, direction) {
+    console.log(`Navigasi dari ${origin.anchor} ke ${destination.anchor}`);
+
+    if (origin.index == 2 && direction == "down" && !isToggleImageRunning) {
+      isToggleImageRunning = true;
+
+      toggleImage(function () {
+        isToggleImageRunning = false;
+        return true;
+      });
+
+      return false;
+    }
+
+    if (origin.index == 3 && direction == "down" && !isVerval3Running) {
+      isVerval3Running = true;
+
+        verval3(function () {
+          isVerval3Running = false;
+          return true 
+        });
+
+      return false;
+    }
+
+  },
+});
+
+//verval 1
+
+let imgContainer = document.querySelector(".img1");
+let img = document.querySelector(".img1 img");
+function verval1() {
+  // Check if imgContainer and img are found
+  if (imgContainer && img) {
+    let containerRect = imgContainer.getBoundingClientRect();
+    let scrollPosition =
+      this.window.pageYOffset || document.documentElement.scrollTop;
+    let movement = (scrollPosition - containerRect.top) * -0.1;
+
+    img.style.transform = "translateY(" + movement + "px)";
+  }
 }
 
 // verval 4
