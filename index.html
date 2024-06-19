@@ -29,13 +29,12 @@
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.1.2/fullpage.min.css"
-    />
+    <!-- gsap -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/ScrollTrigger.min.js"></script>
   </head>
   <body>
-    <header  class="parallax-header">
+    <header class="parallax-header">
       <nav
         data-aos="fade-zoom-in"
         data-aos-easing="ease-in-back"
@@ -108,14 +107,12 @@
 
       <!-- section verval 1 -->
 
-      <section class="verval1 section" id="section1">
+      <section class="verval1 section d-flex justify-content-center align-items-center" id="section1">
         <div class="siku">
           <div
-            class="siku-2 d-flex justify-content-center align-items-center gap-5"
+            class="siku-2 d-flex align-items-center "
           >
-            <div class="img1">
-            
-            </div>
+            <div class="img1"></div>
 
             <div class="container">
               <p class="who-we-are">who we are</p>
@@ -145,19 +142,17 @@
       <!-- verval 3 -->
 
       <section class="verval3 section p-5" id="section3">
-        <div
-          class="bumi-icon d-flex gap-2 justify-content-center align-items-center"
-        >
-          <p class="emb">emb</p>
-          <div class="icon w-75">
-            <img class="bumi" src="img/icons/bumi.png" alt="" />
-          </div>
-        </div>
+        <div class="our d-flex flex-column position-relative">
+          <p id="text" class="emb2">
+            <span>emb</span>
+            <span>dying the essence of better</span>
+          </p>
 
-        <div class="our d-flex flex-column">
-          <p class="emb2">dying the essence of better</p>
-          <p class="emb3" style="position: relative; right: 13rem">
-            future, these are <span class="our-values">our values</span>
+            <span onclick="bumiku()" class="img-bumiku"><img class="kecili" src="img/icons/bumi.png" alt="" /></span>
+
+          <p id="text-2" class="emb2">
+            future, these are
+            <span id="our" class="our-values">our values.</span>
           </p>
         </div>
 
@@ -193,10 +188,10 @@
       <!-- verval 4 -->
 
       <section
-        class="verval4 section d-flex justify-content-center align-items-center gap-4"
+        class="verval4 section d-flex justify-content-center align-items-center"
         id="section4"
       >
-        <div class="verval4-card" id="testimonialCarousel">
+        <div class="verval4-card d-flex justify-content-center align-items-center gap-2" id="testimonialCarousel">
           <i id="bx1" class="bx bx-chevron-left"></i>
           <div
             class="name-card d-flex flex-column justify-content-center align-items-center"
@@ -231,10 +226,10 @@
 
       <!-- verval 5 -->
 
-      <section class="verval5 section" id="section5">
+      <section class="verval5 section  d-flex align-items-center" id="section5">
         <div
           id="carouselExampleControls"
-          class="container d-flex align-items-center flex-column carousel slide gap-5"
+          class="container d-flex  justify-content-center flex-column carousel slide gap-3"
           data-bs-ride="carousel"
         >
           <div
@@ -244,7 +239,7 @@
             <a class="see-more" href="#">See More</a>
           </div>
 
-          <div class="carousel-inner p-4 gap-3">
+          <div class="carousel-inner p-2 gap-3">
             <div class="carousel-item active">
               <div
                 class="d-flex justify-content-center gap-4 align-items-center"
@@ -320,7 +315,7 @@
             </div>
 
             <div class="carousel-item">
-              <div class="d-flex justify-content-center gap-2">
+              <div class="d-flex justify-content-center gap-3">
                 <div class="card card-img p-2">
                   <img
                     class="card-img-top"
@@ -497,10 +492,10 @@
 
     <!-- js script -->
 
-    <script src="dist/fullpage.min.js"></script>
-    <script src="dist/fullpage.extensions.min.js"></script>
+    <!-- <script src="dist/fullpage.min.js"></script>
+    <script src="dist/fullpage.extensions.min.js"></script> -->
 
-    <script src="home.js"></script>
+    <!-- <script src="home.js"></script> -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -511,5 +506,50 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
+
+    <script>
+      gsap.registerPlugin(ScrollTrigger);
+
+      gsap.to("#text", {
+        backgroundPosition: "0% 0",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#text",
+          start: "top 90%",
+          end: "top 20%",
+          scrub: 1,
+        },
+      });
+      gsap.to("#text-2", {
+        backgroundPosition: "0% 0",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#text",
+          start: "top 10%",
+          end: "top 10%",
+          scrub: 1,
+        },
+      });
+      gsap.to("#our", {
+        backgroundPosition: "0% 0",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#text",
+          start: "top 4%",
+          end: "top 10%",
+          scrub: 1,
+        },
+      });
+      gsap.to("#emb", {
+        backgroundPosition: "0% 0",
+        ease: "none",
+        scrollTrigger: {
+          trigger: "#text",
+          start: "top 60%",
+          end: "top 20%",
+          scrub: 1,
+        },
+      });
+    </script>
   </body>
 </html>

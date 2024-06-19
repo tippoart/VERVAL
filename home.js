@@ -1,3 +1,14 @@
+function bumiku () {
+  let bumiku = document.getElementsByClassName("kecili")
+  console.log(bumiku)
+
+}
+
+
+
+
+
+
 var firstClick = true;
 var secondClick = true;
 var isToggleImageRunning = false;
@@ -116,54 +127,6 @@ function verval3(callback) {
   clickCount++;
 }
 
-// Fungsi verval3 yang dibungkus dengan Promise
-
-
-new fullpage("#fullpage", {
-  anchors: [
-    "firstPage",
-    "secondPage",
-    "3rdPage",
-    "4thPage",
-    "5thPage",
-    "6thPage",
-    "7thPage",
-    "8thPage",
-    "9thPage",
-    "10thPage",
-  ],
-
-  menu: "#menu",
-  lazyLoad: true,
-
-  credits: { enabled: false },
-  beforeLeave: function (origin, destination, direction) {
-    console.log(`Navigasi dari ${origin.anchor} ke ${destination.anchor}`);
-
-    if (origin.index == 2 && direction == "down" && !isToggleImageRunning) {
-      isToggleImageRunning = true;
-
-      toggleImage(function () {
-        isToggleImageRunning = false;
-        return true;
-      });
-
-      return false;
-    }
-
-    if (origin.index == 3 && direction == "down" && !isVerval3Running) {
-      isVerval3Running = true;
-
-        verval3(function () {
-          isVerval3Running = false;
-          return true 
-        });
-
-      return false;
-    }
-
-  },
-});
 
 //verval 1
 

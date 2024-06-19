@@ -1,11 +1,12 @@
 /* verval 1 */
 
+body {
+  overflow-x: hidden;
+}
 .verval1 {
   background-color: rgb(12, 12, 12);
-  padding-left: 13rem;
-  padding-right: 13rem;
-  padding-top: 10rem;
-  gap: 2rem;
+  padding: 10rem;
+  gap: 1rem;
   color: white;
   height: 120vh;
   position: relative;
@@ -15,7 +16,7 @@
 .verval1 .siku {
   position: relative;
   padding-left: 3.5rem;
-  padding-bottom: 2rem;
+  padding-bottom: 4rem;
 }
 
 .verval1 .siku::before,
@@ -63,37 +64,22 @@
   top: -4rem;
 }
 
+
 .verval1 .container .who-we-are {
   color: rgb(255, 181, 44);
   font-size: 3rem;
 }
-/* .verval1 .img1 {
-  width: 30rem;
-  height: 25rem;
-  overflow: hidden;
-  background-image: url("../img/image.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-} */
 
 .img1 {
-  width: 30rem;
-  height: 25rem;
+  width: 35rem;
+  height: 23rem;
   /* overflow: hidden; */
   background-image: url("../img/image.png");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-size: 38%;
   background-attachment: fixed;
+ 
 }
-
-/* .verval1 .img1 img {
-  object-fit: cover;
-  width: 22rem;
-  height: 27rem;
-} */
 
 /* verval 2 */
 
@@ -206,12 +192,12 @@
 /* verval 3 */
 
 .verval3 {
-  height: 100vh;
+  height: 150vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(7, 7, 7);
+  background-color: rgb(5, 4, 4);
   cursor: pointer;
   position: relative;
 }
@@ -222,29 +208,34 @@
 }
 .verval3 .our-values {
   font-weight: 500;
-  transition: color 1s;
 }
 
-.verval3 .bumi-icon {
-  width: 13.5rem;
-  position: relative;
-  top: 7rem;
-  left: 0.2rem;
-}
-.verval3 .bumi-icon p {
-  font-size: 4rem;
-  text-align: center;
-}
-.verval3 .bumi-icon .icon {
+.verval3 .img-bumiku {
   border: 2px solid rgba(43, 47, 49, 0.915);
   border-radius: 10rem;
+  width: 5rem;
   position: relative;
-  top: 4px;
-  right: 10px;
-  transition: 0.5s;
+  bottom: 4.3rem;
+  left: 8rem;
+}
+.verval3 .our img {
+  width: 3rem;
+  object-fit: cover;
+  z-index: 22;
 }
 
-.verval3 .bumi-icon img {
+.verval3 .our #text {
+  display: flex;
+  z-index: 0;
+  gap: 5rem;
+}
+
+.verval3 .our #text .emb2-next {
+  position: relative;
+  left: 3rem;
+}
+
+.verval3 .our span img {
   width: 2rem;
   object-fit: cover;
   animation: bumi-jalan 1s ease-in-out;
@@ -300,17 +291,56 @@
   opacity: 1;
 }
 
-.fade-out {
+.verval3 .bumi-icon .emb {
+  background: linear-gradient(
+    to left,
+    rgb(42, 41, 41) 50%,
+    rgb(255, 255, 255) 50%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+.verval3 .our .emb2 {
+  background: linear-gradient(
+    to left,
+    rgb(42, 41, 41) 50%,
+    rgb(255, 255, 255) 50%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+}
+.verval3 .our #our {
+  background: linear-gradient(
+    to left,
+    rgb(42, 41, 41) 50%,
+    rgb(98, 237, 112) 50%
+  );
+  -webkit-background-clip: text;
+  color: transparent;
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  animation: 1s;
+}
+#our {
+  text-shadow: none;
+  -webkit-text-fill-color: transparent; /* Optional if needed */
+}
+
+/* .fade-out {
   opacity: 0;
   transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-}
+} */
 
 /* verval 4 */
 
 .verval4 {
   background-image: url("../img/bg-daun-sec3.png");
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 120vh;
   background-position: center;
   background-size: cover;
 }
@@ -326,10 +356,10 @@
 
 .verval4 .verval4-card {
   width: 100%;
-  height: 120%;
+  height: 100%;
   background-image: url("../img/daun-jatuh.png");
   background-repeat: no-repeat;
-  background-size: 93rem;
+  background-size: cover;
   background-position: center;
 }
 
@@ -344,6 +374,7 @@
   border: 2px solid rgba(255, 255, 255, 0.176);
   z-index: 1;
   transform: 3s;
+
 }
 
 .verval4 .verval4-card .name-card .testimoni {
@@ -352,7 +383,7 @@
   position: relative;
   text-align: center;
   bottom: 7rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
 .verval4 .verval4-card .name-card img {
@@ -367,16 +398,6 @@
   color: rgb(245, 186, 24);
 }
 
-.verval4 #bx1 {
-  position: relative;
-  right: 3rem;
-  top: 9rem;
-}
-.verval4 #bx2 {
-  position: relative;
-  left: 30.5rem;
-  bottom: 9.5rem;
-}
 
 /* verval 5 */
 
@@ -385,7 +406,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 55rem;
+  height:130vh;
   padding-left: 9rem;
   padding-right: 9rem;
 }
@@ -400,7 +421,7 @@
   border-radius: 10px;
 }
 .verval5 #carouselExampleControls {
-  margin-top: 3rem;
+
   background-color: rgba(255, 255, 255, 0.165);
   padding: 2rem;
   backdrop-filter: blur(10px);
@@ -409,7 +430,6 @@
   border-left: 1.5px solid rgba(255, 255, 255, 0.17);
   border-right: 1.5px solid rgba(255, 255, 255, 0.17);
   border-radius: 2rem;
-
   height: 40rem;
 }
 .verval5 #carouselExampleControls .nice-to-now {
@@ -427,17 +447,23 @@
   font-size: 25px;
   position: relative;
   left: 1.5rem;
+  bottom: 3rem;
 }
 .verval5 #carouselExampleControls .nice-to-now a {
   text-decoration: none;
   color: white;
   position: relative;
-  top: 0.5rem;
-  right: 3rem;
+  right: 1rem;
+  bottom: 2rem;
 }
 .verval5 .container .card-img #user {
   background-color: rgba(128, 153, 164, 0.063);
   border-radius: 7px;
+}
+
+.verval5 #carouselExampleControls .carousel-inner {
+  position: relative;
+  bottom: 2rem;
 }
 
 /*  */
