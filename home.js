@@ -43,7 +43,7 @@ gsap.to("#bumiku", {
   scrollTrigger: {
     trigger: "#bumiku",
     start: "top 30%",
-    end: "top 100%",
+    end: "top 50%",
     scrub: 1,
   },
 });
@@ -56,7 +56,7 @@ gsap.to("#icons-bumi", {
   scrollTrigger: {
     trigger: "#icons-bumi",
     start: "top 30%", 
-    end: "top 100%", 
+    end: "top 50%", 
     scrub: 1, 
   },
 });
