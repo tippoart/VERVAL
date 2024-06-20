@@ -95,7 +95,7 @@
               </marquee>
             </div>
             <span
-              style="position: absolute; top: 65%; bottom: 0"
+              style="position: absolute; top: 100%; bottom: 0"
               class="scroll-down d-flex flex-column g-4 align-items-center justify-content-center text-white"
             >
               scroll down
@@ -107,11 +107,12 @@
 
       <!-- section verval 1 -->
 
-      <section class="verval1 section d-flex justify-content-center align-items-center" id="section1">
+      <section
+        class="verval1 section d-flex justify-content-center align-items-center"
+        id="section1"
+      >
         <div class="siku">
-          <div
-            class="siku-2 d-flex align-items-center "
-          >
+          <div class="siku-2 d-flex align-items-center">
             <div class="img1"></div>
 
             <div class="container">
@@ -148,7 +149,11 @@
             <span>dying the essence of better</span>
           </p>
 
-            <span onclick="bumiku()" class="img-bumiku"><img class="kecili" src="img/icons/bumi.png" alt="" /></span>
+          <div id="background">
+            <span id="bumiku" class="img-bumiku">
+              <img  id="icons-bumi" class="kecili" src="img/icons/bumi.png" alt="Bumi" />
+            </span>
+          </div>
 
           <p id="text-2" class="emb2">
             future, these are
@@ -191,7 +196,10 @@
         class="verval4 section d-flex justify-content-center align-items-center"
         id="section4"
       >
-        <div class="verval4-card d-flex justify-content-center align-items-center gap-2" id="testimonialCarousel">
+        <div
+          class="verval4-card d-flex justify-content-center align-items-center gap-2"
+          id="testimonialCarousel"
+        >
           <i id="bx1" class="bx bx-chevron-left"></i>
           <div
             class="name-card d-flex flex-column justify-content-center align-items-center"
@@ -226,10 +234,10 @@
 
       <!-- verval 5 -->
 
-      <section class="verval5 section  d-flex align-items-center" id="section5">
+      <section class="verval5 section d-flex align-items-center" id="section5">
         <div
           id="carouselExampleControls"
-          class="container d-flex  justify-content-center flex-column carousel slide gap-3"
+          class="container d-flex justify-content-center flex-column carousel slide gap-3"
           data-bs-ride="carousel"
         >
           <div
@@ -492,10 +500,9 @@
 
     <!-- js script -->
 
-    <!-- <script src="dist/fullpage.min.js"></script>
-    <script src="dist/fullpage.extensions.min.js"></script> -->
+    <script></script>
 
-    <!-- <script src="home.js"></script> -->
+    <script src="home.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
@@ -506,50 +513,5 @@
       integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
       crossorigin="anonymous"
     ></script>
-
-    <script>
-      gsap.registerPlugin(ScrollTrigger);
-
-      gsap.to("#text", {
-        backgroundPosition: "0% 0",
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#text",
-          start: "top 90%",
-          end: "top 20%",
-          scrub: 1,
-        },
-      });
-      gsap.to("#text-2", {
-        backgroundPosition: "0% 0",
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#text",
-          start: "top 10%",
-          end: "top 10%",
-          scrub: 1,
-        },
-      });
-      gsap.to("#our", {
-        backgroundPosition: "0% 0",
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#text",
-          start: "top 4%",
-          end: "top 10%",
-          scrub: 1,
-        },
-      });
-      gsap.to("#emb", {
-        backgroundPosition: "0% 0",
-        ease: "none",
-        scrollTrigger: {
-          trigger: "#text",
-          start: "top 60%",
-          end: "top 20%",
-          scrub: 1,
-        },
-      });
-    </script>
   </body>
 </html>

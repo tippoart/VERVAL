@@ -64,7 +64,6 @@ body {
   top: -4rem;
 }
 
-
 .verval1 .container .who-we-are {
   color: rgb(255, 181, 44);
   font-size: 3rem;
@@ -78,7 +77,6 @@ body {
   background-repeat: no-repeat;
   background-size: 38%;
   background-attachment: fixed;
- 
 }
 
 /* verval 2 */
@@ -215,14 +213,37 @@ body {
   border-radius: 10rem;
   width: 5rem;
   position: relative;
-  bottom: 4.3rem;
+  bottom: 4.5rem;
   left: 8rem;
+  display: inline-block;
+  background: linear-gradient(
+    to left,
+    rgba(42, 41, 41, 0) 50%,
+    rgb(255, 255, 255) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
 }
-.verval3 .our img {
+
+.verval3 #icons-bumi {
+  display: inline-block;
+  -webkit-background-clip: text;
+  background: linear-gradient(
+    to left,
+    rgb(23, 23, 23) 50%,
+    rgb(30, 203, 255) 50%
+  );
+  background-size: 200% 100%;
+  background-position: 100% 0;
+  border-radius: 100%;
+}
+
+/* .verval3 .our img {
   width: 3rem;
   object-fit: cover;
   z-index: 22;
-}
+  background-color: aquamarine;
+} */
 
 .verval3 .our #text {
   display: flex;
@@ -238,8 +259,7 @@ body {
 .verval3 .our span img {
   width: 2rem;
   object-fit: cover;
-  animation: bumi-jalan 1s ease-in-out;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.1s linear;
   color: rgba(43, 47, 49, 0.915);
 }
 
@@ -374,7 +394,6 @@ body {
   border: 2px solid rgba(255, 255, 255, 0.176);
   z-index: 1;
   transform: 3s;
-
 }
 
 .verval4 .verval4-card .name-card .testimoni {
@@ -398,7 +417,6 @@ body {
   color: rgb(245, 186, 24);
 }
 
-
 /* verval 5 */
 
 .verval5 {
@@ -406,7 +424,7 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height:130vh;
+  height: 130vh;
   padding-left: 9rem;
   padding-right: 9rem;
 }
@@ -421,7 +439,6 @@ body {
   border-radius: 10px;
 }
 .verval5 #carouselExampleControls {
-
   background-color: rgba(255, 255, 255, 0.165);
   padding: 2rem;
   backdrop-filter: blur(10px);

@@ -1,148 +1,199 @@
-function bumiku () {
-  let bumiku = document.getElementsByClassName("kecili")
-  console.log(bumiku)
+gsap.registerPlugin(ScrollTrigger);
 
-}
+gsap.to("#text", {
+  backgroundPosition: "0% 0",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#text",
+    start: "top 30%",
+    end: "top 20%",
+    scrub: 1,
+  },
+});
+gsap.to("#text-2", {
+  backgroundPosition: "0% 0",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#text",
+    start: "top 30%",
+    end: "top 10%",
+    scrub: 1,
+  },
+});
+gsap.to("#our", {
+  backgroundPosition: "0% 0",
+  ease: "none",
+  scrollTrigger: {
+    trigger: "#text",
+    start: "top 30%",
+    end: "top 10%",
+    scrub: 1,
+  },
+});
 
+// Tambahkan log untuk memastikan elemen ditemukan
+const bumikuElement = document.querySelector("#bumiku");
+console.log("Elemen #bumiku:", bumikuElement);
 
+gsap.to("#bumiku", {
+  backgroundSize: "200% 100%",
+  backgroundPosition: "0% 0",
+  ease: "none",
+  duration: 0.1,
+  scrollTrigger: {
+    trigger: "#bumiku",
+    start: "top 30%",
+    end: "top 100%",
+    scrub: 1,
+  },
+});
 
+gsap.to("#icons-bumi", {
+  x: 45,
+  backgroundSize: "200% 100%",
+  backgroundPosition: "0% 0",
+  ease: "power2.out", 
+  scrollTrigger: {
+    trigger: "#icons-bumi",
+    start: "top 30%", 
+    end: "top 100%", 
+    scrub: 1, 
+  },
+});
 
+// var firstClick = true;
+// var secondClick = true;
+// var isToggleImageRunning = false;
 
+// function toggleImage(callback) {
+//   console.log("toggleImage dimulai");
+//   let imgs = document.getElementsByClassName("img");
+//   let imgCard = document.getElementById("img-container");
 
-var firstClick = true;
-var secondClick = true;
-var isToggleImageRunning = false;
+//   if (firstClick) {
+//     for (let i = 0; i < imgs.length; i++) {
+//       imgs[i].style.display = "block";
+//       imgs[i].style.cursor = "default";
+//     }
+//     firstClick = false;
+//     console.log("toggleImage selesai (pertama kali)");
+//     callback(); // Panggil callback setelah pertama kali
+//   } else if (secondClick) {
+//     imgCard.classList.add("centered");
+//     secondClick = false;
+//     console.log("toggleImage selesai (kedua kali)");
+//     callback(); // Panggil callback setelah kedua kali
+//   }
+// }
 
-function toggleImage(callback) {
-  console.log("toggleImage dimulai");
-  let imgs = document.getElementsByClassName("img");
-  let imgCard = document.getElementById("img-container");
+// //verval3
+// let isVerval3Running = false;
+// let clickCount = 0;
+// let emb = document.getElementsByClassName("emb");
+// let emb2 = document.getElementsByClassName("emb2");
+// let emb3 = document.getElementsByClassName("emb3");
 
-  if (firstClick) {
-    for (let i = 0; i < imgs.length; i++) {
-      imgs[i].style.display = "block";
-      imgs[i].style.cursor = "default";
-    }
-    firstClick = false;
-    console.log("toggleImage selesai (pertama kali)");
-    callback(); // Panggil callback setelah pertama kali
-  } else if (secondClick) {
-    imgCard.classList.add("centered");
-    secondClick = false;
-    console.log("toggleImage selesai (kedua kali)");
-    callback(); // Panggil callback setelah kedua kali
-  }
-}
+// let icon = document.querySelector(".icon");
+// let ourValues = document.querySelector(".our-values");
+// let iconImg = document.querySelector(".bumi");
+// let verval3CardImgs = document.querySelectorAll(".verval3-card img");
 
-//verval3
-let isVerval3Running = false;
-let clickCount = 0;
-let emb = document.getElementsByClassName("emb");
-let emb2 = document.getElementsByClassName("emb2");
-let emb3 = document.getElementsByClassName("emb3");
+// let bumiIcon = document.querySelector(".bumi-icon");
+// let our = document.querySelector(".our");
+// function verval3(callback) {
+//   // Initial animations on first scroll
+//   if (clickCount === 0) {
+//     if (icon) {
+//       icon.style.backgroundColor = "white";
+//     }
+//     if (iconImg) {
+//       iconImg.style.transform = "translateX(2.9rem)";
+//       iconImg.style.backgroundColor = "#3ABEF9";
+//       iconImg.style.borderRadius = "50%";
+//     }
+//     if (emb) {
+//       emb[0].style.color = "white";
+//     }
+//     if (emb2) {
+//       emb2[0].style.color = "white";
+//     }
+//      callback();
+//   } else if (clickCount === 1) {
+//     if (ourValues) {
+//       ourValues.style.color = "rgb(130, 185, 68)";
+//     }
 
-let icon = document.querySelector(".icon");
-let ourValues = document.querySelector(".our-values");
-let iconImg = document.querySelector(".bumi");
-let verval3CardImgs = document.querySelectorAll(".verval3-card img");
+//     if (emb3) {
+//       emb3[0].style.color = "white";
+//     }
+//      callback();
+//   } else if (clickCount === 2) {
+//     // Fade out .bumi-icon and .our on second scroll
+//     if (bumiIcon) {
+//       bumiIcon.classList.add("fade-out");
+//     }
+//     if (our) {
+//       our.classList.add("fade-out");
+//     }
 
-let bumiIcon = document.querySelector(".bumi-icon");
-let our = document.querySelector(".our");
-function verval3(callback) {
-  // Initial animations on first scroll
-  if (clickCount === 0) {
-    if (icon) {
-      icon.style.backgroundColor = "white";
-    }
-    if (iconImg) {
-      iconImg.style.transform = "translateX(2.9rem)";
-      iconImg.style.backgroundColor = "#3ABEF9";
-      iconImg.style.borderRadius = "50%";
-    }
-    if (emb) {
-      emb[0].style.color = "white";
-    }
-    if (emb2) {
-      emb2[0].style.color = "white";
-    }
-     callback();
-  } else if (clickCount === 1) {
-    if (ourValues) {
-      ourValues.style.color = "rgb(130, 185, 68)";
-    }
+//     // Show the first card
+//     if (verval3CardImgs.length > 0) {
+//       verval3CardImgs[0].classList.add("show", "large");
+//     }
 
-    if (emb3) {
-      emb3[0].style.color = "white";
-    }
-     callback();
-  } else if (clickCount === 2) {
-    // Fade out .bumi-icon and .our on second scroll
-    if (bumiIcon) {
-      bumiIcon.classList.add("fade-out");
-    }
-    if (our) {
-      our.classList.add("fade-out");
-    }
+//     setTimeout(() => {
+//       if (bumiIcon) {
+//         bumiIcon.style.display = "none";
+//       }
+//       if (our) {
+//         our.style.display = "none";
+//       }
+//     }, 1000);
+//      callback();
+//   } else {
+//     // Handling subsequent scrolls to show more cards
+//     if (clickCount - 1 < verval3CardImgs.length) {
+//       if (clickCount > 1) {
+//         verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
+//       }
 
-    // Show the first card
-    if (verval3CardImgs.length > 0) {
-      verval3CardImgs[0].classList.add("show", "large");
-    }
+//       if (clickCount > 2) {
+//         verval3CardImgs[clickCount - 3].style.transform = "scale(0.93)";
+//       }
 
-    setTimeout(() => {
-      if (bumiIcon) {
-        bumiIcon.style.display = "none";
-      }
-      if (our) {
-        our.style.display = "none";
-      }
-    }, 1000);
-     callback();
-  } else {
-    // Handling subsequent scrolls to show more cards
-    if (clickCount - 1 < verval3CardImgs.length) {
-      if (clickCount > 1) {
-        verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
-      }
+//       verval3CardImgs[clickCount - 1].classList.add("show", "large");
 
-      if (clickCount > 2) {
-        verval3CardImgs[clickCount - 3].style.transform = "scale(0.93)";
-      }
+//       if (clickCount >= 4) {
+//         verval3CardImgs[clickCount - 4].style.transform = `translateY(${
+//           6 * (clickCount - 2)
+//         }%) scale(0.6)`;
+//       }
+//        callback();
+//     } else {
+//       // Disable further scrolling when all cards are shown
+//       let verval3Section = document.querySelector(".verval3");
+//       verval3Section.style.cursor = "auto";
+//     }
+//   }
 
-      verval3CardImgs[clickCount - 1].classList.add("show", "large");
+//   clickCount++;
+// }
 
-      if (clickCount >= 4) {
-        verval3CardImgs[clickCount - 4].style.transform = `translateY(${
-          6 * (clickCount - 2)
-        }%) scale(0.6)`;
-      }
-       callback();
-    } else {
-      // Disable further scrolling when all cards are shown
-      let verval3Section = document.querySelector(".verval3");
-      verval3Section.style.cursor = "auto";
-    }
-  }
+// //verval 1
 
-  clickCount++;
-}
+// let imgContainer = document.querySelector(".img1");
+// let img = document.querySelector(".img1 img");
+// function verval1() {
+//   // Check if imgContainer and img are found
+//   if (imgContainer && img) {
+//     let containerRect = imgContainer.getBoundingClientRect();
+//     let scrollPosition =
+//       this.window.pageYOffset || document.documentElement.scrollTop;
+//     let movement = (scrollPosition - containerRect.top) * -0.1;
 
-
-//verval 1
-
-let imgContainer = document.querySelector(".img1");
-let img = document.querySelector(".img1 img");
-function verval1() {
-  // Check if imgContainer and img are found
-  if (imgContainer && img) {
-    let containerRect = imgContainer.getBoundingClientRect();
-    let scrollPosition =
-      this.window.pageYOffset || document.documentElement.scrollTop;
-    let movement = (scrollPosition - containerRect.top) * -0.1;
-
-    img.style.transform = "translateY(" + movement + "px)";
-  }
-}
+//     img.style.transform = "translateY(" + movement + "px)";
+//   }
+// }
 
 // verval 4
 // let card = document.querySelector(".verval4 .verval4-card");

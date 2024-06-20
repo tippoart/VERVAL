@@ -1,25 +1,20 @@
 header {
- position: fixed;
-  height: 50px;
+  position: fixed;
   display: block;
   width: 100%;
-  z-index: 9;
   text-align: center;
   color: #f2f2f2;
   padding: 20px 0 0 0;
-
 }
 
 #section0 {
- 
+  height: 120vh;
   background-image: url("../img/bg-header.png");
   background-repeat: no-repeat;
   background-size: 120%;
   background-position: center;
   animation: moveout 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
 }
-
-
 
 @keyframes moveout {
   from {
@@ -32,7 +27,7 @@ header {
 
 #section0 .paralax {
   background-image: url("../img/paralax1.png");
-  height: 100vh;
+  height: 120vh;
   background-size: 110%;
   background-repeat: no-repeat;
   background-position: left;
@@ -57,7 +52,7 @@ nav img {
   flex-direction: column;
   gap: 2rem;
   align-items: center;
-  width: 38rem;
+  width: 45rem;
   position: absolute;
   padding-left: 4rem;
   padding-right: 4rem;
@@ -87,6 +82,7 @@ nav img {
 
 .paralax .excel .exel-2 {
   position: relative;
+
 }
 
 .paralax .excel-2::before,
@@ -111,8 +107,8 @@ nav img {
 }
 
 .paralax .excel-2 h1 {
-  font-size: 5rem;
-  font-weight: 200;
+  font-size: 6rem;
+  font-weight:200;
 }
 
 .paralax .scroll-down {
