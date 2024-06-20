@@ -5,6 +5,7 @@ header {
   text-align: center;
   color: #f2f2f2;
   padding: 20px 0 0 0;
+  z-index: 0;
 }
 
 #section0 {
@@ -58,6 +59,7 @@ nav img {
   padding-right: 4rem;
   padding-bottom: 3.5rem;
   top: 40%;
+  z-index: 0;
 }
 .paralax .excel::before,
 .paralax .excel::after {
@@ -129,7 +131,7 @@ nav {
   top: 3%;
   left: 15%;
   display: block;
-  z-index: 9;
+  z-index: 55;
   text-align: center;
   padding: 20px 0 0 0;
   width: 70%;

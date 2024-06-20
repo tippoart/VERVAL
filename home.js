@@ -5,7 +5,7 @@ gsap.to("#text", {
   ease: "none",
   scrollTrigger: {
     trigger: "#text",
-    start: "top 30%",
+    start: "top 20%",
     end: "top 20%",
     scrub: 1,
   },
@@ -15,7 +15,7 @@ gsap.to("#text-2", {
   ease: "none",
   scrollTrigger: {
     trigger: "#text",
-    start: "top 30%",
+    start: "top 20%",
     end: "top 10%",
     scrub: 1,
   },
@@ -25,7 +25,7 @@ gsap.to("#our", {
   ease: "none",
   scrollTrigger: {
     trigger: "#text",
-    start: "top 30%",
+    start: "top 20%",
     end: "top 10%",
     scrub: 1,
   },
@@ -42,7 +42,7 @@ gsap.to("#bumiku", {
   duration: 0.1,
   scrollTrigger: {
     trigger: "#bumiku",
-    start: "top 30%",
+    start: "top 20%",
     end: "top 50%",
     scrub: 1,
   },
@@ -52,13 +52,40 @@ gsap.to("#icons-bumi", {
   x: 45,
   backgroundSize: "200% 100%",
   backgroundPosition: "0% 0",
-  ease: "power2.out", 
+  ease: "power2.out",
   scrollTrigger: {
     trigger: "#icons-bumi",
-    start: "top 30%", 
-    end: "top 50%", 
-    scrub: 1, 
+    start: "top 20%",
+    end: "top 50%",
+    scrub: 1,
   },
+});
+
+window.addEventListener("scroll", function () {
+  const ourElement = document.getElementById("ourElement");
+  const section3 = document.getElementById("section3");
+  const section3Top = section3.offsetTop;
+  const section3Height = section3.offsetHeight;
+  const scrollPosition = window.scrollY;
+
+  if (
+    scrollPosition > section3Top &&
+    scrollPosition < section3Top + section3Height
+  ) {
+    gsap.to(ourElement, {
+      position: "fixed",
+      top: "1rem",
+      overwrite: "all",
+      zIndex: 100,
+      padding: "4rem",
+    });
+  } else {
+    gsap.to(ourElement, {
+      position: "relative",
+      top: "4rem",
+      overwrite: "all",
+    });
+  }
 });
 
 // var firstClick = true;
