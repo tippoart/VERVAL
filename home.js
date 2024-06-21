@@ -85,7 +85,7 @@ const section = document.getElementById("section2");
 
 window.addEventListener("scroll", function () {
   const sectionRect = section.getBoundingClientRect();
-  const containerRect = imageContainer.getBoundingClientRect();
+
 
   if (sectionRect.top <= 0 && sectionRect.bottom >= window.innerHeight) {
     imageContainer.classList.add("fixed");
@@ -97,93 +97,174 @@ window.addEventListener("scroll", function () {
 
 
 // verval3
-let clickCount = 0;
-let emb = document.getElementsByClassName("emb");
-let emb2 = document.getElementsByClassName("emb2");
-let emb3 = document.getElementsByClassName("emb3");
+// let clickCount = 0;
+// let emb = document.getElementsByClassName("emb");
+// let emb2 = document.getElementsByClassName("emb2");
+// let emb3 = document.getElementsByClassName("emb3");
 
-let icon = document.querySelector(".icon");
-let ourValues = document.querySelector(".our-values");
-let iconImg = document.querySelector(".bumi");
-let verval3CardImgs = document.querySelectorAll(".verval3-card img");
+// let icon = document.querySelector(".icon");
+// let ourValues = document.querySelector(".our-values");
+// let iconImg = document.querySelector(".bumi");
+// let verval3CardImgs = document.querySelectorAll(".verval3-card img");
 
-let bumiIcon = document.querySelector(".bumi-icon");
-let our = document.querySelector(".our");
+// let bumiIcon = document.querySelector(".bumi-icon");
+// let our = document.querySelector(".our");
 
-function verval3() {
-  // Initial animations on first scroll
-  if (clickCount === 0) {
-    if (icon) {
-      icon.style.backgroundColor = "white";
-    }
-    if (iconImg) {
-      iconImg.style.transform = "translateX(2.9rem)";
-      iconImg.style.backgroundColor = "#3ABEF9";
-      iconImg.style.borderRadius = "50%";
-    }
-    if (emb) {
-      emb[0].style.color = "white";
-    }
-    if (emb2) {
-      emb2[0].style.color = "white";
-    }
-  } else if (clickCount === 1) {
-    if (ourValues) {
-      ourValues.style.color = "rgb(130, 185, 68)";
+// function verval3() {
+//   // Initial animations on first scroll
+//   if (clickCount === 0) {
+//     if (icon) {
+//       icon.style.backgroundColor = "white";
+//     }
+//     if (iconImg) {
+//       iconImg.style.transform = "translateX(2.9rem)";
+//       iconImg.style.backgroundColor = "#3ABEF9";
+//       iconImg.style.borderRadius = "50%";
+//     }
+//     if (emb) {
+//       emb[0].style.color = "white";
+//     }
+//     if (emb2) {
+//       emb2[0].style.color = "white";
+//     }
+//   } else if (clickCount === 1) {
+//     if (ourValues) {
+//       ourValues.style.color = "rgb(130, 185, 68)";
+//     }
+
+//     if (emb3) {
+//       emb3[0].style.color = "white";
+//     }
+//   } else if (clickCount === 2) {
+//     // Fade out .bumi-icon and .our on second scroll
+//     if (bumiIcon) {
+//       bumiIcon.classList.add("fade-out");
+//     }
+//     if (our) {
+//       our.classList.add("fade-out");
+//     }
+
+//     // Show the first card
+//     if (verval3CardImgs.length > 0) {
+//       verval3CardImgs[0].classList.add("show", "large");
+//     }
+
+//     setTimeout(() => {
+//       if (bumiIcon) {
+//         bumiIcon.style.display = "none";
+//       }
+//       if (our) {
+//         our.style.display = "none";
+//       }
+//     }, 1000);
+//   } else {
+//     // Handling subsequent scrolls to show more cards
+//     if (clickCount - 1 < verval3CardImgs.length) {
+//       if (clickCount > 1) {
+//         verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
+//       }
+
+//       if (clickCount > 2) {
+//         verval3CardImgs[clickCount - 3].style.transform = "scale(0.93)";
+//       }
+
+//       verval3CardImgs[clickCount - 1].classList.add("show", "large");
+
+//       if (clickCount >= 4) {
+//         verval3CardImgs[clickCount - 4].style.transform = `translateY(${6 * (clickCount - 2)}%) scale(0.6)`;
+//       }
+//     } else {
+//       // Disable further scrolling when all cards are shown
+//       let verval3Section = document.querySelector(".verval3");
+//       verval3Section.style.cursor = "auto";
+//     }
+//   }
+
+//   clickCount++;
+// }
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const textElement = document.querySelector(".emb");
+
+  // Mengambil teks dari elemen p yang sesuai
+  const textContent = textElement.textContent.trim();
+
+  // Hanya memecah teks menjadi span per huruf jika teks cocok dengan "emb dying the essence of better future, these are our values"
+  if (
+    textContent.includes(
+      "emb dying the essence of better future, these are our values"
+    )
+  ) {
+    textElement.innerHTML = "";
+
+    for (let i = 0; i < textContent.length; i++) {
+      const span = document.createElement("span");
+      span.textContent = textContent[i];
+      textElement.appendChild(span);
     }
 
-    if (emb3) {
-      emb3[0].style.color = "white";
-    }
-  } else if (clickCount === 2) {
-    // Fade out .bumi-icon and .our on second scroll
-    if (bumiIcon) {
-      bumiIcon.classList.add("fade-out");
-    }
-    if (our) {
-      our.classList.add("fade-out");
-    }
+    const allSpans = document.querySelectorAll(".emb span");
 
-    // Show the first card
-    if (verval3CardImgs.length > 0) {
-      verval3CardImgs[0].classList.add("show", "large");
-    }
+    window.addEventListener("scroll", function (e) {
+      const sectionRect = document
+        .getElementById("section3")
+        .getBoundingClientRect();
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
 
-    setTimeout(() => {
-      if (bumiIcon) {
-        bumiIcon.style.display = "none";
+      // Menentukan apakah section berada dalam tampilan
+      if (
+        sectionRect.top <= windowHeight * 0.1 &&
+        sectionRect.bottom >= windowHeight * 0.1
+      ) {
+        textElement.classList.add("fixed-text");
+      } else {
+        textElement.classList.remove("fixed-text");
       }
-      if (our) {
-        our.style.display = "none";
-      }
-    }, 1000);
-  } else {
-    // Handling subsequent scrolls to show more cards
-    if (clickCount - 1 < verval3CardImgs.length) {
-      if (clickCount > 1) {
-        verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
-      }
 
-      if (clickCount > 2) {
-        verval3CardImgs[clickCount - 3].style.transform = "scale(0.93)";
-      }
+      // Menghitung persentase scroll dari keseluruhan tinggi dokumen
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPercentage = scrollPosition / (documentHeight - windowHeight);
 
-      verval3CardImgs[clickCount - 1].classList.add("show", "large");
+      // Menghitung jumlah huruf yang harus diwarnai, dimulai dari huruf "e"
+      const totalLetters = allSpans.length;
+      const lettersToColor = Math.max(
+        0,
+        Math.floor(
+          scrollPercentage * totalLetters - (textContent.indexOf("e") + 1)
+        )
+      );
 
-      if (clickCount >= 4) {
-        verval3CardImgs[clickCount - 4].style.transform = `translateY(${
-          6 * (clickCount - 2)
-        }%) scale(0.6)`;
+      // Mewarnai huruf-huruf sesuai dengan posisi scroll
+      allSpans.forEach((span, index) => {
+        if (
+          index >= textContent.indexOf("e") &&
+          index < textContent.indexOf("e") + lettersToColor
+        ) {
+          span.style.color = "white";
+        } else {
+          span.style.color = ""; // Kembalikan warna huruf menjadi default
+        }
+      });
+
+      // Mengembalikan warna huruf menjadi default saat scroll ke atas
+      const scrollDirection = Math.sign(e.deltaY);
+      if (scrollDirection === -1) {
+        allSpans.forEach((span) => {
+          span.style.color = ""; // Kembalikan warna huruf menjadi default
+        });
       }
-    } else {
-      // Disable further scrolling when all cards are shown
-      let verval3Section = document.querySelector(".verval3");
-      verval3Section.style.cursor = "auto";
-    }
+    });
   }
+});
 
-  clickCount++;
-}
+
+
+
+
+
+
 
 //verval 1
 

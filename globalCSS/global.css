@@ -101,7 +101,6 @@
 .verval2 .fp-auto-height {
   overflow-y: auto;
   height: 100%;
-
 }
 
 .extra-content {
@@ -199,18 +198,34 @@
 /* verval 3 */
 
 .verval3 {
-  height: 140vh;
+  height: 3000vh;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: rgb(7, 7, 7);
-  cursor: pointer;
   position: relative;
+
+}
+
+
+.emb span {
+  transition: color 0.3s ease;
+}
+
+.verval3 .fixed-text {
+  position: fixed;
+  left: 6%;
+}
+.verval3 p.emb {
+  font-size: 4rem;
+  top: 10rem;
 }
 
 .verval3 p {
   font-size: 4rem;
   text-align: center;
+  position: relative;
+  right: 2rem;
 }
 .verval3 .our-values {
   font-weight: 500;
