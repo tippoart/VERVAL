@@ -8,7 +8,6 @@
   height: 120vh;
   position: relative;
   z-index: 0;
-
 }
 
 .verval1 .siku {
@@ -81,34 +80,41 @@
 
 .verval2 {
   background-image: url("../img/img-card-sec2/uhu.png");
-  height: 140vh;
+  height: 130vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   cursor: pointer;
   color: white;
-    overflow: hidden;
-
-}
-
-.verval2 .card-container {
-  left: 20rem;
-  height: 100vh;
-  position: relative;
   overflow: hidden;
-  top: 6rem;
-
-
 }
 
+.verval2 .card-container.fixed {
+  position: fixed;
+  height: 100vh;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  right: 15rem;
+}
 
 .verval2 .fp-auto-height {
   overflow-y: auto;
   height: 100%;
+
 }
+
 .extra-content {
   height: 200vh;
 }
+.verval2 .card-container {
+  left: 20rem;
+  height: 140vh;
+  position: relative;
+  overflow: hidden;
+  bottom: 5rem;
+}
+
 .verval2 img {
   display: none;
   height: 27rem;
@@ -187,12 +193,10 @@
 
   100% {
     transform: translate(-20rem, 5rem) rotate(-11deg);
-
   }
 }
 
 /* verval 3 */
-
 
 .verval3 {
   height: 140vh;
@@ -243,7 +247,7 @@
 .verval3 .verval3-card {
   right: 15rem;
   position: absolute;
-  top:5%;
+  top: 5%;
 }
 
 .verval3 .verval3-card img {
@@ -300,7 +304,6 @@
   height: 120vh;
   background-position: center;
   background-size: cover;
-
 }
 
 .verval4 i {

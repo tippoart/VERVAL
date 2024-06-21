@@ -23,13 +23,13 @@ function toggleImage(callback) {
   }
 }
 
-// New Variables
+// Variabel Baru
 const imageContainer = document.getElementById("img-container");
 let currentIndex = 0;
-const imageWidth = document.querySelector(".img").clientWidth + 3; // width of each image + margin-right
+const imageWidth = document.querySelector(".img").clientWidth + 3; // lebar setiap gambar + margin-right
 const totalImages = document.getElementsByClassName("img").length;
 
-// Function to check if element is in the center of the viewport
+// Fungsi untuk memeriksa apakah elemen berada di tengah viewport
 function isElementInViewportCenter(el) {
   const rect = el.getBoundingClientRect();
   const viewportHeight = window.innerHeight;
@@ -45,32 +45,31 @@ function isElementInViewportCenter(el) {
   );
 }
 
-
 window.addEventListener("wheel", function (e) {
   if (!isToggleImageRunning) {
     isToggleImageRunning = true;
 
     if (isElementInViewportCenter(imageContainer)) {
       toggleImage(function () {
-        // Determine direction of scroll
+        // Menentukan arah scroll
         const scrollDirection = Math.sign(e.deltaY);
 
-        // Calculate new index based on scroll direction
-        if (scrollDirection === 2) {
-          // Scroll down (next image)
+        // Menghitung indeks baru berdasarkan arah scroll
+        if (scrollDirection === 1) {
+          // Scroll ke bawah (gambar berikutnya)
           currentIndex = (currentIndex + 1) % totalImages;
         } else if (scrollDirection === -1) {
-          // Scroll up (previous image)
+          // Scroll ke atas (gambar sebelumnya)
           currentIndex = (currentIndex - 1 + totalImages) % totalImages;
         }
 
-        // Scroll to the new image
+        // Scroll ke gambar baru
         imageContainer.scrollTo({
           left: currentIndex * imageWidth,
           behavior: "smooth",
         });
 
-        // Prevent default scrolling behavior
+        // Mencegah perilaku scroll default
         e.preventDefault();
 
         isToggleImageRunning = false;
@@ -80,6 +79,24 @@ window.addEventListener("wheel", function (e) {
     }
   }
 });
+
+// Memeriksa kapan bagian (`section`) berada dalam tampilan untuk membuat kartu tetap (`fixed`)
+const section = document.getElementById("section2");
+
+window.addEventListener("scroll", function () {
+  const sectionRect = section.getBoundingClientRect();
+  const containerRect = imageContainer.getBoundingClientRect();
+
+  if (sectionRect.top <= 0 && sectionRect.bottom >= window.innerHeight) {
+    imageContainer.classList.add("fixed");
+  } else {
+    imageContainer.classList.remove("fixed");
+  }
+});
+
+
+
+// verval3
 let clickCount = 0;
 let emb = document.getElementsByClassName("emb");
 let emb2 = document.getElementsByClassName("emb2");
@@ -167,7 +184,6 @@ function verval3() {
 
   clickCount++;
 }
-
 
 //verval 1
 
