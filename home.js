@@ -1,100 +1,3 @@
-// var firstClick = true;
-// var secondClick = true;
-
-// var isToggleImageRunning = false;
-
-// function toggleImage(callback) {
-//   console.log("toggleImage dimulai");
-//   let imgs = document.getElementsByClassName("img");
-//   let imgCard = document.getElementById("img-container");
-//   let text = document.getElementsByClassName("we-ofer")
-
-//   if (firstClick) {
-//     for (let i = 0; i < imgs.length; i++) {
-//       imgs[i].style.display = "block";
-//       imgs[i].style.cursor = "default";
-//     }
-
-//     for (let i = 0; i < text.length; i++) {
-//       text[i].style.opacity = "0";
-//       text[i].style.transition = "1s";
-//     }
-//     firstClick = false;
-//     callback();
-//   } else if (secondClick) {
-//     imgCard.classList.add("centered");
-//     secondClick = false;
-//     console.log("toggleImage selesai (kedua kali)");
-//     callback();
-//   }
-// }
-
-// const imageContainer = document.getElementById("img-container");
-// let currentIndex = 0;
-// const imageWidth = document.querySelector(".img").clientWidth + 3;
-// const totalImages = document.getElementsByClassName("img").length;
-
-// function isElementInViewportCenter(el) {
-//   const rect = el.getBoundingClientRect();
-//   const viewportHeight = window.innerHeight;
-//   const viewportWidth = window.innerWidth;
-//   const elementCenterY = rect.top + rect.height / 2;
-//   const elementCenterX = rect.left + rect.width / 2;
-
-//   return (
-//     elementCenterY >= viewportHeight / 4 &&
-//     elementCenterY <= (3 * viewportHeight) / 4 &&
-//     elementCenterX >= viewportWidth / 4 &&
-//     elementCenterX <= (3 * viewportWidth) / 4
-//   );
-// }
-
-// window.addEventListener("wheel", function (e) {
-//   if (!isToggleImageRunning) {
-//     isToggleImageRunning = true;
-
-//     if (isElementInViewportCenter(imageContainer)) {
-//       toggleImage(function () {
-//         // Menentukan arah scroll
-//         const scrollDirection = Math.sign(e.deltaY);
-
-//         // Menghitung indeks baru berdasarkan arah scroll
-//         if (scrollDirection === 1) {
-//           // Scroll ke bawah (gambar berikutnya)
-//           currentIndex = (currentIndex + 1) % totalImages;
-//         } else if (scrollDirection === -1) {
-//           // Scroll ke atas (gambar sebelumnya)
-//           currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-//         }
-
-//         // Scroll ke gambar baru
-//         imageContainer.scrollTo({
-//           left: currentIndex * imageWidth,
-//           behavior: "smooth",
-//         });
-
-//         // Mencegah perilaku scroll default
-//         e.preventDefault();
-
-//         isToggleImageRunning = false;
-//       });
-//     } else {
-//       isToggleImageRunning = false;
-//     }
-//   }
-// });
-
-// const section = document.getElementById("section2");
-
-// window.addEventListener("scroll", function () {
-//   const sectionRect = section.getBoundingClientRect();
-
-//   if (sectionRect.top <= 0 && sectionRect.bottom >= window.innerHeight) {
-//     imageContainer.classList.add("fixed");
-//   } else {
-//     imageContainer.classList.remove("fixed");
-//   }
-// });
 
 // verval 2
 
@@ -146,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrolling = 1;
       } else if (
         scrolling === 1 &&
-        scrollPosition > sectionStart + sectionHeight / 6
+        scrollPosition > sectionStart + sectionHeight / 7
       ) {
    
         imgCardSec2.classList.add("centered");
