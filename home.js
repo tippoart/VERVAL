@@ -234,7 +234,7 @@ document.addEventListener("DOMContentLoaded", function () {
         scrollPosition > sectionStart + sectionHeight / 10
       ) {
         // Jalankan fungsi scroll kedua kali
-        ourValuesSpan.style.color = "green";
+        ourValuesSpan.style.color = "rgb(159, 190, 88)";
         ourValuesSpan.style.transition = "color 0.5s";
         future.style.color = "white";
         future.style.transition = "color 0.5s";
