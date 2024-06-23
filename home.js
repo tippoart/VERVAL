@@ -1,20 +1,29 @@
 var firstClick = true;
 var secondClick = true;
+
 var isToggleImageRunning = false;
 
 function toggleImage(callback) {
   console.log("toggleImage dimulai");
   let imgs = document.getElementsByClassName("img");
   let imgCard = document.getElementById("img-container");
+  let text = document.getElementsByClassName("we-ofer")
+
+ 
 
   if (firstClick) {
     for (let i = 0; i < imgs.length; i++) {
       imgs[i].style.display = "block";
       imgs[i].style.cursor = "default";
     }
+
+    for (let i = 0; i < text.length; i++) {
+      text[i].style.opacity = "0";
+      text[i].style.transition = "1s";
+    }
     firstClick = false;
     console.log("toggleImage selesai (pertama kali)");
-    callback(); // Panggil callback setelah pertama kali
+    callback(); 
   } else if (secondClick) {
     imgCard.classList.add("centered");
     secondClick = false;
@@ -23,13 +32,11 @@ function toggleImage(callback) {
   }
 }
 
-// Variabel Baru
 const imageContainer = document.getElementById("img-container");
 let currentIndex = 0;
-const imageWidth = document.querySelector(".img").clientWidth + 3; // lebar setiap gambar + margin-right
+const imageWidth = document.querySelector(".img").clientWidth + 3; 
 const totalImages = document.getElementsByClassName("img").length;
 
-// Fungsi untuk memeriksa apakah elemen berada di tengah viewport
 function isElementInViewportCenter(el) {
   const rect = el.getBoundingClientRect();
   const viewportHeight = window.innerHeight;
@@ -80,7 +87,6 @@ window.addEventListener("wheel", function (e) {
   }
 });
 
-// Memeriksa kapan bagian (`section`) berada dalam tampilan untuk membuat kartu tetap (`fixed`)
 
 const section = document.getElementById("section2");
 
@@ -93,6 +99,11 @@ window.addEventListener("scroll", function () {
     imageContainer.classList.remove("fixed");
   }
 });
+
+
+
+
+
 
 //
 

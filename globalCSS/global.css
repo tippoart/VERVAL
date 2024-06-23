@@ -79,41 +79,29 @@
 /* verval 2 */
 
 .verval2 {
-  background-image: url("../img/img-card-sec2/uhu.png");
+  background-image: url("../img/img-card-sec2/OR68VV0.jpg");
   height: 130vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  cursor: pointer;
   color: white;
   overflow: hidden;
 }
 
-.verval2 .card-container.fixed {
-  position: fixed;
-  height: 100vh;
-  width: 100%;
-  top: 0;
-  bottom: 0;
-  right: 15rem;
-}
 
-.verval2 .fp-auto-height {
-  overflow-y: auto;
-  height: 100%;
-}
-
-.extra-content {
-  height: 200vh;
-}
 .verval2 .card-container {
   left: 20rem;
   height: 140vh;
   position: relative;
   overflow: hidden;
-  bottom: 5rem;
+  bottom: 4rem;
 }
 
+.verval2 h2{
+  position: relative;
+  top: 50%;
+
+}
 .verval2 img {
   display: none;
   height: 27rem;
@@ -198,18 +186,22 @@
 
 /* verval 3 */
 .verval3 {
-  height: 800vh;
+  height: 500vh;
   display: flex;
   background-color: rgb(7, 7, 7);
   position: relative;
   flex-direction: column;
-  padding: 5rem;
+  padding-bottom: 20rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
 
 }
 .verval3 .our {
   position: sticky;
   top: 3rem;
-  width: 100%;
+  width: 70rem;
+  overflow: hidden;
+
 }
 
 .verval3 .emb {
@@ -241,6 +233,8 @@
 .verval3 .our .bumiku {
   position: relative;
   top: 18%;
+
+
 }
 .verval3 .our .bumiku .icon {
   border: 2px solid rgba(43, 47, 49, 0.915);
