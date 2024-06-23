@@ -160,6 +160,7 @@
     transform: translateY(4px) rotate(11deg);
   }
 }
+
 .verval2 #card-3 {
   transform: rotate(22deg);
   position: relative;
@@ -196,73 +197,82 @@
 }
 
 /* verval 3 */
-
 .verval3 {
-  height: 3000vh;
+  height: 800vh;
   display: flex;
-  align-items: center;
-  justify-content: center;
   background-color: rgb(7, 7, 7);
   position: relative;
+  flex-direction: column;
+  padding: 5rem;
 
 }
-
-
-.emb span {
-  transition: color 0.3s ease;
+.verval3 .our {
+  position: sticky;
+  top: 3rem;
+  width: 100%;
 }
 
-.verval3 .fixed-text {
-  position: fixed;
-  left: 6%;
-}
-.verval3 p.emb {
+.verval3 .emb {
   font-size: 4rem;
-  top: 10rem;
+  bottom: 3rem;
+  position: relative;
+  padding-left: 10rem;
 }
 
 .verval3 p {
   font-size: 4rem;
   text-align: center;
-  position: relative;
-  right: 2rem;
 }
+
 .verval3 .our-values {
   font-weight: 500;
   transition: color 1s;
 }
 
-.verval3 .bumi-icon {
-  width: 13.5rem;
-  position: relative;
-  bottom: 3.5rem;
-  left: 0.2rem;
+.emb span {
+  transition: color 0.3s ease;
 }
+
 .verval3 .bumi-icon p {
   font-size: 4rem;
   text-align: center;
 }
-.verval3 .bumi-icon .icon {
+
+.verval3 .our .bumiku {
+  position: relative;
+  top: 18%;
+}
+.verval3 .our .bumiku .icon {
   border: 2px solid rgba(43, 47, 49, 0.915);
   border-radius: 10rem;
   position: relative;
-  top: 4px;
-  right: 10px;
   transition: 0.5s;
+  top: 5px;
+  width: 7rem;
+  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+
 }
 
-.verval3 .bumi-icon img {
+.verval3 .our .bumiku .icon img {
+
   width: 2rem;
   object-fit: cover;
-  animation: bumi-jalan 1s ease-in-out;
-  transition: transform 0.5s ease-in-out;
   color: rgba(43, 47, 49, 0.915);
+  transition: transform 0.3s ease; /* Animasi pergerakan smooth */
 }
 
+
+
+
 .verval3 .verval3-card {
-  right: 15rem;
-  position: absolute;
-  top: 5%;
+   position: sticky;
+  top: 3rem;
+  width: 100%;
+  bottom: 6rem;
+  height: 25rem;
+  padding: 3rem;
+ 
+
 }
 
 .verval3 .verval3-card img {
@@ -286,11 +296,11 @@
 }
 .verval3 .verval3-card .verval3-card-img-2 {
   position: absolute;
-  bottom: -2rem;
+  bottom: -1rem;
 }
 .verval3 .verval3-card .verval3-card-img-3 {
   position: absolute;
-  bottom: -2.5rem;
+  bottom: -3rem;
 }
 .verval3 .verval3-card .verval3-card-img-4 {
   position: absolute;
@@ -298,18 +308,11 @@
 }
 .verval3 .verval3-card .verval3-card-img-5 {
   position: absolute;
-  bottom: -7rem;
+  bottom: -7.5rem;
 }
 
-.verval3 .verval3-card img.show {
-  display: block;
-  opacity: 1;
-}
 
-.fade-out {
-  opacity: 0;
-  transition: opacity 1s ease-in-out, visibility 1s ease-in-out;
-}
+
 
 /* verval 4 */
 
