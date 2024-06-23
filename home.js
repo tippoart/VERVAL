@@ -1,111 +1,189 @@
-var firstClick = true;
-var secondClick = true;
+// var firstClick = true;
+// var secondClick = true;
 
-var isToggleImageRunning = false;
+// var isToggleImageRunning = false;
 
-function toggleImage(callback) {
-  console.log("toggleImage dimulai");
-  let imgs = document.getElementsByClassName("img");
-  let imgCard = document.getElementById("img-container");
-  let text = document.getElementsByClassName("we-ofer")
+// function toggleImage(callback) {
+//   console.log("toggleImage dimulai");
+//   let imgs = document.getElementsByClassName("img");
+//   let imgCard = document.getElementById("img-container");
+//   let text = document.getElementsByClassName("we-ofer")
 
- 
+//   if (firstClick) {
+//     for (let i = 0; i < imgs.length; i++) {
+//       imgs[i].style.display = "block";
+//       imgs[i].style.cursor = "default";
+//     }
 
-  if (firstClick) {
-    for (let i = 0; i < imgs.length; i++) {
-      imgs[i].style.display = "block";
-      imgs[i].style.cursor = "default";
-    }
+//     for (let i = 0; i < text.length; i++) {
+//       text[i].style.opacity = "0";
+//       text[i].style.transition = "1s";
+//     }
+//     firstClick = false;
+//     callback();
+//   } else if (secondClick) {
+//     imgCard.classList.add("centered");
+//     secondClick = false;
+//     console.log("toggleImage selesai (kedua kali)");
+//     callback();
+//   }
+// }
 
-    for (let i = 0; i < text.length; i++) {
-      text[i].style.opacity = "0";
-      text[i].style.transition = "1s";
-    }
-    firstClick = false;
-    console.log("toggleImage selesai (pertama kali)");
-    callback(); 
-  } else if (secondClick) {
-    imgCard.classList.add("centered");
-    secondClick = false;
-    console.log("toggleImage selesai (kedua kali)");
-    callback();
-  }
-}
+// const imageContainer = document.getElementById("img-container");
+// let currentIndex = 0;
+// const imageWidth = document.querySelector(".img").clientWidth + 3;
+// const totalImages = document.getElementsByClassName("img").length;
 
-const imageContainer = document.getElementById("img-container");
-let currentIndex = 0;
-const imageWidth = document.querySelector(".img").clientWidth + 3; 
-const totalImages = document.getElementsByClassName("img").length;
+// function isElementInViewportCenter(el) {
+//   const rect = el.getBoundingClientRect();
+//   const viewportHeight = window.innerHeight;
+//   const viewportWidth = window.innerWidth;
+//   const elementCenterY = rect.top + rect.height / 2;
+//   const elementCenterX = rect.left + rect.width / 2;
 
-function isElementInViewportCenter(el) {
-  const rect = el.getBoundingClientRect();
-  const viewportHeight = window.innerHeight;
-  const viewportWidth = window.innerWidth;
-  const elementCenterY = rect.top + rect.height / 2;
-  const elementCenterX = rect.left + rect.width / 2;
+//   return (
+//     elementCenterY >= viewportHeight / 4 &&
+//     elementCenterY <= (3 * viewportHeight) / 4 &&
+//     elementCenterX >= viewportWidth / 4 &&
+//     elementCenterX <= (3 * viewportWidth) / 4
+//   );
+// }
 
-  return (
-    elementCenterY >= viewportHeight / 4 &&
-    elementCenterY <= (3 * viewportHeight) / 4 &&
-    elementCenterX >= viewportWidth / 4 &&
-    elementCenterX <= (3 * viewportWidth) / 4
-  );
-}
+// window.addEventListener("wheel", function (e) {
+//   if (!isToggleImageRunning) {
+//     isToggleImageRunning = true;
 
-window.addEventListener("wheel", function (e) {
-  if (!isToggleImageRunning) {
-    isToggleImageRunning = true;
+//     if (isElementInViewportCenter(imageContainer)) {
+//       toggleImage(function () {
+//         // Menentukan arah scroll
+//         const scrollDirection = Math.sign(e.deltaY);
 
-    if (isElementInViewportCenter(imageContainer)) {
-      toggleImage(function () {
-        // Menentukan arah scroll
-        const scrollDirection = Math.sign(e.deltaY);
+//         // Menghitung indeks baru berdasarkan arah scroll
+//         if (scrollDirection === 1) {
+//           // Scroll ke bawah (gambar berikutnya)
+//           currentIndex = (currentIndex + 1) % totalImages;
+//         } else if (scrollDirection === -1) {
+//           // Scroll ke atas (gambar sebelumnya)
+//           currentIndex = (currentIndex - 1 + totalImages) % totalImages;
+//         }
 
-        // Menghitung indeks baru berdasarkan arah scroll
-        if (scrollDirection === 1) {
-          // Scroll ke bawah (gambar berikutnya)
-          currentIndex = (currentIndex + 1) % totalImages;
-        } else if (scrollDirection === -1) {
-          // Scroll ke atas (gambar sebelumnya)
-          currentIndex = (currentIndex - 1 + totalImages) % totalImages;
-        }
+//         // Scroll ke gambar baru
+//         imageContainer.scrollTo({
+//           left: currentIndex * imageWidth,
+//           behavior: "smooth",
+//         });
 
-        // Scroll ke gambar baru
-        imageContainer.scrollTo({
-          left: currentIndex * imageWidth,
-          behavior: "smooth",
-        });
+//         // Mencegah perilaku scroll default
+//         e.preventDefault();
 
-        // Mencegah perilaku scroll default
-        e.preventDefault();
+//         isToggleImageRunning = false;
+//       });
+//     } else {
+//       isToggleImageRunning = false;
+//     }
+//   }
+// });
 
-        isToggleImageRunning = false;
-      });
+// const section = document.getElementById("section2");
+
+// window.addEventListener("scroll", function () {
+//   const sectionRect = section.getBoundingClientRect();
+
+//   if (sectionRect.top <= 0 && sectionRect.bottom >= window.innerHeight) {
+//     imageContainer.classList.add("fixed");
+//   } else {
+//     imageContainer.classList.remove("fixed");
+//   }
+// });
+
+// verval 2
+
+document.addEventListener("DOMContentLoaded", function () {
+  let textOfer = document.querySelector(".we-ofer");
+
+  const imgCardSec2 = document.querySelector(".card-container");
+
+  const AllCards = [
+    document.querySelector(".my-img1"),
+    document.querySelector(".my-img2"),
+    document.querySelector(".my-img3"),
+  ];
+
+  let scrolling = 0;
+
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const sectionOffsetTop = document.querySelector("#section2").offsetTop;
+    const sectionHeight = document.querySelector("#section2").offsetHeight;
+
+    // Menghitung posisi awal dan akhir dari section
+    const sectionStart = sectionOffsetTop;
+    const sectionEnd = sectionOffsetTop + sectionHeight;
+
+    if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
+      if (scrolling === 0) {
+        textOfer.style.opacity = 0;
+        textOfer.style.transition = "1s";
+        textOfer.style.zIndex = "0";
+
+        AllCards[0].style.opacity = "1";
+        AllCards[0].style.transition = "1s";
+        AllCards[0].style.transform = "translateY(0)";
+        AllCards[0].classList.add("smooth-bounce");
+
+        AllCards[1].style.opacity = "1";
+        AllCards[1].style.transition = "1s";
+        AllCards[1].style.transform = "translateY(0)";
+
+        AllCards[1].classList.add("smooth-bounce");
+
+        AllCards[2].style.opacity = "1";
+        AllCards[2].style.transition = "1s";
+        AllCards[2].style.transform = "translateY(0)";
+        AllCards[2].classList.add("smooth-bounce");
+
+        scrolling = 1;
+      } else if (
+        scrolling === 1 &&
+        scrollPosition > sectionStart + sectionHeight / 6
+      ) {
+   
+        imgCardSec2.classList.add("centered");
+        
+        scrolling == 2;
+      }
+      
     } else {
-      isToggleImageRunning = false;
+      // textOfer.style.opacity = 1;
+
+      // AllCards[0].style.opacity = "0";
+      // AllCards[0].style.transition = "0.2s";
+      // AllCards[0].style.transform = "translateY(0)";
+      // AllCards[0].classList.remove("smooth-bounce");
+      
+      // AllCards[1].style.opacity = "0";
+      // AllCards[1].style.transition = "0.2s";
+      // AllCards[1].style.transform = "translateY(0)";
+      // AllCards[1].classList.remove("smooth-bounce");
+      
+      // AllCards[2].style.opacity = "0";
+      // AllCards[2].style.transition = "0.2s";
+      // AllCards[2].style.transform = "translateY(0)";
+      // AllCards[2].classList.remove("smooth-bounce");
+      
+      
+
+
+      // const back = document.querySelector(".centered")
+      // back.classList.remove("centered");
+     
+      scrolling = 0;
     }
-  }
+  });
 });
 
-
-const section = document.getElementById("section2");
-
-window.addEventListener("scroll", function () {
-  const sectionRect = section.getBoundingClientRect();
-
-  if (sectionRect.top <= 0 && sectionRect.bottom >= window.innerHeight) {
-    imageContainer.classList.add("fixed");
-  } else {
-    imageContainer.classList.remove("fixed");
-  }
-});
-
-
-
-
-
-
-//
+// verval 3
 
 document.addEventListener("DOMContentLoaded", function () {
   const textElement = document.querySelector(".emb");
@@ -181,7 +259,7 @@ document.addEventListener("DOMContentLoaded", function () {
         future.style.transition = "1s";
 
         cardContainers[0].style.display = "block";
-        
+
         scrollStage = 3; // Update tahap scroll
       } else if (
         scrollStage === 3 &&
@@ -189,9 +267,9 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         // Jalankan fungsi scroll keempat kali
         cardContainers[1].style.display = "block";
-       cardContainers[0].style.transform = ` scale(0.93)`;
-       
-       scrollStage = 4; // Update tahap scroll
+        cardContainers[0].style.transform = ` scale(0.93)`;
+
+        scrollStage = 4; // Update tahap scroll
       } else if (
         scrollStage === 4 &&
         scrollPosition > sectionStart + sectionHeight / 3
@@ -200,7 +278,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[2].style.display = "block";
         cardContainers[1].style.transform = ` scale(0.94)`;
         cardContainers[0].style.transform = ` scale(0.85)`;
-        
+
         scrollStage = 5; // Update tahap scroll
       } else if (
         scrollStage === 5 &&
@@ -212,7 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[1].style.transform = ` scale(0.90)`;
         cardContainers[2].style.transform = ` scale(0.96)`;
         cardContainers[0].style.transform = `translateY(85px) scale(0.91)`;
-        
+
         scrollStage = 6; // Update tahap scroll
       } else if (
         scrollStage === 6 &&
@@ -220,7 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
       ) {
         // Jalankan fungsi scroll ketujuh kali
         cardContainers[4].style.display = "block";
-        
+
         cardContainers[2].style.transform = ` scale(0.90)`;
         cardContainers[3].style.transform = ` scale(0.94)`;
         // Turunkan card keempat
@@ -272,121 +350,6 @@ document.addEventListener("DOMContentLoaded", function () {
   ourValuesSpan.style.color = "rgba(43, 47, 49, 0.915)";
   future.style.color = "rgba(43, 47, 49, 0.915)";
 });
-
-
-
-
-
-
-// verval3
-
-// let clickCount = 0;
-// let emb = document.getElementsByClassName("emb");
-// let emb2 = document.getElementsByClassName("emb2");
-// let emb3 = document.getElementsByClassName("emb3");
-
-// let icon = document.querySelector(".icon");
-// let ourValues = document.querySelector(".our-values");
-// let iconImg = document.querySelector(".bumi");
-// let verval3CardImgs = document.querySelectorAll(".verval3-card img");
-
-// let bumiIcon = document.querySelector(".bumi-icon");
-// let our = document.querySelector(".our");
-
-// function verval3() {
-//   // Initial animations on first scroll
-//   if (clickCount === 0) {
-//     if (icon) {
-//       icon.style.backgroundColor = "white";
-//     }
-//     if (iconImg) {
-//       iconImg.style.transform = "translateX(2.9rem)";
-//       iconImg.style.backgroundColor = "#3ABEF9";
-//       iconImg.style.borderRadius = "50%";
-//     }
-//     if (emb) {
-//       emb[0].style.color = "white";
-//     }
-//     if (emb2) {
-//       emb2[0].style.color = "white";
-//     }
-//   } else if (clickCount === 1) {
-//     if (ourValues) {
-//       ourValues.style.color = "rgb(130, 185, 68)";
-//     }
-
-//     if (emb3) {
-//       emb3[0].style.color = "white";
-//     }
-//   } else if (clickCount === 2) {
-//     // Fade out .bumi-icon and .our on second scroll
-//     if (bumiIcon) {
-//       bumiIcon.classList.add("fade-out");
-//     }
-//     if (our) {
-//       our.classList.add("fade-out");
-//     }
-
-//     // Show the first card
-//     if (verval3CardImgs.length > 0) {
-//       verval3CardImgs[0].classList.add("show", "large");
-//     }
-
-//     setTimeout(() => {
-//       if (bumiIcon) {
-//         bumiIcon.style.display = "none";
-//       }
-//       if (our) {
-//         our.style.display = "none";
-//       }
-//     }, 1000);
-//   } else {
-//     // Handling subsequent scrolls to show more cards
-//     if (clickCount - 1 < verval3CardImgs.length) {
-//       if (clickCount > 1) {
-//         verval3CardImgs[clickCount - 2].style.transform = "scale(0.97)";
-//       }
-
-//       if (clickCount > 2) {
-//         verval3CardImgs[clickCount - 3].style.transform = "scale(0.93)";
-//       }
-
-//       verval3CardImgs[clickCount - 1].classList.add("show", "large");
-
-//       if (clickCount >= 4) {
-//         verval3CardImgs[clickCount - 4].style.transform = `translateY(${6 * (clickCount - 2)}%) scale(0.6)`;
-//       }
-//     } else {
-//       // Disable further scrolling when all cards are shown
-//       let verval3Section = document.querySelector(".verval3");
-//       verval3Section.style.cursor = "auto";
-//     }
-//   }
-
-//   clickCount++;
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 //verval 1
 

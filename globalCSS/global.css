@@ -5,7 +5,7 @@
   padding: 10rem;
   gap: 1rem;
   color: white;
-  height: 120vh;
+
   position: relative;
   z-index: 0;
 }
@@ -79,8 +79,9 @@
 /* verval 2 */
 
 .verval2 {
-  background-image: url("../img/img-card-sec2/OR68VV0.jpg");
-  height: 130vh;
+  /* background-image: url("../img/img-card-sec2/OR68VV0.jpg"); */
+  background-color: rgb(23, 22, 22);
+  height: 140vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -88,90 +89,57 @@
   overflow: hidden;
 }
 
-
 .verval2 .card-container {
-  left: 20rem;
-  height: 140vh;
+  display: flex;
   position: relative;
   overflow: hidden;
-  bottom: 4rem;
+  left: 25%;
+  padding: 5rem;
+  rotate: 14deg;
+  bottom: 3rem;
 }
 
-.verval2 h2{
+.verval2 .my-img1 {
+  rotate: -15deg;
   position: relative;
-  top: 50%;
+  top: 3rem;
+  left: 1rem;
+}
+.verval2 .my-img3 {
+  rotate: 15deg;
+  position: relative;
+  top: 3rem;
+  right: 1rem;
+}
 
+.verval2 h2 {
+  position: relative;
+  top: 30%;
 }
 .verval2 img {
-  display: none;
   height: 27rem;
   object-fit: cover;
+  opacity: 0;
 }
 
-.verval2 #card-1 {
-  position: relative;
-  left: 1.5rem;
-  bottom: 4rem;
-  animation: slideInCard1 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-}
-
-@keyframes slideInCard1 {
+@keyframes smooth-bounce {
   0% {
-    transform: translateY(100%);
-  }
-  70% {
     transform: translateY(0);
   }
-
-  90% {
-    transform: translateY(4px);
+  40% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 
-.verval2 #card-2 {
-  transform: rotate(11deg);
-  position: relative;
-  bottom: 2rem;
-  animation: slideInCard2 1s ease-in-out;
-  transition: transform 1s ease-in-out;
-}
-@keyframes slideInCard2 {
-  0% {
-    transform: translateY(100%) rotate(11deg);
-  }
-  70% {
-    transform: translateY(0) rotate(11deg);
-  }
-
-  90% {
-    transform: translateY(4px) rotate(11deg);
-  }
-}
-
-.verval2 #card-3 {
-  transform: rotate(22deg);
-  position: relative;
-  right: 2.3rem;
-  top: 5rem;
-  animation: slideInCard3 1s ease-in-out;
+.smooth-bounce {
+  animation: smooth-bounce 1s ease-in-out;
   transition: transform 1s ease-in-out;
 }
 
-@keyframes slideInCard3 {
-  0% {
-    transform: translateY(100%) rotate(22deg);
-  }
-  70% {
-    transform: translateY(0) rotate(22deg);
-  }
-
-  90% {
-    transform: translateY(4px) rotate(22deg);
-  }
-}
-
-.verval2 .card-container.centered {
+.verval2 .centered {
   animation: slide-in 1s ease-in-out forwards;
 }
 @keyframes slide-in {
@@ -180,13 +148,13 @@
   }
 
   100% {
-    transform: translate(-20rem, 5rem) rotate(-11deg);
+    transform: translate(-20rem, 5rem) rotate(-14deg);
   }
 }
 
 /* verval 3 */
 .verval3 {
-  height: 500vh;
+  height: 300vh;
   display: flex;
   background-color: rgb(7, 7, 7);
   position: relative;
@@ -194,14 +162,12 @@
   padding-bottom: 20rem;
   padding-left: 5rem;
   padding-right: 5rem;
-
 }
 .verval3 .our {
   position: sticky;
   top: 3rem;
   width: 70rem;
   overflow: hidden;
-
 }
 
 .verval3 .emb {
@@ -233,8 +199,6 @@
 .verval3 .our .bumiku {
   position: relative;
   top: 18%;
-
-
 }
 .verval3 .our .bumiku .icon {
   border: 2px solid rgba(43, 47, 49, 0.915);
@@ -244,28 +208,22 @@
   top: 5px;
   width: 7rem;
   transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
-
 }
 
 .verval3 .our .bumiku .icon img {
-
   width: 2rem;
   object-fit: cover;
   color: rgba(43, 47, 49, 0.915);
   transition: transform 0.3s ease; /* Animasi pergerakan smooth */
 }
 
-
-
-
 .verval3 .verval3-card {
-   position: sticky;
+  position: sticky;
   top: 3rem;
   width: 100%;
-  bottom: 6rem;
+  bottom: 7rem;
   height: 25rem;
   padding: 3rem;
- 
 
 }
 
@@ -279,7 +237,7 @@
 
 @keyframes card-verval-animation {
   0% {
-    transform: translateY(100%);
+    transform: translateY(40%);
   }
   70% {
     transform: translateY(0);
@@ -304,9 +262,6 @@
   position: absolute;
   bottom: -7.5rem;
 }
-
-
-
 
 /* verval 4 */
 
