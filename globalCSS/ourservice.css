@@ -4,6 +4,7 @@ header .our-company {
 header .our-company:hover {
   color: rgb(150, 229, 71);
 }
+
 header {
   position: fixed;
   display: block;
@@ -20,7 +21,7 @@ header {
 }
 
 #navbar-head {
-  background-color: rgba(19, 18, 18, 0.791);
+   background-color: rgba(19, 18, 18, 0.791);
   border-radius: 2rem;
   display: flex;
   backdrop-filter: blur(5px);
@@ -36,8 +37,11 @@ header {
 }
 
 #navbar-head .container-fluid {
-  display: flex;
+   display: flex;
   justify-content: space-between;
+   position: relative;
+  bottom: 3px;
+
 }
 #navbar-head .container-fluid .navbar-brand {
   font-weight: 500;
@@ -63,7 +67,6 @@ header {
   background-repeat: no-repeat;
   background-size: 110%;
   padding: 20rem;
-
 }
 
 .section1 h1 {
