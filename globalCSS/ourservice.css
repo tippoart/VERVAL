@@ -1,0 +1,93 @@
+header .our-company {
+  color: rgb(150, 229, 71);
+}
+header .our-company:hover {
+  color: rgb(150, 229, 71);
+}
+header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  z-index: 3;
+}
+
+#navbar-head img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+#navbar-head {
+  background-color: rgba(19, 18, 18, 0.791);
+  border-radius: 2rem;
+  display: flex;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  height: 50px;
+  top: 3%;
+  left: 15%;
+  display: block;
+  z-index: 5;
+  text-align: center;
+  padding: 20px 0 0 0;
+  width: 70%;
+}
+
+#navbar-head .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+#navbar-head .container-fluid .navbar-brand {
+  font-weight: 500;
+}
+
+#navbar-head .container-fluid .contact-us {
+  background-color: rgb(130, 185, 68);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  color: white;
+  text-decoration: none;
+  width: 6rem;
+  text-align: center;
+}
+
+.section1 {
+  padding: 5rem;
+  background-color: rgb(19, 19, 19);
+}
+.section1 .ourservice-card {
+  background-image: url("../img/our-service/ourservice-card1-min.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 110%;
+  padding: 20rem;
+
+}
+
+.section1 h1 {
+  text-align: center;
+}
+
+#navbar {
+  background-color: rgba(37, 38, 39, 0.821);
+  border-radius: 30px;
+  border: 1px solid rgb(80, 80, 80);
+  display: flex;
+  justify-content: center;
+  padding: 0.5rem;
+  position: relative;
+  bottom: 470%;
+
+  left: 90%;
+}
+
+#navbar ul li {
+  list-style: none;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  top: 7px;
+  right: 25px;
+}
