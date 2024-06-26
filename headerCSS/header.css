@@ -155,4 +155,12 @@ nav .container-fluid .contact-us {
   text-align: center;
 }
 
+header .home{
+    color: rgb(150, 229, 71);
+}
+header .home:hover{
+    color:rgb(150, 229, 71);
+}
+
+
 /* desktop version */

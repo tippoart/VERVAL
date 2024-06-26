@@ -1,0 +1,149 @@
+header .our-company {
+  color: rgb(150, 229, 71);
+}
+header .our-company:hover {
+  color: rgb(150, 229, 71);
+}
+.section1 {
+  background-image: url("../img/img-ourcompany/Article\ -\ Opened.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 120vh;
+}
+
+.section2 {
+  background-color: rgba(13, 14, 14, 0.976);
+  padding: 6rem 17rem;
+}
+
+.section2 h4 {
+  color: rgb(150, 229, 71);
+  text-align: center;
+}
+.section2 .vision {
+  position: relative;
+  bottom: 10%;
+}
+.section2 .vision p {
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 100;
+}
+.section2 .mission .mission-card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 60rem;
+}
+.section2 .mission .mission-card .our-card {
+  color: white;
+  background-color: rgb(30, 36, 39);
+  padding: 2rem;
+  border-radius: 20px;
+  width: 30rem;
+
+  flex: 2 2 calc(50% - 1rem);
+  box-sizing: border-box;
+  border-left: 1.7px solid rgb(150, 229, 71);
+}
+.section2 .mission .mission-card .our-card p {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* sec 3 */
+
+.our-values {
+  padding: 7rem;
+  background-color: rgba(246, 247, 249, 0.952);
+}
+
+.our-values .bg-values {
+  background-image: url("../img/img-ourcompany/Frame\ 11998.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 85%;
+  width: 16rem;
+  height: 9rem;
+  padding: 3rem;
+}
+
+.faq-item {
+  margin: 1rem 0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.faq-item .hr {
+  border-bottom: 1.5px solid black;
+  height: 1px;
+
+  position: relative;
+  left: 15px;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.faq-content {
+  max-height: 0;
+  overflow: hidden;
+  border-left: 1px solid rgb(39, 38, 38);
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.5s ease;
+  position: relative;
+  left: 3.4%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+.faq-content p {
+  font-style: italic;
+  font-size: 20px;
+  color: rgb(129, 129, 129);
+}
+.faq-item.active .faq-content {
+  max-height: 200px; /* Sesuaikan dengan tinggi konten maksimum Anda */
+  opacity: 1;
+  padding: 1rem;
+}
+
+.faq-content p {
+  margin: 0;
+}
+
+.number {
+  border: 1px solid black;
+  border-radius: 100%;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  height: 2.5rem;
+  text-align: center;
+  position: relative;
+  bottom: 2px;
+}
+.number p {
+  position: relative;
+  top: 19%;
+}
+
+.icons img {
+  width: 2.3rem;
+  object-fit: contain;
+}
+.icons .img2 {
+  display: none;
+}
+.icons .expand-up {
+  display: block;
+}
+
+.icons .expand-down {
+  display: none; 
+}
