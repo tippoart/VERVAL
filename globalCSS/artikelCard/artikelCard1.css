@@ -1,0 +1,80 @@
+header .artikel {
+  color: rgb(150, 229, 71);
+}
+header .artikel:hover {
+  color: rgb(150, 229, 71);
+}
+
+header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  z-index: 3;
+}
+
+header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  z-index: 3;
+}
+
+#navbar-head img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+#navbar-head {
+  background-color: rgba(19, 18, 18, 0.791);
+  border-radius: 2rem;
+  display: flex;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  height: 50px;
+  top: 3%;
+  left: 15%;
+  display: block;
+  z-index: 5;
+  text-align: center;
+  padding: 23px 0 0 0;
+  width: 70%;
+}
+
+#navbar-head .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 3px;
+}
+#navbar-head .container-fluid .navbar-brand {
+  font-weight: 500;
+}
+
+#navbar-head .container-fluid .contact-us {
+  background-color: rgb(120, 181, 51);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  color: white;
+  text-decoration: none;
+  width: 6rem;
+  text-align: center;
+}
+
+/* section1 */
+
+.section1 {
+  padding: 8rem;
+}
+
+
+
+
+.list {
+  color: rgb(158, 203, 91);
+}
