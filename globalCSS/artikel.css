@@ -145,6 +145,7 @@ hr {
 }
 .card-body {
   transition: transfrom 1.5s, 1.5s;
+  width: 58rem;
 }
 .card-body:hover {
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.065);
@@ -152,15 +153,14 @@ hr {
 
 .date-person {
   background-color: rgba(239, 242, 242, 0.67);
-  width: 30%;
+  width: 13rem;
   justify-content: space-between;
   border-radius: 8px;
   height: 2rem;
   padding: 15px;
   align-items: center;
-  margin-left: 24rem;
-
-
+  position: relative;
+  left: 23rem;
 
 }
 
