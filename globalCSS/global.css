@@ -67,8 +67,8 @@
 }
 
 .img1 {
-  width: 35rem;
-  height: 23rem;
+  width: 23rem;
+  height: 35rem;
   /* overflow: hidden; */
   background-image: url("../img/image.png");
   background-repeat: no-repeat;
