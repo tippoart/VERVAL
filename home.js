@@ -102,7 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
   var elementsectiontiga = document.getElementById('section3');
   const bumiIcon = document.querySelector(".bumi");
   const iconContainer = document.querySelector(".icon");
-  // const span = document.createElement('span');
 
   const cardContainers = [
     document.querySelector(".verval3-card-img-1"),
@@ -114,39 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   let currentImageIndex = 0;
 
-  // if (textElement && textElementPartDua && textElementPartTiga && textElementPartEmpat) {
   if (textElementPartSatu) {
-      // // List of paragraph IDs
-      // const paragraphIds = ['sectiontigapart1', 'sectiontigapart2', 'sectiontigapart3', 'sectiontigapart4'];
-
-      // // Loop through each paragraph ID
-      // paragraphIds.forEach(id => {
-      //     // Get the paragraph element by ID
-      //     const paragraph = document.getElementById(id);
-
-      //     // Get the text content of the paragraph
-      //     const text = paragraph.textContent;
-
-      //     // Create an array of span elements for each character
-      //     const spans = Array.from(text).map(char => {
-      //         const span = document.createElement('span');
-      //         span.textContent = char;
-      //         return span;
-      //     });
-
-      //     // Clear the paragraph's text content
-      //     paragraph.textContent = '';
-
-      //     // Append each span to the paragraph
-          
-      //     spans.forEach(span => {
-      //       if(span.textContent != " "){
-      //         paragraph.appendChild(span)
-      //       }
-      //     });
-      // });
-
-      // const spans = element.querySelectorAll('span');
       const spans = textElementPartSatu.querySelectorAll('span');
       const spansdua = textElementPartDua.querySelectorAll('span');
       const spansketiga = textElementPartTiga.querySelectorAll('span');
@@ -154,46 +121,30 @@ document.addEventListener('DOMContentLoaded', function() {
       const ourValuesSpan = document.querySelector(".our-values");
 
       window.addEventListener('scroll', function() {
-          // Fungsi untuk mendapatkan total tinggi konten
           function getTotalHeight() {
               return document.body.scrollHeight;
           }
-
-          // Fungsi untuk mendapatkan tinggi viewport (tinggi layar saat ini)
           function getViewportHeight() {
               return window.innerHeight;
           }
-
-          // Fungsi untuk mendapatkan tinggi yang digunakan setiap kali scroll
           function getScrollHeightPerStep() {
               return getViewportHeight();
           }
-
-          // Fungsi untuk menampilkan hasil perhitungan
-
           function displayScrollInfo() {
               const totalHeight = getTotalHeight();
               const viewportHeight = getViewportHeight();
               const scrollHeightPerStep = getScrollHeightPerStep();
               scrollAddS3 = (Number(totalLettersll) - 40) * Number(scrollHeightPerStep);
-
-
-              // console.log(`Total Height of the Page: ${totalHeight}px`);
-              // console.log(`Viewport Height: ${viewportHeight}px`);
-              // console.log(`Scroll Height Per Step: ${scrollHeightPerStep}px`);
-              // console.log('Scroll Yang di butuhkan: ' + scrollAddS3);
-              // console.log('Scroll Yang di butuhkan aaaa: ' + Number(scrollHeightPerStep));
           }
 
           const observer = new IntersectionObserver((entries) => {
               entries.forEach(entry => {
                   if (entry.isIntersecting) {
                       sectionSelectedin = entry.target.id;
-                      // console.log(`Section ${entry.target.id} is in view`);
                   }
               });
           }, {
-              threshold: 0.1 // Adjust the threshold as needed
+              threshold: 0.1
           });
           document.querySelectorAll('section').forEach(section => {
               observer.observe(section);
@@ -205,38 +156,17 @@ document.addEventListener('DOMContentLoaded', function() {
           var scrollHeightsection = element.scrollHeight;
           const windowHeights = window.innerHeight;
           const documentHeight = document.documentElement.scrollHeight;
-
-          // Menghitung persentase scroll dari keseluruhan tinggi dokumen
-          // const scrollPercentage = height / (documentHeight - windowHeight);
           const scrollPercentage = ((scrollPosition - offsettop) / windowHeights) * 100;
-
-          // Menghitung jumlah huruf yang harus diwarnai
-          
           totallll = spans.length+spansdua.length+spansketiga.length+spanskeempat.length;
           totalLettersll = totallll;
           totalLetters = spans.length;
           totalLettersDua = spansdua.length;
           totalLettersTiga = spansketiga.length;
           totalLettersEmpat = spanskeempat.length;
-          // console.log("=======================");
-          // console.log(spans.length);
-          // console.log(spansdua.length);
-          // console.log(spansketiga.length);
-          // console.log(spanskeempat.length);
-          // console.log("=======================");
           const lettersToColor = Math.floor(scrollPercentage * totalLetters / totallll);
           const lettersToColorDua = Math.floor((lettersToColor + totalLettersDua / totallll));
           const lettersToColorTiga = Math.floor((lettersToColorDua + totalLettersTiga / totallll));
           const lettersToColorEmpat = Math.floor((lettersToColorTiga + totalLettersEmpat / totallll));
-          console.log("==========TEST==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log("=======================");
-          // console.log(lettersToColor);
-
-          // console.log(scrollPercentage);
-
-          // Mewarnai huruf-huruf sesuai dengan posisi scroll
           spans.forEach((span, index) => {
             console.log("====span pertama====");
                 console.log(lettersToColor);
@@ -248,10 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
               }
           });
 
-          // Ketika semua huruf sudah merah, tampilkan gambar dan sembunyikan teks
           if (lettersToColor >= totalLetters) {
-              // textElement.style.display = 'none';
-              // imagesContainer.classList.add('active');
               bumiIcon.style.transition = "0.5s";
               bumiIcon.style.transform = "translateX(4.8rem)";
               bumiIcon.style.backgroundColor = "rgb(58, 190, 249)";
@@ -313,7 +240,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log(lettersToColorEmpat);
                 console.log("=======================");
               if (indexkeempat < lettersToColorEmpat-totalLetters-totalLettersDua-totalLettersTiga) {
-                // document.getElementById('sectiontigapart4').style.color = "rgb(159, 190, 88)";
                 document.getElementById('sectiontigapart4').style.transition = "color 0.5s";
                 document.getElementById('sectiontigapart4').style.coloopacityr = "1";
                 document.getElementById('sectiontigapart4').style.display = "block";
@@ -331,12 +257,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }
 
           if(lettersToColorEmpat == 51){
-            console.log("==========TEST Ke Empat==========");
-                console.log(totalLettersEmpat);
-                console.log(lettersToColorDua);
-                console.log(lettersToColorTiga);
-                console.log(lettersToColorEmpat);
-                console.log("=======================");
             cardContainers[0].style.display = "block";
             cardContainers[1].style.display = "none";
             document.getElementById('sectiontigadiv').style.visibility = "hidden";
@@ -350,12 +270,6 @@ document.addEventListener('DOMContentLoaded', function() {
           }
 
           if(lettersToColorEmpat == 52){
-            console.log("==========TEST Ke Empat==========");
-                console.log(totalLettersEmpat);
-                console.log(lettersToColorDua);
-                console.log(lettersToColorTiga);
-                console.log(lettersToColorEmpat);
-                console.log("=======================");
             cardContainers[0].style.display = ` scale(0.93)`;
             cardContainers[1].style.display = "block";
             cardContainers[2].style.display = "none";
@@ -364,12 +278,6 @@ document.addEventListener('DOMContentLoaded', function() {
           } 
 
           if(lettersToColorEmpat == 53){
-            console.log("==========TEST Ke Empat==========");
-                console.log(totalLettersEmpat);
-                console.log(lettersToColorDua);
-                console.log(lettersToColorTiga);
-                console.log(lettersToColorEmpat);
-                console.log("=======================");
             cardContainers[3].style.display = "none";
             cardContainers[4].style.display = "none";
             cardContainers[2].style.display = "block";
@@ -378,53 +286,27 @@ document.addEventListener('DOMContentLoaded', function() {
           } 
 
           if(lettersToColorEmpat == 54){
-            console.log("==========TEST Ke Empat==========");
-                console.log(totalLettersEmpat);
-                console.log(lettersToColorDua);
-                console.log(lettersToColorTiga);
-                console.log(lettersToColorEmpat);
-                console.log("=======================");
             cardContainers[4].style.display = "none";
             cardContainers[3].style.display = "block";
-        // Turunkan card ketiga
         cardContainers[1].style.transform = ` scale(0.90)`;
         cardContainers[2].style.transform = ` scale(0.96)`;
         cardContainers[0].style.transform = `translateY(85px) scale(0.91)`;
           } 
 
           if(lettersToColorEmpat == 55){
-            console.log("==========TEST Ke Empat==========");
-                console.log(totalLettersEmpat);
-                console.log(lettersToColorDua);
-                console.log(lettersToColorTiga);
-                console.log(lettersToColorEmpat);
-                console.log("=======================");
-            // Jalankan fungsi scroll ketujuh kali
         cardContainers[4].style.display = "block";
-
         cardContainers[2].style.transform = ` scale(0.90)`;
         cardContainers[3].style.transform = ` scale(0.94)`;
-        // Turunkan card keempat
         cardContainers[1].style.transform = `translateY(50px) scale(0.91)`;
           } 
 
           if(lettersToColorEmpat == 56){
-            console.log("==========TEST Ke Empat==========");
-                console.log(totalLettersEmpat);
-                console.log(lettersToColorDua);
-                console.log(lettersToColorTiga);
-                console.log(lettersToColorEmpat);
-                console.log("=======================");
-            // Jalankan fungsi scroll ketujuh kali
         cardContainers[4].style.display = "block";
-
         cardContainers[2].style.transform = ` scale(0.90)`;
         cardContainers[3].style.transform = ` scale(0.94)`;
-        // Turunkan card keempat
         cardContainers[1].style.transform = `translateY(50px) scale(0.91)`;
           } 
 
-          // console.log(sectionSelectedin);
           if (isScrollAdded == "false" && sectionSelectedin == "section3") {
               console.log("Hore");
               displayScrollInfo();
@@ -467,7 +349,7 @@ let testimoni = document.querySelector(".testimoni");
 function verval4() {
   if (card) {
       card.style.backgroundSize = "80rem";
-      card.style.opacity = "1"; // Tambahkan ini
+      card.style.opacity = "1";
   }
 
   if (nameCard) {
