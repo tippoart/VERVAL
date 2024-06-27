@@ -67,7 +67,7 @@
 }
 
 .img1 {
-  width: 23rem;
+  width: 25rem;
   height: 35rem;
   /* overflow: hidden; */
   background-image: url("../img/image.png");
@@ -79,14 +79,31 @@
 /* verval 2 */
 
 .verval2 {
-  /* background-image: url("../img/img-card-sec2/OR68VV0.jpg"); */
-  background-color: rgb(23, 22, 22);
+  background-image: url("../img/background_section2.jpeg");
+  /* background-color: rgb(23, 22, 22); */
   height: 140vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   overflow: hidden;
+
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* filter: grayscale(100%); */
+}
+
+.section-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  filter: grayscale(100%);
+  background: rgba(6,17,9, 0.9);/* Menyesuaikan opasitas untuk membuatnya lebih gelap atau lebih terang */
+  z-index: 1;
 }
 
 .verval2 .card-container {
@@ -97,6 +114,7 @@
   padding: 5rem;
   rotate: 14deg;
   bottom: 3rem;
+  z-index: 3;
 }
 
 .verval2 .my-img1 {
@@ -165,7 +183,7 @@
 }
 .verval3 .our {
   position: sticky;
-  top: 3rem;
+  top: 30%;
   width: 70rem;
   overflow: hidden;
 }
