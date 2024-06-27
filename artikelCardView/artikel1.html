@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>VERVAL</title>
 
-    <link rel="stylesheet" href="globalCSS/ourservice.css" />
-    <link rel="stylesheet" href="footerCSS/footer.css" />
+    <link rel="stylesheet" href="../headerCSS/header.css" />
+    <link rel="stylesheet" href="../globalCSS/artikelCard/artikelCard1.css" />
+    <link rel="stylesheet" href="../footerCSS/footer.css" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
@@ -37,8 +38,8 @@
       <nav id="navbar-head" class="navbar navbar-expand-lg p-2">
         <div class="container-fluid">
           <div>
-            <img src="img/logoverval/logo-verval.png" alt="" />
-            <a class="navbar-brand text-white" href="index.html">VERVAL</a>
+            <img src="../img/logoverval/logo-verval.png" alt="" />
+            <a class="navbar-brand text-white" href="../index.html">VERVAL</a>
           </div>
 
           <ul class="navbar-nav gap-4">
@@ -51,15 +52,17 @@
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link text-white" href="ourcompany.html"
+              <a class="nav-link text-white" href="../ourcompany.html"
                 >our company</a
               >
             </li>
             <li class="nav-item">
-              <a class="nav-link our-company" href="#">our service</a>
+              <a class="nav-link text-white" href="../ourservice.html"
+                >our service</a
+              >
             </li>
             <li class="nav-item">
-              <a class="nav-link  text-white " href="artikel.html">articles</a>
+              <a class="nav-link artikel" href="#">articles</a>
             </li>
           </ul>
 
@@ -69,35 +72,62 @@
     </header>
 
     <!-- sec 1 -->
+    <div class="section1">
+      <p>
+        Article /
+        <span class="list"
+          >Embracing Green: Steps Towards a Sustainable Future</span
+        >
+      </p>
 
-    <div class="section1 d-flex gap-2 justify-content-center">
-      <div class="ourservice-card">
-        <nav id="navbar" class="">
-          <ul class="d-flex justify-content-center align-items-center gap-2">
-            <li class="verifikasi">Verfication</li>
+      <div class="d-flex">
+        <div>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde,
+            consequatur.
+          </p>
 
-            <li class="li">Validation</li>
+          <img src="../img/artikelCard/05.png" alt="">
 
-            <li class="li">Training</li>
-          </ul>
-        </nav>
+          <div class="icon"></div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia adipisci laudantium nobis omnis neque quam ipsum sunt magni perspiciatis quis.</p>
+
+          <img src="../img/artikelCard/06.png" alt="">
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam possimus assumenda harum adipisci temporibus expedita rerum facilis at tenetur inventore illum suscipit, magnam consequatur quam sequi voluptatum corporis ea reiciendis, veritatis fugit blanditiis voluptas libero. Deleniti aliquid corrupti nobis voluptates repellat architecto sequi quis sunt distinctio modi, obcaecati odit minima?</p>
+        </div>
+        <main class="d-flex flex-column">
+            <div class="d-flex">
+                <img src="../img/artikelCard/Rectangle 4229.png" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <img src="../img/artikelCard/Rectangle 4229.png" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+            <div class="d-flex">
+                <img src="../img/artikelCard/Rectangle 4229.png" alt="">
+                <div>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                </div>
+            </div>
+           <p>Lorem ipsum dolor sit amet consectetur.</p>
+        </main>
       </div>
     </div>
-
-    <div class="section2">
-        <div class="d-flex section2-verify">
-          <img class="img1" src="img/our-service/Property 1=Default.png" alt="" onclick="gambar()">
-          <img class="img2" src="img/our-service/Frame 427318188.png" alt="">
-        </div>
-    </div>
-
 
     <!-- verval 6 -->
     <footer id="section6" class="verval6 section">
       <div class="footer d-flex justify-content-between gap-5">
         <section class="footer-logo d-flex flex-column gap-2">
           <div class="verval-logo-footer d-flex g-1">
-            <img src="img/logoverval/logo-verval.png" alt="" />
+            <img src="../img/logoverval/logo-verval.png" alt="" />
             <h1>VERVAL</h1>
           </div>
           <p>
@@ -106,11 +136,11 @@
             commitment to preserve, protect, and prosper
           </p>
           <div class="logo d-flex gap-3">
-            <img src="img/sosmed/instagram.png" alt="" />
-            <img src="img/sosmed/facebook.png" alt="" />
-            <img src="img/sosmed/twitter.png" alt="" />
-            <img src="img/sosmed/linkedin.png" alt="" />
-            <img src="img/sosmed/youtube.png" alt="" />
+            <img src="../img/sosmed/instagram.png" alt="" />
+            <img src="../img/sosmed/facebook.png" alt="" />
+            <img src="../img/sosmed/twitter.png" alt="" />
+            <img src="../img/sosmed/linkedin.png" alt="" />
+            <img src="../img/sosmed/youtube.png" alt="" />
           </div>
         </section>
 
@@ -176,7 +206,7 @@
 
     <script></script>
 
-    <script src="ourservice.js"></script>
+    <script src="ourCompany.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
