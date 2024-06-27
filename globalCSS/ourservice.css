@@ -21,7 +21,7 @@ header {
 }
 
 #navbar-head {
-   background-color: rgba(19, 18, 18, 0.791);
+  background-color: rgba(19, 18, 18, 0.791);
   border-radius: 2rem;
   display: flex;
   backdrop-filter: blur(5px);
@@ -37,11 +37,10 @@ header {
 }
 
 #navbar-head .container-fluid {
-   display: flex;
+  display: flex;
   justify-content: space-between;
-   position: relative;
+  position: relative;
   bottom: 3px;
-
 }
 #navbar-head .container-fluid .navbar-brand {
   font-weight: 500;
@@ -79,18 +78,62 @@ header {
   border: 1px solid rgb(80, 80, 80);
   display: flex;
   justify-content: center;
-  padding: 0.5rem;
+  width: 22.7rem;
   position: relative;
-  bottom: 470%;
-
-  left: 90%;
+  bottom: 485%;
+  left: 88%;
 }
 
 #navbar ul li {
   list-style: none;
-  color: white;
   cursor: pointer;
   position: relative;
   top: 7px;
-  right: 25px;
+  right: 17px;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 26px;
+  padding: 5px;
+  width: 6.7rem;
+  text-align: center;
 }
+#navbar ul li:hover {
+  background-color: rgb(42, 51, 56);
+  color: white;
+  border: 1px solid  rgb(42, 51, 56); 
+
+}
+.verifikasi {
+  border: 1.3px solid rgb(122, 195, 77);
+  border-radius: 26px;
+  padding: 5px;
+  width: 6.7rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+
+nav ul .li {
+  color: rgba(122, 133, 143, 0.909);
+}
+
+.section2 {
+  overflow: hidden;
+}
+.section2 .section2-verify .img1{
+  object-fit: cover;
+  cursor: pointer;
+  width: 120%;
+
+}
+.section2 img{
+   transition: transform 0.5s ease-in-out;
+}
+.img2 {
+  z-index: 2;
+}
+.img1 {
+  z-index: 3;
+}
+
+
+
