@@ -1,100 +1,107 @@
-
 // verval 2
 
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
   let textOfer = document.querySelector(".we-ofer");
 
   const imgCardSec2 = document.querySelector(".card-container");
 
   const AllCards = [
-    document.querySelector(".my-img1"),
-    document.querySelector(".my-img2"),
-    document.querySelector(".my-img3"),
+      document.querySelector(".my-img1"),
+      document.querySelector(".my-img2"),
+      document.querySelector(".my-img3"),
   ];
 
   let scrolling = 0;
 
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const sectionOffsetTop = document.querySelector("#section2").offsetTop;
-    const sectionHeight = document.querySelector("#section2").offsetHeight;
+  window.addEventListener("scroll", function() {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const sectionOffsetTop = document.querySelector("#section2").offsetTop;
+      const sectionHeight = document.querySelector("#section2").offsetHeight;
 
-    // Menghitung posisi awal dan akhir dari section
-    const sectionStart = sectionOffsetTop;
-    const sectionEnd = sectionOffsetTop + sectionHeight;
+      // Menghitung posisi awal dan akhir dari section
+      const sectionStart = sectionOffsetTop;
+      const sectionEnd = sectionOffsetTop + sectionHeight;
 
-    if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
-      if (scrolling === 0) {
-        textOfer.style.opacity = 0;
-        textOfer.style.transition = "1s";
-        textOfer.style.zIndex = "0";
+      if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
+          if (scrolling === 0) {
+              textOfer.style.opacity = 0;
+              textOfer.style.transition = "1s";
+              textOfer.style.zIndex = "0";
 
-        AllCards[0].style.opacity = "1";
-        AllCards[0].style.transition = "1s";
-        AllCards[0].style.transform = "translateY(0)";
-        AllCards[0].classList.add("smooth-bounce");
+              AllCards[0].style.opacity = "1";
+              AllCards[0].style.transition = "1s";
+              AllCards[0].style.transform = "translateY(0)";
+              AllCards[0].classList.add("smooth-bounce");
 
-        AllCards[1].style.opacity = "1";
-        AllCards[1].style.transition = "1s";
-        AllCards[1].style.transform = "translateY(0)";
+              AllCards[1].style.opacity = "1";
+              AllCards[1].style.transition = "1s";
+              AllCards[1].style.transform = "translateY(0)";
 
-        AllCards[1].classList.add("smooth-bounce");
+              AllCards[1].classList.add("smooth-bounce");
 
-        AllCards[2].style.opacity = "1";
-        AllCards[2].style.transition = "1s";
-        AllCards[2].style.transform = "translateY(0)";
-        AllCards[2].classList.add("smooth-bounce");
+              AllCards[2].style.opacity = "1";
+              AllCards[2].style.transition = "1s";
+              AllCards[2].style.transform = "translateY(0)";
+              AllCards[2].classList.add("smooth-bounce");
 
-        scrolling = 1;
-      } else if (
-        scrolling === 1 &&
-        scrollPosition > sectionStart + sectionHeight / 7
-      ) {
-   
-        imgCardSec2.classList.add("centered");
-        
-        scrolling == 2;
+              scrolling = 1;
+          } else if (
+              scrolling === 1 &&
+              scrollPosition > sectionStart + sectionHeight / 7
+          ) {
+
+              imgCardSec2.classList.add("centered");
+
+              scrolling == 2;
+          }
+
+      } else {
+          // textOfer.style.opacity = 1;
+
+          // AllCards[0].style.opacity = "0";
+          // AllCards[0].style.transition = "0.2s";
+          // AllCards[0].style.transform = "translateY(0)";
+          // AllCards[0].classList.remove("smooth-bounce");
+
+          // AllCards[1].style.opacity = "0";
+          // AllCards[1].style.transition = "0.2s";
+          // AllCards[1].style.transform = "translateY(0)";
+          // AllCards[1].classList.remove("smooth-bounce");
+
+          // AllCards[2].style.opacity = "0";
+          // AllCards[2].style.transition = "0.2s";
+          // AllCards[2].style.transform = "translateY(0)";
+          // AllCards[2].classList.remove("smooth-bounce");
+
+
+
+
+          // const back = document.querySelector(".centered")
+          // back.classList.remove("centered");
+
+          scrolling = 0;
       }
-      
-    } else {
-      // textOfer.style.opacity = 1;
-
-      // AllCards[0].style.opacity = "0";
-      // AllCards[0].style.transition = "0.2s";
-      // AllCards[0].style.transform = "translateY(0)";
-      // AllCards[0].classList.remove("smooth-bounce");
-      
-      // AllCards[1].style.opacity = "0";
-      // AllCards[1].style.transition = "0.2s";
-      // AllCards[1].style.transform = "translateY(0)";
-      // AllCards[1].classList.remove("smooth-bounce");
-      
-      // AllCards[2].style.opacity = "0";
-      // AllCards[2].style.transition = "0.2s";
-      // AllCards[2].style.transform = "translateY(0)";
-      // AllCards[2].classList.remove("smooth-bounce");
-      
-      
-
-
-      // const back = document.querySelector(".centered")
-      // back.classList.remove("centered");
-     
-      scrolling = 0;
-    }
   });
 });
 
 // verval 3
 
-document.addEventListener("DOMContentLoaded", function () {
-  const textElement = document.querySelector(".emb");
+
+document.addEventListener('DOMContentLoaded', function() {
+  var totalLettersll = '';
+  var isScrollAdded = "false";
+  let scrollAddS3 = "";
+  var sectionSelectedin = "";
   const textElement2 = document.querySelector(".emb2");
+  const textElementPartSatu = document.getElementById('sectiontigapart1');
+  const textElementPartDua = document.getElementById('sectiontigapart2');
+  const textElementPartTiga = document.getElementById('sectiontigapart3');
+  const textElementPartEmpat = document.getElementById('sectiontigapart4');
+  var element = document.getElementById('section3');
+  var elementsectiontiga = document.getElementById('section3');
   const bumiIcon = document.querySelector(".bumi");
   const iconContainer = document.querySelector(".icon");
-  const ourValuesSpan = document.querySelector(".our-values");
-  const future = document.querySelector(".future");
 
   const cardContainers = [
     document.querySelector(".verval3-card-img-1"),
@@ -104,169 +111,232 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector(".verval3-card-img-5"),
   ];
 
-  const spans = textElement.querySelectorAll("span");
-  let scrollStage = 0;
+  let currentImageIndex = 0;
 
-  window.addEventListener("scroll", function () {
-    const scrollPosition = window.scrollY;
-    const windowHeight = window.innerHeight;
-    const sectionOffsetTop = document.querySelector("#section3").offsetTop;
-    const sectionHeight = document.querySelector("#section3").offsetHeight;
+  if (textElementPartSatu) {
+      const spans = textElementPartSatu.querySelectorAll('span');
+      const spansdua = textElementPartDua.querySelectorAll('span');
+      const spansketiga = textElementPartTiga.querySelectorAll('span');
+      const spanskeempat = textElementPartEmpat.querySelectorAll('span');
+      const ourValuesSpan = document.querySelector(".our-values");
 
-    // Menghitung posisi awal dan akhir dari section
-    const sectionStart = sectionOffsetTop;
-    const sectionEnd = sectionOffsetTop + sectionHeight;
+      window.addEventListener('scroll', function() {
+          function getTotalHeight() {
+              return document.body.scrollHeight;
+          }
+          function getViewportHeight() {
+              return window.innerHeight;
+          }
+          function getScrollHeightPerStep() {
+              return getViewportHeight();
+          }
+          function displayScrollInfo() {
+              const totalHeight = getTotalHeight();
+              const viewportHeight = getViewportHeight();
+              const scrollHeightPerStep = getScrollHeightPerStep();
+              scrollAddS3 = (Number(totalLettersll) - 40) * Number(scrollHeightPerStep);
+          }
 
-    if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
-      if (scrollStage === 0) {
-        // Animasi perubahan warna teks saat scroll pertama kali
-        textElement2.style.color = "white";
-        textElement.style.color = "white";
-        bumiIcon.style.transition = "0.5s";
-        bumiIcon.style.transform = "translateX(4.8rem)";
-        bumiIcon.style.backgroundColor = "#3ABEF9";
-        bumiIcon.style.borderRadius = "3.5rem";
-        iconContainer.style.backgroundColor = "white";
-        spans.forEach((span) => {
-          span.style.color = "white";
-        });
+          const observer = new IntersectionObserver((entries) => {
+              entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                      sectionSelectedin = entry.target.id;
+                  }
+              });
+          }, {
+              threshold: 0.1
+          });
+          document.querySelectorAll('section').forEach(section => {
+              observer.observe(section);
+          });
 
-        scrollStage = 1; // Update tahap scroll
-      } else if (
-        scrollStage === 1 &&
-        scrollPosition > sectionStart + sectionHeight / 10
-      ) {
-        // Jalankan fungsi scroll kedua kali
-        ourValuesSpan.style.color = "rgb(159, 190, 88)";
-        ourValuesSpan.style.transition = "color 0.5s";
-        future.style.color = "white";
-        future.style.transition = "color 0.5s";
+          const scrollPosition = window.scrollY;
+          var height = element.offsetHeight;
+          var offsettop = element.offsetTop;
+          var scrollHeightsection = element.scrollHeight;
+          const windowHeights = window.innerHeight;
+          const documentHeight = document.documentElement.scrollHeight;
+          const scrollPercentage = ((scrollPosition - offsettop) / windowHeights) * 100;
+          totallll = spans.length+spansdua.length+spansketiga.length+spanskeempat.length;
+          totalLettersll = totallll;
+          totalLetters = spans.length;
+          totalLettersDua = spansdua.length;
+          totalLettersTiga = spansketiga.length;
+          totalLettersEmpat = spanskeempat.length;
+          const lettersToColor = Math.floor(scrollPercentage * totalLetters / totallll);
+          const lettersToColorDua = Math.floor((lettersToColor + totalLettersDua / totallll));
+          const lettersToColorTiga = Math.floor((lettersToColorDua + totalLettersTiga / totallll));
+          const lettersToColorEmpat = Math.floor((lettersToColorTiga + totalLettersEmpat / totallll));
+          spans.forEach((span, index) => {
+            console.log("====span pertama====");
+                console.log(lettersToColor);
+                console.log("========");
+              if (index < lettersToColor) {
+                  span.style.color = 'white';
+              } else {
+                  span.style.color = 'rgba(43, 47, 49, 0.915)';
+              }
+          });
 
-        scrollStage = 2; // Update tahap scroll
-      } else if (
-        scrollStage === 2 &&
-        scrollPosition > sectionStart + sectionHeight / 5
-      ) {
-        // Jalankan fungsi scroll ketiga kali
-        textElement.style.opacity = "0";
-        textElement.style.transition = "1s";
-        iconContainer.style.opacity = "0";
-        iconContainer.style.transition = "1s";
-        textElement2.style.opacity = "0";
-        textElement2.style.transition = "1s";
-        bumiIcon.style.opacity = "0";
-        bumiIcon.style.transition = "1s";
-        ourValuesSpan.style.opacity = "0";
-        ourValuesSpan.style.transition = "1s";
-        future.style.opacity = "0";
-        future.style.transition = "1s";
+          if (lettersToColor >= totalLetters) {
+              bumiIcon.style.transition = "0.5s";
+              bumiIcon.style.transform = "translateX(4.8rem)";
+              bumiIcon.style.backgroundColor = "rgb(58, 190, 249)";
+              bumiIcon.style.borderRadius = "3.5rem";
+              iconContainer.style.backgroundColor = "white";
 
-        cardContainers[0].style.display = "block";
+              spansdua.forEach((spandua, indexdua) => {
+                console.log("==========TEST Kedua==========");
+                console.log(lettersToColor);
+                console.log(lettersToColorDua);
+                console.log("=======================");
+                if (indexdua < lettersToColorDua-totalLetters) {
+                  spandua.style.color = 'white';
+                } else {
+                  spandua.style.color = 'rgba(43, 47, 49, 0.915)';
+                }
+              });              
+          } else{
+            spansdua.forEach((spandua, indexdua) => {
+              if (lettersToColor < totalLetters) {
+                spandua.style.color = 'rgba(43, 47, 49, 0.915)';
+                bumiIcon.style.transition = "all 0.5s ease 0s";
+                bumiIcon.style.transform = "translateX(0px)";
+                bumiIcon.style.backgroundColor = "transparent";
+                bumiIcon.style.borderRadius = "3rem";
+                iconContainer.style.backgroundColor = "transparent";
+              }
+            });
+          } 
+          
+          
+          if(lettersToColorDua >= totalLettersDua){
+            spansketiga.forEach((spanketiga, indexketiga) => {
+              console.log("==========TEST Ketiga==========");
+                console.log(lettersToColor);
+                console.log(lettersToColorDua);
+                console.log(lettersToColorTiga);
+                console.log("=======================");
+              if (indexketiga < lettersToColorTiga-totalLetters-totalLettersDua) {
+                spanketiga.style.color = 'white';
+              } else {
+                spanketiga.style.color = 'rgba(43, 47, 49, 0.915)';
+              }
+            });
+          }else {
+              spansketiga.forEach((spanketiga, index) => {
+                if (index < lettersToColorTiga) {
+                  spanketiga.style.color = 'rgba(43, 47, 49, 0.915)';
+                }
+              });
+          }
 
-        scrollStage = 3; // Update tahap scroll
-      } else if (
-        scrollStage === 3 &&
-        scrollPosition > sectionStart + sectionHeight / 4
-      ) {
-        // Jalankan fungsi scroll keempat kali
-        cardContainers[1].style.display = "block";
-        cardContainers[0].style.transform = ` scale(0.93)`;
+          if(lettersToColorTiga >= totalLettersTiga){
+            spanskeempat.forEach((spanempat, indexkeempat) => {
+              console.log("==========TEST Ketiga==========");
+                console.log(lettersToColor);
+                console.log(lettersToColorDua);
+                console.log(lettersToColorTiga);
+                console.log(lettersToColorEmpat);
+                console.log("=======================");
+              if (indexkeempat < lettersToColorEmpat-totalLetters-totalLettersDua-totalLettersTiga) {
+                document.getElementById('sectiontigapart4').style.transition = "color 0.5s";
+                document.getElementById('sectiontigapart4').style.coloopacityr = "1";
+                document.getElementById('sectiontigapart4').style.display = "block";
+                spanempat.style.color = 'rgb(159, 190, 88)';
+              } else {
+                spanempat.style.color = 'rgba(43, 47, 49, 0.915)';
+              }
+            });
+          }else {
+              spansketiga.forEach((spanempat, index) => {
+                if (index < lettersToColorEmpat) {
+                  spanempat.style.color = 'rgba(43, 47, 49, 0.915)';
+                }
+              });
+          }
 
-        scrollStage = 4; // Update tahap scroll
-      } else if (
-        scrollStage === 4 &&
-        scrollPosition > sectionStart + sectionHeight / 3
-      ) {
-        // Jalankan fungsi scroll kelima kali
-        cardContainers[2].style.display = "block";
-        cardContainers[1].style.transform = ` scale(0.94)`;
-        cardContainers[0].style.transform = ` scale(0.85)`;
+          if(lettersToColorEmpat == 51){
+            cardContainers[0].style.display = "block";
+            cardContainers[1].style.display = "none";
+            document.getElementById('sectiontigadiv').style.visibility = "hidden";
+          } else if(lettersToColorEmpat < 51){
+            document.getElementById('sectiontigadiv').style.visibility = "visible";
+            cardContainers[0].style.display = "none";
+            cardContainers[1].style.display = "none";
+            cardContainers[2].style.display = "none";
+            cardContainers[3].style.display = "none";
+            cardContainers[4].style.display = "none";
+          }
 
-        scrollStage = 5; // Update tahap scroll
-      } else if (
-        scrollStage === 5 &&
-        scrollPosition > sectionStart + sectionHeight / 2.5
-      ) {
-        // Jalankan fungsi scroll keenam kali
-        cardContainers[3].style.display = "block";
-        // Turunkan card ketiga
+          if(lettersToColorEmpat == 52){
+            cardContainers[0].style.display = ` scale(0.93)`;
+            cardContainers[1].style.display = "block";
+            cardContainers[2].style.display = "none";
+            cardContainers[3].style.display = "none";
+            cardContainers[4].style.display = "none";
+          } 
+
+          if(lettersToColorEmpat == 53){
+            cardContainers[3].style.display = "none";
+            cardContainers[4].style.display = "none";
+            cardContainers[2].style.display = "block";
+            cardContainers[1].style.transform = ` scale(0.94)`;
+            cardContainers[0].style.transform = ` scale(0.85)`;
+          } 
+
+          if(lettersToColorEmpat == 54){
+            cardContainers[4].style.display = "none";
+            cardContainers[3].style.display = "block";
         cardContainers[1].style.transform = ` scale(0.90)`;
         cardContainers[2].style.transform = ` scale(0.96)`;
         cardContainers[0].style.transform = `translateY(85px) scale(0.91)`;
+          } 
 
-        scrollStage = 6; // Update tahap scroll
-      } else if (
-        scrollStage === 6 &&
-        scrollPosition > sectionStart + sectionHeight / 2
-      ) {
-        // Jalankan fungsi scroll ketujuh kali
+          if(lettersToColorEmpat == 55){
         cardContainers[4].style.display = "block";
-
         cardContainers[2].style.transform = ` scale(0.90)`;
         cardContainers[3].style.transform = ` scale(0.94)`;
-        // Turunkan card keempat
         cardContainers[1].style.transform = `translateY(50px) scale(0.91)`;
+          } 
 
-        scrollStage = 7; // Update tahap scroll
-      }
-    } else {
-      // Reset warna huruf jika scroll berada di luar area yang ditentukan
-      spans.forEach((span) => {
-        span.style.color = "rgba(43, 47, 49, 0.915)";
+          if(lettersToColorEmpat == 56){
+        cardContainers[4].style.display = "block";
+        cardContainers[2].style.transform = ` scale(0.90)`;
+        cardContainers[3].style.transform = ` scale(0.94)`;
+        cardContainers[1].style.transform = `translateY(50px) scale(0.91)`;
+          } 
+
+          if (isScrollAdded == "false" && sectionSelectedin == "section3") {
+              console.log("Hore");
+              displayScrollInfo();
+              isScrollAdded = "true";
+              document.getElementById('section3').style.height = `${scrollAddS3}px`;
+          }
+
+
+
       });
-      textElement2.style.color = "rgba(43, 47, 49, 0.915)";
-      textElement2.style.opacity = "1";
-      textElement.style.color = "rgba(43, 47, 49, 0.915)";
-      textElement.style.opacity = "1";
-      ourValuesSpan.style.color = "rgba(43, 47, 49, 0.915)";
-      ourValuesSpan.style.opacity = "1";
-      future.style.color = "rgba(43, 47, 49, 0.915)";
-      future.style.opacity = "1";
-      iconContainer.style.backgroundColor = "transparent";
-      iconContainer.style.opacity = "1";
-      bumiIcon.style.transition = "0.5s";
-      bumiIcon.style.transform = "translateX(0)";
-      bumiIcon.style.backgroundColor = "transparent";
-      bumiIcon.style.borderRadius = "3rem";
-      bumiIcon.style.opacity = "1";
-
-      textElement.style.display = "block";
-      textElement2.style.display = "block";
-      bumiIcon.style.display = "block";
-      ourValuesSpan.style.display = "block";
-      future.style.display = "block";
-      cardContainers.forEach((card) => {
-        card.style.display = "none";
-        card.style.transform = "none"; // Reset posisi dan scale card
-      });
-
-      scrollStage = 0; // Reset tahap scroll
-    }
-  });
-
-  // Set warna huruf awalnya menjadi hitam saat halaman dimuat
-  spans.forEach((span) => {
-    span.style.color = "rgba(43, 47, 49, 0.915)";
-  });
-  textElement2.style.color = "rgba(43, 47, 49, 0.915)";
-  textElement.style.color = "rgba(43, 47, 49, 0.915)";
-  ourValuesSpan.style.color = "rgba(43, 47, 49, 0.915)";
-  future.style.color = "rgba(43, 47, 49, 0.915)";
+  }
 });
+
+
+
 
 //verval 1
 
 let imgContainer = document.querySelector(".img1");
 let img = document.querySelector(".img1 img");
+
 function verval1() {
   // Check if imgContainer and img are found
   if (imgContainer && img) {
-    let containerRect = imgContainer.getBoundingClientRect();
-    let scrollPosition =
-      this.window.pageYOffset || document.documentElement.scrollTop;
-    let movement = (scrollPosition - containerRect.top) * -0.1;
+      let containerRect = imgContainer.getBoundingClientRect();
+      let scrollPosition =
+          this.window.pageYOffset || document.documentElement.scrollTop;
+      let movement = (scrollPosition - containerRect.top) * -0.1;
 
-    img.style.transform = "translateY(" + movement + "px)";
+      img.style.transform = "translateY(" + movement + "px)";
   }
 }
 
@@ -278,24 +348,24 @@ let testimoni = document.querySelector(".testimoni");
 
 function verval4() {
   if (card) {
-    card.style.backgroundSize = "80rem";
-    card.style.opacity = "1"; // Tambahkan ini
+      card.style.backgroundSize = "80rem";
+      card.style.opacity = "1";
   }
 
   if (nameCard) {
-    nameCard.setAttribute("data-aos", "zoom-in");
-    nameCard.setAttribute("data-aos-once", "true");
-    nameCard.style.opacity = "1";
+      nameCard.setAttribute("data-aos", "zoom-in");
+      nameCard.setAttribute("data-aos-once", "true");
+      nameCard.style.opacity = "1";
   }
   if (testimoni) {
-    testimoni.setAttribute("data-aos", "zoom-in");
-    testimoni.setAttribute("data-aos-once", "true");
-    testimoni.style.opacity = "1";
+      testimoni.setAttribute("data-aos", "zoom-in");
+      testimoni.setAttribute("data-aos-once", "true");
+      testimoni.style.opacity = "1";
   }
 
   if (carouselIcons.length > 0) {
-    carouselIcons.forEach((icon) => {
-      icon.style.opacity = "1";
-    });
+      carouselIcons.forEach((icon) => {
+          icon.style.opacity = "1";
+      });
   }
 }
