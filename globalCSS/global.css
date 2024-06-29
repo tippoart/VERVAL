@@ -3,13 +3,17 @@
 .verval1 {
   background-color: rgb(12, 12, 12);
   padding: 10rem;
-  gap: 1rem;
+  padding: 12rem;
   color: white;
-
+gap: 2rem;
   position: relative;
   z-index: 0;
 }
 
+.deskripsi1 {
+  font-size: 20px;
+  font-weight: 100;
+}
 .verval1 .siku {
   position: relative;
   padding-left: 3.5rem;
@@ -68,11 +72,11 @@
 
 .img1 {
   width: 30rem;
-  height: 20rem;
+  height: 23rem;
   /* overflow: hidden; */
   background-image: url("../img/image.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 47%;
   background-attachment: fixed;
 }
 
@@ -224,7 +228,6 @@
   bottom: 7rem;
   height: 25rem;
   padding: 3rem;
-
 }
 
 .verval3 .verval3-card img {
