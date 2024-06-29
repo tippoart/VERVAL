@@ -69,12 +69,36 @@ header {
 /* section1 */
 
 .section1 {
-  padding: 8rem;
+  padding-left: 8rem;
+  padding-right: 1rem;
+  padding-top: 8rem;
 }
 
-
-
+.sec-kanan{
+  padding: 3rem;
+  width: 50rem;
+  position: relative;
+  right: 3rem;
+}
+.sec-kanan img {
+width: 46rem;
+object-fit: cover;
+}
 
 .list {
   color: rgb(158, 203, 91);
+}
+.judul {
+  font-size: 35px;
+}
+
+.main{
+  width: 40rem;
+  height: 30rem;
+  padding: 1rem;
+
+}
+.main img{
+  object-fit: contain;
+  width: 4rem;
 }
