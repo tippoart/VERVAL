@@ -63,26 +63,22 @@ document.addEventListener("DOMContentLoaded", function () {
         scrolling == 2;
       }
     } else {
-        textOfer.style.opacity = 1;
-        textOfer2.style.opacity = 1;
+      textOfer.style.opacity = 1;
+      textOfer2.style.opacity = 1;
 
-        AllCards[0].style.opacity = "0";
-        AllCards[0].style.transition = "0.2s";
-        AllCards[0].style.transform = "translateY(0)";
-        AllCards[0].classList.remove("smooth-bounce");
+      AllCards[0].style.opacity = "0";
+      AllCards[0].classList.remove("smooth-bounce");
 
-        AllCards[1].style.opacity = "0";
-        AllCards[1].syle.transition = "0.2s";
-        AllCards[1].style.transform = "translateY(0)";
-        AllCards[1].classList.remove("smooth-bounce");
+      AllCards[1].style.opacity = "0";
 
-        AllCards[2].style.opacity = "0";
-        AllCards[2].style.transition = "0.2s";
-        AllCards[2].style.transform = "translateY(0)";
-        AllCards[2].classList.remove("smooth-bounce");
+      AllCards[1].classList.remove("smooth-bounce");
 
-        const back = document.querySelector(".centered")
-        back.classList.remove("centered");
+      AllCards[2].style.opacity = "0";
+
+      AllCards[2].classList.remove("smooth-bounce");
+
+      const back = document.querySelector(".centered");
+      back.classList.remove("centered");
 
       scrolling = 0;
     }
@@ -347,10 +343,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-
-
-
 
 //verval 4
 document.addEventListener("DOMContentLoaded", function () {
