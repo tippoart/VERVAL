@@ -2,6 +2,7 @@
 
 document.addEventListener("DOMContentLoaded", function() {
   let textOfer = document.querySelector(".we-ofer");
+  let textOfer2 = document.querySelector(".we-ofer2");
 
   const imgCardSec2 = document.querySelector(".card-container");
 
@@ -29,6 +30,10 @@ document.addEventListener("DOMContentLoaded", function() {
               textOfer.style.transition = "1s";
               textOfer.style.zIndex = "0";
 
+              textOfer2.style.opacity = 0;
+              textOfer2.style.transition = "1s";
+              textOfer2.style.zIndex = "0";
+
               AllCards[0].style.opacity = "1";
               AllCards[0].style.transition = "1s";
               AllCards[0].style.transform = "translateY(0)";
@@ -46,9 +51,12 @@ document.addEventListener("DOMContentLoaded", function() {
               AllCards[2].classList.add("smooth-bounce");
 
               scrolling = 1;
-          } else if (
+          }
+          
+          
+          else if (
               scrolling === 1 &&
-              scrollPosition > sectionStart + sectionHeight / 7
+              scrollPosition > sectionStart + sectionHeight / 12
           ) {
 
               imgCardSec2.classList.add("centered");

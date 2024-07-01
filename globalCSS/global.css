@@ -1,11 +1,13 @@
 /* verval 1 */
-
+body {
+  overflow-x: hidden;
+}
 .verval1 {
   background-color: rgb(12, 12, 12);
   padding: 10rem;
   padding: 12rem;
   color: white;
-gap: 2rem;
+  gap: 2rem;
   position: relative;
   z-index: 0;
 }
@@ -83,48 +85,72 @@ gap: 2rem;
 /* verval 2 */
 
 .verval2 {
-  /* background-image: url("../img/img-card-sec2/OR68VV0.jpg"); */
+  background-image: url("../img/Desktop-2_cleanup.png");
   background-color: rgb(23, 22, 22);
-  height: 140vh;
+  height: 150vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
-  overflow: hidden;
+  position: relative;
+}
+
+.h2-sticky {
+  position: sticky;
+  top: 3rem;
+}
+.h2-sticky h2 {
+  position: relative;
+  top: 15rem;
+}
+.we-ofer {
+  font-weight: 100;
+  font-size: 48px;
+}
+
+.we-ofer2 {
+  font-weight: 100;
+  font-size: 48px;
 }
 
 .verval2 .card-container {
   display: flex;
-  position: relative;
-  overflow: hidden;
-  left: 25%;
-  padding: 5rem;
+  position: sticky;
+  bottom: 2px;
   rotate: 14deg;
-  bottom: 3rem;
+  justify-content: center;
+
+  padding: 8rem;
+  
 }
 
 .verval2 .my-img1 {
   rotate: -15deg;
   position: relative;
-  top: 3rem;
-  left: 1rem;
+  top: 8rem;
+  left: 20rem;
 }
 .verval2 .my-img3 {
   rotate: 15deg;
   position: relative;
-  top: 3rem;
+  top: 8rem;
+  right: 1rem;
+}
+.verval2 .my-img2 {
+ 
+  position: relative;
+  top: 4rem;
   right: 1rem;
 }
 
-.verval2 h2 {
-  position: relative;
-  top: 30%;
-}
 .verval2 img {
   height: 27rem;
   object-fit: cover;
   opacity: 0;
+  position: absolute;
+  left: 20rem;
 }
+
 
 @keyframes smooth-bounce {
   0% {
