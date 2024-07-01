@@ -121,7 +121,6 @@ body {
   justify-content: center;
 
   padding: 8rem;
-  
 }
 
 .verval2 .my-img1 {
@@ -137,7 +136,6 @@ body {
   right: 1rem;
 }
 .verval2 .my-img2 {
- 
   position: relative;
   top: 4rem;
   right: 1rem;
@@ -150,7 +148,6 @@ body {
   position: absolute;
   left: 20rem;
 }
-
 
 @keyframes smooth-bounce {
   0% {
@@ -210,6 +207,7 @@ body {
 .verval3 p {
   font-size: 4rem;
   text-align: center;
+  color: rgb(49, 57, 60);
 }
 
 .verval3 .our-values {
@@ -258,7 +256,7 @@ body {
 
 .verval3 .verval3-card img {
   object-fit: cover;
-  width: 65rem;
+  width: 90%;
   display: none;
   transition: transform 1s ease-in-out;
   animation: card-verval-animation 1s ease-in-out;
@@ -275,21 +273,48 @@ body {
     transform: translateY(4px);
   }
 }
+.verval3 .verval3-card .verval3-card-img-1 {
+  position: absolute;
+  bottom: -8rem;
+}
 .verval3 .verval3-card .verval3-card-img-2 {
   position: absolute;
-  bottom: -3rem;
+  bottom: -10rem;
 }
 .verval3 .verval3-card .verval3-card-img-3 {
   position: absolute;
-  bottom: -4.4rem;
+  bottom: -12rem;
 }
 .verval3 .verval3-card .verval3-card-img-4 {
   position: absolute;
-  bottom: -4rem;
+  bottom: -12rem;
 }
 .verval3 .verval3-card .verval3-card-img-5 {
   position: absolute;
-  bottom: -4rem;
+  bottom: -12.3rem;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .verval3 .verval3-card .verval3-card-img-1 {
+    position: absolute;
+    bottom: 1rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-2 {
+    position: absolute;
+    bottom: -1rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-3 {
+    position: absolute;
+    bottom: -3rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-4 {
+    position: absolute;
+    bottom: -3rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-5 {
+    position: absolute;
+    bottom: -3.3rem;
+  }
 }
 
 /* verval 4 */
@@ -316,8 +341,24 @@ body {
   height: 100%;
   background-image: url("../img/daun-jatuh.png");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 140%;
   background-position: center;
+  opacity: 0;
+  transition: opacity 1s;
+}
+
+@keyframes zoomOutBackground {
+  from {
+    background-size: 140%; /* Mulai dengan background yang diperbesar */
+  }
+  to {
+    background-size: 100%; /* Akhiri dengan background pada ukuran normal */
+  }
+}
+
+.verval4 .verval4-card.visible {
+  opacity: 1;
+  animation: zoomOutBackground 1s forwards;
 }
 
 .verval4 .verval4-card .name-card {
@@ -325,12 +366,16 @@ body {
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   padding: 4rem;
-  border-radius: 2rem;
-  width: 30rem;
-  height: 16rem;
+  border-radius: 4rem;
+  width: 35rem;
+  height: 18rem;
   border: 2px solid rgba(255, 255, 255, 0.176);
   z-index: 1;
   transform: 3s;
+}
+#testimonialText {
+  position: relative;
+  bottom: 2rem;
 }
 
 .verval4 .verval4-card .name-card .testimoni {
@@ -338,17 +383,17 @@ body {
   font-weight: 500;
   position: relative;
   text-align: center;
-  bottom: 7rem;
-  font-size: 1.5rem;
+  bottom: 9rem;
+  font-size: 1rem;
 }
 
 .verval4 .verval4-card .name-card img {
   object-fit: cover;
-  width: 5rem;
+  width: 6rem;
   border-radius: 50%;
   border: 2px solid rgb(182, 180, 180);
   position: relative;
-  bottom: 4rem;
+  bottom: 5rem;
 }
 .verval4 .verval4-card .name-card .user {
   color: rgb(245, 186, 24);

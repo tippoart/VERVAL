@@ -194,7 +194,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (index < lettersToColor) {
           span.style.color = "white";
         } else {
-          span.style.color = "rgba(43, 47, 49, 0.915)";
+          span.style.color = " rgb(49, 57, 60)";
         }
       });
 
@@ -213,7 +213,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (indexdua < lettersToColorDua - totalLetters) {
             spandua.style.color = "white";
           } else {
-            spandua.style.color = "rgba(43, 47, 49, 0.915)";
+            spandua.style.color = "rgb(49, 57, 60)";
           }
         });
       } else {
@@ -300,7 +300,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (lettersToColorEmpat == 52) {
-        cardContainers[0].style.transform = ` scale(0.99)`;
+        cardContainers[0].style.transform = ` scale(0.97)`;
         cardContainers[1].style.display = "block";
         cardContainers[2].style.display = "none";
         cardContainers[3].style.display = "none";
@@ -312,14 +312,14 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[4].style.display = "none";
         cardContainers[2].style.display = "block";
 
-        cardContainers[1].style.transform = ` scale(0.98)`;
-        cardContainers[0].style.transform = ` scale(0.96)`;
+        cardContainers[1].style.transform = ` scale(0.96)`;
+        cardContainers[0].style.transform = ` scale(0.93)`;
       }
 
       if (lettersToColorEmpat == 54) {
         cardContainers[4].style.display = "none";
         cardContainers[3].style.display = "block";
-        cardContainers[1].style.transform = `translateY(-30px) scale(0.96)`;
+        cardContainers[1].style.transform = `translateY(-30px) scale(0.95)`;
         cardContainers[2].style.transform = `translateY(-27px) scale(0.98)`;
         cardContainers[0].style.transform = `translateY(50px) scale(0.91)`;
       }
@@ -348,49 +348,29 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-//verval 1
 
-let imgContainer = document.querySelector(".img1");
-let img = document.querySelector(".img1 img");
 
-function verval1() {
-  // Check if imgContainer and img are found
-  if (imgContainer && img) {
-    let containerRect = imgContainer.getBoundingClientRect();
-    let scrollPosition =
-      this.window.pageYOffset || document.documentElement.scrollTop;
-    let movement = (scrollPosition - containerRect.top) * -0.1;
 
-    img.style.transform = "translateY(" + movement + "px)";
-  }
-}
 
 //verval 4
-let card = document.querySelector(".verval4 .verval4-card");
-let carouselIcons = document.querySelectorAll(".verval4 .bx");
-let nameCard = document.querySelector(".verval4 .name-card");
-let testimoni = document.querySelector(".testimoni");
+document.addEventListener("DOMContentLoaded", function () {
+  const testimonialCarousel = document.getElementById("testimonialCarousel");
 
-function verval4() {
-  if (card) {
-    card.style.backgroundSize = "80rem";
-    card.style.opacity = "1";
-  }
+  window.addEventListener("scroll", function () {
+    const scrollPosition = window.scrollY;
+    const windowHeight = window.innerHeight;
+    const sectionOffsetTop = document.querySelector("#section4").offsetTop;
+    const sectionHeight = document.querySelector("#section4").offsetHeight;
 
-  if (nameCard) {
-    nameCard.setAttribute("data-aos", "zoom-in");
-    nameCard.setAttribute("data-aos-once", "true");
-    nameCard.style.opacity = "1";
-  }
-  if (testimoni) {
-    testimoni.setAttribute("data-aos", "zoom-in");
-    testimoni.setAttribute("data-aos-once", "true");
-    testimoni.style.opacity = "1";
-  }
+    const sectionMiddle = sectionOffsetTop + sectionHeight / 2;
 
-  if (carouselIcons.length > 0) {
-    carouselIcons.forEach((icon) => {
-      icon.style.opacity = "1";
-    });
-  }
-}
+    if (
+      scrollPosition + windowHeight / 2 >= sectionMiddle &&
+      scrollPosition <= sectionOffsetTop + sectionHeight
+    ) {
+      testimonialCarousel.classList.add("visible");
+    } else {
+      testimonialCarousel.classList.remove("visible");
+    }
+  });
+});
