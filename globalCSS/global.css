@@ -3,9 +3,8 @@ body {
   overflow-x: hidden;
 }
 .verval1 {
-  background-color: rgb(12, 12, 12);
-  padding: 10rem;
-  padding: 12rem;
+  background-color: rgb(8, 8, 8);
+  padding: 13rem;
   color: white;
   gap: 2rem;
   position: relative;
@@ -73,13 +72,32 @@ body {
 }
 
 .img1 {
-  width: 30rem;
-  height: 23rem;
+  width: 31rem;
+  height: 27rem;
   /* overflow: hidden; */
   background-image: url("../img/image.png");
   background-repeat: no-repeat;
   background-size: 47%;
   background-attachment: fixed;
+}
+
+#who-we-are {
+  padding: 4rem;
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .verval1 {
+    padding: 10rem;
+  }
+
+  .img1 {
+    width: 28rem;
+    height: 23rem;
+  }
+
+  #who-we-are {
+    padding: 2rem;
+  }
 }
 
 /* verval 2 */
@@ -126,7 +144,7 @@ body {
 .verval2 .my-img1 {
   rotate: -15deg;
   position: relative;
-  top: 8rem;
+  top: 7.9rem;
   left: 20rem;
 }
 .verval2 .my-img3 {
@@ -142,7 +160,7 @@ body {
 }
 
 .verval2 img {
-  height: 27rem;
+  height: 30rem;
   object-fit: cover;
   opacity: 0;
   position: absolute;
@@ -179,6 +197,16 @@ body {
   }
 }
 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .verval2 img {
+    height: 27rem;
+    object-fit: cover;
+    opacity: 0;
+    position: absolute;
+    left: 20rem;
+  }
+}
+
 /* verval 3 */
 .verval3 {
   height: 300vh;
@@ -192,7 +220,7 @@ body {
 }
 .verval3 .our {
   position: sticky;
-  top: 3rem;
+  top: 5rem;
   width: 70rem;
   overflow: hidden;
 }
@@ -226,7 +254,25 @@ body {
 
 .verval3 .our .bumiku {
   position: relative;
-  top: 18%;
+  top: 52%;
+  left: 9%;
+}
+
+#my-text {
+  top: 34%;
+  left: 8.5%;
+}
+
+#sectiontigapart3 {
+  position: relative;
+  right: 29%;
+  bottom: 20%;
+}
+
+#sectiontigapart4 {
+  position: relative;
+  left: 10%;
+  bottom: 53%;
 }
 .verval3 .our .bumiku .icon {
   border: 2px solid rgba(43, 47, 49, 0.915);
@@ -295,24 +341,38 @@ body {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .verval3 .our .bumiku {
+    top: 35%;
+    left: 3%;
+  }
+  #my-text {
+    top: 18%;
+    left: 2%;
+  }
+
+  #sectiontigapart3 {
+    right: 29%;
+    bottom: 20%;
+  }
+
+  #sectiontigapart4 {
+    left: 9%;
+    bottom: 53%;
+  }
+
   .verval3 .verval3-card .verval3-card-img-1 {
-    position: absolute;
     bottom: 1rem;
   }
   .verval3 .verval3-card .verval3-card-img-2 {
-    position: absolute;
     bottom: -1rem;
   }
   .verval3 .verval3-card .verval3-card-img-3 {
-    position: absolute;
     bottom: -3rem;
   }
   .verval3 .verval3-card .verval3-card-img-4 {
-    position: absolute;
     bottom: -3rem;
   }
   .verval3 .verval3-card .verval3-card-img-5 {
-    position: absolute;
     bottom: -3.3rem;
   }
 }
