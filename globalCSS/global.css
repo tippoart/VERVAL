@@ -249,7 +249,7 @@ body {
 
 .verval3 .verval3-card {
   position: sticky;
-  top: 3rem;
+  top: 9rem;
   width: 100%;
   bottom: 7rem;
   height: 25rem;
@@ -258,7 +258,7 @@ body {
 
 .verval3 .verval3-card img {
   object-fit: cover;
-  width: 50rem;
+  width: 65rem;
   display: none;
   transition: transform 1s ease-in-out;
   animation: card-verval-animation 1s ease-in-out;
@@ -277,19 +277,19 @@ body {
 }
 .verval3 .verval3-card .verval3-card-img-2 {
   position: absolute;
-  bottom: -1rem;
+  bottom: -3rem;
 }
 .verval3 .verval3-card .verval3-card-img-3 {
   position: absolute;
-  bottom: -3rem;
+  bottom: -4.4rem;
 }
 .verval3 .verval3-card .verval3-card-img-4 {
   position: absolute;
-  bottom: -5rem;
+  bottom: -4rem;
 }
 .verval3 .verval3-card .verval3-card-img-5 {
   position: absolute;
-  bottom: -7.5rem;
+  bottom: -4rem;
 }
 
 /* verval 4 */
