@@ -66,14 +66,14 @@ document.addEventListener("DOMContentLoaded", function () {
       textOfer.style.opacity = 1;
       textOfer2.style.opacity = 1;
 
-      AllCards[0].style.opacity = "0";
+      // AllCards[0].style.opacity = "0";
       AllCards[0].classList.remove("smooth-bounce");
 
-      AllCards[1].style.opacity = "0";
+      // AllCards[1].style.opacity = "0";
 
       AllCards[1].classList.remove("smooth-bounce");
 
-      AllCards[2].style.opacity = "0";
+      // AllCards[2].style.opacity = "0";
 
       AllCards[2].classList.remove("smooth-bounce");
 
