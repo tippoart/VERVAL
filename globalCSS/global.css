@@ -314,11 +314,11 @@ body {
 
 .verval3 .verval3-card {
   position: sticky;
-  top: 14rem;
+  top: 12rem;
+  margin-top: 6rem;
   width: 100%;
   bottom: 7rem;
   height: 25rem;
-  padding: 3rem;
 }
 
 .verval3 .verval3-card img {
@@ -390,24 +390,22 @@ body {
     top: -17%;
   }
 
-  .verval3 .verval3-card {
-    top: 9rem;
-  }
+ 
 
   .verval3 .verval3-card .verval3-card-img-1 {
-    bottom: 1rem;
+    bottom: 9%;
   }
   .verval3 .verval3-card .verval3-card-img-2 {
-    bottom: -1rem;
+    bottom: 3%;
   }
   .verval3 .verval3-card .verval3-card-img-3 {
-    bottom: -3rem;
+    bottom: -3%;
   }
   .verval3 .verval3-card .verval3-card-img-4 {
-    bottom: -3rem;
+    bottom: -4%;
   }
   .verval3 .verval3-card .verval3-card-img-5 {
-    bottom: -3.3rem;
+    bottom: -5%;
   }
 }
 
