@@ -72,31 +72,32 @@ body {
 }
 
 .img1 {
-  width: 31rem;
+  width: 30rem;
   height: 27rem;
   /* overflow: hidden; */
   background-image: url("../img/image.png");
   background-repeat: no-repeat;
-  background-size: 47%;
+  background-size: contain;
   background-attachment: fixed;
 }
 
 #who-we-are {
-  padding: 4rem;
+  padding: 5rem;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px) {
   .verval1 {
     padding: 10rem;
   }
 
   .img1 {
-    width: 28rem;
+    width: 26rem;
     height: 23rem;
+    background-size: 45%;
   }
 
   #who-we-are {
-    padding: 2rem;
+    padding: 4rem;
   }
 }
 
@@ -144,18 +145,18 @@ body {
 .verval2 .my-img1 {
   rotate: -15deg;
   position: relative;
-  top: 7.9rem;
+  top: 1.9rem;
   left: 20rem;
 }
 .verval2 .my-img3 {
   rotate: 15deg;
   position: relative;
-  top: 8rem;
+  top: 1.9rem;
   right: 1rem;
 }
 .verval2 .my-img2 {
   position: relative;
-  top: 4rem;
+  top: -2rem;
   right: 1rem;
 }
 
@@ -198,12 +199,26 @@ body {
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  .verval2 .my-img1 {
+    top: 7.9rem;
+    left: 20rem;
+  }
+  .verval2 .my-img3 {
+    top: 8rem;
+    right: 1rem;
+  }
+  .verval2 .my-img2 {
+    top: 4rem;
+    right: 1rem;
+  }
+
   .verval2 img {
     height: 27rem;
-    object-fit: cover;
-    opacity: 0;
-    position: absolute;
     left: 20rem;
+  }
+
+  .h2-sticky h2 {
+    top: 16rem;
   }
 }
 
@@ -217,12 +232,17 @@ body {
   padding-bottom: 20rem;
   padding-left: 5rem;
   padding-right: 5rem;
+
+
+
 }
 .verval3 .our {
   position: sticky;
-  top: 5rem;
-  width: 70rem;
+  top: 40rem;
+
   overflow: hidden;
+  margin-top: 25%;
+  width: 70rem;
 }
 
 .verval3 .emb {
@@ -236,6 +256,7 @@ body {
   font-size: 4rem;
   text-align: center;
   color: rgb(49, 57, 60);
+  position: relative;
 }
 
 .verval3 .our-values {
@@ -254,24 +275,24 @@ body {
 
 .verval3 .our .bumiku {
   position: relative;
-  top: 52%;
-  left: 9%;
+  top: 51%;
+  left: 10%;
 }
 
 #my-text {
   top: 34%;
-  left: 8.5%;
+  right: 2%;
 }
 
 #sectiontigapart3 {
   position: relative;
-  right: 29%;
+  right: 10.5%;
   bottom: 20%;
 }
 
 #sectiontigapart4 {
   position: relative;
-  left: 10%;
+  left: 3.5%;
   bottom: 53%;
 }
 .verval3 .our .bumiku .icon {
@@ -281,7 +302,7 @@ body {
   transition: 0.5s;
   top: 5px;
   width: 7rem;
-  transition: background-color 0.3s ease; /* Animasi perubahan warna latar belakang */
+  transition: background-color 0.3s ease; 
 }
 
 .verval3 .our .bumiku .icon img {
@@ -293,7 +314,7 @@ body {
 
 .verval3 .verval3-card {
   position: sticky;
-  top: 9rem;
+  top: 14rem;
   width: 100%;
   bottom: 7rem;
   height: 25rem;
@@ -340,24 +361,37 @@ body {
   bottom: -12.3rem;
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+@media screen and (min-width: 1024px){
+  .verval3 .our {
+    top: 15%;
+    margin-top: 10%;
+  }
+
   .verval3 .our .bumiku {
-    top: 35%;
-    left: 3%;
+    top: 11.4rem;
+    left: 2rem;
   }
   #my-text {
-    top: 18%;
+    top: -10%;
     left: 2%;
+  }
+  #my-text #sectiontigapart2 {
+    position: relative;
+    top: 6rem;
   }
 
   #sectiontigapart3 {
-    right: 29%;
-    bottom: 20%;
+    right: 30%;
+    top: 16%;
   }
 
   #sectiontigapart4 {
-    left: 9%;
-    bottom: 53%;
+    left: 10%;
+    top: -17%;
+  }
+
+  .verval3 .verval3-card {
+    top: 9rem;
   }
 
   .verval3 .verval3-card .verval3-card-img-1 {
