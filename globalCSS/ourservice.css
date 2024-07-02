@@ -118,11 +118,25 @@ nav ul .li {
 .section2 {
   overflow: hidden;
   position: relative;
+  background-color: rgb(26, 25, 25);
+  height: 50vh;
 }
+.section2 p{
+  font-size: 2rem;
+  color: rgb(116, 116, 116);
+}
+
 .section2 .section2-verify .img1 {
-  object-fit: cover;
+  object-fit: contain;
   cursor: pointer;
-  width: 120%;
+  width: 30rem;
+  position: absolute;
+  bottom: 6.5rem;
+}
+.section2 .section2-verify .img2 {
+  cursor: pointer;
+  position: absolute;
+  bottom: -10rem;
 }
 
 .img-container {
@@ -141,12 +155,14 @@ nav ul .li {
 .img1 {
   left: 0;
   transform: translateX(0);
+
 }
 
 .img2 {
   transform: translateX(0);
   cursor: grab;
   position: absolute;
+  
  
 
 }

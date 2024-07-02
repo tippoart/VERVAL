@@ -106,22 +106,22 @@ body {
 .verval2 {
   background-image: url("../img/Desktop-2_cleanup.png");
   background-color: rgb(23, 22, 22);
-  height: 150vh;
+  height: 175vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   position: relative;
+  padding-bottom: 20rem;
 }
 
 .h2-sticky {
   position: sticky;
-  top: 3rem;
+  top: 10rem;
+  padding: 10rem;
+  margin-top: 50%;
 }
-.h2-sticky h2 {
-  position: relative;
-  top: 15rem;
-}
+
 .we-ofer {
   font-weight: 100;
   font-size: 48px;
@@ -135,11 +135,13 @@ body {
 .verval2 .card-container {
   display: flex;
   position: sticky;
+
   bottom: 2px;
+  top: 2px;
   rotate: 14deg;
   justify-content: center;
 
-  padding: 8rem;
+  padding: 10rem;
 }
 
 .verval2 .my-img1 {
@@ -198,7 +200,35 @@ body {
   }
 }
 
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
+/* pc */
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+  .h2-sticky {
+    top: 1rem;
+    margin-top: 5%;
+  }
+  .verval2 .card-container {
+    top: 20%;
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+  .h2-sticky {
+    top: 15rem;
+    margin-top: 10%;
+  }
+
+    .verval2 .card-container {
+    bottom: 10%;
+    padding: 4rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+ 
+  .verval2 .card-container {
+    bottom: 10%;
+    padding: 4rem;
+  }
   .verval2 .my-img1 {
     top: 7.9rem;
     left: 20rem;
@@ -216,9 +246,14 @@ body {
     height: 27rem;
     left: 20rem;
   }
+  .h2-sticky {
+    margin-top: 45%;
+    top: 20rem;
+    padding: 3rem;
+  }
 
   .h2-sticky h2 {
-    top: 16rem;
+    position: relative;
   }
 }
 
@@ -364,12 +399,10 @@ body {
   }
   .verval3 .our {
     margin-left: 25%;
-   
   }
 }
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
- 
   .verval3 .our {
     margin-left: 20%;
     margin-top: 50%;

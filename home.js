@@ -73,12 +73,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
       AllCards[1].classList.remove("smooth-bounce");
 
-      // AllCards[2].style.opacity = "0";
-
+      
       AllCards[2].classList.remove("smooth-bounce");
-
+      
       const back = document.querySelector(".centered");
       back.classList.remove("centered");
+      AllCards[0].style.opacity = "0";
+      AllCards[1].style.opacity = "0";
+      AllCards[2].style.opacity = "0";
 
       scrolling = 0;
     }
