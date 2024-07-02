@@ -100,8 +100,7 @@ header {
 #navbar ul li:hover {
   background-color: rgb(42, 51, 56);
   color: white;
-  border: 1px solid  rgb(42, 51, 56); 
-
+  border: 1px solid rgb(42, 51, 56);
 }
 .verifikasi {
   border: 1.3px solid rgb(122, 195, 77);
@@ -118,22 +117,36 @@ nav ul .li {
 
 .section2 {
   overflow: hidden;
+  position: relative;
 }
-.section2 .section2-verify .img1{
+.section2 .section2-verify .img1 {
   object-fit: cover;
   cursor: pointer;
   width: 120%;
+}
+
+.img-container {
+  position: relative;
+  width: 110%;
+ 
 
 }
-.section2 img{
-   transition: transform 0.5s ease-in-out;
-}
+.img1,
 .img2 {
-  z-index: 2;
+  position: relative;
+  transition: transform 0.5s ease; /* Transisi halus */
+  cursor: pointer;
 }
+
 .img1 {
-  z-index: 3;
+  left: 0;
+  transform: translateX(0);
 }
 
+.img2 {
+  transform: translateX(0);
+  cursor: grab;
+  position: absolute;
+ 
 
-
+}

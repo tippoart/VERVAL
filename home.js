@@ -309,14 +309,14 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[2].style.display = "block";
 
         cardContainers[1].style.transform = ` scale(0.96)`;
-        cardContainers[0].style.transform = ` scale(0.93)`;
+        cardContainers[0].style.transform = ` scale(0.90)`;
       }
 
       if (lettersToColorEmpat == 54) {
         cardContainers[4].style.display = "none";
         cardContainers[3].style.display = "block";
-        cardContainers[1].style.transform = `translateY(-30px) scale(0.95)`;
-        cardContainers[2].style.transform = `translateY(-27px) scale(0.98)`;
+        cardContainers[1].style.transform = `translateY(-30px) scale(0.90)`;
+        cardContainers[2].style.transform = `translateY(-40px) scale(0.94)`;
         cardContainers[0].style.transform = `translateY(50px) scale(0.91)`;
       }
 
@@ -324,7 +324,8 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[4].style.display = "block";
         cardContainers[2].style.transform = `translateY(-60px) scale(0.92)`;
         cardContainers[3].style.transform = `translateY(-30px) scale(0.96)`;
-        cardContainers[1].style.transform = `translateY(20px) scale(0.96)`;
+        cardContainers[1].style.transform = `translateY(20px) scale(0.92)`;
+        cardContainers[0].style.transform = `translateY(20px) scale(0.80)`;
       }
 
       // if (lettersToColorEmpat == 56) {

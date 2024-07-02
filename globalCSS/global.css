@@ -229,17 +229,14 @@ body {
   background-color: rgb(7, 7, 7);
   position: relative;
   flex-direction: column;
+
   padding-bottom: 20rem;
   padding-left: 5rem;
   padding-right: 5rem;
-
-
-
 }
 .verval3 .our {
   position: sticky;
   top: 40rem;
-
   overflow: hidden;
   margin-top: 25%;
   width: 70rem;
@@ -302,7 +299,7 @@ body {
   transition: 0.5s;
   top: 5px;
   width: 7rem;
-  transition: background-color 0.3s ease; 
+  transition: background-color 0.3s ease;
 }
 
 .verval3 .our .bumiku .icon img {
@@ -314,11 +311,10 @@ body {
 
 .verval3 .verval3-card {
   position: sticky;
-  top: 12rem;
-  margin-top: 6rem;
+  top: 4%;
+  padding: 25%;
   width: 100%;
   bottom: 7rem;
-  height: 25rem;
 }
 
 .verval3 .verval3-card img {
@@ -346,22 +342,42 @@ body {
 }
 .verval3 .verval3-card .verval3-card-img-2 {
   position: absolute;
-  bottom: -10rem;
+  bottom: 1rem;
 }
 .verval3 .verval3-card .verval3-card-img-3 {
   position: absolute;
-  bottom: -12rem;
+  bottom: -10rem;
 }
 .verval3 .verval3-card .verval3-card-img-4 {
   position: absolute;
-  bottom: -12rem;
+  bottom: -10rem;
 }
 .verval3 .verval3-card .verval3-card-img-5 {
   position: absolute;
-  bottom: -12.3rem;
+  bottom: -15rem;
 }
 
-@media screen and (min-width: 1024px){
+/* pc */
+@media screen and (min-width: 2560px) and (min-height: 1600px) {
+  .verval3 .verval3-card {
+    top: 5%;
+  }
+  .verval3 .our {
+    margin-left: 25%;
+   
+  }
+}
+
+@media screen and (min-width: 1920px) and (min-height: 1080px) {
+ 
+  .verval3 .our {
+    margin-left: 20%;
+    margin-top: 50%;
+  }
+}
+
+/* laptop */
+@media screen and (min-width: 768px) {
   .verval3 .our {
     top: 15%;
     margin-top: 10%;
@@ -389,8 +405,6 @@ body {
     left: 10%;
     top: -17%;
   }
-
- 
 
   .verval3 .verval3-card .verval3-card-img-1 {
     bottom: 9%;
