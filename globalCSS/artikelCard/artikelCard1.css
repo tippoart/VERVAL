@@ -70,19 +70,20 @@ header {
 
 .section1 {
   padding-left: 8rem;
-  padding-right: 1rem;
+border-bottom: 1px solid black;
   padding-top: 8rem;
+  padding-bottom: 3rem;
 }
 
-.sec-kanan{
+.sec-kanan {
   padding: 3rem;
   width: 50rem;
   position: relative;
   right: 3rem;
 }
 .sec-kanan img {
-width: 46rem;
-object-fit: cover;
+  width: 46rem;
+  object-fit: cover;
 }
 
 .list {
@@ -92,13 +93,81 @@ object-fit: cover;
   font-size: 35px;
 }
 
-.main{
+.main {
   width: 40rem;
   height: 30rem;
   padding: 1rem;
-
 }
-.main img{
+.main img {
   object-fit: contain;
-  width: 4rem;
+  width: 5rem;
+}
+.img1 {
+  position: relative;
+  right: 2rem;
+}
+
+.icon {
+  padding-right: 2rem;
+}
+.icon i {
+  position: relative;
+  top: 5px;
+}
+
+.share {
+  background-color: rgb(150, 193, 86);
+  border-radius: 10px;
+  padding: 5px;
+  width: 6rem;
+  height: 2em;
+}
+.share img {
+  object-fit: contain;
+  width: 16px;
+}
+
+.share p {
+  position: relative;
+  top: 6px;
+  color: white;
+}
+
+.paraf1 {
+  font-size: 20px;
+  color: rgb(70, 70, 70);
+}
+
+.judul-1 {
+  font-weight: bold;
+}
+
+.main {
+  background-color: rgb(247, 249, 250);
+  border-radius: 10px;
+  width: 20rem;
+  position: sticky;
+  right: 4rem;
+  top: 7rem;
+  margin-top: 4rem;
+}
+
+.card-main .p1 {
+  font-size: 12px;
+  position: relative;
+  bottom: 3px;
+}
+.p-head {
+  position: relative;
+  top: 10px;
+  font-weight: 500;
+}
+.hr1 {
+  border-top: 0.5px solid rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.more {
+  font-size: 18px;
+  color: rgb(158, 203, 91);
 }

@@ -116,53 +116,39 @@ nav ul .li {
 }
 
 .section2 {
-  overflow: hidden;
+  background-image: url("../img/our-service/bg-our1.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 55vh;
+  justify-content: space-between;
   position: relative;
-  background-color: rgb(26, 25, 25);
-  height: 50vh;
+  width: 100%;
+  overflow: hidden;
 }
-.section2 p{
+.section2 p {
   font-size: 2rem;
   color: rgb(116, 116, 116);
 }
 
 .section2 .section2-verify .img1 {
-  object-fit: contain;
   cursor: pointer;
-  width: 30rem;
-  position: absolute;
-  bottom: 6.5rem;
-}
-.section2 .section2-verify .img2 {
-  cursor: pointer;
-  position: absolute;
-  bottom: -10rem;
-}
-
-.img-container {
   position: relative;
-  width: 110%;
- 
 
 }
-.img1,
-.img2 {
-  position: relative;
-  transition: transform 0.5s ease; /* Transisi halus */
-  cursor: pointer;
-}
-
-.img1 {
+.img1, .img2 {
+  transition: all 0.5s ease;
+  position: absolute;
   left: 0;
-  transform: translateX(0);
-
 }
-
 .img2 {
-  transform: translateX(0);
-  cursor: grab;
-  position: absolute;
-  
- 
-
+  transform: translateX(100%); /* Geser gambar kedua ke kanan penuh */
+  opacity: 0;
+}
+.show-img2 .img1 {
+  transform: translateX(-100%); /* Geser gambar pertama ke kiri penuh */
+}
+.show-img2 .img2 {
+  transform: translateX(0); /* Kembalikan gambar kedua ke posisi aslinya */
+  opacity: 1;
 }

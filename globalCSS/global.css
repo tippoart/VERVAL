@@ -136,12 +136,13 @@ body {
   display: flex;
   position: sticky;
 
-  bottom: 2px;
+  bottom: 4px;
   top: 2px;
   rotate: 14deg;
   justify-content: center;
+  margin-bottom: 7rem;
 
-  padding: 10rem;
+  padding: 15rem;
 }
 
 .verval2 .my-img1 {
@@ -217,14 +218,13 @@ body {
     margin-top: 10%;
   }
 
-    .verval2 .card-container {
+  .verval2 .card-container {
     bottom: 10%;
     padding: 4rem;
   }
 }
 
 @media screen and (min-width: 768px) {
- 
   .verval2 .card-container {
     bottom: 10%;
     padding: 4rem;
