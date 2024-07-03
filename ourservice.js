@@ -11,7 +11,7 @@ const imgContainer = document.querySelector(".img-container");
 gambar1.addEventListener("click", () => {
   if (!isMoved) {
     gambar1.style.transform = "translateX(-100%)";
-    gambar2.style.transform = "translateX(-100%)";
+    gambar2.style.transform = "translateX(-47%)";
   } else {
     gambar1.style.transform = "translateX(0)";
     gambar2.style.transform = "translateX(0)";
@@ -27,7 +27,7 @@ gambar2.addEventListener("mousedown", (e) => {
     transformStyle === "none"
       ? 0
       : parseFloat(transformStyle.split(",")[4].trim());
-  gambar2.style.cursor = "grabbing"; /* Mengubah cursor saat dragging */
+  gambar2.style.cursor = "grabbing"; // Mengubah cursor saat dragging
   document.addEventListener("mousemove", onMouseMove);
   document.addEventListener("mouseup", onMouseUp);
 });
@@ -43,8 +43,8 @@ function onMouseMove(e) {
   const imgWidth = gambar2.offsetWidth;
 
   // Membatasi pergerakan gambar dalam batas container
-  const minTransform = 0;
-  const maxTransform = containerWidth - imgWidth;
+  const minTransform = -imgWidth;
+  const maxTransform = containerWidth;
 
   // Memastikan pergerakan tidak melewati batas
   if (newTransform < minTransform) {
@@ -60,9 +60,23 @@ function onMouseMove(e) {
 function onMouseUp() {
   if (isDragging) {
     isDragging = false;
-    gambar2.style.cursor = "grab"; /* Mengembalikan cursor ke state awal */
+    gambar2.style.cursor = "grab"; // Mengembalikan cursor ke state awal
     document.removeEventListener("mousemove", onMouseMove);
     document.removeEventListener("mouseup", onMouseUp);
     initialTransform = currentTransform; // Memperbarui nilai transformasi awal
   }
 }
+
+// // Menambahkan event listener untuk menangani perubahan ukuran jendela
+// window.addEventListener("resize", () => {
+//   // Mendapatkan lebar container dan gambar
+//   const containerWidth = imgContainer.offsetWidth;
+//   const imgWidth = gambar2.offsetWidth;
+
+//   // Membatasi posisi transformasi saat ini dalam batas container
+//   if (currentTransform > containerWidth - imgWidth) {
+//     currentTransform = containerWidth - imgWidth;
+//     gambar2.style.transform = `translateX(${currentTransform}px)`;
+//     initialTransform = currentTransform; // Memperbarui nilai transformasi awal
+//   }
+// });
