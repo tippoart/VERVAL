@@ -3,7 +3,10 @@
 document.addEventListener("DOMContentLoaded", function () {
   let textOfer = document.querySelector(".we-ofer");
   let textOfer2 = document.querySelector(".we-ofer2");
-
+  
+  var sectionSelectedin = "";
+  let scrollAddS3 = "";
+  
   const imgCardSec2 = document.querySelector(".card-container");
 
   const AllCards = [
@@ -24,16 +27,71 @@ document.addEventListener("DOMContentLoaded", function () {
     const sectionStart = sectionOffsetTop;
     const sectionEnd = sectionOffsetTop + sectionHeight;
 
-    if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
-      if (
-        scrolling === 0 &&
-        scrollPosition > sectionStart + sectionHeight / 10
-      ) {
-        textOfer.style.opacity = 0;
+    var element = document.getElementById("section2");
+      var height = element.offsetHeight;
+      var offsettop = element.offsetTop;
+      var scrollHeightsection = element.scrollHeight;
+      const windowHeights = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPercentage =
+        ((scrollPosition - offsettop) / windowHeights) * 100;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            sectionSelectedin = entry.target.id;
+          }
+        });
+      },
+      {
+        threshold: 0.1,
+      }
+    );
+    document.querySelectorAll("section").forEach((section) => {
+      observer.observe(section);
+    });
+  
+    var isScrollAdded = "false";
+
+    function getTotalHeight() {
+      return document.body.scrollHeight;
+    }
+    function getViewportHeight() {
+      return window.innerHeight;
+    }
+    function getScrollHeightPerStep() {
+      return getViewportHeight();
+    }
+  
+    function displayScrollInfo() {
+      const totalHeight = getTotalHeight();
+      const viewportHeight = getViewportHeight();
+      const scrollHeightPerStep = getScrollHeightPerStep();
+      scrollAddS3 = (4) * Number(scrollHeightPerStep);
+    }
+
+    scrollHeightPerStepsatu = getScrollHeightPerStep();
+
+    if (isScrollAdded == "false" && sectionSelectedin == "section2") {
+      displayScrollInfo();
+      isScrollAdded = "true";
+      document.getElementById("section2").style.height = `${scrollAddS3}px`;
+    }
+
+
+    const lettersToColorEmpat = Math.floor((scrollPosition - offsettop) / scrollHeightPerStepsatu);        
+    
+    if(lettersToColorEmpat == "1"){
+      textOfer.style.opacity = 0;
         textOfer.style.transition = "1s";
         textOfer.style.zIndex = "0";
 
         textOfer2.style.opacity = 0;
+        // let textOfer3 = document.querySelector(".we-ofer3");
+        // if(textOfer3){
+        //   textOfer3.classList.toggle("hidden");
+        // }
         textOfer2.style.transition = "1s";
         textOfer2.style.zIndex = "0";
 
@@ -52,17 +110,9 @@ document.addEventListener("DOMContentLoaded", function () {
         AllCards[2].style.transition = "1s";
         AllCards[2].style.transform = "translateY(0)";
         AllCards[2].classList.add("smooth-bounce");
-
-        scrolling = 1;
-      } else if (
-        scrolling === 1 &&
-        scrollPosition > sectionStart + sectionHeight / 6
-      ) {
-        imgCardSec2.classList.add("centered");
-
-        scrolling == 2;
-      }
-    } else {
+    }else if(lettersToColorEmpat == "2"){
+      imgCardSec2.classList.add("centered");
+    }else if(lettersToColorEmpat < 1){
       textOfer.style.opacity = 1;
       textOfer2.style.opacity = 1;
 
@@ -77,13 +127,82 @@ document.addEventListener("DOMContentLoaded", function () {
       AllCards[2].classList.remove("smooth-bounce");
       
       const back = document.querySelector(".centered");
-      back.classList.remove("centered");
+      if(back){
+        back.classList.remove("centered");
+      }
       AllCards[0].style.opacity = "0";
       AllCards[1].style.opacity = "0";
       AllCards[2].style.opacity = "0";
 
-      scrolling = 0;
     }
+      
+
+    // if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
+    //   if (
+    //     scrolling === 0 &&
+    //     scrollPosition > sectionStart + sectionHeight / 10
+    //   ) {
+    //     textOfer.style.opacity = 0;
+    //     textOfer.style.transition = "1s";
+    //     textOfer.style.zIndex = "0";
+
+    //     textOfer2.style.opacity = 0;
+    //     // let textOfer3 = document.querySelector(".we-ofer3");
+    //     // if(textOfer3){
+    //     //   textOfer3.classList.toggle("hidden");
+    //     // }
+    //     textOfer2.style.transition = "1s";
+    //     textOfer2.style.zIndex = "0";
+
+    //     AllCards[0].style.opacity = "1";
+    //     AllCards[0].style.transition = "1s";
+    //     AllCards[0].style.transform = "translateY(0)";
+    //     AllCards[0].classList.add("smooth-bounce");
+
+    //     AllCards[1].style.opacity = "1";
+    //     AllCards[1].style.transition = "1s";
+    //     AllCards[1].style.transform = "translateY(0)";
+
+    //     AllCards[1].classList.add("smooth-bounce");
+
+    //     AllCards[2].style.opacity = "1";
+    //     AllCards[2].style.transition = "1s";
+    //     AllCards[2].style.transform = "translateY(0)";
+    //     AllCards[2].classList.add("smooth-bounce");
+
+    //     scrolling = 1;
+    //   } else if (
+    //     scrolling === 1 &&
+    //     scrollPosition > sectionStart + sectionHeight / 6
+    //   ) {
+    //     imgCardSec2.classList.add("centered");
+
+    //     scrolling == 2;
+    //   }
+    // } else {
+    //   textOfer.style.opacity = 1;
+    //   textOfer2.style.opacity = 1;
+
+    //   // AllCards[0].style.opacity = "0";
+    //   AllCards[0].classList.remove("smooth-bounce");
+
+    //   // AllCards[1].style.opacity = "0";
+
+    //   AllCards[1].classList.remove("smooth-bounce");
+
+      
+    //   AllCards[2].classList.remove("smooth-bounce");
+      
+    //   const back = document.querySelector(".centered");
+    //   if(back){
+    //     back.classList.remove("centered");
+    //   }
+    //   AllCards[0].style.opacity = "0";
+    //   AllCards[1].style.opacity = "0";
+    //   AllCards[2].style.opacity = "0";
+
+    //   scrolling = 0;
+    // }
   });
 });
 
@@ -186,9 +305,6 @@ document.addEventListener("DOMContentLoaded", function () {
         lettersToColorTiga + totalLettersEmpat / totallll
       );
       spans.forEach((span, index) => {
-        console.log("====span pertama====");
-        console.log(lettersToColor);
-        console.log("========");
         if (index < lettersToColor) {
           span.style.color = "white";
         } else {
@@ -204,10 +320,6 @@ document.addEventListener("DOMContentLoaded", function () {
         iconContainer.style.backgroundColor = "white";
 
         spansdua.forEach((spandua, indexdua) => {
-          console.log("==========TEST Kedua==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log("=======================");
           if (indexdua < lettersToColorDua - totalLetters) {
             spandua.style.color = "white";
           } else {
@@ -229,11 +341,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (lettersToColorDua >= totalLettersDua) {
         spansketiga.forEach((spanketiga, indexketiga) => {
-          console.log("==========TEST Ketiga==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log(lettersToColorTiga);
-          console.log("=======================");
           if (
             indexketiga <
             lettersToColorTiga - totalLetters - totalLettersDua
@@ -253,12 +360,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (lettersToColorTiga >= totalLettersTiga) {
         spanskeempat.forEach((spanempat, indexkeempat) => {
-          console.log("==========TEST Ketiga==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log(lettersToColorTiga);
-          console.log(lettersToColorEmpat);
-          console.log("=======================");
           if (
             indexkeempat <
             lettersToColorEmpat -
@@ -338,7 +439,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // }
 
       if (isScrollAdded == "false" && sectionSelectedin == "section3") {
-        console.log("Hore");
         displayScrollInfo();
         isScrollAdded = "true";
         document.getElementById("section3").style.height = `${scrollAddS3}px`;
