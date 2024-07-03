@@ -17,9 +17,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     if (event.deltaY < 0) {
-      x += 90;
+      x += 100;
     } else {
-      x -= 90;
+      x -= 100;
     }
 
     img2.style.transform = `translateX(${x}px)`;
