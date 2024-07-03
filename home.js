@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const totalHeight = getTotalHeight();
       const viewportHeight = getViewportHeight();
       const scrollHeightPerStep = getScrollHeightPerStep();
-      scrollAddS3 = (4) * Number(scrollHeightPerStep);
+      scrollAddS3 = (6) * Number(scrollHeightPerStep);
     }
 
     scrollHeightPerStepsatu = getScrollHeightPerStep();
@@ -82,7 +82,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const lettersToColorEmpat = Math.floor((scrollPosition - offsettop) / scrollHeightPerStepsatu);        
     
-    if(lettersToColorEmpat == "1"){
+    if(lettersToColorEmpat == "2"){
       textOfer.style.opacity = 0;
         textOfer.style.transition = "1s";
         textOfer.style.zIndex = "0";
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", function () {
         AllCards[2].style.transition = "1s";
         AllCards[2].style.transform = "translateY(0)";
         AllCards[2].classList.add("smooth-bounce");
-    }else if(lettersToColorEmpat == "2"){
+    }else if(lettersToColorEmpat == "4"){
       imgCardSec2.classList.add("centered");
     }else if(lettersToColorEmpat < 1){
       textOfer.style.opacity = 1;
