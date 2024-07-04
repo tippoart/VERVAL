@@ -113,14 +113,13 @@ body {
   color: white;
   position: relative;
   padding-bottom: 20rem;
-  
-  background-attachment: fixed;
 }
 
 .h2-sticky {
   position: sticky;
   top: 10rem;
   padding: 10rem;
+  margin-top: 50%;
 }
 
 .we-ofer {
