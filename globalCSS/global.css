@@ -134,21 +134,21 @@ body {
 
 .verval2 .card-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   position: sticky;
-
   bottom: 4px;
   top: 2px;
   rotate: 14deg;
   justify-content: center;
   margin-bottom: 7rem;
-
-  padding: 15rem;
+  align-items: center;
 }
 
 .verval2 .my-img1 {
   rotate: -15deg;
   position: relative;
-  top: 1.9rem;
+  top: 0.5rem;
   left: 20rem;
 }
 .verval2 .my-img3 {
@@ -164,7 +164,7 @@ body {
 }
 
 .verval2 img {
-  height: 30rem;
+  width: 70%;
   object-fit: cover;
   opacity: 0;
   position: absolute;
@@ -214,13 +214,14 @@ body {
 
 @media screen and (min-width: 1920px) and (min-height: 1080px) {
   .h2-sticky {
-    top: 15rem;
-    margin-top: 10%;
+    top: 5rem;
+    margin-top: 20%;
   }
 
   .verval2 .card-container {
-    bottom: 10%;
-    padding: 4rem;
+    bottom: 60%;
+    position: sticky;
+    margin-bottom: 7rem;
   }
 }
 
@@ -355,9 +356,9 @@ body {
 .verval3 .verval3-card img {
   object-fit: cover;
   width: 90%;
-  display: none;
-  transition: transform 1s ease-in-out;
-  animation: card-verval-animation 1s ease-in-out;
+  opacity: 0;
+  transform: translateY(40%);
+  transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
 
 @keyframes card-verval-animation {
@@ -497,7 +498,7 @@ body {
 
 .verval4 .verval4-card.visible {
   opacity: 1;
-  animation: zoomOutBackground 1s forwards;
+  animation: zoomOutBackground 0.7s forwards;
 }
 
 .verval4 .verval4-card .name-card {

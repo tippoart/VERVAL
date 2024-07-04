@@ -16,10 +16,22 @@ document.addEventListener("DOMContentLoaded", function () {
       x = parseFloat(matrix[1].split(", ")[4]);
     }
 
+    // Hitung batas maksimum dan minimum
+    const maxTranslate = 0; // batas kanan (secara default)
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth); // batas kiri
+
+    // Tentukan perubahan posisi berdasarkan event scroll
     if (event.deltaY < 0) {
-      x += 100;
+      x += 150; // scroll ke atas
     } else {
-      x -= 100;
+      x -= 150; // scroll ke bawah
+    }
+
+    // Batasi pergerakan img2 agar tidak melewati batas section
+    if (x > maxTranslate) {
+      x = maxTranslate; // jika lebih dari batas kanan, atur ke batas kanan
+    } else if (x < minTranslate) {
+      x = minTranslate; // jika lebih dari batas kiri, atur ke batas kiri
     }
 
     img2.style.transform = `translateX(${x}px)`;

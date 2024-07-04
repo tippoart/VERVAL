@@ -134,16 +134,22 @@ nav ul .li {
 .section2 .section2-verify .img1 {
   cursor: pointer;
   position: relative;
-
 }
-.img1, .img2 {
+.img1,
+.img2 {
   transition: all 0.5s ease;
   position: absolute;
   left: 0;
 }
+
+.img1 {
+  width: 32rem;
+}
+
 .img2 {
   transform: translateX(100%); /* Geser gambar kedua ke kanan penuh */
   opacity: 0;
+  width: 150rem;
 }
 .show-img2 .img1 {
   transform: translateX(-100%); /* Geser gambar pertama ke kiri penuh */

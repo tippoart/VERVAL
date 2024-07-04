@@ -219,6 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (lettersToColor < totalLetters) {
             spandua.style.color = "rgba(43, 47, 49, 0.915)";
             bumiIcon.style.transition = "all 0.5s ease 0s";
+        
             bumiIcon.style.transform = "translateX(0px)";
             bumiIcon.style.backgroundColor = "transparent";
             bumiIcon.style.borderRadius = "3rem";
@@ -285,45 +286,50 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (lettersToColorEmpat == 51) {
-        cardContainers[0].style.display = "block";
-        cardContainers[1].style.display = "none";
+        cardContainers[0].style.opacity = "1";
+        cardContainers[0].style.transform = "translateY(0)";
+        cardContainers[1].style.opacity = "0";
         document.getElementById("sectiontigadiv").style.visibility = "hidden";
       } else if (lettersToColorEmpat < 51) {
         document.getElementById("sectiontigadiv").style.visibility = "visible";
-        cardContainers[0].style.display = "none";
-        cardContainers[1].style.display = "none";
-        cardContainers[2].style.display = "none";
-        cardContainers[3].style.display = "none";
-        cardContainers[4].style.display = "none";
+        cardContainers.forEach((img) => {
+          img.style.opacity = "0";
+          img.style.transform = "translateY(40%)";
+        });
       }
 
       if (lettersToColorEmpat == 52) {
-        cardContainers[0].style.transform = ` scale(0.97)`;
-        cardContainers[1].style.display = "block";
-        cardContainers[2].style.display = "none";
-        cardContainers[3].style.display = "none";
-        cardContainers[4].style.display = "none";
+   
+        cardContainers[0].style.transform = `scale(0.97)`;
+        cardContainers[1].style.opacity = "1";
+        cardContainers[1].style.transform = "translateY(0)";
+        cardContainers[2].style.opacity = "0";
+        cardContainers[3].style.opacity = "0";
+        cardContainers[4].style.opacity = "0";
       }
 
       if (lettersToColorEmpat == 53) {
-        cardContainers[3].style.display = "none";
-        cardContainers[4].style.display = "none";
-        cardContainers[2].style.display = "block";
+        cardContainers[3].style.opacity = "0";
+        cardContainers[4].style.opacity = "0";
+        cardContainers[2].style.opacity = "1";
+        cardContainers[2].style.transform = "translateY(0)";
 
-        cardContainers[1].style.transform = ` scale(0.96)`;
-        cardContainers[0].style.transform = ` scale(0.90)`;
+        cardContainers[1].style.transform = `scale(0.96)`;
+        cardContainers[0].style.transform = `scale(0.90)`;
       }
 
       if (lettersToColorEmpat == 54) {
-        cardContainers[4].style.display = "none";
-        cardContainers[3].style.display = "block";
+        cardContainers[4].style.opacity = "0";
+        cardContainers[3].style.opacity = "1";
+        cardContainers[3].style.transform = "translateY(0)";
         cardContainers[1].style.transform = `translateY(-30px) scale(0.90)`;
         cardContainers[2].style.transform = `translateY(-40px) scale(0.94)`;
         cardContainers[0].style.transform = `translateY(50px) scale(0.91)`;
       }
 
       if (lettersToColorEmpat == 55) {
-        cardContainers[4].style.display = "block";
+        cardContainers[4].style.opacity = "1";
+        cardContainers[4].style.transform = "translateY(0)";
         cardContainers[2].style.transform = `translateY(-60px) scale(0.92)`;
         cardContainers[3].style.transform = `translateY(-30px) scale(0.96)`;
         cardContainers[1].style.transform = `translateY(20px) scale(0.92)`;
