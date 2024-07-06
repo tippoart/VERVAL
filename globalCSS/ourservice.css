@@ -117,7 +117,7 @@ header {
 #navbar ul li:hover {
   background-color: rgb(42, 51, 56);
   color: white;
-  border: 1px solid rgb(42, 51, 56);
+  
 }
 .verifikasi {
   border: 1.3px solid rgb(122, 195, 77);
@@ -136,7 +136,7 @@ header {
 .hover-effect {
   background-color: rgb(42, 51, 56);
   color: white;
-  border: 1px solid rgb(42, 51, 56);
+ 
 }
 .verifikasi,
 .validation,
