@@ -1,0 +1,95 @@
+header .artikel {
+  color: rgb(255, 255, 255);
+}
+header .artikel:hover {
+  color: rgb(255, 255, 255);
+}
+
+header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  z-index: 3;
+}
+
+header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  z-index: 3;
+}
+
+#navbar-head img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+#navbar-head {
+  background-color: rgba(19, 18, 18, 0.791);
+  border-radius: 2rem;
+  display: flex;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  height: 50px;
+  top: 3%;
+  left: 15%;
+  display: block;
+  z-index: 5;
+  text-align: center;
+  padding: 23px 0 0 0;
+  width: 70%;
+}
+
+#navbar-head .container-fluid {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  bottom: 3px;
+}
+#navbar-head .container-fluid .navbar-brand {
+  font-weight: 500;
+}
+
+#navbar-head .container-fluid .contact-us {
+  background-color: rgb(130, 185, 68);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  color: white;
+  text-decoration: none;
+  width: 6rem;
+  text-align: center;
+}
+
+.section1 {
+  background-color: rgb(17, 17, 17);
+  color: yellowgreen;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 30rem;
+  gap: 20px;
+}
+
+form input {
+  outline: none;
+  background-color: rgb(17, 17, 17);
+  border: none;
+  color: white;
+}
+form input::placeholder{
+    color: yellowgreen;
+}

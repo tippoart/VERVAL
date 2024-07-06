@@ -37,3 +37,21 @@ document.addEventListener("DOMContentLoaded", function () {
     img2.style.transform = `translateX(${x}px)`;
   });
 });
+
+
+
+    document.querySelectorAll('#navbar li').forEach(item => {
+      item.addEventListener('click', function() {
+        // Simpan warna background awal
+        const originalBackground = this.style.backgroundColor;
+        // Ubah background menjadi hitam
+        this.style.backgroundColor = "rgb(128, 203, 74)";
+        this.style.color = "white";
+        this.style.transition = "0.5s";
+        // Setelah 2 detik, kembalikan ke warna background awal
+        setTimeout(() => {
+          this.style.backgroundColor = originalBackground;
+        }, 1500);
+      });
+    });
+ 
