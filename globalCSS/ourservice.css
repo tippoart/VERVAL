@@ -68,12 +68,12 @@ header {
   text-align: center;
 }
 
-.card-sec{
+.card-sec {
   position: relative;
   bottom: 5rem;
 }
 
-.card-sec img{
+.card-sec img {
   position: absolute;
   bottom: -27rem;
   right: -20rem;
@@ -82,15 +82,15 @@ header {
   object-fit: cover;
 }
 
-.card-sec .g-2{
+.card-sec .g-2 {
   opacity: 0;
 }
-.card-sec .g-3{
+.card-sec .g-3 {
   opacity: 0;
 }
 
 #navbar {
-  background-color: rgba(37, 38, 39, 0.821);
+  background-color: rgba(29, 30, 31, 0.821);
   border-radius: 30px;
   border: 1px solid rgb(80, 80, 80);
   display: flex;
@@ -126,9 +126,36 @@ header {
   width: 6.7rem;
   text-align: center;
   color: rgb(255, 255, 255);
- 
 }
 
+.active {
+  border: 1.3px solid rgb(122, 195, 77);
+  color: rgba(255, 255, 255, 0.909) !important;
+}
+
+.hover-effect {
+  background-color: rgb(42, 51, 56);
+  color: white;
+  border: 1px solid rgb(42, 51, 56);
+}
+.verifikasi,
+.validation,
+.training {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: rgb(128, 203, 74) !important;
+   transition: background-color 0.5s, color 0.5s; 
+  color: white !important;
+  border: 1.3px solid rgb(128, 203, 74) !important;
+}
+.selected-verifikasi {
+  color: rgba(122, 133, 143, 0.909);
+}
+.selected-verifikasi:hover {
+  color: white !important;
+}
 nav ul .li {
   color: rgba(122, 133, 143, 0.909);
 }

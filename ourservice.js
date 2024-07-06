@@ -46,14 +46,36 @@ const verifikasi = document.querySelector(".verifikasi");
 const validation = document.querySelector(".validation");
 const training = document.querySelector(".training");
 
+const removeSelectedClass = () => {
+  document.querySelectorAll("#navbar ul li").forEach((item) => {
+    item.classList.remove("selected");
+    if (item.classList.contains("verifikasi")) {
+      item.classList.add("selected-verifikasi");
+    }
+  });
+  validation.classList.remove("active");
+  training.classList.remove("active");
+  verifikasi.classList.remove("active");
+};
+
 if (verifikasi) {
   verifikasi.addEventListener("click", function () {
     g1.style.opacity = "1";
     g2.style.opacity = "0";
     g3.style.opacity = "0";
-    verifikasi.style.backgroundColor = "rgb(128, 203, 74)";
-    verifikasi.style.color = "white";
-    validation.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+
+    verifikasi.style.border = " 1.3px solid rgb(122, 195, 77)";
+
+    removeSelectedClass();
+    verifikasi.classList.add("selected");
+
+    // Remove selected class after a delay (1 second)
+    setTimeout(() => {
+      verifikasi.classList.remove("selected");
+      verifikasi.classList.add("selected-verifikasi");
+      verifikasi.style.color = "white";
+      verifikasi.style.transition = "0.5s";
+    }, 1000);
   });
 }
 
@@ -62,11 +84,20 @@ if (validation) {
     g2.style.opacity = "1";
     g1.style.opacity = "0";
     g3.style.opacity = "0";
-    validation.style.backgroundColor = "rgb(128, 203, 74)";
-    validation.style.color = "white";
 
-    verifikasi.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
-    training.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+    verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
+    verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+
+    removeSelectedClass();
+    validation.classList.add("active");
+    validation.classList.add("selected");
+    verifikasi.classList.add("selected-verifikasi");
+
+    // Remove selected class after a delay (1 second)
+    setTimeout(() => {
+      validation.classList.remove("selected");
+      validation.style.transition = "0.5s";
+    }, 1000);
   });
 }
 
@@ -75,10 +106,19 @@ if (training) {
     g3.style.opacity = "1";
     g2.style.opacity = "0";
     g1.style.opacity = "0";
-    training.style.backgroundColor = "rgb(128, 203, 74)";
-    training.style.color = "white";
 
-    verifikasi.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
-    validation.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+    verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
+    verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+
+    removeSelectedClass();
+    training.classList.add("selected");
+    training.classList.add("active");
+    verifikasi.classList.add("selected-verifikasi");
+
+    // Remove selected class after a delay (1 second)
+    setTimeout(() => {
+      training.classList.remove("selected");
+      training.style.transition = "0.5s";
+    }, 1000);
   });
 }
