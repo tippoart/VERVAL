@@ -38,20 +38,47 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+const g1 = document.querySelector(".g-1");
+const g2 = document.querySelector(".g-2");
+const g3 = document.querySelector(".g-3");
 
+const verifikasi = document.querySelector(".verifikasi");
+const validation = document.querySelector(".validation");
+const training = document.querySelector(".training");
 
-    document.querySelectorAll('#navbar li').forEach(item => {
-      item.addEventListener('click', function() {
-        // Simpan warna background awal
-        const originalBackground = this.style.backgroundColor;
-        // Ubah background menjadi hitam
-        this.style.backgroundColor = "rgb(128, 203, 74)";
-        this.style.color = "white";
-        this.style.transition = "0.5s";
-        // Setelah 2 detik, kembalikan ke warna background awal
-        setTimeout(() => {
-          this.style.backgroundColor = originalBackground;
-        }, 1500);
-      });
-    });
- 
+if (verifikasi) {
+  verifikasi.addEventListener("click", function () {
+    g1.style.opacity = "1";
+    g2.style.opacity = "0";
+    g3.style.opacity = "0";
+    verifikasi.style.backgroundColor = "rgb(128, 203, 74)";
+    verifikasi.style.color = "white";
+    validation.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+  });
+}
+
+if (validation) {
+  validation.addEventListener("click", function () {
+    g2.style.opacity = "1";
+    g1.style.opacity = "0";
+    g3.style.opacity = "0";
+    validation.style.backgroundColor = "rgb(128, 203, 74)";
+    validation.style.color = "white";
+
+    verifikasi.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+    training.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+  });
+}
+
+if (training) {
+  training.addEventListener("click", function () {
+    g3.style.opacity = "1";
+    g2.style.opacity = "0";
+    g1.style.opacity = "0";
+    training.style.backgroundColor = "rgb(128, 203, 74)";
+    training.style.color = "white";
+
+    verifikasi.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+    validation.style.backgroundColor = "rgba(37, 38, 39, 0.821)";
+  });
+}

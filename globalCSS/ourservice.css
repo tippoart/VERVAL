@@ -61,15 +61,32 @@ header {
   background-color: rgb(19, 19, 19);
 }
 .section1 .ourservice-card {
-  background-image: url("../img/our-service/ourservice-card1-min.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 110%;
   padding: 20rem;
 }
 
 .section1 h1 {
   text-align: center;
+}
+
+.card-sec{
+  position: relative;
+  bottom: 5rem;
+}
+
+.card-sec img{
+  position: absolute;
+  bottom: -27rem;
+  right: -20rem;
+
+  width: 67rem;
+  object-fit: cover;
+}
+
+.card-sec .g-2{
+  opacity: 0;
+}
+.card-sec .g-3{
+  opacity: 0;
 }
 
 #navbar {
@@ -81,7 +98,7 @@ header {
   width: 22.7rem;
   position: relative;
   bottom: 485%;
-  left: 88%;
+  left: 78%;
 }
 
 #navbar ul li {
