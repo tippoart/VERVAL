@@ -1,11 +1,19 @@
+const img1 = document.querySelector(".img1");
+const img2 = document.querySelector(".img2");
+const validasicard = document.querySelector(".validasi");
 document.addEventListener("DOMContentLoaded", function () {
-  const img1 = document.querySelector(".img1");
-  const img2 = document.querySelector(".img2");
-
   const section = document.querySelector(".section2");
+  const verifikasicard = document.querySelector(".verifikasicard");
 
   img1.addEventListener("click", function () {
-    section.classList.add("show-img2");
+    img1.style.transform = "translateX(-125%)";
+    img1.style.transition = "0.7s";
+    img2.style.transform = "translateX(5%)";
+    img2.style.transition = "0.7s";
+    img2.style.opacity = "1";
+    validasicard.style.transform = "translateX(5%)";
+    validasicard.style.transition = "0.7s";
+    validasicard.style.opacity = "1";
   });
 
   img2.addEventListener("wheel", function (event) {
@@ -17,119 +25,153 @@ document.addEventListener("DOMContentLoaded", function () {
       x = parseFloat(matrix[1].split(", ")[4]);
     }
 
-    // Hitung batas maksimum dan minimum
-    const maxTranslate = 0; // batas kanan (secara default)
-    const minTranslate = -(img2.offsetWidth - section.offsetWidth); // batas kiri
+    const maxTranslate = 0;
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
-    // Tentukan perubahan posisi berdasarkan event scroll
     if (event.deltaY < 0) {
-      x += 150; // scroll ke atas
+      x += 150;
     } else {
-      x -= 150; // scroll ke bawah
+      x -= 150;
     }
 
-    // Batasi pergerakan img2 agar tidak melewati batas section
     if (x > maxTranslate) {
-      x = maxTranslate; // jika lebih dari batas kanan, atur ke batas kanan
+      x = maxTranslate;
     } else if (x < minTranslate) {
-      x = minTranslate; // jika lebih dari batas kiri, atur ke batas kiri
+      x = minTranslate;
     }
 
     img2.style.transform = `translateX(${x}px)`;
   });
 
-  // Tambahkan listener untuk memastikan img2 muncul saat img1 diklik, meskipun setelah scroll
-  img2.addEventListener("click", function () {
-    section.classList.add("show-img2");
-  });
-});
-
-const g1 = document.querySelector(".g-1");
-const g2 = document.querySelector(".g-2");
-const g3 = document.querySelector(".g-3");
-
-const verifikasi = document.querySelector(".verifikasi");
-const validation = document.querySelector(".validation");
-const training = document.querySelector(".training");
-
-const text = document.querySelector(".textku");
-
-const removeSelectedClass = () => {
-  document.querySelectorAll("#navbar ul li").forEach((item) => {
-    item.classList.remove("selected");
-    if (item.classList.contains("verifikasi")) {
-      item.classList.add("selected-verifikasi");
+  validasicard.addEventListener("wheel", function (event) {
+    event.preventDefault();
+    let currentTransform = window.getComputedStyle(validasicard).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
     }
+
+    const maxTranslate = 0;
+    const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
+
+    if (event.deltaY < 0) {
+      x += 150;
+    } else {
+      x -= 150;
+    }
+
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
+
+    validasicard.style.transform = `translateX(${x}px)`;
   });
-  validation.classList.remove("active");
-  training.classList.remove("active");
-  verifikasi.classList.remove("active");
-};
 
-if (verifikasi) {
-  verifikasi.addEventListener("click", function () {
-    g1.style.opacity = "1";
-    g2.style.opacity = "0";
-    g3.style.opacity = "0";
-    text.innerHTML = "Verification";
+  const g1 = document.querySelector(".g-1");
+  const g2 = document.querySelector(".g-2");
+  const g3 = document.querySelector(".g-3");
 
-    verifikasi.style.border = " 1.3px solid rgb(122, 195, 77)";
+  const verifikasi = document.querySelector(".verifikasi");
+  const validation = document.querySelector(".validation");
+  const training = document.querySelector(".training");
 
-    removeSelectedClass();
-    verifikasi.classList.add("selected");
+  const text = document.querySelector(".textku");
 
-    // Remove selected class after a delay (1 second)
-    setTimeout(() => {
-      verifikasi.classList.remove("selected");
+  const removeSelectedClass = () => {
+    document.querySelectorAll("#navbar ul li").forEach((item) => {
+      item.classList.remove("selected");
+      if (item.classList.contains("verifikasi")) {
+        item.classList.add("selected-verifikasi");
+      }
+    });
+    validation.classList.remove("active");
+    training.classList.remove("active");
+    verifikasi.classList.remove("active");
+  };
+
+  if (verifikasi) {
+    verifikasi.addEventListener("click", function () {
+      img1.style.transform = "translateX(4%)";
+      img1.style.transition = "0.7s";
+      img2.style.transform = "translateX(100%)";
+      img2.style.transition = "0.7s";
+      img2.style.opacity = "1";
+
+      g1.style.opacity = "1";
+      g2.style.opacity = "0";
+      g3.style.opacity = "0";
+      text.innerHTML = "Verification";
+
+      validasicard.style.display = "none";
+      verifikasicard.style.display = "block";
+
+      verifikasi.style.border = "1.3px solid rgb(122, 195, 77)";
+
+      removeSelectedClass();
+      verifikasi.classList.add("selected");
+
+      setTimeout(() => {
+        verifikasi.classList.remove("selected");
+        verifikasi.classList.add("selected-verifikasi");
+        verifikasi.style.color = "white";
+        verifikasi.style.transition = "0.5s";
+      }, 1000);
+    });
+  }
+
+  if (validation) {
+    validation.addEventListener("click", function () {
+      img1.style.transform = "translateX(3%)";
+      img1.style.transition = "0.7s";
+      validasicard.style.transform = "translateX(100%)";
+      validasicard.style.transition = "0.7s";
+      validasicard.style.opacity = "1";
+
+      g2.style.opacity = "1";
+      g1.style.opacity = "0";
+      g3.style.opacity = "0";
+      text.innerHTML = "Validation";
+
+      validasicard.style.display = "block";
+
+      verifikasicard.style.display = "none";
+
+      verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
+      verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+
+      removeSelectedClass();
+      validation.classList.add("active");
+      validation.classList.add("selected");
       verifikasi.classList.add("selected-verifikasi");
-      verifikasi.style.color = "white";
-      verifikasi.style.transition = "0.5s";
-    }, 1000);
-  });
-}
 
-if (validation) {
-  validation.addEventListener("click", function () {
-    g2.style.opacity = "1";
-    g1.style.opacity = "0";
-    g3.style.opacity = "0";
+      setTimeout(() => {
+        validation.classList.remove("selected");
+        validation.style.transition = "0.5s";
+      }, 1000);
+    });
+  }
 
-    text.innerHTML = "Validation";
+  if (training) {
+    training.addEventListener("click", function () {
+      g3.style.opacity = "1";
+      g2.style.opacity = "0";
+      g1.style.opacity = "0";
 
-    verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
-    verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+      verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
+      verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
 
-    removeSelectedClass();
-    validation.classList.add("active");
-    validation.classList.add("selected");
-    verifikasi.classList.add("selected-verifikasi");
+      removeSelectedClass();
+      training.classList.add("selected");
+      training.classList.add("active");
+      verifikasi.classList.add("selected-verifikasi");
 
-    // Remove selected class after a delay (1 second)
-    setTimeout(() => {
-      validation.classList.remove("selected");
-      validation.style.transition = "0.5s";
-    }, 1000);
-  });
-}
-
-if (training) {
-  training.addEventListener("click", function () {
-    g3.style.opacity = "1";
-    g2.style.opacity = "0";
-    g1.style.opacity = "0";
-
-    verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
-    verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
-
-    removeSelectedClass();
-    training.classList.add("selected");
-    training.classList.add("active");
-    verifikasi.classList.add("selected-verifikasi");
-
-    // Remove selected class after a delay (1 second)
-    setTimeout(() => {
-      training.classList.remove("selected");
-      training.style.transition = "0.5s";
-    }, 1000);
-  });
-}
+      setTimeout(() => {
+        training.classList.remove("selected");
+        training.style.transition = "0.5s";
+      }, 1000);
+    });
+  }
+});

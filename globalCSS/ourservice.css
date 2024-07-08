@@ -117,7 +117,6 @@ header {
 #navbar ul li:hover {
   background-color: rgb(42, 51, 56);
   color: white;
-  
 }
 .verifikasi {
   border: 1.3px solid rgb(122, 195, 77);
@@ -136,7 +135,6 @@ header {
 .hover-effect {
   background-color: rgb(42, 51, 56);
   color: white;
- 
 }
 .verifikasi,
 .validation,
@@ -146,7 +144,7 @@ header {
 
 .selected {
   background-color: rgb(128, 203, 74) !important;
-   transition: background-color 0.5s, color 0.5s; 
+  transition: background-color 0.5s, color 0.5s;
   color: white !important;
   border: 1.3px solid rgb(128, 203, 74) !important;
 }
@@ -176,15 +174,20 @@ nav ul .li {
   color: rgb(116, 116, 116);
 }
 
+
 .section2 .section2-verify .img1 {
   cursor: pointer;
   position: relative;
 }
-.img1,
+
 .img2 {
   transition: all 0.5s ease;
   position: absolute;
   left: 0;
+}
+.validasi {
+  transition: all 0.5s ease;
+    width: 150rem;
 }
 
 .img1 {
@@ -193,31 +196,48 @@ nav ul .li {
   border-radius: 30rem;
   position: relative;
   left: 5rem;
-box-shadow: 0px 0px  20px 7px rgba(105, 137, 46, 0.377);
-
+  box-shadow: 0px 0px 20px 7px rgba(105, 137, 46, 0.377);
 }
-.button1{
+.button1 {
   position: relative;
   left: 2rem;
   top: 5px;
   font-weight: 100;
   cursor: pointer;
- 
 }
 
-.icon{
-  background-color: #7AB317;
+.icon {
+  background-color: #7ab317;
   border-radius: 100%;
 }
 .img2 {
+  transform: translateX(100%);
+  opacity: 0;
+  width: 150rem;
+}
+.validasi {
   transform: translateX(100%); /* Geser gambar kedua ke kanan penuh */
   opacity: 0;
   width: 150rem;
 }
-.show-img2 .img1 {
-  transform: translateX(-130%); 
+
+/* .img1 {
+  transform: translateX(-130%);
 }
-.show-img2 .img2 {
-  transform: translateX(0); /* Kembalikan gambar kedua ke posisi aslinya */
+.img2 {
+  transform: translateX(0); 
   opacity: 1;
+}
+.img3 {
+  transform: translateX(0); 
+  opacity: 1;
+} */
+
+.menu {
+  cursor: pointer;
+}
+
+.validasi {
+  display: none;
+  position: absolute;
 }
