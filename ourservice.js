@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
   const img1 = document.querySelector(".img1");
   const img2 = document.querySelector(".img2");
+
   const section = document.querySelector(".section2");
 
   img1.addEventListener("click", function () {
     section.classList.add("show-img2");
   });
 
-  section.addEventListener("wheel", function (event) {
+  img2.addEventListener("wheel", function (event) {
     event.preventDefault();
     let currentTransform = window.getComputedStyle(img2).transform;
     let matrix = currentTransform.match(/^matrix\((.+)\)$/);
@@ -36,6 +37,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     img2.style.transform = `translateX(${x}px)`;
   });
+
+  // Tambahkan listener untuk memastikan img2 muncul saat img1 diklik, meskipun setelah scroll
+  img2.addEventListener("click", function () {
+    section.classList.add("show-img2");
+  });
 });
 
 const g1 = document.querySelector(".g-1");
@@ -45,6 +51,8 @@ const g3 = document.querySelector(".g-3");
 const verifikasi = document.querySelector(".verifikasi");
 const validation = document.querySelector(".validation");
 const training = document.querySelector(".training");
+
+const text = document.querySelector(".textku");
 
 const removeSelectedClass = () => {
   document.querySelectorAll("#navbar ul li").forEach((item) => {
@@ -63,6 +71,7 @@ if (verifikasi) {
     g1.style.opacity = "1";
     g2.style.opacity = "0";
     g3.style.opacity = "0";
+    text.innerHTML = "Verification";
 
     verifikasi.style.border = " 1.3px solid rgb(122, 195, 77)";
 
@@ -84,6 +93,8 @@ if (validation) {
     g2.style.opacity = "1";
     g1.style.opacity = "0";
     g3.style.opacity = "0";
+
+    text.innerHTML = "Validation";
 
     verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
     verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
