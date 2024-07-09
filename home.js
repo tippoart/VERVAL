@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const sectionEnd = sectionOffsetTop + sectionHeight;
 
     var element = document.getElementById("section2");
-      var height = element.offsetHeight;
-      var offsettop = element.offsetTop;
-      var scrollHeightsection = element.scrollHeight;
-      const windowHeights = window.innerHeight;
-      const documentHeight = document.documentElement.scrollHeight;
-      const scrollPercentage =
-        ((scrollPosition - offsettop) / windowHeights) * 100;
+    var height = element.offsetHeight;
+    var offsettop = element.offsetTop;
+    var scrollHeightsection = element.scrollHeight;
+    const windowHeights = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight;
+    const scrollPercentage =
+      ((scrollPosition - offsettop) / windowHeights) * 100;
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll("section").forEach((section) => {
       observer.observe(section);
     });
-  
+
     var isScrollAdded = "false";
 
     function getTotalHeight() {
@@ -63,12 +63,12 @@ document.addEventListener("DOMContentLoaded", function () {
     function getScrollHeightPerStep() {
       return getViewportHeight();
     }
-  
+
     function displayScrollInfo() {
       const totalHeight = getTotalHeight();
       const viewportHeight = getViewportHeight();
       const scrollHeightPerStep = getScrollHeightPerStep();
-      scrollAddS3 = (6) * Number(scrollHeightPerStep);
+      scrollAddS3 = 6 * Number(scrollHeightPerStep);
     }
 
     scrollHeightPerStepsatu = getScrollHeightPerStep();
@@ -79,40 +79,41 @@ document.addEventListener("DOMContentLoaded", function () {
       document.getElementById("section2").style.height = `${scrollAddS3}px`;
     }
 
+    const lettersToColorEmpat = Math.floor(
+      (scrollPosition - offsettop) / scrollHeightPerStepsatu
+    );
 
-    const lettersToColorEmpat = Math.floor((scrollPosition - offsettop) / scrollHeightPerStepsatu);        
-    
-    if(lettersToColorEmpat == "2"){
+    if (lettersToColorEmpat == "2") {
       textOfer.style.opacity = 0;
-        textOfer.style.transition = "1s";
-        textOfer.style.zIndex = "0";
+      textOfer.style.transition = "1s";
+      textOfer.style.zIndex = "0";
 
-        textOfer2.style.opacity = 0;
-        // let textOfer3 = document.querySelector(".we-ofer3");
-        // if(textOfer3){
-        //   textOfer3.classList.toggle("hidden");
-        // }
-        textOfer2.style.transition = "1s";
-        textOfer2.style.zIndex = "0";
+      textOfer2.style.opacity = 0;
+      // let textOfer3 = document.querySelector(".we-ofer3");
+      // if(textOfer3){
+      //   textOfer3.classList.toggle("hidden");
+      // }
+      textOfer2.style.transition = "1s";
+      textOfer2.style.zIndex = "0";
 
-        AllCards[0].style.opacity = "1";
-        AllCards[0].style.transition = "1s";
-        AllCards[0].style.transform = "translateY(0)";
-        AllCards[0].classList.add("smooth-bounce");
+      AllCards[0].style.opacity = "1";
+      AllCards[0].style.transition = "1s";
+      AllCards[0].style.transform = "translateY(0)";
+      AllCards[0].classList.add("smooth-bounce");
 
-        AllCards[1].style.opacity = "1";
-        AllCards[1].style.transition = "1s";
-        AllCards[1].style.transform = "translateY(0)";
+      AllCards[1].style.opacity = "1";
+      AllCards[1].style.transition = "1s";
+      AllCards[1].style.transform = "translateY(0)";
 
-        AllCards[1].classList.add("smooth-bounce");
+      AllCards[1].classList.add("smooth-bounce");
 
-        AllCards[2].style.opacity = "1";
-        AllCards[2].style.transition = "1s";
-        AllCards[2].style.transform = "translateY(0)";
-        AllCards[2].classList.add("smooth-bounce");
-    }else if(lettersToColorEmpat == "4"){
+      AllCards[2].style.opacity = "1";
+      AllCards[2].style.transition = "1s";
+      AllCards[2].style.transform = "translateY(0)";
+      AllCards[2].classList.add("smooth-bounce");
+    } else if (lettersToColorEmpat == "4") {
       imgCardSec2.classList.add("centered");
-    }else if(lettersToColorEmpat < 1){
+    } else if (lettersToColorEmpat < 1) {
       textOfer.style.opacity = 1;
       textOfer2.style.opacity = 1;
 
@@ -123,19 +124,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       AllCards[1].classList.remove("smooth-bounce");
 
-      
       AllCards[2].classList.remove("smooth-bounce");
-      
+
       const back = document.querySelector(".centered");
-      if(back){
+      if (back) {
         back.classList.remove("centered");
       }
       AllCards[0].style.opacity = "0";
       AllCards[1].style.opacity = "0";
       AllCards[2].style.opacity = "0";
-
     }
-      
 
     // if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
     //   if (
@@ -190,9 +188,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     //   AllCards[1].classList.remove("smooth-bounce");
 
-      
     //   AllCards[2].classList.remove("smooth-bounce");
-      
+
     //   const back = document.querySelector(".centered");
     //   if(back){
     //     back.classList.remove("centered");
@@ -338,7 +335,7 @@ document.addEventListener("DOMContentLoaded", function () {
           if (lettersToColor < totalLetters) {
             spandua.style.color = "rgba(43, 47, 49, 0.915)";
             bumiIcon.style.transition = "all 0.5s ease 0s";
-        
+
             bumiIcon.style.transform = "translateX(0px)";
             bumiIcon.style.backgroundColor = "transparent";
             bumiIcon.style.borderRadius = "3rem";
@@ -418,7 +415,6 @@ document.addEventListener("DOMContentLoaded", function () {
       }
 
       if (lettersToColorEmpat == 52) {
-   
         cardContainers[0].style.transform = `scale(0.97)`;
         cardContainers[1].style.opacity = "1";
         cardContainers[1].style.transform = "translateY(0)";
@@ -482,15 +478,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const sectionOffsetTop = document.querySelector("#section4").offsetTop;
     const sectionHeight = document.querySelector("#section4").offsetHeight;
 
-    const sectionMiddle = sectionOffsetTop + sectionHeight / 2;
+    const sectionMiddle = sectionOffsetTop + sectionHeight / 2.5;
 
     if (
       scrollPosition + windowHeight / 2 >= sectionMiddle &&
       scrollPosition <= sectionOffsetTop + sectionHeight
     ) {
       testimonialCarousel.classList.add("visible");
-    } else {
-      testimonialCarousel.classList.remove("visible");
     }
+    //  else {
+    //   testimonialCarousel.classList.remove("visible");
+    // }
   });
 });

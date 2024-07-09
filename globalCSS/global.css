@@ -462,9 +462,10 @@ body {
 .verval4 {
   background-image: url("../img/bg-daun-sec3.png");
   background-repeat: no-repeat;
-  height: 120vh;
+  height: 105vh;
   background-position: center;
   background-size: cover;
+  overflow: hidden;
 }
 
 .verval4 i {
@@ -479,12 +480,13 @@ body {
 .verval4 .verval4-card {
   width: 100%;
   height: 100%;
-  background-image: url("../img/daun-jatuh.png");
+  background-image: url("../img/daunku2.webp");
   background-repeat: no-repeat;
-  background-size: 140%;
+  background-size: 150%;
   background-position: center;
   opacity: 0;
   transition: opacity 1s;
+  overflow: hidden;
 }
 
 @keyframes zoomOutBackground {
