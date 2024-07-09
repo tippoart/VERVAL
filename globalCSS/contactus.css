@@ -67,7 +67,7 @@ header {
 }
 
 .section1 {
-  background-color: rgb(17, 17, 17);
+  background-color: rgb(29, 25, 29);
   color: yellowgreen;
   height: 100vh;
   display: flex;
@@ -82,14 +82,46 @@ form {
   flex-direction: column;
   width: 30rem;
   gap: 20px;
+  background-color: rgb(29, 25, 29);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 form input {
   outline: none;
-  background-color: rgb(17, 17, 17);
   border: none;
   color: white;
+  background-color: rgb(52, 49, 52);
+  padding: 10px;
 }
 form input::placeholder{
-    color: yellowgreen;
+    color: rgb(255, 255, 255);
+}
+form textarea {
+  outline: none;
+  border: none;
+  color: white;
+  background-color:  rgb(52, 49, 52);
+  padding: 10px;
+}
+form textarea::placeholder{
+    color: rgb(255, 255, 255);
+}
+form button{
+  outline: none;
+  border: 1px solid white;
+  background-color:transparent;
+  color: white;
+  padding: 5px;
+  transition: transform 0.5s,0.5s ;
+}
+form button:hover{
+  background-color:rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  border-radius: 15px;
+}
+
+.contact-us2{
+  position: relative;
+  top: 2rem;
 }
