@@ -123,15 +123,15 @@ document.addEventListener("DOMContentLoaded", function () {
       validasicard.style.transition = "0.7s";
       validasicard.style.opacity = "1";
       text.innerHTML = "Validation";
-      img2.style.display = "none"
+      img2.style.display = "none";
 
       validation.style.opacity = "1";
 
-        validasicard.style.display = "block";
-        verifikasicard.style.display = "none";
+      validasicard.style.display = "block";
+      verifikasicard.style.display = "none";
 
       verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
-      verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+
 
       removeSelectedClass();
       validation.classList.add("active");
@@ -141,6 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         validation.classList.remove("selected");
         validation.style.transition = "0.5s";
+        verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
       }, 1000);
     });
   }
