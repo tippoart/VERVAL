@@ -70,14 +70,9 @@ document.addEventListener("DOMContentLoaded", function () {
     validasicard.style.transform = `translateX(${x}px)`;
   });
 
-  const g1 = document.querySelector(".g-1");
-  const g2 = document.querySelector(".g-2");
-  const g3 = document.querySelector(".g-3");
-
   const verifikasi = document.querySelector(".verifikasi");
   const validation = document.querySelector(".validation");
   const training = document.querySelector(".training");
-
   const text = document.querySelector(".textku");
 
   const removeSelectedClass = () => {
@@ -99,11 +94,9 @@ document.addEventListener("DOMContentLoaded", function () {
       img2.style.transform = "translateX(100%)";
       img2.style.transition = "0.7s";
       img2.style.opacity = "1";
-
-      g1.style.opacity = "1";
-      g2.style.opacity = "0";
-      g3.style.opacity = "0";
       text.innerHTML = "Verification";
+
+      verifikasi.style.opacity = "1";
 
       validasicard.style.display = "none";
       verifikasicard.style.display = "block";
@@ -129,15 +122,13 @@ document.addEventListener("DOMContentLoaded", function () {
       validasicard.style.transform = "translateX(100%)";
       validasicard.style.transition = "0.7s";
       validasicard.style.opacity = "1";
-
-      g2.style.opacity = "1";
-      g1.style.opacity = "0";
-      g3.style.opacity = "0";
       text.innerHTML = "Validation";
+      img2.style.display = "none"
 
-      validasicard.style.display = "block";
+      validation.style.opacity = "1";
 
-      verifikasicard.style.display = "none";
+        validasicard.style.display = "block";
+        verifikasicard.style.display = "none";
 
       verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
       verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
@@ -156,9 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (training) {
     training.addEventListener("click", function () {
-      g3.style.opacity = "1";
-      g2.style.opacity = "0";
-      g1.style.opacity = "0";
+      training.style.opacity = "1";
 
       verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
       verifikasi.style.color = "rgba(122, 133, 143, 0.909)";

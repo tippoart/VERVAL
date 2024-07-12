@@ -56,37 +56,16 @@ header {
   text-align: center;
 }
 
-.section1 {
-  padding: 5rem;
+.ourservice-card {
   background-color: rgb(19, 19, 19);
-}
-.section1 .ourservice-card {
-  padding: 20rem;
-}
+  background-image: url("../img/our-service/Subtract.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 70rem;
+  height: 120vh;
+  padding: 27rem;
 
-.section1 h1 {
-  text-align: center;
-}
 
-.card-sec {
-  position: relative;
-  bottom: 5rem;
-}
-
-.card-sec img {
-  position: absolute;
-  bottom: -27rem;
-  right: -20rem;
-
-  width: 67rem;
-  object-fit: cover;
-}
-
-.card-sec .g-2 {
-  opacity: 0;
-}
-.card-sec .g-3 {
-  opacity: 0;
 }
 
 #navbar {
@@ -95,10 +74,10 @@ header {
   border: 1px solid rgb(80, 80, 80);
   display: flex;
   justify-content: center;
-  width: 22.7rem;
+  width: 22rem;
   position: relative;
-  bottom: 485%;
-  left: 78%;
+  left: 5rem;
+  bottom: 17rem;
 }
 
 #navbar ul li {
@@ -118,6 +97,50 @@ header {
   background-color: rgb(42, 51, 56);
   color: white;
 }
+
+.my-card{
+  width: 30rem;
+}
+
+.gases{
+  color: white;
+  width: 33rem;
+  position:relative;
+  right: 3rem;
+  bottom: 7rem;
+}
+
+.paraf-2{
+  border-left: 2px solid #FFC107;
+  padding: 5px;
+  height: 6rem;
+}
+.paraf-2 p {
+  position: relative;
+  bottom: 0.5rem;
+}
+
+.gases-2{
+  position: relative;
+  color: white;
+  width: 57rem;
+ top: 3rem;
+ right: 3rem;
+
+}
+
+.card-1 p {
+  font-size: 11.5px;
+  font-weight: 100;
+}
+
+.scrolldown{
+  top: 11.5rem;
+  font-weight: 100;
+  left: 26rem;
+}
+
+
 .verifikasi {
   border: 1.3px solid rgb(122, 195, 77);
   border-radius: 26px;
@@ -174,7 +197,6 @@ nav ul .li {
   color: rgb(116, 116, 116);
 }
 
-
 .section2 .section2-verify .img1 {
   cursor: pointer;
   position: relative;
@@ -187,7 +209,7 @@ nav ul .li {
 }
 .validasi {
   transition: all 0.5s ease;
-    width: 150rem;
+  width: 150rem;
 }
 
 .img1 {
@@ -220,18 +242,6 @@ nav ul .li {
   opacity: 0;
   width: 150rem;
 }
-
-/* .img1 {
-  transform: translateX(-130%);
-}
-.img2 {
-  transform: translateX(0); 
-  opacity: 1;
-}
-.img3 {
-  transform: translateX(0); 
-  opacity: 1;
-} */
 
 .menu {
   cursor: pointer;
