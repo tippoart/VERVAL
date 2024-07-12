@@ -74,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const validation = document.querySelector(".validation");
   const training = document.querySelector(".training");
   const text = document.querySelector(".textku");
+  const textrol = document.querySelector(".role");
 
   const removeSelectedClass = () => {
     document.querySelectorAll("#navbar ul li").forEach((item) => {
@@ -95,6 +96,7 @@ document.addEventListener("DOMContentLoaded", function () {
       img2.style.transition = "0.7s";
       img2.style.opacity = "1";
       text.innerHTML = "Verification";
+       textrol.innerHTML = "Verification";
 
       verifikasi.style.opacity = "1";
 
@@ -123,6 +125,8 @@ document.addEventListener("DOMContentLoaded", function () {
       validasicard.style.transition = "0.7s";
       validasicard.style.opacity = "1";
       text.innerHTML = "Validation";
+      textrol.innerHTML= "Validation"
+
       img2.style.display = "none";
 
       validation.style.opacity = "1";
@@ -152,6 +156,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
       verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+      textrol.innerHTML = "Training"
 
       removeSelectedClass();
       training.classList.add("selected");
