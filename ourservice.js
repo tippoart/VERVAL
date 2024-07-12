@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
       verifikasicard.style.display = "none";
 
       verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
-
+      verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
 
       removeSelectedClass();
       validation.classList.add("active");
@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         validation.classList.remove("selected");
         validation.style.transition = "0.5s";
-        verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
+      
       }, 1000);
     });
   }
