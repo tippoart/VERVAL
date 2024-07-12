@@ -134,72 +134,6 @@ document.addEventListener("DOMContentLoaded", function () {
       AllCards[1].style.opacity = "0";
       AllCards[2].style.opacity = "0";
     }
-
-    // if (scrollPosition >= sectionStart && scrollPosition <= sectionEnd) {
-    //   if (
-    //     scrolling === 0 &&
-    //     scrollPosition > sectionStart + sectionHeight / 10
-    //   ) {
-    //     textOfer.style.opacity = 0;
-    //     textOfer.style.transition = "1s";
-    //     textOfer.style.zIndex = "0";
-
-    //     textOfer2.style.opacity = 0;
-    //     // let textOfer3 = document.querySelector(".we-ofer3");
-    //     // if(textOfer3){
-    //     //   textOfer3.classList.toggle("hidden");
-    //     // }
-    //     textOfer2.style.transition = "1s";
-    //     textOfer2.style.zIndex = "0";
-
-    //     AllCards[0].style.opacity = "1";
-    //     AllCards[0].style.transition = "1s";
-    //     AllCards[0].style.transform = "translateY(0)";
-    //     AllCards[0].classList.add("smooth-bounce");
-
-    //     AllCards[1].style.opacity = "1";
-    //     AllCards[1].style.transition = "1s";
-    //     AllCards[1].style.transform = "translateY(0)";
-
-    //     AllCards[1].classList.add("smooth-bounce");
-
-    //     AllCards[2].style.opacity = "1";
-    //     AllCards[2].style.transition = "1s";
-    //     AllCards[2].style.transform = "translateY(0)";
-    //     AllCards[2].classList.add("smooth-bounce");
-
-    //     scrolling = 1;
-    //   } else if (
-    //     scrolling === 1 &&
-    //     scrollPosition > sectionStart + sectionHeight / 6
-    //   ) {
-    //     imgCardSec2.classList.add("centered");
-
-    //     scrolling == 2;
-    //   }
-    // } else {
-    //   textOfer.style.opacity = 1;
-    //   textOfer2.style.opacity = 1;
-
-    //   // AllCards[0].style.opacity = "0";
-    //   AllCards[0].classList.remove("smooth-bounce");
-
-    //   // AllCards[1].style.opacity = "0";
-
-    //   AllCards[1].classList.remove("smooth-bounce");
-
-    //   AllCards[2].classList.remove("smooth-bounce");
-
-    //   const back = document.querySelector(".centered");
-    //   if(back){
-    //     back.classList.remove("centered");
-    //   }
-    //   AllCards[0].style.opacity = "0";
-    //   AllCards[1].style.opacity = "0";
-    //   AllCards[2].style.opacity = "0";
-
-    //   scrolling = 0;
-    // }
   });
 });
 
@@ -252,7 +186,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const viewportHeight = getViewportHeight();
         const scrollHeightPerStep = getScrollHeightPerStep();
         scrollAddS3 =
-          (Number(totalLettersll) - 40) * Number(scrollHeightPerStep);
+          (Number(totalLettersll) - 35) * Number(scrollHeightPerStep);
       }
 
       const observer = new IntersectionObserver(
@@ -303,7 +237,7 @@ document.addEventListener("DOMContentLoaded", function () {
       );
       spans.forEach((span, index) => {
         console.log("====span pertama====");
-        console.log(lettersToColor);
+        console.log(lettersToColorEmpat);
         console.log("========");
         if (index < lettersToColor) {
           span.style.color = "white";
@@ -320,10 +254,6 @@ document.addEventListener("DOMContentLoaded", function () {
         iconContainer.style.backgroundColor = "white";
 
         spansdua.forEach((spandua, indexdua) => {
-          console.log("==========TEST Kedua==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log("=======================");
           if (indexdua < lettersToColorDua - totalLetters) {
             spandua.style.color = "white";
           } else {
@@ -346,11 +276,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (lettersToColorDua >= totalLettersDua) {
         spansketiga.forEach((spanketiga, indexketiga) => {
-          console.log("==========TEST Ketiga==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log(lettersToColorTiga);
-          console.log("=======================");
           if (
             indexketiga <
             lettersToColorTiga - totalLetters - totalLettersDua
@@ -370,12 +295,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (lettersToColorTiga >= totalLettersTiga) {
         spanskeempat.forEach((spanempat, indexkeempat) => {
-          console.log("==========TEST Ketiga==========");
-          console.log(lettersToColor);
-          console.log(lettersToColorDua);
-          console.log(lettersToColorTiga);
-          console.log(lettersToColorEmpat);
-          console.log("=======================");
           if (
             indexkeempat <
             lettersToColorEmpat -
@@ -414,7 +333,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
       }
 
-      if (lettersToColorEmpat == 52) {
+      if (lettersToColorEmpat == 59) {
         cardContainers[0].style.transform = `scale(0.97)`;
         cardContainers[1].style.opacity = "1";
         cardContainers[1].style.transform = "translateY(0)";
@@ -423,7 +342,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[4].style.opacity = "0";
       }
 
-      if (lettersToColorEmpat == 53) {
+      if (lettersToColorEmpat == 67) {
         cardContainers[3].style.opacity = "0";
         cardContainers[4].style.opacity = "0";
         cardContainers[2].style.opacity = "1";
@@ -433,7 +352,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[0].style.transform = `scale(0.90)`;
       }
 
-      if (lettersToColorEmpat == 54) {
+      if (lettersToColorEmpat == 75) {
         cardContainers[4].style.opacity = "0";
         cardContainers[3].style.opacity = "1";
         cardContainers[3].style.transform = "translateY(0)";
@@ -442,7 +361,7 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[0].style.transform = `translateY(50px) scale(0.91)`;
       }
 
-      if (lettersToColorEmpat == 55) {
+      if (lettersToColorEmpat == 83) {
         cardContainers[4].style.opacity = "1";
         cardContainers[4].style.transform = "translateY(0)";
         cardContainers[2].style.transform = `translateY(-60px) scale(0.92)`;
