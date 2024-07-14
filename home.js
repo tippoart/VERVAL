@@ -236,9 +236,6 @@ document.addEventListener("DOMContentLoaded", function () {
         lettersToColorTiga + totalLettersEmpat / totallll
       );
       spans.forEach((span, index) => {
-        console.log("====span pertama====");
-        console.log(lettersToColorEmpat);
-        console.log("========");
         if (index < lettersToColor) {
           span.style.color = "white";
         } else {
@@ -247,7 +244,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (lettersToColor >= totalLetters) {
-        bumiIcon.style.transition = "0.5s";
+        // bumiIcon.style.transition = "0.5s";
         bumiIcon.style.transform = "translateX(4.8rem)";
         bumiIcon.style.backgroundColor = "rgb(58, 190, 249)";
         bumiIcon.style.borderRadius = "3.5rem";
@@ -264,7 +261,7 @@ document.addEventListener("DOMContentLoaded", function () {
         spansdua.forEach((spandua, indexdua) => {
           if (lettersToColor < totalLetters) {
             spandua.style.color = "rgba(43, 47, 49, 0.915)";
-            bumiIcon.style.transition = "all 0.5s ease 0s";
+            // bumiIcon.style.transition = "all 0.5s ease 0s";
 
             bumiIcon.style.transform = "translateX(0px)";
             bumiIcon.style.backgroundColor = "transparent";
@@ -325,8 +322,10 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[0].style.transform = "translateY(0)";
         cardContainers[1].style.opacity = "0";
         document.getElementById("sectiontigadiv").style.visibility = "hidden";
+        bumiIcon.style.visibility = "hidden";
       } else if (lettersToColorEmpat < 51) {
         document.getElementById("sectiontigadiv").style.visibility = "visible";
+        bumiIcon.style.visibility = "visible";
         cardContainers.forEach((img) => {
           img.style.opacity = "0";
           img.style.transform = "translateY(40%)";
@@ -378,7 +377,6 @@ document.addEventListener("DOMContentLoaded", function () {
       // }
 
       if (isScrollAdded == "false" && sectionSelectedin == "section3") {
-        console.log("Hore");
         displayScrollInfo();
         isScrollAdded = "true";
         document.getElementById("section3").style.height = `${scrollAddS3}px`;
