@@ -147,3 +147,22 @@ header .our-company:hover {
 .icons .expand-down {
   display: none; 
 }
+.impartial-head {
+  background-color: black;
+  padding: 60px; 
+  height: 100vh;
+  
+}
+.impartial {
+  background-image: url("../img/img-ourcompany/background-impartial.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 75%;
+  height: 80%;
+  color: white;
+  padding: 30px;
+ 
+}
+.impartial-paraf{
+  font-weight: 100;
+}

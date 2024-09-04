@@ -56,6 +56,17 @@ header {
   text-align: center;
 }
 
+#contact-us {
+  background-color: rgb(130, 185, 68);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  color: white;
+  text-decoration: none;
+  width: 9rem;
+  text-align: center;
+  outline: none;
+  border: none;
+}
 .ourservice-card {
   background-color: rgb(19, 19, 19);
   background-image: url("../img/our-service/Subtract.png");
@@ -64,8 +75,6 @@ header {
   background-size: 70rem;
   height: 120vh;
   padding: 27rem;
-
-
 }
 
 #navbar {
@@ -98,20 +107,20 @@ header {
   color: white;
 }
 
-.my-card{
+.my-card {
   width: 30rem;
 }
 
-.gases{
+.gases {
   color: white;
   width: 33rem;
-  position:relative;
+  position: relative;
   right: 3rem;
   bottom: 7rem;
 }
 
-.paraf-2{
-  border-left: 2px solid #FFC107;
+.paraf-2 {
+  border-left: 2px solid #ffc107;
   padding: 5px;
   height: 6rem;
 }
@@ -120,13 +129,12 @@ header {
   bottom: 0.5rem;
 }
 
-.gases-2{
+.gases-2 {
   position: relative;
   color: white;
   width: 57rem;
- top: 3rem;
- right: 3rem;
-
+  top: 3rem;
+  right: 3rem;
 }
 
 .card-1 p {
@@ -134,12 +142,11 @@ header {
   font-weight: 100;
 }
 
-.scrolldown{
+.scrolldown {
   top: 11.5rem;
   font-weight: 100;
   left: 26rem;
 }
-
 
 .verifikasi {
   border: 1.3px solid rgb(122, 195, 77);
@@ -250,4 +257,32 @@ nav ul .li {
 .validasi {
   display: none;
   position: absolute;
+}
+
+.tanda-tanya {
+  color: #7ab317;
+  border: 2px solid #7ab317;
+  border-radius: 100%;
+  padding: 10px;
+  width: 7rem;
+  text-align: center;
+}
+.tanda-tanya span {
+  font-size: 35px;
+  font-weight: 100;
+  line-height: 2rem;
+}
+.complaint {
+  background-color: rgb(231, 231, 231);
+}
+
+.link-pro {
+  text-decoration: none;
+  color: #6d9c1b;
+  font-weight: 500;
+}
+
+.link-pro:hover {
+  text-decoration: none;
+  color: #7ab317;
 }
