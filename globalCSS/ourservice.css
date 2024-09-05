@@ -53,7 +53,6 @@ header {
   color: white;
   text-decoration: none;
   width: 6rem;
-  text-align: center;
 }
 
 #contact-us {
@@ -66,6 +65,8 @@ header {
   text-align: center;
   outline: none;
   border: none;
+  left: 24.6rem;
+
 }
 .ourservice-card {
   background-color: rgb(19, 19, 19);
@@ -287,7 +288,7 @@ nav ul .li {
 }
 
 .sector {
- background-image: url("../img/our-service/Layer\ 4.png");
+  background-image: url("../img/our-service/Layer\ 4.png");
   background-position: right;
   background-repeat: no-repeat;
   background-size: 55%;
@@ -296,7 +297,6 @@ nav ul .li {
   padding-top: 3rem;
   overflow-y: hidden;
   height: 26rem;
-
 }
 .sector-img {
   background-image: url("../img/our-service/leaf-2210973_1280.png");
@@ -310,11 +310,9 @@ nav ul .li {
 }
 
 .sector-content {
-
   width: 40rem;
   position: relative;
   left: 2rem;
-
 }
 
 .sector-num {
@@ -339,12 +337,10 @@ nav ul .li {
   left: 1rem;
   font-size: 0.8rem;
 }
-.sector-img2{
+.sector-img2 {
   width: 120%;
   object-fit: contain;
   position: relative;
   bottom: 3rem;
   right: 6rem;
-
-  
 }
