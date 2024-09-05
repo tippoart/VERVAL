@@ -273,7 +273,6 @@ nav ul .li {
 .complaint {
   background-color: rgb(231, 231, 231);
   height: 40vh;
-  
 }
 
 .link-pro {
@@ -288,38 +287,42 @@ nav ul .li {
 }
 
 .sector {
-  background-image: url("../img/our-service/Layer\ 4.png");
+ background-image: url("../img/our-service/Layer\ 4.png");
   background-position: right;
   background-repeat: no-repeat;
-  background-size: 57%;
-  height: 62vh;
-
+  background-size: 55%;
   background-color: rgb(244, 244, 244);
   padding-left: 2rem;
-  overflow-x: hidden;
+  padding-top: 3rem;
+  overflow-y: hidden;
+  height: 26rem;
+
 }
 .sector-img {
   background-image: url("../img/our-service/leaf-2210973_1280.png");
   background-repeat: no-repeat;
   background-size: 14rem;
   background-position: center;
-  height: 8rem;
-  width: 20rem;
+  height: 5rem;
+  width: 14.5rem;
   color: white;
   font-size: 2.3rem;
 }
 
 .sector-content {
+
+  width: 40rem;
   position: relative;
-  left: 5rem;
+  left: 2rem;
+
 }
 
 .sector-num {
   border: 1px solid black;
   border-radius: 50%;
-  padding: 1.3rem;
-  width: 1rem;
-  height: 1rem;
+  padding: 1rem;
+  width: 0.8rem;
+  height: 0.8rem;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -327,8 +330,21 @@ nav ul .li {
 
   line-height: 1;
 }
-
+.sector-num-des {
+  font-weight: 500;
+  font-size: 0.8rem;
+}
 .sector-num-des-content {
   position: relative;
-  left: 2rem;
+  left: 1rem;
+  font-size: 0.8rem;
+}
+.sector-img2{
+  width: 120%;
+  object-fit: contain;
+  position: relative;
+  bottom: 3rem;
+  right: 6rem;
+
+  
 }
