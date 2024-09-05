@@ -74,8 +74,11 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 70rem;
-  height: 120vh;
-  padding: 27rem;
+  height: 40vh;
+  padding-top: 35rem;
+  padding-bottom: 16rem;
+  padding-left: 20rem;
+  padding-right: 20rem;
 }
 
 #navbar {
@@ -87,7 +90,7 @@ header {
   width: 22rem;
   position: relative;
   left: 5rem;
-  bottom: 17rem;
+  bottom: 26.5rem;
 }
 
 #navbar ul li {
@@ -117,7 +120,7 @@ header {
   width: 33rem;
   position: relative;
   right: 3rem;
-  bottom: 7rem;
+  bottom: 15rem;
 }
 
 .paraf-2 {
@@ -134,7 +137,7 @@ header {
   position: relative;
   color: white;
   width: 57rem;
-  top: 3rem;
+  bottom: 5rem;
   right: 3rem;
 }
 
@@ -194,11 +197,12 @@ nav ul .li {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  height: 55vh;
+  height: 45vh;
   justify-content: space-between;
   position: relative;
   width: 100%;
   overflow: hidden;
+
 }
 .section2 p {
   font-size: 2rem;
