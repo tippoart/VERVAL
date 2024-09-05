@@ -273,6 +273,7 @@ nav ul .li {
 .complaint {
   background-color: rgb(231, 231, 231);
   height: 40vh;
+  
 }
 
 .link-pro {
@@ -293,7 +294,7 @@ nav ul .li {
   background-size: 57%;
   height: 62vh;
 
-  background-color: #ffc107;
+  background-color: rgb(244, 244, 244);
   padding-left: 2rem;
   overflow-x: hidden;
 }
@@ -325,10 +326,9 @@ nav ul .li {
   text-align: center;
 
   line-height: 1;
- 
 }
 
-.sector-num-des-content{
+.sector-num-des-content {
   position: relative;
   left: 2rem;
 }
