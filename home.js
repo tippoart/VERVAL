@@ -246,6 +246,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (lettersToColor >= totalLetters) {
          bumiIcon.style.transition = "0.5s";
+         bumiIcon2.style.transition = "0.5s";
         // bumiIcon.style.transform = "translateX(4.8rem)";
         bumiIcon.style.backgroundColor = "rgb(145, 201, 54)";
         bumiIcon.style.borderRadius = "3.5rem";
@@ -276,6 +277,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             bumiIcon2.style.display = "none";
           }
+       
         });
       }
 
@@ -330,10 +332,10 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[0].style.transform = "translateY(0)";
         cardContainers[1].style.opacity = "0";
         document.getElementById("sectiontigadiv").style.visibility = "hidden";
-        bumiIcon.style.visibility = "hidden";
+        iconContainer.style.zIndex = "0";
       } else if (lettersToColorEmpat < 51) {
         document.getElementById("sectiontigadiv").style.visibility = "visible";
-        bumiIcon.style.visibility = "visible";
+        iconContainer.style.zIndex = "0";
         cardContainers.forEach((img) => {
           img.style.opacity = "0";
           img.style.transform = "translateY(40%)";
