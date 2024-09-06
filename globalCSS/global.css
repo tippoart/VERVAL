@@ -10,7 +10,7 @@ body {
   position: relative;
   z-index: 0;
 }
-#judul-utama{
+#judul-utama {
   font-size: 2.5rem;
 }
 
@@ -28,9 +28,7 @@ body {
   border-radius: 20px;
   padding: 5px;
   width: 25%;
-
 }
-
 
 .deskripsi1 {
   font-size: 20px;
@@ -359,18 +357,21 @@ body {
   left: 0.3rem;
   /* width: 7rem; */
   transition: background-color 0.3s ease;
-  z-index: 0;
- 
 }
 
 .verval3 .our .bumiku .icon img {
   width: 2rem;
   object-fit: cover;
   color: rgba(43, 47, 49, 0.915);
-  transition: transform 0.3s ease; /* Animasi pergerakan smooth */
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
-.bumi-2{
+.hidden {
+  opacity: 0;
+}
+
+.bumi-2 {
   position: absolute;
   right: 0.5px;
   bottom: 0.3px;
@@ -488,7 +489,6 @@ body {
   }
   .verval3 .verval3-card .verval3-card-img-5 {
     bottom: -5%;
-  
   }
 }
 

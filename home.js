@@ -332,10 +332,12 @@ document.addEventListener("DOMContentLoaded", function () {
         cardContainers[0].style.transform = "translateY(0)";
         cardContainers[1].style.opacity = "0";
         document.getElementById("sectiontigadiv").style.visibility = "hidden";
-        iconContainer.style.zIndex = "0";
+        // bumiIcon.style.visibility = "hidden";
+        iconContainer.classList.add("hidden");
       } else if (lettersToColorEmpat < 51) {
         document.getElementById("sectiontigadiv").style.visibility = "visible";
-        iconContainer.style.zIndex = "0";
+        //bumiIcon.style.visibility = "visible";
+       iconContainer.classList.remove("hidden");
         cardContainers.forEach((img) => {
           img.style.opacity = "0";
           img.style.transform = "translateY(40%)";
