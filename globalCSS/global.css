@@ -304,7 +304,7 @@ body {
   font-size: 4rem;
   bottom: 3rem;
   position: relative;
-  padding-left: 10rem;
+  padding-left: 0.1rem;
 }
 
 .verval3 p {
@@ -351,13 +351,15 @@ body {
   bottom: 53%;
 }
 .verval3 .our .bumiku .icon {
-  border: 2px solid rgba(43, 47, 49, 0.915);
-  border-radius: 10rem;
+  /* border: 2px solid rgba(43, 47, 49, 0.915);
+  border-radius: 10rem; */
   position: relative;
   transition: 0.5s;
-  top: 5px;
-  width: 7rem;
+  top: 4px;
+  left: 0.3rem;
+  /* width: 7rem; */
   transition: background-color 0.3s ease;
+ 
 }
 
 .verval3 .our .bumiku .icon img {
@@ -365,6 +367,15 @@ body {
   object-fit: cover;
   color: rgba(43, 47, 49, 0.915);
   transition: transform 0.3s ease; /* Animasi pergerakan smooth */
+}
+
+.bumi-2{
+  position: absolute;
+  right: 0.5px;
+  bottom: 0.3px;
+  display: none;
+  border: 2px solid white;
+  border-radius: 100%;
 }
 
 .verval3 .verval3-card {
@@ -476,6 +487,7 @@ body {
   }
   .verval3 .verval3-card .verval3-card-img-5 {
     bottom: -5%;
+  
   }
 }
 

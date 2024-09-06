@@ -152,6 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var element = document.getElementById("section3");
   var elementsectiontiga = document.getElementById("section3");
   const bumiIcon = document.querySelector(".bumi");
+  const bumiIcon2 = document.querySelector(".bumi-2");
   const iconContainer = document.querySelector(".icon");
 
   const cardContainers = [
@@ -244,11 +245,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (lettersToColor >= totalLetters) {
-        // bumiIcon.style.transition = "0.5s";
-        bumiIcon.style.transform = "translateX(4.8rem)";
-        bumiIcon.style.backgroundColor = "rgb(58, 190, 249)";
+         bumiIcon.style.transition = "0.5s";
+        // bumiIcon.style.transform = "translateX(4.8rem)";
+        bumiIcon.style.backgroundColor = "rgb(145, 201, 54)";
         bumiIcon.style.borderRadius = "3.5rem";
-        iconContainer.style.backgroundColor = "white";
+
+        bumiIcon2.style.display = "block"
+         bumiIcon2.style.transition = "0.5s";
+        // iconContainer.style.backgroundColor = "white";
 
         spansdua.forEach((spandua, indexdua) => {
           if (indexdua < lettersToColorDua - totalLetters) {
@@ -267,6 +271,8 @@ document.addEventListener("DOMContentLoaded", function () {
             bumiIcon.style.backgroundColor = "transparent";
             bumiIcon.style.borderRadius = "3rem";
             iconContainer.style.backgroundColor = "transparent";
+
+            bumiIcon2.style.display = "none";
           }
         });
       }
