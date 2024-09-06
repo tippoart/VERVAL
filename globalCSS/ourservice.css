@@ -65,18 +65,19 @@ header {
   text-align: center;
   outline: none;
   border: none;
-  left: 24.6rem;
-
+  position: relative;
+  top: 1rem;
+  left: 4rem;
 }
 .ourservice-card {
   background-color: rgb(19, 19, 19);
   background-image: url("../img/our-service/Subtract.png");
-  background-position: center;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-size: 70rem;
   height: 40vh;
   padding-top: 35rem;
-  padding-bottom: 16rem;
+  padding-bottom: 12rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
@@ -90,7 +91,7 @@ header {
   width: 22rem;
   position: relative;
   left: 5rem;
-  bottom: 26.5rem;
+  bottom: 27rem;
 }
 
 #navbar ul li {
@@ -120,9 +121,17 @@ header {
   width: 33rem;
   position: relative;
   right: 3rem;
-  bottom: 15rem;
+  bottom: 10rem;
 }
-
+.link-prosedur {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 400;
+  color: rgb(150, 229, 71);
+}
+.link-prosedur:hover {
+  color: rgb(150, 229, 71);
+}
 .paraf-2 {
   border-left: 2px solid #ffc107;
   padding: 5px;
@@ -136,13 +145,24 @@ header {
 .gases-2 {
   position: relative;
   color: white;
-  width: 57rem;
-  bottom: 5rem;
+  width: 50rem;
+  height: 25rem;
+  bottom: 10rem;
   right: 3rem;
 }
-
+.gases-2-content {
+  width: 37rem;
+  position: relative;
+  right: 4.6rem;
+}
+.icon-bumi {
+  width: 4rem;
+}
+.gases-2-title {
+  width: 10rem;
+}
 .card-1 p {
-  font-size: 11.5px;
+  font-size: 13px;
   font-weight: 100;
 }
 
@@ -202,7 +222,6 @@ nav ul .li {
   position: relative;
   width: 100%;
   overflow: hidden;
-
 }
 .section2 p {
   font-size: 2rem;
