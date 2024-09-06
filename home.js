@@ -251,7 +251,7 @@ document.addEventListener("DOMContentLoaded", function () {
         bumiIcon.style.borderRadius = "3.5rem";
 
         bumiIcon2.style.display = "block"
-         bumiIcon2.style.transition = "0.5s";
+         bumiIcon2.style.transition = "0.7s";
         // iconContainer.style.backgroundColor = "white";
 
         spansdua.forEach((spandua, indexdua) => {
@@ -271,6 +271,8 @@ document.addEventListener("DOMContentLoaded", function () {
             bumiIcon.style.backgroundColor = "transparent";
             bumiIcon.style.borderRadius = "3rem";
             iconContainer.style.backgroundColor = "transparent";
+             bumiIcon.style.transition = "0s";
+             bumiIcon2.style.transition = "0s";
 
             bumiIcon2.style.display = "none";
           }
