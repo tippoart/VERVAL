@@ -154,15 +154,13 @@ body {
 
 .verval2 .card-container {
   display: flex;
-  align-items: center;
-  justify-content: center;
+   /* align-items: center; */
+  justify-content: center; 
   position: sticky;
   bottom: 30px;
   top: 2px;
   rotate: 14deg;
-  justify-content: center;
   margin-bottom: 14rem;
-  align-items: center;
 }
 
 
@@ -218,7 +216,7 @@ body {
   }
 
   100% {
-    transform: translate(-20rem, 5rem) rotate(-14deg);
+    transform: translate(-20rem, 7.7rem) rotate(-14deg);
   }
 }
 
