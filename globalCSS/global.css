@@ -157,14 +157,14 @@ body {
   align-items: center;
   justify-content: center;
   position: sticky;
-  bottom: 6px;
+  bottom: 30px;
   top: 2px;
   rotate: 14deg;
   justify-content: center;
   margin-bottom: 14rem;
   align-items: center;
-
 }
+
 
 .verval2 .my-img1 {
   rotate: -15deg;
