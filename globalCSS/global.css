@@ -157,12 +157,13 @@ body {
   align-items: center;
   justify-content: center;
   position: sticky;
-  bottom: 4px;
+  bottom: 6px;
   top: 2px;
   rotate: 14deg;
   justify-content: center;
-  margin-bottom: 7rem;
+  margin-bottom: 14rem;
   align-items: center;
+
 }
 
 .verval2 .my-img1 {
@@ -183,13 +184,13 @@ body {
   right: 1rem;
 }
 
-.verval2 img {
-  width: 70%;
+/* .verval2 img {
+ 
   object-fit: cover;
   opacity: 0;
   position: absolute;
   left: 20rem;
-}
+} */
 
 @keyframes smooth-bounce {
   0% {
