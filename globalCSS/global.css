@@ -315,6 +315,7 @@ body {
 .verval3 .our-values {
   font-weight: 500;
   transition: color 1s;
+  width: 64rem;
 }
 
 .emb span {
@@ -343,11 +344,6 @@ body {
   bottom: 20%;
 }
 
-#sectiontigapart4 {
-  position: relative;
-  left: 3.5%;
-  bottom: 53%;
-}
 .verval3 .our .bumiku .icon {
   /* border: 2px solid rgba(43, 47, 49, 0.915);
   border-radius: 10rem; */
@@ -458,7 +454,7 @@ body {
   }
   #my-text {
     top: -10%;
-    left: 2%;
+    left: 1.5rem;
   }
   #my-text #sectiontigapart2 {
     position: relative;
