@@ -69,18 +69,20 @@ header {
   top: 1rem;
   left: 4rem;
 }
+
 .ourservice-card {
   background-color: rgb(19, 19, 19);
   background-image: url("../img/our-service/Subtract.png");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: 70rem;
-  height: 40vh;
+  height: 35vh;
   padding-top: 35rem;
   padding-bottom: 12rem;
   padding-left: 20rem;
   padding-right: 20rem;
 }
+
 
 #navbar {
   background-color: rgba(29, 30, 31, 0.821);
