@@ -126,13 +126,12 @@ body {
 .verval2 {
   background-image: url("../img/Desktop-2_cleanup.png");
   background-color: rgb(23, 22, 22);
-  height: 100vh;
+  height: 150vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   position: relative;
-  padding-bottom: 7rem;
   background-attachment: fixed;
 }
 
@@ -154,13 +153,14 @@ body {
 
 .verval2 .card-container {
   display: flex;
-   /* align-items: center; */
+   align-items: center;
   justify-content: center; 
   position: sticky;
-  bottom: 30px;
-  top: 2px;
+  top: -2rem;
   rotate: 14deg;
-  margin-bottom: 14rem;
+  margin-bottom: 20rem;
+
+
 }
 
 
@@ -217,6 +217,7 @@ body {
 
   100% {
     transform: translate(-20rem, 7.7rem) rotate(-14deg);
+ 
   }
 }
 
