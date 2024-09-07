@@ -126,13 +126,13 @@ body {
 .verval2 {
   background-image: url("../img/Desktop-2_cleanup.png");
   background-color: rgb(23, 22, 22);
-  height: 175vh;
+  height: 100vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   color: white;
   position: relative;
-  padding-bottom: 20rem;
+  padding-bottom: 7rem;
   background-attachment: fixed;
 }
 
