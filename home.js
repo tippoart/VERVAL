@@ -1,3 +1,27 @@
+const KlikMenu = document.getElementById("klik-menu");
+
+KlikMenu.addEventListener("click", function () {
+  const liElements = document.querySelectorAll("ul.navbar-nav li");
+  const ContackUs = document.querySelector(".contact-us");
+  const ul = document.querySelector("ul");
+
+  if (ContackUs.style.display === "block") {
+    ContackUs.style.display = "none";
+  } else {
+    ContackUs.style.display = "block";
+  }
+
+  liElements.forEach(function (li) {
+    if (li.style.display === "block") {
+      ul.style.backgroundColor = "transparent";
+      li.style.display = "none";
+    } else {
+      ul.style.backgroundColor = "white";
+      li.style.display = "block";
+    }
+  });
+});
+
 // verval 2
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -245,14 +269,14 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       if (lettersToColor >= totalLetters) {
-         bumiIcon.style.transition = "0.5s";
-         bumiIcon2.style.transition = "0.5s";
+        bumiIcon.style.transition = "0.5s";
+        bumiIcon2.style.transition = "0.5s";
         // bumiIcon.style.transform = "translateX(4.8rem)";
         bumiIcon.style.backgroundColor = "rgb(145, 201, 54)";
         bumiIcon.style.borderRadius = "3.5rem";
 
-        bumiIcon2.style.display = "block"
-         bumiIcon2.style.transition = "0.7s";
+        bumiIcon2.style.display = "block";
+        bumiIcon2.style.transition = "0.7s";
         // iconContainer.style.backgroundColor = "white";
 
         spansdua.forEach((spandua, indexdua) => {
@@ -272,12 +296,11 @@ document.addEventListener("DOMContentLoaded", function () {
             bumiIcon.style.backgroundColor = "transparent";
             bumiIcon.style.borderRadius = "3rem";
             iconContainer.style.backgroundColor = "transparent";
-             bumiIcon.style.transition = "0s";
-             bumiIcon2.style.transition = "0s";
+            bumiIcon.style.transition = "0s";
+            bumiIcon2.style.transition = "0s";
 
             bumiIcon2.style.display = "none";
           }
-       
         });
       }
 
@@ -337,7 +360,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else if (lettersToColorEmpat < 51) {
         document.getElementById("sectiontigadiv").style.visibility = "visible";
         //bumiIcon.style.visibility = "visible";
-       iconContainer.classList.remove("hidden");
+        iconContainer.classList.remove("hidden");
         cardContainers.forEach((img) => {
           img.style.opacity = "0";
           img.style.transform = "translateY(40%)";

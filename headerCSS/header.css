@@ -86,7 +86,6 @@ nav img {
 
 .paralax .excel .exel-2 {
   position: relative;
-
 }
 
 .paralax .excel-2::before,
@@ -112,7 +111,7 @@ nav img {
 
 .paralax .excel-2 h1 {
   font-size: 6rem;
-  font-weight:200;
+  font-weight: 200;
 }
 
 .paralax .scroll-down {
@@ -157,12 +156,80 @@ nav .container-fluid .contact-us {
   text-align: center;
 }
 
-header .home{
-    color: rgb(150, 229, 71);
-}
-header .home:hover{
-    color:rgb(150, 229, 71);
+ .link-color {
+  color: white;
 }
 
+header .home {
+  color: rgb(150, 229, 71);
+}
+header .home:hover {
+  color: rgb(150, 229, 71);
+}
 
-/* desktop version */
+header .nav-text {
+  color: white;
+}
+header .nav-text:hover {
+  color: white;
+}
+.humburger-menu {
+  display: none;
+}
+
+.logo-brand2 {
+  position: absolute;
+  display: none;
+}
+.logo-brand2 img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+/* mobile version */
+@media only screen and (max-width: 600px) {
+  nav {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: none;
+    width: 93%;
+    left: 5%;
+  }
+
+  ul {
+
+    width: 35rem;
+    padding: 2rem;
+  }
+
+  ul li {
+    display: none;
+  }
+
+  header .home {
+    color: black;
+  }
+  header .nav-text {
+    color: black;
+  }
+
+
+  .contact-us {
+    display: none;
+  }
+
+  .logo-brand {
+    display: none;
+  }
+
+  .logo-brand2 {
+    display: block;
+    bottom: 93%;
+    left: 5%;
+  }
+
+  .humburger-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
