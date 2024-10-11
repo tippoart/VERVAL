@@ -634,11 +634,11 @@ body {
     padding-top: 5rem;
   }
   #who-we-are {
-    padding: 1rem;
+    padding: 2rem;
   }
 
   .img1 {
-    width: 18rem;
+    width: 80%;
   }
   .verval1 .siku .siku-2 {
     flex-direction: column;
@@ -662,13 +662,13 @@ body {
 
   .verval1 .siku-2::before {
     height: 3.5rem;
-    left: 20.2rem;
-    top:-1.5rem;
+    right:0.5rem;
+    top: -2.5rem;
   }
 
   .verval1 .siku-2::after {
     width: 3.5rem;
-     left: 16.7rem;
-    top: -1.5rem;
+    right: 0.5rem;
+    top: -2.5rem;
   }
 }
