@@ -186,10 +186,10 @@ header .nav-text:hover {
   object-fit: cover;
 }
 
-.excel-2 #scroll-down {
-  font-size: 12px;
-  top: 70%;
+#scroll-down {
   position: absolute;
+  top: 70%;
+  bottom: 0;
 }
 
 /* mobile version */
@@ -278,15 +278,14 @@ header .nav-text:hover {
     font-size: 14px;
     position: relative;
     left: 2%;
-  
   }
 
-  .excel-2 #our-service {
+ #our-service {
     font-size: 12px;
   }
-  .excel-2 #scroll-down {
+ #scroll-down {
     font-size: 12px;
-    top: 150%;
+    top: 90%;
   }
 
   .paralax .excel {
@@ -295,9 +294,7 @@ header .nav-text:hover {
     padding-right: 2rem;
     padding-bottom: 4.5rem;
     top: 25%;
-   
   }
-
 
   .paralax .excel::before {
     height: 3.5rem;
@@ -308,20 +305,19 @@ header .nav-text:hover {
   .paralax .excel::after {
     width: 3.5rem;
     right: 12rem;
-
   }
 
   .paralax .excel-2::before {
     width: 2px;
     height: 3.5rem;
-    left: 12rem;
-    bottom: 15rem;
+    left: 11.5rem;
+    bottom: 3rem;
   }
 
   .paralax .excel-2::after {
     width: 3.5rem;
     height: 2px;
-    left: 12rem;
-    bottom: 15rem;
+    left: 11.5rem;
+    bottom: 3rem;
   }
 }
