@@ -156,7 +156,7 @@ nav .container-fluid .contact-us {
   text-align: center;
 }
 
- .link-color {
+.link-color {
   color: white;
 }
 
@@ -185,6 +185,13 @@ header .nav-text:hover {
   width: 1.5rem;
   object-fit: cover;
 }
+
+.excel-2 #scroll-down {
+  font-size: 12px;
+  top: 70%;
+  position: absolute;
+}
+
 /* mobile version */
 @media only screen and (max-width: 600px) {
   nav {
@@ -195,7 +202,6 @@ header .nav-text:hover {
   }
 
   ul {
-
     width: 35rem;
     padding: 2rem;
   }
@@ -211,6 +217,9 @@ header .nav-text:hover {
     color: black;
   }
 
+  header .nav-text:hover {
+    color: rgb(0, 0, 0);
+  }
 
   .contact-us {
     display: none;
@@ -231,5 +240,88 @@ header .nav-text:hover {
     position: absolute;
     top: 10px;
     right: 10px;
+  }
+
+  #section0 {
+    height: 110vh;
+    background-size: 365%;
+  }
+
+  @keyframes moveout {
+    from {
+      background-position: center;
+    }
+    to {
+      background-size: 400%;
+    }
+  }
+
+  #section0 .paralax {
+    height: 150vh;
+    background-size: 350%;
+    animation: moveLeft 4s cubic-bezier(0.4, 0, 0.4, 1) forwards 1s;
+  }
+
+  @keyframes moveLeft {
+    from {
+      background-position: 0%;
+    }
+    to {
+      background-position: 10%;
+    }
+  }
+
+  .excel-2 #judul-utama {
+    font-size: 1.5rem;
+  }
+  .excel-2 #paraf {
+    font-size: 14px;
+    position: relative;
+    left: 2%;
+  
+  }
+
+  .excel-2 #our-service {
+    font-size: 12px;
+  }
+  .excel-2 #scroll-down {
+    font-size: 12px;
+    top: 150%;
+  }
+
+  .paralax .excel {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 4.5rem;
+    top: 25%;
+   
+  }
+
+
+  .paralax .excel::before {
+    height: 3.5rem;
+    right: 12rem;
+    top: -3.5rem;
+  }
+
+  .paralax .excel::after {
+    width: 3.5rem;
+    right: 12rem;
+
+  }
+
+  .paralax .excel-2::before {
+    width: 2px;
+    height: 3.5rem;
+    left: 12rem;
+    bottom: 15rem;
+  }
+
+  .paralax .excel-2::after {
+    width: 3.5rem;
+    height: 2px;
+    left: 12rem;
+    bottom: 15rem;
   }
 }
