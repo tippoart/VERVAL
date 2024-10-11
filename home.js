@@ -135,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
       AllCards[2].style.transition = "1s";
       AllCards[2].style.transform = "translateY(0)";
       AllCards[2].classList.add("smooth-bounce");
-    } else if (lettersToColorEmpat == "4") {
+    } else if (lettersToColorEmpat == "4"  ) {
       imgCardSec2.classList.add("centered");
     } else if (lettersToColorEmpat < 1) {
       textOfer.style.opacity = 1;

@@ -662,7 +662,7 @@ body {
 
   .verval1 .siku-2::before {
     height: 3.5rem;
-    right:0.5rem;
+    right: 0.5rem;
     top: -2.5rem;
   }
 
@@ -670,5 +670,68 @@ body {
     width: 3.5rem;
     right: 0.5rem;
     top: -2.5rem;
+  }
+
+  /* verval 2 */
+  .h2-sticky {
+    padding: 2rem;
+    top: 17rem;
+    margin-top: 15rem;
+  }
+
+  .we-ofer,
+  .we-ofer2 {
+    font-size: 35px;
+  }
+
+  #img-container {
+    flex-direction: column;
+    top: -10rem;
+  }
+  #img-container img {
+    width: 20rem;
+  }
+
+  .verval2 .my-img1 {
+    rotate: 0deg;
+    position: relative;
+    top: 0.5rem;
+    left: 21rem;
+  }
+  .verval2 .my-img3 {
+    rotate: 0deg;
+    position: relative;
+    top: 2rem;
+    left: 21rem;
+  }
+  .verval2 .my-img2 {
+    position: relative;
+    top: 2rem;
+    left: 21rem;
+  }
+
+  /* @keyframes smooth-bounce {
+    0% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateX(-60px);
+    }
+    100% {
+      transform: translateY(-20px);
+     
+    }
+  } */
+  .verval2 .centered {
+    animation: slide-in 1s ease-in-out forwards;
+  }
+  @keyframes slide-in {
+    0% {
+      transform: translateY(-20%);
+    }
+
+    100% {
+      transform: translate(-20rem, 7.7rem) rotate(-14deg);
+    }
   }
 }
