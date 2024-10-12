@@ -194,6 +194,9 @@ header .nav-text:hover {
 
 /* mobile version */
 @media only screen and (max-width: 600px) {
+  body{
+    width: auto;
+  }
    header {
     width: 100% auto;
     background-color: blue;
