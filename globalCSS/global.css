@@ -693,13 +693,32 @@ body {
 
   #img-container {
     flex-direction: column;
-    top: -10rem;
+    top: 2rem;
     gap: 1px;
   }
   #img-container img {
     width: 24rem;
   }
 
+  
+.verval2 .my-img1 {
+  rotate: -14deg;
+  position: relative;
+  top: 0.5rem;
+  left: -6.5rem;
+}
+.verval2 .my-img3 {
+  rotate: -14deg;
+  position: relative;
+  top: -5rem;
+  left: 5.3rem;
+}
+.verval2 .my-img2 {
+  position: relative;
+  top: -3rem;
+  right: 1rem;
+  rotate: -14deg;
+}
 
 @keyframes slide-in {
   0% {

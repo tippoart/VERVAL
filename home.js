@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrolling = 0;
 
   window.addEventListener("scroll", function () {
-    const isMobile = window.innerWidth < 600;
+    //const isMobile = window.innerWidth < 600;
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
     const sectionOffsetTop = document.querySelector("#section2").offsetTop;
@@ -151,20 +151,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     // Tambahan logika untuk mobile
-    if (isMobile) {
-      AllCards.forEach((card) => {
-        card.style.transform = "none";
-        card.style.left = "3.5rem"; 
-        card.style.top = "15rem";
-        card.style.margin = "0 auto"; 
-        card.style.position = "relative"; 
-        card.style.rotate = "-14deg"
-      });
-
-      AllCards[0].style.left = "-3rem"
-      AllCards[2].style.left = "10.3rem"
-      imgCardSec2.classList.remove("centered"); 
-    }
+   
   });
 
 })
