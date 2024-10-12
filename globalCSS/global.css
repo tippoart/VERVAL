@@ -700,6 +700,17 @@ body {
     width: 24rem;
   }
 
+
+@keyframes slide-in {
+  0% {
+    transform: translateY(-7%);
+  }
+
+  100% {
+    transform: translate(-20rem, 7.7rem) rotate(0deg);
+  }
+}
+
   /* verval 3 */
   .verval3 {
     overflow-x: hidden;
