@@ -195,13 +195,13 @@ header .nav-text:hover {
 /* mobile version */
 @media only screen and (max-width: 600px) {
   header {
-    width: 99%;
+    width: auto;
   }
   nav {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: none;
-    width: 90%;
-    left: 7%;
+    width: auto;
+    left: -40%;
   }
 
   ul {
