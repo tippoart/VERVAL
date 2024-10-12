@@ -194,12 +194,11 @@ header .nav-text:hover {
 
 /* mobile version */
 @media only screen and (max-width: 600px) {
-  body{
-    width: auto;
-  }
+ 
    header {
-    width: 100% auto;
+    width: 23rem ;
     background-color: blue;
+    padding: 2rem;
    }
   nav {
     background-color: rgba(255, 255, 255, 0);
