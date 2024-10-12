@@ -629,10 +629,7 @@ body {
 /* mobile version */
 
 @media screen and (max-width: 600px) {
-  * {
-    box-sizing: border-box; 
-  }
-
+ 
 
 
   .verval1 {
@@ -682,7 +679,6 @@ body {
 
   .verval2 {
     height: 20%;
-    overflow-x: hidden;
   }
   .h2-sticky {
     padding: 2rem;
@@ -701,7 +697,12 @@ body {
     gap: 1px;
   }
   #img-container img {
-    width: 24rem;
+    transform: none;
+    position: relative;
+    margin: 0 auto;
+    transition: all 0.5s ease;
+    top: 15rem;
+    rotate: -14deg;
   }
 
   /* verval 3 */
