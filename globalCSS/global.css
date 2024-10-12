@@ -675,6 +675,9 @@ body{
     top: -2.5rem;
   }
 
+
+
+
   /* verval 2 */
 
   .verval2 {
@@ -699,5 +702,11 @@ body{
   }
   #img-container img {
     width: 24rem;
+  }
+
+  /* verval 3 */
+  .verval3{
+    overflow-x: hidden;
+  
   }
 }
