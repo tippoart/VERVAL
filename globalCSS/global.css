@@ -629,6 +629,9 @@ body {
 /* mobile version */
 
 @media screen and (max-width: 600px) {
+  body {
+    overflow: hidden;
+  }
   .verval1 {
     padding: 1rem;
     padding-top: 5rem;
@@ -674,9 +677,9 @@ body {
 
   /* verval 2 */
 
-  .verval2{
+  .verval2 {
     height: 20%;
-
+    overflow: hidden;
   }
   .h2-sticky {
     padding: 2rem;
@@ -697,7 +700,4 @@ body {
   #img-container img {
     width: 24rem;
   }
-
-
- 
 }
