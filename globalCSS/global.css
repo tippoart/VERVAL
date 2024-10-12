@@ -732,8 +732,58 @@ body {
 
   /* verval 3 */
   .verval3 {
-    overflow-x: hidden;
+  padding-left: 1rem;
+  padding-right: 1rem;
   }
+
+  .verval3 .our {
+  top: 1rem;
+  margin-top: 2rem;
+  width: 120%;
+  padding: 1rem;
+  
+}
+
+
+#sectiontigapart1,#sectiontigapart2,#sectiontigapart3,#sectiontigapart4{
+font-size: 2.5rem;
+}
+
+#sectiontigapart1{
+  top: 0.7rem;
+  left: -2rem;
+}
+#sectiontigapart2{
+  top: 0.7rem;
+  left: 2.4rem;
+}
+#sectiontigapart3{
+  right: 1.5rem;
+}
+#sectiontigapart4{
+  position: relative;
+  right: 5rem;
+}
+
+.verval3 .our .bumiku .icon {
+  top: 9px;
+  left: -1.5rem;
+}
+.verval3 .our .bumiku .icon img{
+  width: 10%;
+}
+
+.essence{
+  position: relative;
+  right: 3.8rem;
+}
+
+
+
+#my-text p {
+  top:-20px;
+}
+
 
 
   /* footer */
