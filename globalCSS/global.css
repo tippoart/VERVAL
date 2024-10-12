@@ -629,9 +629,10 @@ body {
 /* mobile version */
 
 @media screen and (max-width: 600px) {
-body{
-  overflow-x: hidden;
+  * {
+  box-sizing: border-box; 
 }
+
   .verval1 {
     padding: 1rem;
     padding-top: 5rem;
