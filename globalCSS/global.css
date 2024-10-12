@@ -703,11 +703,11 @@ body {
 
 @keyframes slide-in {
   0% {
-    transform: translateY(-7%);
+    transform: translateY(0);
   }
 
   100% {
-    transform: translate(-20rem, 7.7rem) rotate(0deg);
+    transform:  rotate(0deg);
   }
 }
 
