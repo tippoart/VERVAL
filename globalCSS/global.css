@@ -683,7 +683,7 @@ body {
   .h2-sticky {
     padding: 2rem;
     top: 17rem;
-    margin-top: 15rem;
+   
   }
 
   .we-ofer,
@@ -710,13 +710,13 @@ body {
 .verval2 .my-img3 {
   rotate: -14deg;
   position: relative;
-  top: -5rem;
-  left: 5.3rem;
+  top: -6.5rem;
+  left: 5rem;
 }
 .verval2 .my-img2 {
   position: relative;
   top: -3rem;
-  right: 1rem;
+  right: 0.8rem;
   rotate: -14deg;
 }
 
