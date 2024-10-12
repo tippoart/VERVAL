@@ -673,6 +673,11 @@ body {
   }
 
   /* verval 2 */
+
+  .verval2{
+    height: 20%;
+
+  }
   .h2-sticky {
     padding: 2rem;
     top: 17rem;
@@ -687,51 +692,12 @@ body {
   #img-container {
     flex-direction: column;
     top: -10rem;
+    gap: 1px;
   }
   #img-container img {
-    width: 20rem;
+    width: 24rem;
   }
 
-  .verval2 .my-img1 {
-    rotate: 0deg;
-    position: relative;
-    top: 0.5rem;
-    left: 21rem;
-  }
-  .verval2 .my-img3 {
-    rotate: 0deg;
-    position: relative;
-    top: 2rem;
-    left: 21rem;
-  }
-  .verval2 .my-img2 {
-    position: relative;
-    top: 2rem;
-    left: 21rem;
-  }
 
-  /* @keyframes smooth-bounce {
-    0% {
-      transform: translateY(0);
-    }
-    40% {
-      transform: translateX(-60px);
-    }
-    100% {
-      transform: translateY(-20px);
-     
-    }
-  } */
-  .verval2 .centered {
-    animation: slide-in 1s ease-in-out forwards;
-  }
-  @keyframes slide-in {
-    0% {
-      transform: translateY(-20%);
-    }
-
-    100% {
-      transform: translate(-20rem, 7.7rem) rotate(-14deg);
-    }
-  }
+ 
 }
