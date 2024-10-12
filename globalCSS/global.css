@@ -697,12 +697,7 @@ body {
     gap: 1px;
   }
   #img-container img {
-    transform: none;
-    position: relative;
-    margin: 0 auto;
-    transition: all 0.5s ease;
-    top: 15rem;
-    rotate: -14deg;
+    width: 24rem;
   }
 
   /* verval 3 */

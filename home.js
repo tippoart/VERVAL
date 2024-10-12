@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let scrolling = 0;
 
   window.addEventListener("scroll", function () {
-    const isMobile = window.innerWidth <= 600;
+    const isMobile = window.innerWidth < 600;
     const scrollPosition = window.scrollY;
     const windowHeight = window.innerHeight;
     const sectionOffsetTop = document.querySelector("#section2").offsetTop;
