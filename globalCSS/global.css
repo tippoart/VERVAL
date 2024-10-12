@@ -704,4 +704,10 @@ body {
   .verval3 {
     overflow-x: hidden;
   }
+
+
+  /* footer */
+  .footer{
+    flex-direction: column;
+  }
 }
