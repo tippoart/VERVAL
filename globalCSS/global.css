@@ -912,6 +912,43 @@ body {
     top: 10rem;
   }
 
+  /* verval 4 */
+  .verval4 {
+  background-image: url("../img/bg-daun-sec3.png");
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.verval4 i {
+
+  font-size: 35px;
+  background-color: rgba(255, 255, 255, 0.102);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 100%;
+}
+
+.verval4 .verval4-card {
+  width:96%;
+  height: 100%;
+}
+
+
+
+.verval4 .verval4-card .name-card {
+
+  padding: 1rem;
+  border-radius: 4rem;
+  width: 35rem;
+  height: 23rem;
+
+}
+
+
+
   /* footer */
   .footer {
     flex-direction: column;
