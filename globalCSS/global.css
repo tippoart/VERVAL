@@ -783,13 +783,14 @@ body {
   .verval3 .our {
     top: 1rem;
     margin-top: 2rem;
-    width: 24rem;
+    width: 100.5%;
     padding: 1rem;
     height: 40rem;
   }
 
   #my-text {
     top: 10%;
+    width: 100%;
    
   }
 
