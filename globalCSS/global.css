@@ -366,13 +366,13 @@ body {
 
 .verval3 .verval3-card {
   position: sticky;
-  top: 4%;
+  top: 22%;
   padding: 25%;
   width: 100%;
   bottom: 7rem;
 }
 
-.verval3 .verval3-card img {
+.verval3 .verval3-card .img {
   object-fit: cover;
   width: 90%;
   opacity: 0;
@@ -391,23 +391,70 @@ body {
     transform: translateY(4px);
   }
 }
+
+.card-text-img {
+  width: 20rem;
+  position: relative;
+  top: 17rem;
+  left: 2rem;
+}
+.card-text-img p {
+  text-align: left;
+}
+
+.card-text-des {
+  padding: 0.5rem;
+  font-weight: 100;
+  border-left: 1px solid rgb(143, 106, 41);
+}
+
+.collab {
+  width: 30rem;
+  top: 15rem;
+}
+
 .verval3 .verval3-card .verval3-card-img-1 {
+  background-image: url("/img/img-card-sec3/value\ 11\ \(1\).png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+  height: 100%;
   position: absolute;
-  bottom: -8rem;
+  bottom: -2rem;
 }
 .verval3 .verval3-card .verval3-card-img-2 {
+  background-image: url("/img/img-card-sec3/value\ 12.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+  height: 100%;
   position: absolute;
   bottom: 1rem;
 }
 .verval3 .verval3-card .verval3-card-img-3 {
+  background-image: url("/img/img-card-sec3/value\ 13.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+  height: 100%;
   position: absolute;
   bottom: -10rem;
 }
 .verval3 .verval3-card .verval3-card-img-4 {
+  background-image: url("/img/img-card-sec3/value\ 14.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+  height: 100%;
   position: absolute;
   bottom: -10rem;
 }
 .verval3 .verval3-card .verval3-card-img-5 {
+  background-image: url("/img/img-card-sec3/value\ 15.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 90%;
+  height: 100%;
   position: absolute;
   bottom: -15rem;
 }
@@ -629,9 +676,6 @@ body {
 /* mobile version */
 
 @media screen and (max-width: 600px) {
- 
-
-
   .verval1 {
     padding: 1rem;
     padding-top: 5rem;
@@ -700,106 +744,176 @@ body {
     width: 24rem;
   }
 
-  
-.verval2 .my-img1 {
-  rotate: -14deg;
-  position: relative;
-  top: 0.5rem;
-  left: -6.5rem;
-}
-.verval2 .my-img3 {
-  rotate: -14deg;
-  position: relative;
-  top: -6.5rem;
-  left: 5rem;
-}
-.verval2 .my-img2 {
-  position: relative;
-  top: -3rem;
-  right: 0.8rem;
-  rotate: -14deg;
-}
-
-@keyframes slide-in {
-  0% {
-    transform: translateY(0);
+  .verval2 .my-img1 {
+    rotate: -14deg;
+    position: relative;
+    top: 0.5rem;
+    left: -6.5rem;
+  }
+  .verval2 .my-img3 {
+    rotate: -14deg;
+    position: relative;
+    top: -6.5rem;
+    left: 5rem;
+  }
+  .verval2 .my-img2 {
+    position: relative;
+    top: -3rem;
+    right: 0.8rem;
+    rotate: -14deg;
   }
 
-  100% {
-    transform:  rotate(0deg);
+  @keyframes slide-in {
+    0% {
+      transform: translateY(0);
+    }
+
+    100% {
+      transform: rotate(0deg);
+    }
   }
-}
 
   /* verval 3 */
   .verval3 {
-
-  padding-left: 0;
-  padding-right: 2%;
-  height: 30vh;
+    padding-left: 0;
+    padding-right: 2%;
+    height: 30vh;
   }
 
   .verval3 .our {
-  top: 1rem;
-  margin-top: 2rem;
-  width: 24rem;
-  padding: 1rem;
-  height: 40rem;
-  
-}
+    top: 1rem;
+    margin-top: 2rem;
+    width: 24rem;
+    padding: 1rem;
+    height: 40rem;
+  }
 
+  #my-text {
+    top: 10%;
 
-#my-text{
-  top: 10%;
-}
+    width: 22rem;
+  }
 
-#sectiontigapart1,#sectiontigapart2,#sectiontigapart3,#sectiontigapart4{
-font-size: 2.5rem;
-}
+  #sectiontigapart1,
+  #sectiontigapart2,
+  #sectiontigapart3,
+  #sectiontigapart4 {
+    font-size: 2.5rem;
+  }
 
-#sectiontigapart1{
-  top: -10.5rem;
-  left: -1.2rem;
-}
-#sectiontigapart2{
-  left: 3.7rem;
-}
-#sectiontigapart3{
-  right: 0.1rem;
-}
-#sectiontigapart4{
-  right: 22.4rem;
-}
+  #sectiontigapart1 {
+    top: -10.5rem;
+    left: -1.2rem;
+  }
+  #sectiontigapart2 {
+    left: 3.7rem;
+  }
+  #sectiontigapart3 {
+    right: 0.1rem;
+  }
+  #sectiontigapart4 {
+    right: 22.4rem;
+  }
 
+  .verval3 .our .bumiku .icon {
+    top: -10.7rem;
+    left: -0.6rem;
+  }
+  .verval3 .our .bumiku .icon img {
+    width: 10%;
+  }
 
+  .bumi-2 {
+    right: 15.37rem;
+  }
 
+  .essence {
+    position: relative;
+    right: 3.8rem;
+  }
 
-.verval3 .our .bumiku .icon {
- top: -10.7rem;
-  left: -0.6rem;
-}
-.verval3 .our .bumiku .icon img{
-  width: 10%;
-}
+  #my-text p {
+    top: -20px;
+  }
+  .verval3 .verval3-card {
+    top: 56%;
+  }
 
-.bumi-2{
-  right: 15.37rem;
-}
+  .verval3 .verval3-card .verval3-card-img-1 {
+    left: 6%;
+    background-size: cover;
+    height: 38rem;
+    border-radius: 4.1rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-2 {
+    left: 6%;
+    bottom: -4rem;
+    background-size: cover;
+    height: 38rem;
+    border-radius: 4.1rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-3 {
+    left: 6%;
+    bottom: -52%;
+    background-size: cover;
+    height: 38rem;
+    border-radius: 4.1rem;
+  }
 
-.essence{
-  position: relative;
-  right: 3.8rem;
-}
+  .verval3 .verval3-card .verval3-card-img-4 {
+    left: 6%;
+    bottom: -50%;
+    background-size: cover;
+    height: 38rem;
+    border-radius: 4.1rem;
+  }
+  .verval3 .verval3-card .verval3-card-img-5 {
+    left: 6%;
+    bottom: -50%;
+    background-size: cover;
+    height: 38rem;
+    border-radius: 4.1rem;
+  }
 
+  .card-title-img {
+    left: 2rem;
+  }
 
+  .card-text-des {
+    top: 10rem;
+    right: 0.5rem;
+  }
+  .excellence {
+    left: 4rem;
+  }
 
-#my-text p {
-  top:-20px;
-}
+  .excellence-p {
+    width: 19rem;
+    top: 9rem;
+  }
 
+  .collab {
+    left: -0.7rem;
+  }
 
+  .collab-p {
+    width: 19rem;
+    top: 6rem;
+    left: 2rem;
+  }
+
+  .envi {
+    left: 4.5rem;
+  }
+
+  .envi-p {
+    width: 19rem;
+    left: 2.5rem;
+    top: 10rem;
+  }
 
   /* footer */
-  .footer{
+  .footer {
     flex-direction: column;
   }
 }
