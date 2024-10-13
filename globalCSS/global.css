@@ -811,7 +811,6 @@ body {
     right: 0.1rem;
   }
   #sectiontigapart4 {
-
     right: 22.4rem;
   }
 
@@ -913,39 +912,69 @@ body {
   }
 
   /* verval 4 */
-  .verval4 {
-  background-image: url("../img/bg-daun-sec3.png");
-  background-repeat: no-repeat;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  overflow: hidden;
+
+  .verval4 i {
+    font-size: 35px;
+  }
+
+  .verval4 .verval4-card {
+    width: 96%;
+    height: 100%;
+  }
+
+  .verval4 .verval4-card .name-card {
+    padding: 1rem;
+    height: 23rem;
+    background-size: cover;
+  }
+
+  @keyframes zoomOutBackground {
+    from {
+      background-size: 570%;
+    }
+    to {
+      background-size: 490%;
+    }
+  }
+
+  /* verval 5 */
+
+  .verval5 {
+    height: 130vh;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .verval5 .container .card-img {
+    width: 100%;
+    max-width: 20rem; /* Batasi ukuran card untuk mobile */
+  }
+
+  .verval5 #carouselExampleControls .nice-to-now h3 {
+  padding: 10px;
+  width: 9rem;
+  font-size: 20px;
+  left:-1rem;
+  bottom: 1.2rem;
 }
+ .verval5 #carouselExampleControls .nice-to-now a{
+  left: 1rem;
+ }
+  .verval5 .container .card-img img {
+    object-fit: cover;
+    height: 10rem;
+    border-radius: 10px;
+  }
+  .verval5 #carouselExampleControls {
+    background-color: rgba(255, 255, 255, 0.165);
+    padding: 2rem;
+    height: 30rem;
+  }
 
-.verval4 i {
+ .card {
+    flex: 0 0 100%; 
+  }
 
-  font-size: 35px;
-  background-color: rgba(255, 255, 255, 0.102);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 100%;
-}
-
-.verval4 .verval4-card {
-  width:96%;
-  height: 100%;
-}
-
-
-
-.verval4 .verval4-card .name-card {
-
-  padding: 1rem;
-  border-radius: 4rem;
-  width: 35rem;
-  height: 23rem;
-
-}
 
 
 
