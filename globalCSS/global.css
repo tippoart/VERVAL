@@ -722,12 +722,13 @@ body {
   /* verval 2 */
 
   .verval2 {
-    height: 20%;
+    height: auto;
   }
   .h2-sticky {
     padding: 2rem;
     top: 17rem;
     margin-top: 15rem;
+   
   }
 
   .we-ofer,
@@ -739,6 +740,7 @@ body {
     flex-direction: column;
     top: 2rem;
     gap: 1px;
+     margin-bottom: 1rem;
   }
   #img-container img {
     width: 24rem;
@@ -777,7 +779,8 @@ body {
   .verval3 {
     padding-left: 0;
     padding-right: 2%;
-    height: 30vh;
+    height: 100vh;
+   
   }
 
   .verval3 .our {
@@ -786,6 +789,7 @@ body {
     width: 24.5rem;
     padding: 4%;
     height: 35rem;
+ 
   }
 
   #my-text {
@@ -836,6 +840,7 @@ body {
   }
   .verval3 .verval3-card {
     top: 56%;
+    
   }
 
   .verval3 .verval3-card .verval3-card-img-1 {
@@ -912,6 +917,9 @@ body {
   }
 
   /* verval 4 */
+  .verval4{
+    height: 100vh;
+  }
 
   .verval4 i {
     font-size: 35px;
@@ -940,7 +948,7 @@ body {
   /* verval 5 */
 
   .verval5 {
-    height: 130vh;
+    height: 100vh;
     padding-left: 1rem;
     padding-right: 1rem;
   }
