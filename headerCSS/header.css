@@ -201,9 +201,8 @@ header .nav-text:hover {
   nav {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: none;
-
     width: auto;
-    left: 1%;
+    left: 3rem;
   }
 
   ul {
