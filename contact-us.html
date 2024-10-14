@@ -8,6 +8,7 @@
     />
     <title>VERVAL</title>
     <link rel="stylesheet" href="globalCSS/contactus.css" />
+    <link rel="stylesheet" href="headerCSS/header.css" />
     <link rel="stylesheet" href="footerCSS/footer.css" />
 
     <link
@@ -32,38 +33,43 @@
   </head>
   <body>
     <header class="parallax-header">
-      <nav id="navbar-head" class="navbar navbar-expand-lg p-2">
+      <nav
+        data-aos="fade-zoom-in"
+        data-aos-easing="ease-in-back"
+        data-aos-delay="300"
+        data-aos-duration="1900"
+        data-aos-offset="0"
+        class="navbar navbar-expand-lg p-2"
+      >
         <div class="container-fluid">
-          <div>
+          <div class="logo-brand">
             <img src="img/logoverval/logo-verval.png" alt="" />
-            <a class="navbar-brand text-white" href="index.html">VERVAL</a>
+            <a class="navbar-brand text-white" href="#">VERVAL</a>
           </div>
-
           <ul class="navbar-nav gap-4">
-            <li class="nav-item">
-              <a
-                class="nav-link text-white"
-                aria-current="page"
-                href="index.html"
-                >home</a
-              >
+            <li class="">
+              <a class="nav-link home" aria-current="page" href="#">home</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="ourcompany.html"
+            <li class="">
+              <a class="nav-link nav-text" href="ourcompany.html"
                 >our company</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link text-white" href="ourservice.html"
+            <li class="">
+              <a class="nav-link nav-text" href="ourservice.html"
                 >our service</a
               >
             </li>
-            <li class="nav-item">
-              <a class="nav-link artikel" href="artikel.html">articles</a>
+            <li class="">
+              <a class="nav-link nav-text" href="artikel.html">articles</a>
             </li>
           </ul>
 
-          <a href="#" class="contact-us"> Contact Us</a>
+          <a href="contact-us.html" class="contact-us"> Contact Us</a>
+
+          <div class="humburger-menu" id="klik-menu">
+            <i class="bx bx-menu bg-dark rounded-circle fs-4 p-2"></i>
+          </div>
         </div>
       </nav>
     </header>
@@ -88,7 +94,7 @@
     </div>
 
     <footer id="section6" class="verval6 section">
-      <div class="footer d-flex justify-content-between gap-5">
+      <div class="footer d-flex justify-content-between">
         <section class="footer-logo d-flex flex-column gap-2">
           <div class="verval-logo-footer d-flex g-1">
             <img src="img/logoverval/logo-verval.png" alt="" />
@@ -112,7 +118,7 @@
           <h5>Our Contact</h5>
           <br />
 
-          <div class="d-flex align-items-center gap-1">
+          <div class="d-flex align-items-center gap-1 our">
             <i
               style="position: relative; bottom: 5px; font-size: 17px"
               class="bx bx-envelope"
@@ -128,13 +134,13 @@
           </div>
         </section>
 
-        <section>
+        <section class="help-and-support-footer">
           <h5>Help & Support</h5>
           <br />
           <p>FAQ</p>
         </section>
 
-        <section>
+        <section class="our-location-footer">
           <h5>Our Location</h5>
           <br />
 
@@ -150,10 +156,7 @@
 
       <hr class="garis" />
 
-      <div
-        style="position: relative; top: 1rem"
-        class="d-flex justify-content-between"
-      >
+      <div id="copyright" class="d-flex justify-content-between">
         <p>Copyright &copy; 2024 Verval Nusantara Hijau</p>
 
         <div class="footer-end">
@@ -165,5 +168,7 @@
         </div>
       </div>
     </footer>
+
+    <script src="nav.js"></script>
   </body>
 </html>
