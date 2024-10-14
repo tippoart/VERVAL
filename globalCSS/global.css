@@ -126,7 +126,6 @@ body {
 .verval2 {
   background-image: url("../img/Desktop-2_cleanup.png");
   background-color: rgb(23, 22, 22);
-  height: 150vh;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -986,8 +985,4 @@ body {
 
 
 
-  /* footer */
-  .footer {
-    flex-direction: column;
-  }
 }

@@ -13,6 +13,7 @@ footer .garis {
   width: 100%;
   position: relative;
   top: 2rem;
+  gap: 5rem;
 }
 footer section .verval-logo-footer {
   gap: 10px;
@@ -26,10 +27,37 @@ footer .footer {
   height: 17rem;
 }
 
-footer  .footer-end .terms {
+footer .footer-end .terms {
   color: rgb(121, 221, 129);
 }
 
-footer  .footer-end .pripacy {
+footer .footer-end .pripacy {
   color: rgb(121, 221, 129);
+}
+
+#copyright {
+  position: relative;
+  top: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+  footer {
+    padding: 2rem;
+  }
+  footer .garis {
+    top: 3.5rem;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  #copyright {
+    top: 23rem;
+  }
+  .help-and-support-footer {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.504);
+  }
+
+ 
 }
