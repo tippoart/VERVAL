@@ -10,6 +10,13 @@ body {
   position: relative;
   z-index: 0;
 }
+
+header .home {
+  color: rgb(150, 229, 71);
+}
+header .home:hover {
+  color: rgb(150, 229, 71);
+}
 #judul-utama {
   font-size: 2.5rem;
 }

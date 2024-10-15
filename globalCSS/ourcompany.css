@@ -4,6 +4,10 @@ header .our-company {
 header .our-company:hover {
   color: rgb(150, 229, 71);
 }
+
+header .home {
+  color: white;
+}
 .section1 {
   background-image: url("../img/img-ourcompany/Article\ -\ Opened.png");
   background-position: center;
@@ -70,7 +74,7 @@ header .our-company:hover {
   padding: 3rem;
 }
 
-.our-img{
+.our-img {
   object-fit: contain;
   width: 3rem;
   height: 3rem;
@@ -151,13 +155,12 @@ header .our-company:hover {
 }
 
 .icons .expand-down {
-  display: none; 
+  display: none;
 }
 .impartial-head {
   background-color: black;
-  padding: 60px; 
+  padding: 60px;
   height: 100vh;
-  
 }
 .impartial {
   background-image: url("../img/img-ourcompany/background-impartial.png");
@@ -167,8 +170,7 @@ header .our-company:hover {
   height: 80%;
   color: white;
   padding: 30px;
- 
 }
-.impartial-paraf{
+.impartial-paraf {
   font-weight: 100;
 }

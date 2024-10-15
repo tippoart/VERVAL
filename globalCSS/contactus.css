@@ -13,16 +13,7 @@ header {
   color: #f2f2f2;
   padding: 20px 0 0 0;
   z-index: 3;
-}
-
-header {
-  position: fixed;
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #f2f2f2;
-  padding: 20px 0 0 0;
-  z-index: 3;
+  
 }
 
 #navbar-head img {
@@ -75,6 +66,7 @@ header {
   justify-content: center;
   align-items: center;
   gap: 3rem;
+  z-index: 0;
 }
 
 form {

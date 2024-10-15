@@ -1,10 +1,13 @@
-header .our-company {
+header #our-service {
   color: rgb(150, 229, 71);
 }
-header .our-company:hover {
+header #our-service:hover {
   color: rgb(150, 229, 71);
 }
 
+header .home {
+  color: white;
+}
 header {
   position: fixed;
   display: block;
@@ -93,14 +96,14 @@ header {
   width: 22rem;
   position: relative;
   left: 5rem;
-  bottom: 27rem;
+  top: -27rem;
 }
 
 #navbar ul li {
   list-style: none;
   cursor: pointer;
   position: relative;
-  top: 7px;
+  bottom: 1.5px;
   right: 17px;
   font-size: 18px;
   font-weight: 500;
