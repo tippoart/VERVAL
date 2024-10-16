@@ -86,7 +86,6 @@ header {
   padding-right: 20rem;
 }
 
-
 #navbar {
   background-color: rgba(29, 30, 31, 0.821);
   border-radius: 30px;
@@ -154,6 +153,7 @@ header {
   height: 25rem;
   bottom: 10rem;
   right: 3rem;
+  gap: 1rem;
 }
 .gases-2-content {
   width: 37rem;
@@ -371,4 +371,68 @@ nav ul .li {
   position: relative;
   bottom: 3rem;
   right: 6rem;
+}
+
+@media screen and (max-width: 600px) {
+  .my-card {
+    width: 20rem;
+  }
+
+  .ourservice-card {
+    background-image: url("../img/our-service/bomm.png");
+    padding-top: 60rem;
+    background-position: bottom;
+    right: 4rem;
+    background-size: 28rem;
+  }
+
+  .card-1 {
+    flex-direction: column;
+  }
+
+  .gases-2 .card-1 img {
+    width: 2rem;
+  }
+
+  .gases {
+    width: 17rem;
+    position: relative;
+    gap: 30rem;
+    right: 8rem;
+    bottom: 20rem;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+  }
+
+  .paraf-2 {
+    border-left: 2px solid #ffc107;
+    padding: 5px;
+    height: 6rem;
+  }
+  .paraf-2 p {
+    position: relative;
+    bottom: 0.5rem;
+  }
+
+  .gases-2 {
+    width: 18rem;
+    height: 22rem;
+    bottom: 19rem;
+    right: 9rem;
+    text-align: center;
+    gap: 1px;
+  }
+  .gases-2-content {
+    width: 37rem;
+    position: relative;
+    right: 4.6rem;
+  }
+  .icon-bumi {
+    width: 4rem;
+  }
+  .gases-2-title {
+    width: 10rem;
+  }
 }
