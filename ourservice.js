@@ -42,10 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     img2.style.transform = `translateX(${x}px)`;
   });
-
-  validasicard.addEventListener("wheel", function (event) {
+  img2.addEventListener("touchstart", function (event) {
     event.preventDefault();
-    let currentTransform = window.getComputedStyle(validasicard).transform;
+    let currentTransform = window.getComputedStyle(img2).transform;
     let matrix = currentTransform.match(/^matrix\((.+)\)$/);
     let x = 0;
     if (matrix) {
@@ -53,7 +52,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     const maxTranslate = 0;
-    const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
     if (event.deltaY < 0) {
       x += 150;
@@ -67,34 +66,35 @@ document.addEventListener("DOMContentLoaded", function () {
       x = minTranslate;
     }
 
-    validasicard.style.transform = `translateX(${x}px)`;
+    img2.style.transform = `translateX(${x}px)`;
   });
-  validasicard.addEventListener("touchstart", function (event) {
-    event.preventDefault();
-    let currentTransform = window.getComputedStyle(validasicard).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
 
-    const maxTranslate = 0;
-    const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
+  // validasicard.addEventListener("touchstart", function (event) {
+  //   event.preventDefault();
+  //   let currentTransform = window.getComputedStyle(validasicard).transform;
+  //   let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+  //   let x = 0;
+  //   if (matrix) {
+  //     x = parseFloat(matrix[1].split(", ")[4]);
+  //   }
 
-    if (event.deltaY < 0) {
-      x += 150;
-    } else {
-      x -= 150;
-    }
+  //   const maxTranslate = 0;
+  //   const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
 
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
+  //   if (event.deltaY < 0) {
+  //     x += 150;
+  //   } else {
+  //     x -= 150;
+  //   }
 
-    validasicard.style.transform = `translateX(${x}px)`;
-  });
+  //   if (x > maxTranslate) {
+  //     x = maxTranslate;
+  //   } else if (x < minTranslate) {
+  //     x = minTranslate;
+  //   }
+
+  //   validasicard.style.transform = `translateX(${x}px)`;
+  // });
 
   const verifikasi = document.querySelector(".verifikasi");
   const validation = document.querySelector(".validation");
