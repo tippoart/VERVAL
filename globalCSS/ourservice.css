@@ -567,9 +567,9 @@ nav ul .li {
   .gases {
     width: 18rem;
     position: relative;
-    gap: 21rem;
+    gap: 23rem;
     right: -1rem;
-    bottom: 31.5rem;
+    bottom: 35.5rem;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -601,7 +601,7 @@ nav ul .li {
   .gases-2 {
     width: 18rem;
     height: 22rem;
-    bottom: 27rem;
+    bottom: 30rem;
     right: -1rem;
     text-align: center;
     gap: 15px;
@@ -618,7 +618,7 @@ nav ul .li {
 
   .img1 {
     left: 2rem;
-    width: 19rem;
+    width: 20rem;
   }
 
 
