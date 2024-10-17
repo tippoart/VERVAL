@@ -8,118 +8,9 @@ header {
   z-index: 3;
 }
 
-#section0 {
-  height: 110vh;
-  background-image: url("../img/bg-header.png");
-  background-repeat: no-repeat;
-  background-size: 145%;
-  background-position: center;
-  animation: moveout 3s cubic-bezier(0.25, 0.1, 0.25, 1) forwards 1s;
-}
-
-@keyframes moveout {
-  from {
-    background-position: center;
-  }
-  to {
-    background-size: 125%;
-  }
-}
-
-#section0 .paralax {
-  background-image: url("../img/paralax1.png");
-  height: 140vh;
-  position: relative;
-  bottom: 11%;
-  background-size: 110%;
-  background-repeat: no-repeat;
-  background-position: left;
-  animation: moveLeft 3s cubic-bezier(0.44, 0.1, 0.44, 1) forwards 1s;
-}
-@keyframes moveLeft {
-  from {
-    background-position: left;
-  }
-  to {
-    background-position: right;
-  }
-}
-
 nav img {
   width: 1.5rem;
   object-fit: cover;
-}
-
-.paralax .excel {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  align-items: center;
-  width: 45rem;
-  position: absolute;
-  padding-left: 4rem;
-  padding-right: 4rem;
-  padding-bottom: 3.5rem;
-  top: 40%;
-  z-index: 0;
-}
-.paralax .excel::before,
-.paralax .excel::after {
-  content: "";
-  position: absolute;
-  background-color: white;
-}
-
-.paralax .excel::before {
-  width: 2px;
-  height: 5.5rem;
-  right: -2rem;
-  top: -3.5rem;
-}
-
-.paralax .excel::after {
-  width: 5.5rem;
-  height: 2px;
-  right: -2rem;
-  top: -3.5rem;
-}
-
-.paralax .excel .exel-2 {
-  position: relative;
-}
-
-.paralax .excel-2::before,
-.paralax .excel-2::after {
-  content: "";
-  position: absolute;
-  background-color: white;
-}
-
-.paralax .excel-2::before {
-  width: 2px;
-  height: 5.5rem;
-  left: 0;
-  bottom: 0;
-}
-
-.paralax .excel-2::after {
-  width: 5.5rem;
-  height: 2px;
-  left: 0;
-  bottom: 0;
-}
-
-.paralax .excel-2 h1 {
-  font-size: 6rem;
-  font-weight: 200;
-}
-
-.paralax .scroll-down {
-  margin-top: 10rem;
-}
-
-.paralax .scroll-down i {
-  font-size: 1rem;
 }
 
 nav {
@@ -307,9 +198,9 @@ header {
   width: 30rem;
 }
 
-  #navbar ul {
-    gap: 0.4rem;
-  }
+#navbar ul {
+  gap: 0.4rem;
+}
 
 .gases {
   color: white;
@@ -567,6 +458,14 @@ nav ul .li {
 .complain-sec {
   width: 65%;
 }
+.card-1 {
+  gap: 2rem;
+}
+
+.End-to-End-p {
+  position: relative;
+  left: 1rem;
+}
 
 @media screen and (max-width: 600px) {
   header {
@@ -648,10 +547,13 @@ nav ul .li {
     background-image: url("../img/our-service/bomm.png");
     padding-top: 56rem;
     background-position: center;
-    background-size: 52%;
+    background-size: 90%;
     flex-direction: column;
-    right: 8rem;
- 
+    right: 0;
+    width: 100%;
+    padding-bottom: 12rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 
   .card-1 {
@@ -663,11 +565,11 @@ nav ul .li {
   }
 
   .gases {
-    width: 17rem;
+    width: 18rem;
     position: relative;
-    gap: 18rem;
+    gap: 21rem;
     right: -1rem;
-    bottom: 26rem;
+    bottom: 31.5rem;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -676,9 +578,20 @@ nav ul .li {
 
   .paraf-2 {
     border-left: 2px solid #ffc107;
-    padding: 5px;
-    height: 5.5rem;
+    padding: 8px;
+    height: 7rem;
     font-size: 12px;
+  }
+
+  .card-1 {
+    gap: 0.5rem;
+  }
+
+  #contact-us {
+    font-size: 12px;
+    width: 5rem;
+    left: 0;
+    top: -0.2rem;
   }
   .paraf-2 p {
     position: relative;
@@ -688,13 +601,17 @@ nav ul .li {
   .gases-2 {
     width: 18rem;
     height: 22rem;
-    bottom: 24rem;
+    bottom: 27rem;
     right: -1rem;
     text-align: center;
-    gap: 1px;
+    gap: 15px;
   }
 
-  .gases-2-content{
+  .End-to-End-p {
+    left: 0;
+  }
+
+  .gases-2-content {
     width: 17rem;
     left: -0.5rem;
   }
