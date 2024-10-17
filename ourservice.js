@@ -44,49 +44,59 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   
- let startX = 0; // untuk menyimpan posisi awal sentuhan
- let currentX = 0; // untuk menyimpan posisi saat ini
- let isDragging = false; // untuk mengontrol apakah gambar sedang diseret
+  img2.addEventListener("touchstart", function (event) {
+    event.preventDefault();
+    let currentTransform = window.getComputedStyle(img2).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
 
- img2.addEventListener("touchstart", function (event) {
-   event.preventDefault();
-   startX = event.touches[0].clientX; // ambil posisi X awal
-   isDragging = true; // tandai bahwa gambar sedang diseret
- });
+    const maxTranslate = 0;
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
- img2.addEventListener("touchmove", function (event) {
-   if (!isDragging) return; // jika tidak dalam status dragging, keluar
+    if (event.deltaY < 0) {
+      x += 150;
+    } else {
+      x -= 150;
+    }
 
-   event.preventDefault();
-   currentX = event.touches[0].clientX; // ambil posisi X saat ini
-   let currentTransform = window.getComputedStyle(img2).transform;
-   let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-   let x = 0;
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
 
-   if (matrix) {
-     x = parseFloat(matrix[1].split(", ")[4]);
-   }
+    img2.style.transform = `translateX(${x}px)`;
+  });
+  
+  img2.addEventListener("touchend", function (event) {
+    event.preventDefault();
+    let currentTransform = window.getComputedStyle(img2).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
 
-   const maxTranslate = 0;
-   const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+    const maxTranslate = 0;
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
-   // hitung pergeseran berdasarkan sentuhan
-   x += currentX - startX; // tambahkan pergeseran ke posisi saat ini
-   startX = currentX; // perbarui posisi awal
+    if (event.deltaY < 0) {
+      x += 150;
+    } else {
+      x -= 150;
+    }
 
-   // pastikan posisi tidak melampaui batas
-   if (x > maxTranslate) {
-     x = maxTranslate;
-   } else if (x < minTranslate) {
-     x = minTranslate;
-   }
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
 
-   img2.style.transform = `translateX(${x}px)`; // terapkan transformasi
- });
-
- img2.addEventListener("touchend", function () {
-   isDragging = false; // atur status dragging menjadi false saat sentuhan berakhir
- });
+    img2.style.transform = `translateX(${x}px)`;
+  });
 
 
   //   event.preventDefault();
