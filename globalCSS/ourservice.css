@@ -373,6 +373,10 @@ nav ul .li {
   right: 6rem;
 }
 
+.complain-sec {
+  width: 65%;
+}
+
 @media screen and (max-width: 600px) {
   .my-card {
     width: 20rem;
@@ -398,7 +402,7 @@ nav ul .li {
     width: 20rem;
     position: relative;
     gap: 18rem;
-    right:-3rem;
+    right: -3rem;
     bottom: 24rem;
     justify-content: space-between;
     display: flex;
@@ -409,7 +413,8 @@ nav ul .li {
   .paraf-2 {
     border-left: 2px solid #ffc107;
     padding: 5px;
-    height: 6rem;
+    height: 5.5rem;
+    font-size: 12px;
   }
   .paraf-2 p {
     position: relative;
@@ -424,11 +429,37 @@ nav ul .li {
     text-align: center;
     gap: 1px;
   }
- 
-  .icon-bumi {
-    width: 4rem;
+
+  .button {
+    width: 25rem;
   }
-  .gases-2-title {
-    width: 10rem;
+
+  .sector {
+    height: 100vh;
+    padding: 1rem;
+    background-position: center;
+    background-position-y: 30rem;
+    background-size: 100%;
+    position: relative;
+  }
+  .sector-img {
+    width: 15rem;
+    font-size: 30px;
+    background-size: 70%;
+  }
+
+  .sector-content {
+    flex-direction: column;
+    width: 26rem;
+  }
+
+  .complain-sec {
+    padding: 1rem;
+    width: 24rem;
+  }
+
+  .tanda-tanya {
+    height: 3.8rem;
+    line-height: -2rem;
   }
 }
