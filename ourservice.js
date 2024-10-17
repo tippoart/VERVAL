@@ -15,91 +15,80 @@ document.addEventListener("DOMContentLoaded", function () {
     validasicard.style.transition = "0.7s";
     validasicard.style.opacity = "1";
   });
+img2.addEventListener("wheel", function (event) {
+  event.preventDefault();
 
-  img2.addEventListener("wheel", function (event) {
-    event.preventDefault();
-    let currentTransform = window.getComputedStyle(img2).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
+  // Ambil transformasi saat ini
+  let currentTransform = window.getComputedStyle(img2).transform;
+  let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+  let x = 0;
 
-    const maxTranslate = 0;
-    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+  // Dapatkan posisi x saat ini jika ada transformasi
+  if (matrix) {
+    x = parseFloat(matrix[1].split(", ")[4]);
+  }
 
-    if (event.deltaY < 0) {
-      x += 150;
-    } else {
-      x -= 150;
-    }
+  const maxTranslate = 0;
+  const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
+  // Menyesuaikan nilai x berdasarkan scroll
+  if (event.deltaY < 0) {
+    x += 150; // Scroll ke atas
+  } else {
+    x -= 150; // Scroll ke bawah
+  }
 
-    img2.style.transform = `translateX(${x}px)`;
-  });
+  // Batasan untuk nilai x
+  if (x > maxTranslate) {
+    x = maxTranslate;
+  } else if (x < minTranslate) {
+    x = minTranslate;
+  }
 
-  
-  img2.addEventListener("touchmove", function (event) {
-    event.preventDefault();
-    let currentTransform = window.getComputedStyle(img2).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
+  // Terapkan transformasi
+  img2.style.transform = `translateX(${x}px)`;
+});
 
-    const maxTranslate = 0;
-    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+// Menangani sentuhan untuk perangkat mobile
+img2.addEventListener("touchmove", function (event) {
+  event.preventDefault();
 
-    if (event.deltaY < 0) {
-      x += 150;
-    } else {
-      x -= 150;
-    }
+  const touch = event.touches[0];
+  let currentTransform = window.getComputedStyle(img2).transform;
+  let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+  let x = 0;
 
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
+  if (matrix) {
+    x = parseFloat(matrix[1].split(", ")[4]);
+  }
 
-    img2.style.transform = `translateX(${x}px)`;
-  });
-  
+  const maxTranslate = 0;
+  const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+
+  // Menghitung pergerakan berdasarkan posisi sentuh
+  const deltaY = touch.clientY - img2.getBoundingClientRect().top;
+
+  // Sesuaikan nilai x
+  if (deltaY < 0) {
+    x += 150; // Scroll ke atas
+  } else {
+    x -= 150; // Scroll ke bawah
+  }
+
+  // Batasan untuk nilai x
+  if (x > maxTranslate) {
+    x = maxTranslate;
+  } else if (x < minTranslate) {
+    x = minTranslate;
+  }
+
+  // Terapkan transformasi
+  img2.style.transform = `translateX(${x}px)`;
+});
+
+
+
  
-
-
-  //   event.preventDefault();
-  //   let currentTransform = window.getComputedStyle(validasicard).transform;
-  //   let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-  //   let x = 0;
-  //   if (matrix) {
-  //     x = parseFloat(matrix[1].split(", ")[4]);
-  //   }
-
-  //   const maxTranslate = 0;
-  //   const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
-
-  //   if (event.deltaY < 0) {
-  //     x += 150;
-  //   } else {
-  //     x -= 150;
-  //   }
-
-  //   if (x > maxTranslate) {
-  //     x = maxTranslate;
-  //   } else if (x < minTranslate) {
-  //     x = minTranslate;
-  //   }
-
-  //   validasicard.style.transform = `translateX(${x}px)`;
-  // });
-
   const verifikasi = document.querySelector(".verifikasi");
   const validation = document.querySelector(".validation");
   const training = document.querySelector(".training");
