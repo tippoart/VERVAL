@@ -380,10 +380,10 @@ nav ul .li {
 
   .ourservice-card {
     background-image: url("../img/our-service/bomm.png");
-    padding-top: 45rem;
-    background-position: bottom;
-    right: 8rem;
-    background-size: 55%;
+    padding-top: 50rem;
+    background-position: center;
+    background-size: 56%;
+    right: 7.5rem;
   }
 
   .card-1 {
