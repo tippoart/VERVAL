@@ -380,10 +380,10 @@ nav ul .li {
 
   .ourservice-card {
     background-image: url("../img/our-service/bomm.png");
-    padding-top: 60rem;
+    padding-top: 45rem;
     background-position: bottom;
-    right: 4rem;
-    background-size: 28rem;
+    right: 8rem;
+    background-size: 55%;
   }
 
   .card-1 {
@@ -395,11 +395,11 @@ nav ul .li {
   }
 
   .gases {
-    width: 17rem;
+    width: 20rem;
     position: relative;
-    gap: 30rem;
-    right: 8rem;
-    bottom: 20rem;
+    gap: 18rem;
+    right:-3rem;
+    bottom: 24rem;
     justify-content: space-between;
     display: flex;
     flex-direction: column;
@@ -419,16 +419,12 @@ nav ul .li {
   .gases-2 {
     width: 18rem;
     height: 22rem;
-    bottom: 19rem;
-    right: 9rem;
+    bottom: 23rem;
+    right: -2rem;
     text-align: center;
     gap: 1px;
   }
-  .gases-2-content {
-    width: 37rem;
-    position: relative;
-    right: 4.6rem;
-  }
+ 
   .icon-bumi {
     width: 4rem;
   }
