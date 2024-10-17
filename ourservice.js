@@ -5,70 +5,75 @@ document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".section2");
   const verifikasicard = document.querySelector(".verifikasicard");
 
-  img1.addEventListener("click", function () {
-    img1.style.transform = "translateX(-125%)";
-    img1.style.transition = "0.7s";
-    img2.style.transform = "translateX(5%)";
-    img2.style.transition = "0.7s";
-    img2.style.opacity = "1";
-    validasicard.style.transform = "translateX(5%)";
-    validasicard.style.transition = "0.7s";
-    validasicard.style.opacity = "1";
-  });
+   img1.addEventListener("click", function () {
+     img1.style.transform = "translateX(-125%)";
+     img1.style.transition = "0.7s";
+     img2.style.transform = "translateX(5%)";
+     img2.style.transition = "0.7s";
+     img2.style.opacity = "1";
+     validasicard.style.transform = "translateX(5%)";
+     validasicard.style.transition = "0.7s";
+     validasicard.style.opacity = "1";
+   });
 
-  img2.addEventListener("wheel", function (event) {
-    event.preventDefault();
-    let currentTransform = window.getComputedStyle(img2).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
+   // Function to handle translation on wheel and touch events
+   function handleScroll(event, element) {
+     event.preventDefault();
+     let currentTransform = window.getComputedStyle(element).transform;
+     let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+     let x = matrix ? parseFloat(matrix[1].split(", ")[4]) : 0;
 
-    const maxTranslate = 0;
-    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+     const maxTranslate = 0;
+     const minTranslate = -(element.offsetWidth - section.offsetWidth);
 
-    if (event.deltaY < 0) {
-      x += 150;
-    } else {
-      x -= 150;
-    }
+     if (
+       event.deltaY < 0 ||
+       (event.touches &&
+         event.touches.length > 0 &&
+         event.touches[0].clientY < startY)
+     ) {
+       x += 150; // Scroll up or touch move up
+     } else if (
+       event.deltaY > 0 ||
+       (event.touches &&
+         event.touches.length > 0 &&
+         event.touches[0].clientY > startY)
+     ) {
+       x -= 150; // Scroll down or touch move down
+     }
 
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
+     x = Math.max(maxTranslate, Math.min(x, minTranslate)); // Clamp x
+     element.style.transform = `translateX(${x}px)`;
+   }
 
-    img2.style.transform = `translateX(${x}px)`;
-  });
+   // Event listeners for wheel (desktop)
+   img2.addEventListener("wheel", function (event) {
+     handleScroll(event, img2);
+   });
 
-  validasicard.addEventListener("wheel", function (event) {
-    event.preventDefault();
-    let currentTransform = window.getComputedStyle(validasicard).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
+   validasicard.addEventListener("wheel", function (event) {
+     handleScroll(event, validasicard);
+   });
 
-    const maxTranslate = 0;
-    const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
+   // Variables for touch events
+   let startY;
 
-    if (event.deltaY < 0) {
-      x += 150;
-    } else {
-      x -= 150;
-    }
+   // Event listeners for touch (mobile)
+   img2.addEventListener("touchstart", function (event) {
+     startY = event.touches[0].clientY;
+   });
 
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
+   img2.addEventListener("touchmove", function (event) {
+     handleScroll(event, img2);
+   });
 
-    validasicard.style.transform = `translateX(${x}px)`;
-  });
+   validasicard.addEventListener("touchstart", function (event) {
+     startY = event.touches[0].clientY;
+   });
+
+   validasicard.addEventListener("touchmove", function (event) {
+     handleScroll(event, validasicard);
+   });
 
   const verifikasi = document.querySelector(".verifikasi");
   const validation = document.querySelector(".validation");
