@@ -187,6 +187,7 @@ header .nav-text:hover {
   bottom: 0;
 }
 
+
 /* mobile version */
 @media only screen and (max-width: 600px) {
   header {
