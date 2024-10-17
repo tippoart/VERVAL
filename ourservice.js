@@ -42,7 +42,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     img2.style.transform = `translateX(${x}px)`;
   });
-  img2.addEventListener("touchstart", function (event) {
+
+  
+  img2.addEventListener("touch", function (event) {
     event.preventDefault();
     let currentTransform = window.getComputedStyle(img2).transform;
     let matrix = currentTransform.match(/^matrix\((.+)\)$/);
@@ -69,7 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
     img2.style.transform = `translateX(${x}px)`;
   });
 
-  // validasicard.addEventListener("touchstart", function (event) {
+
   //   event.preventDefault();
   //   let currentTransform = window.getComputedStyle(validasicard).transform;
   //   let matrix = currentTransform.match(/^matrix\((.+)\)$/);
