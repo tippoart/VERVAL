@@ -522,7 +522,7 @@ nav ul .li {
   #navbar {
     width: 18rem;
     left: -1rem;
-    top: -69.5rem;
+    top: -73.5rem;
   }
 
   #navbar ul {
@@ -545,7 +545,7 @@ nav ul .li {
 
   .ourservice-card {
     background-image: url("../img/our-service/bomm.png");
-    padding-top: 56rem;
+    padding-top: 60rem;
     background-position: center;
     background-size: 90%;
     flex-direction: column;
@@ -616,8 +616,15 @@ nav ul .li {
     left: -0.5rem;
   }
 
-  .button {
-    width: 25rem;
+  .img1 {
+    left: 2rem;
+    width: 19rem;
+  }
+
+
+
+  #button1{
+    font-size: 23px;
   }
 
   .sector {
