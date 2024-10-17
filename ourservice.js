@@ -5,75 +5,108 @@ document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".section2");
   const verifikasicard = document.querySelector(".verifikasicard");
 
-   img1.addEventListener("click", function () {
-     img1.style.transform = "translateX(-125%)";
-     img1.style.transition = "0.7s";
-     img2.style.transform = "translateX(5%)";
-     img2.style.transition = "0.7s";
-     img2.style.opacity = "1";
-     validasicard.style.transform = "translateX(5%)";
-     validasicard.style.transition = "0.7s";
-     validasicard.style.opacity = "1";
-   });
+  img1.addEventListener("click", function () {
+    img1.style.transform = "translateX(-125%)";
+    img1.style.transition = "0.7s";
+    img2.style.transform = "translateX(5%)";
+    img2.style.transition = "0.7s";
+    img2.style.opacity = "1";
+    validasicard.style.transform = "translateX(5%)";
+    validasicard.style.transition = "0.7s";
+    validasicard.style.opacity = "1";
+  });
 
-   // Function to handle translation on wheel and touch events
-   function handleScroll(event, element) {
-     event.preventDefault();
-     let currentTransform = window.getComputedStyle(element).transform;
-     let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-     let x = matrix ? parseFloat(matrix[1].split(", ")[4]) : 0;
+  img2.addEventListener("wheel", function (event) {
+    event.preventDefault();
+    let currentTransform = window.getComputedStyle(img2).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
 
-     const maxTranslate = 0;
-     const minTranslate = -(element.offsetWidth - section.offsetWidth);
+    const maxTranslate = 0;
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
-     if (
-       event.deltaY < 0 ||
-       (event.touches &&
-         event.touches.length > 0 &&
-         event.touches[0].clientY < startY)
-     ) {
-       x += 150; // Scroll up or touch move up
-     } else if (
-       event.deltaY > 0 ||
-       (event.touches &&
-         event.touches.length > 0 &&
-         event.touches[0].clientY > startY)
-     ) {
-       x -= 150; // Scroll down or touch move down
-     }
+    if (event.deltaY < 0) {
+      x += 150;
+    } else {
+      x -= 150;
+    }
 
-     x = Math.max(maxTranslate, Math.min(x, minTranslate)); // Clamp x
-     element.style.transform = `translateX(${x}px)`;
-   }
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
 
-   // Event listeners for wheel (desktop)
-   img2.addEventListener("wheel", function (event) {
-     handleScroll(event, img2);
-   });
+    img2.style.transform = `translateX(${x}px)`;
+  });
 
-   validasicard.addEventListener("wheel", function (event) {
-     handleScroll(event, validasicard);
-   });
+  // Event listener untuk penggeseran dengan mouse (desktop)
+  validasicard.addEventListener("wheel", function (event) {
+    event.preventDefault();
+    let currentTransform = window.getComputedStyle(validasicard).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
 
-   // Variables for touch events
-   let startY;
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
 
-   // Event listeners for touch (mobile)
-   img2.addEventListener("touchstart", function (event) {
-     startY = event.touches[0].clientY;
-   });
+    const maxTranslate = 0; // Batas maksimum (tidak ada pergeseran)
+    const minTranslate = -(validasicard.offsetWidth - section.offsetWidth); // Batas minimum (sepenuhnya ke kiri)
 
-   img2.addEventListener("touchmove", function (event) {
-     handleScroll(event, img2);
-   });
+    // Penanganan pergeseran
+    if (event.deltaY < 0) {
+      x += 150; // Scroll ke atas
+    } else {
+      x -= 150; // Scroll ke bawah
+    }
 
-   validasicard.addEventListener("touchstart", function (event) {
-     startY = event.touches[0].clientY;
-   });
+    // Clamp x untuk memastikan tidak melebihi batas
+    x = Math.max(maxTranslate, Math.min(x, minTranslate));
 
-   validasicard.addEventListener("touchmove", function (event) {
-     handleScroll(event, validasicard);
-   });
+    validasicard.style.transform = `translateX(${x}px)`;
+  });
+
+  // Variabel untuk touch event
+  let startY;
+
+  // Event listener untuk penggeseran dengan sentuhan (mobile)
+  validasicard.addEventListener("touchstart", function (event) {
+    startY = event.touches[0].clientY; // Menyimpan posisi awal sentuhan
+  });
+
+  validasicard.addEventListener("touchmove", function (event) {
+    event.preventDefault(); // Mencegah perilaku default (scrolling)
+
+    let currentTransform = window.getComputedStyle(validasicard).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
+
+    const maxTranslate = 0;
+    const minTranslate = -(validasicard.offsetWidth - section.offsetWidth);
+
+    // Mendapatkan posisi sentuhan baru
+    let touchY = event.touches[0].clientY;
+
+    // Penanganan pergeseran berdasarkan perubahan Y
+    if (touchY < startY) {
+      x += 150; // Sentuhan ke atas
+    } else {
+      x -= 150; // Sentuhan ke bawah
+    }
+
+    // Clamp x untuk memastikan tidak melebihi batas
+    x = Math.max(maxTranslate, Math.min(x, minTranslate));
+
+    validasicard.style.transform = `translateX(${x}px)`;
+  });
 
   const verifikasi = document.querySelector(".verifikasi");
   const validation = document.querySelector(".validation");
@@ -101,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       img2.style.transition = "0.7s";
       img2.style.opacity = "1";
       text.innerHTML = "Verification";
-       textrol.innerHTML = "Verification";
+      textrol.innerHTML = "Verification";
 
       verifikasi.style.opacity = "1";
 
@@ -130,7 +163,7 @@ document.addEventListener("DOMContentLoaded", function () {
       validasicard.style.transition = "0.7s";
       validasicard.style.opacity = "1";
       text.innerHTML = "Validation";
-      textrol.innerHTML= "Validation"
+      textrol.innerHTML = "Validation";
 
       img2.style.display = "none";
 
@@ -150,7 +183,6 @@ document.addEventListener("DOMContentLoaded", function () {
       setTimeout(() => {
         validation.classList.remove("selected");
         validation.style.transition = "0.5s";
-      
       }, 1000);
     });
   }
@@ -161,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       verifikasi.style.border = "1px solid rgba(29, 30, 31, 0.821)";
       verifikasi.style.color = "rgba(122, 133, 143, 0.909)";
-      textrol.innerHTML = "Training"
+      textrol.innerHTML = "Training";
 
       removeSelectedClass();
       training.classList.add("selected");
