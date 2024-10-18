@@ -72,7 +72,7 @@ img2.addEventListener("touchmove", function (event) {
   if (deltaY < 0) {
     x += 150; // Scroll ke atas
   } else {
-    x -= 100; // Scroll ke bawah
+    x -= 150; // Scroll ke bawah
   }
 
   // Batasan untuk nilai x
