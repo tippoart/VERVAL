@@ -467,6 +467,10 @@ nav ul .li {
   left: 1rem;
 }
 
+.p {
+  font-size: 20px;
+}
+
 @media screen and (max-width: 600px) {
   header {
     width: 90%;
@@ -621,34 +625,46 @@ nav ul .li {
     width: 20rem;
   }
 
-
-
-  #button1{
+  #button1 {
     font-size: 23px;
   }
 
   .sector {
-    height: 100vh;
-    padding: 1rem;
+    height: 94vh;
+    padding: 0.3rem;
     background-position: center;
-    background-position-y: 30rem;
+    background-position-y: 100%;
     background-size: 100%;
     position: relative;
   }
   .sector-img {
-    width: 15rem;
+    width: 13rem;
     font-size: 30px;
     background-size: 70%;
   }
 
   .sector-content {
     flex-direction: column;
-    width: 26rem;
+    width: 20rem;
+  }
+  .p {
+    font-size: 16px;
   }
 
-  .complain-sec {
+  .sector-num-des-content {
+    left: 1.7rem;
+  }
+  .complaint {
+    height: 50vh;
     padding: 1rem;
-    width: 24rem;
+    flex-direction: column;
+  }
+
+  .complaint-sec {
+    padding: 0.2rem;
+    width: 23rem;
+    flex-direction: column;
+    text-align: center;
   }
 
   .tanda-tanya {
