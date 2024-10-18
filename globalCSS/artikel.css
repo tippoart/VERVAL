@@ -171,6 +171,12 @@ hr {
     width: 11rem;
     padding: 15px;
     left: -0.5rem;
-    bottom: 2.5rem;
+    bottom: 2rem;
   }
+
+  hr {
+  width: auto;
+  left: -2px;
+
+}
 }
