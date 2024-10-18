@@ -5,7 +5,6 @@ header .artikel:hover {
   color: rgb(150, 229, 71);
 }
 
-
 header .home {
   color: white;
 }
@@ -105,7 +104,6 @@ hr {
   align-items: center;
   position: relative;
   left: 23rem;
-
 }
 
 .bxs-calendar-alt {
@@ -115,22 +113,21 @@ hr {
 .bxs-user {
   font-size: 14px;
 }
-.data{
+.data {
   position: relative;
   font-size: 13px;
   top: 7px;
-
 }
 
-#judul{
+#judul {
   width: 100%;
- height: 15rem;
+  height: 15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 
-.judul-artikel{
+.judul-artikel {
   font-size: 32px;
   font-weight: 500;
 }
@@ -140,4 +137,40 @@ hr {
   font-size: 20px;
   position: relative;
   bottom: 0.5rem;
+}
+
+@media screen and (max-width: 600px) {
+  .section1 {
+    padding: 1rem;
+  }
+
+  .card-body {
+    width: 22rem;
+    height: 15rem;
+    
+  }
+
+  .sec-img-thum {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 20px;
+    position: relative;
+    top: 2rem;
+  }
+
+  .judul-artikel {
+    font-size: 15px;
+  }
+
+  .deskripsi-artikel {
+    font-size: 10px;
+  }
+
+  .date-person {
+    width: 11rem;
+    padding: 15px;
+    left: -0.5rem;
+    bottom: 2.5rem;
+  }
 }

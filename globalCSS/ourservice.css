@@ -665,6 +665,8 @@ nav ul .li {
     width: 23rem;
     flex-direction: column;
     text-align: center;
+    position: relative;
+    right: 0.3rem;
   }
 
   .tanda-tanya {
