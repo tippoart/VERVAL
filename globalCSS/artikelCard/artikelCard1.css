@@ -33,6 +33,7 @@ header .artikel:hover {
 }
 
 .main {
+  flex-direction: column;
   width: 40rem;
   height: 30rem;
   padding: 1rem;
@@ -125,22 +126,29 @@ header .artikel:hover {
   }
   .section1 {
     padding: 2rem;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .judul {
+    font-size: 28px;
+
   }
 
   .sec-kanan {
     padding: 2rem;
-    width: 30rem;
+    width: 33rem;
     right: 3rem;
   }
   .sec-kanan img {
-    width: 28.5rem;
+    width: 30rem;
   }
 
   .share img {
     width: 14px;
   }
-  .img2 {
-    width: 40%;
+  #img-2-con {
+    width: 100%;
   }
 
   #sec-content {
@@ -149,10 +157,11 @@ header .artikel:hover {
   }
 
   .main {
+    flex-direction: column-reverse;
     width: 20rem;
     position: relative;
-    right: 4rem;
-    top: 7rem;
-    margin-top: 4rem;
+    right: 0;
+    top:0;
+    margin-top: 2rem;
   }
 }
