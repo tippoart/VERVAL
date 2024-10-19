@@ -285,6 +285,7 @@ hr {
     left: -0.1rem;
     z-index: 0;
     margin-bottom: 3.5rem;
+    width: 21rem;
   }
 
   #search .container-fluid .collapse {
@@ -297,7 +298,9 @@ hr {
 
   form {
     position: relative;
-    right: 1.5rem;
+    right: 8%;
+    width: 20rem;
+    bottom: 1px;
   }
 
   .section1 {
