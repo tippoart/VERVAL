@@ -47,6 +47,10 @@ nav .container-fluid .contact-us {
   text-align: center;
 }
 
+#home-text:hover {
+  color: black;
+}
+
 .link-color {
   color: white;
 }
@@ -174,6 +178,7 @@ header {
   position: relative;
   left: 5rem;
   top: -27rem;
+  z-index: 1;
 }
 
 #navbar ul li {

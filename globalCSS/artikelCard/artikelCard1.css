@@ -5,6 +5,10 @@ header .artikel:hover {
   color: rgb(150, 229, 71);
 }
 
+#home-text:hover {
+  color: black;
+}
+
 /* section1 */
 
 .section1 {
@@ -134,11 +138,8 @@ header .artikel:hover {
     overflow-x: hidden;
   }
 
-
-
   .judul {
     font-size: 27px;
-
   }
   .icon {
     width: 30rem;
@@ -156,7 +157,7 @@ header .artikel:hover {
     font-size: 13px;
   }
 
-  #icon-con{
+  #icon-con {
     gap: 1.2rem;
   }
 
@@ -167,7 +168,7 @@ header .artikel:hover {
   }
   .sec-kanan img {
     width: 22.5rem;
-   right: 20px;
+    right: 20px;
   }
 
   .share img {
@@ -187,7 +188,7 @@ header .artikel:hover {
     width: 20rem;
     position: relative;
     right: 0;
-    top:-4rem;
+    top: -4rem;
 
     margin-top: 2rem;
   }

@@ -11,6 +11,9 @@ header .our-company:hover {
 header .home {
   color: white;
 }
+header .home:hover {
+  color: rgb(0, 0, 0);
+}
 .section1 {
   background-image: url("../img/img-ourcompany/bgku-3.png");
   background-color: #090909;

@@ -11,7 +11,9 @@ nav img {
   width: 1.5rem;
   object-fit: cover;
 }
-
+#home-text{
+  color: black;
+}
 nav {
   background-color: rgba(19, 18, 18, 0.791);
   border-radius: 2rem;
