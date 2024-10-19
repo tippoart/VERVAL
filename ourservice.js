@@ -1,3 +1,17 @@
+// const ourNavbar = document.getElementById ("navbar")
+// const headerNavbar = document.getElementById("header-utama");
+
+// if(ourNavbar.style.zIndex==="3"){
+//   ourNavbar.style.zIndex = "0"
+//   headerNavbar.style.zIndex = "4"
+// }
+// else {
+  
+//   ourNavbar.style.zIndex = "3"
+//   headerNavbar.style.zIndex = "1"
+// }
+
+
 const img1 = document.querySelector(".img1");
 const img2 = document.querySelector(".img2");
 const validasicard = document.querySelector(".validasi");
@@ -15,80 +29,77 @@ document.addEventListener("DOMContentLoaded", function () {
     validasicard.style.transition = "0.7s";
     validasicard.style.opacity = "1";
   });
-img2.addEventListener("wheel", function (event) {
-  event.preventDefault();
+  img2.addEventListener("wheel", function (event) {
+    event.preventDefault();
 
-  // Ambil transformasi saat ini
-  let currentTransform = window.getComputedStyle(img2).transform;
-  let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-  let x = 0;
+    // Ambil transformasi saat ini
+    let currentTransform = window.getComputedStyle(img2).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
 
-  // Dapatkan posisi x saat ini jika ada transformasi
-  if (matrix) {
-    x = parseFloat(matrix[1].split(", ")[4]);
-  }
+    // Dapatkan posisi x saat ini jika ada transformasi
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
 
-  const maxTranslate = 0;
-  const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+    const maxTranslate = 0;
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
-  // Menyesuaikan nilai x berdasarkan scroll
-  if (event.deltaY < 0) {
-    x += 150; // Scroll ke atas
-  } else {
-    x -= 150; // Scroll ke bawah
-  }
+    // Menyesuaikan nilai x berdasarkan scroll
+    if (event.deltaY < 0) {
+      x += 150; // Scroll ke atas
+    } else {
+      x -= 150; // Scroll ke bawah
+    }
 
-  // Batasan untuk nilai x
-  if (x > maxTranslate) {
-    x = maxTranslate;
-  } else if (x < minTranslate) {
-    x = minTranslate;
-  }
+    // Batasan untuk nilai x
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
 
-  // Terapkan transformasi
-  img2.style.transform = `translateX(${x}px)`;
-});
+    // Terapkan transformasi
+    img2.style.transform = `translateX(${x}px)`;
+  });
 
-// Menangani sentuhan untuk perangkat mobile
-img2.addEventListener("touchmove", function (event) {
-  event.preventDefault();
+  // Menangani sentuhan untuk perangkat mobile
+  img2.addEventListener("touchmove", function (event) {
+    event.preventDefault();
 
-  const touch = event.touches[0];
-  let currentTransform = window.getComputedStyle(img2).transform;
-  let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-  let x = 0;
+    const touch = event.touches[0];
+    let currentTransform = window.getComputedStyle(img2).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
 
-  if (matrix) {
-    x = parseFloat(matrix[1].split(", ")[4]);
-  }
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
 
-  const maxTranslate = 0;
-  const minTranslate = -(img2.offsetWidth - section.offsetWidth);
+    const maxTranslate = 0;
+    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
 
-  // Menghitung pergerakan berdasarkan posisi sentuh
-  const deltaY = touch.clientY - img2.getBoundingClientRect().top;
+    // Menghitung pergerakan berdasarkan posisi sentuh
+    const deltaY = touch.clientY - img2.getBoundingClientRect().top;
 
-  // Sesuaikan nilai x
-  if (deltaY < 0) {
-    x += 150; // Scroll ke atas
-  } else {
-    x -= 150; // Scroll ke bawah
-  }
+    // Sesuaikan nilai x
+    if (deltaY < 0) {
+      x += 150; // Scroll ke atas
+    } else {
+      x -= 150; // Scroll ke bawah
+    }
 
-  // Batasan untuk nilai x
-  if (x > maxTranslate) {
-    x = maxTranslate;
-  } else if (x < minTranslate) {
-    x = minTranslate;
-  }
+    // Batasan untuk nilai x
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
 
-  // Terapkan transformasi
-  img2.style.transform = `translateX(${x}px)`;
-});
+    // Terapkan transformasi
+    img2.style.transform = `translateX(${x}px)`;
+  });
 
-
-
- 
   const verifikasi = document.querySelector(".verifikasi");
   const validation = document.querySelector(".validation");
   const training = document.querySelector(".training");

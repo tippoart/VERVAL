@@ -21,9 +21,8 @@
 //       }
 //     });
 
-    
-//   });
-// });
+//       });
+//  });
 
    document.querySelectorAll(".faq-header").forEach((item) => {
      item.addEventListener("click", () => {

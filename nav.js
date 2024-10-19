@@ -1,5 +1,4 @@
 const KlikMenu = document.getElementById("klik-menu");
-
 KlikMenu.addEventListener("click", function () {
   const liElements = document.querySelectorAll("ul.navbar-nav li");
   const ContackUs = document.querySelector(".contact-us");
@@ -8,6 +7,16 @@ KlikMenu.addEventListener("click", function () {
 
   const icon1 = document.querySelector(".bx-menu");
   const icon2 = document.querySelector(".bx-x");
+
+  const our = document.getElementById("navbar");
+  const headerUtama = document.getElementById("header-utama");
+
+  // Toggle ul visibility
+  if (ul.classList.contains("visible")) {
+    ul.classList.remove("visible");
+  } else {
+    ul.classList.add("visible");
+  }
 
   // Toggle icon display
   if (icon1.style.display === "none") {
@@ -43,4 +52,6 @@ KlikMenu.addEventListener("click", function () {
       li.style.display = "block";
     }
   });
+
+ 
 });

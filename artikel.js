@@ -1,13 +1,21 @@
 const KlikMenu = document.getElementById("klik-menu");
 
 KlikMenu.addEventListener("click", function () {
-  const liElements = document.querySelectorAll("ul.navbar-nav li");
+const liElements = document.querySelectorAll(".nav-ul-head li");
+
   const ContackUs = document.querySelector(".contact-us");
-  const ul = document.querySelector("ul");
+  const ul = document.querySelector(".nav-ul-head");
   const LogoBrand = document.querySelector(".logo-brand");
 
   const icon1 = document.querySelector(".bx-menu");
   const icon2 = document.querySelector(".bx-x");
+
+  // Toggle ul visibility
+  if (ul.classList.contains("visible")) {
+    ul.classList.remove("visible"); // Sembunyikan menu
+  } else {
+    ul.classList.add("visible"); // Tampilkan menu
+  }
 
   // Toggle icon display
   if (icon1.style.display === "none") {

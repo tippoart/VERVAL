@@ -493,12 +493,13 @@ nav ul .li {
     width: 90%;
     padding: 5px;
   }
-  nav {
-    background-color: rgba(255, 255, 255, 0);
+  #header-utama {
+    background-color: rgba(255, 255, 255, 0.004);
     backdrop-filter: none;
     width: auto;
+    
   }
-
+  
   ul {
     width: 100%;
     padding: 2rem;
@@ -511,6 +512,13 @@ nav ul .li {
     position: absolute;
     top: -0.5rem;
     left: -3.5rem;
+    visibility: hidden;
+    opacity: 1;
+  }
+
+  #ul-nav .visible {
+    visibility: visible;
+    opacity: 1;
   }
 
   #ul-nav li a {
@@ -588,6 +596,7 @@ nav ul .li {
     width: 18rem;
     left: -1rem;
     top: -73.5rem;
+  
   }
 
   #navbar ul {

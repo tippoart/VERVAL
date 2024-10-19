@@ -203,15 +203,15 @@ header .home:hover {
 .impartial-paraf {
   font-weight: 100;
 }
-  .navbar-brand{
-    color: rgb(255, 255, 255);
-  }
+.navbar-brand {
+  color: rgb(255, 255, 255);
+}
 @media screen and (max-width: 600px) {
   header .home {
     color: rgb(0, 0, 0);
   }
 
-  .navbar-brand{
+  .navbar-brand {
     color: black;
   }
 
@@ -256,7 +256,8 @@ header .home:hover {
 
   .our-values {
     padding: 2rem;
-    background-color: rgba(246, 247, 249, 0.952);
+   z-index: 5;
+
   }
 
   .our-values .bg-values {
@@ -282,6 +283,7 @@ header .home:hover {
     height: 2.3rem;
     bottom: 4px;
   }
+
   .faq-item h3 {
     font-size: 17px;
   }

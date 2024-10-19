@@ -300,6 +300,13 @@ hr {
     position: absolute;
     top: -0.5rem;
     left: -3.5rem;
+    visibility: hidden;
+    opacity: 1;
+  }
+
+  .nav-ul-head .visible {
+    visibility: visible;
+    opacity: 1;
   }
 
   .garis-navbar {
