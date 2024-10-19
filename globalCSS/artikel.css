@@ -1,3 +1,80 @@
+header {
+  position: fixed;
+  display: block;
+  width: 100%;
+  text-align: center;
+  color: #f2f2f2;
+  padding: 20px 0 0 0;
+  z-index: 3;
+}
+nav img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+nav {
+  background-color: rgba(19, 18, 18, 0.791);
+  border-radius: 2rem;
+  display: flex;
+  backdrop-filter: blur(5px);
+  position: sticky;
+  height: 50px;
+  top: 3%;
+  left: 15%;
+  display: block;
+  z-index: 5;
+  text-align: center;
+  padding: 20px 0 0 0;
+  width: 70%;
+}
+
+nav .container-fluid {
+  display: flex;
+  justify-content: space-between;
+}
+nav .container-fluid .navbar-brand {
+  font-weight: 500;
+}
+
+nav .container-fluid .contact-us {
+  background-color: rgb(130, 185, 68);
+  border-radius: 1rem;
+  padding: 0.3rem;
+  color: white;
+  text-decoration: none;
+  width: 6rem;
+  text-align: center;
+}
+
+.link-color {
+  color: white;
+}
+
+header .nav-text {
+  color: white;
+}
+header .nav-text:hover {
+  color: white;
+}
+.humburger-menu {
+  display: none;
+}
+
+.logo-brand2 {
+  position: absolute;
+  display: none;
+}
+.logo-brand2 img {
+  width: 1.5rem;
+  object-fit: cover;
+}
+
+#scroll-down {
+  position: absolute;
+  top: 70%;
+  bottom: 0;
+}
+
 header .artikel {
   color: rgb(150, 229, 71);
 }
@@ -18,6 +95,7 @@ header .home {
 #search {
   background-color: rgba(240, 243, 244, 0.641);
   border-radius: 30px;
+  position: relative;
 }
 
 #cari-data {
@@ -140,6 +218,88 @@ hr {
 }
 
 @media screen and (max-width: 600px) {
+  header {
+    width: 90%;
+    padding: 5px;
+  }
+  nav {
+    background-color: rgba(255, 255, 255, 0);
+    backdrop-filter: none;
+    width: auto;
+  }
+
+  ul {
+    width: 100%;
+    padding: 2rem;
+  }
+
+  ul .li-header {
+    display: none;
+  }
+
+  header .home {
+    color: black;
+  }
+  header .nav-text {
+    color: black;
+  }
+
+  header .nav-text:hover {
+    color: rgb(0, 0, 0);
+  }
+
+  .contact-us {
+    display: none;
+  }
+
+  .logo-brand {
+    display: none;
+  }
+
+  .logo-brand2 {
+    display: block;
+    bottom: 93%;
+    left: 5%;
+  }
+
+  .humburger-menu {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+  }
+
+  #ul-2 {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    bottom: 1.7rem;
+  }
+
+  #ul-2 #all-articles {
+    font-size: 12px;
+    width: 5rem;
+  }
+  #search {
+    position: relative;
+    left: -0.1rem;
+    z-index: 0;
+    margin-bottom: 3.5rem;
+  }
+
+  #search .container-fluid .collapse {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  form {
+    position: relative;
+    right: 1.5rem;
+  }
+
   .section1 {
     padding: 1rem;
   }
@@ -147,7 +307,6 @@ hr {
   .card-body {
     width: 22rem;
     height: 15rem;
-    
   }
 
   .sec-img-thum {
@@ -175,8 +334,7 @@ hr {
   }
 
   hr {
-  width: auto;
-  left: -2px;
-
-}
+    width: auto;
+    left: -2px;
+  }
 }
