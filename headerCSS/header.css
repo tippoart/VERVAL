@@ -185,17 +185,19 @@ header .nav-text:hover {
   bottom: 0;
 }
 
+.navbar-brand {
+  color: rgb(255, 255, 255);
+}
 
-  .navbar-brand{
-    color: rgb(255, 255, 255);
-  }
+.bx-x {
+  display: none;
+}
 
 /* mobile version */
 @media only screen and (max-width: 600px) {
   header {
     width: 90%;
     padding: 5px;
-
   }
   nav {
     background-color: rgba(255, 28, 28, 0);
@@ -224,8 +226,8 @@ header .nav-text:hover {
     position: relative;
     left: 1.5rem;
   }
-  
-  .garis-navbar{
+
+  .garis-navbar {
     border-bottom: 1px solid rgba(0, 0, 0, 0.321);
   }
 
@@ -245,7 +247,6 @@ header .nav-text:hover {
     position: relative;
     left: -2rem;
     top: 21rem;
-
   }
 
   .logo-brand {
@@ -255,9 +256,8 @@ header .nav-text:hover {
     top: 5px;
   }
 
-  .navbar-brand{
+  .navbar-brand {
     color: black;
-  
   }
 
   .logo-brand2 {
@@ -270,7 +270,16 @@ header .nav-text:hover {
     display: block;
     position: absolute;
     top: 10px;
-    right: 14px;
+    right: 17%;
+  }
+
+  .bx {
+    position: absolute;
+  }
+  #close-x{
+    display: none;
+    color: black;
+    font-size: 34px;
   }
 
   #section0 {

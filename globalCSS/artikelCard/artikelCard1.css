@@ -6,7 +6,10 @@ header .artikel:hover {
 }
 
 #home-text:hover {
-  color: black;
+  color: rgb(255, 255, 255);
+}
+#home-text {
+  color: rgb(255, 255, 255);
 }
 
 /* section1 */
@@ -128,6 +131,14 @@ header .artikel:hover {
   gap: 5rem;
 }
 @media only screen and (max-width: 600px) {
+
+  #home-text:hover {
+  color: rgb(0, 0, 0);
+}
+#home-text {
+  color: rgb(0, 0, 0);
+}
+
   #artikel-head {
     display: block;
     margin-bottom: 1rem;

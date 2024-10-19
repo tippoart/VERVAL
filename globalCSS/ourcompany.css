@@ -203,9 +203,15 @@ header .home:hover {
 .impartial-paraf {
   font-weight: 100;
 }
-
+  .navbar-brand{
+    color: rgb(255, 255, 255);
+  }
 @media screen and (max-width: 600px) {
   header .home {
+    color: black;
+  }
+
+  .navbar-brand{
     color: black;
   }
 
