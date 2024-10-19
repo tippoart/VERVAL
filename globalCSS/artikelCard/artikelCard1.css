@@ -134,6 +134,10 @@ header .artikel:hover {
     overflow-x: hidden;
   }
 
+  .section1 p {
+    font-size: 14px;
+  }
+
   .judul {
     font-size: 27px;
 
@@ -165,6 +169,7 @@ header .artikel:hover {
   }
   .sec-kanan img {
     width: 22.5rem;
+   right: 20px;
   }
 
   .share img {
