@@ -305,16 +305,17 @@ hr {
 
   .section1 {
     padding: 1rem;
+    overflow-x: hidden;
   }
 
   .card-body {
-    width: 22rem;
+    width: 25rem;
     height: 15rem;
   }
 
   .sec-img-thum {
-    width: 8rem;
-    height: 8rem;
+    width: 7rem;
+    height: 7rem;
     object-fit: cover;
     border-radius: 20px;
     position: relative;
@@ -322,11 +323,11 @@ hr {
   }
 
   .judul-artikel {
-    font-size: 15px;
+    font-size: 17px;
   }
 
   .deskripsi-artikel {
-    font-size: 10px;
+    font-size: 13px;
   }
 
   .date-person {
