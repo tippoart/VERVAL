@@ -305,7 +305,7 @@ hr {
 
   .section1 {
     padding: 1rem;
-    overflow-x: hidden;
+    width: 100%;
   }
 
   .card-body {
@@ -315,7 +315,7 @@ hr {
 
   .sec-img-thum {
     width: 7rem;
-    height: 8rem;
+    height: 9rem;
     object-fit: cover;
     border-radius: 20px;
     position: relative;
