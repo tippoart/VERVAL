@@ -5,72 +5,11 @@ header .artikel:hover {
   color: rgb(150, 229, 71);
 }
 
-header {
-  position: fixed;
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #f2f2f2;
-  padding: 20px 0 0 0;
-  z-index: 3;
-}
-
-header {
-  position: fixed;
-  display: block;
-  width: 100%;
-  text-align: center;
-  color: #f2f2f2;
-  padding: 20px 0 0 0;
-  z-index: 3;
-}
-
-#navbar-head img {
-  width: 1.5rem;
-  object-fit: cover;
-}
-
-#navbar-head {
-  background-color: rgba(19, 18, 18, 0.791);
-  border-radius: 2rem;
-  display: flex;
-  backdrop-filter: blur(5px);
-  position: sticky;
-  height: 50px;
-  top: 3%;
-  left: 15%;
-  display: block;
-  z-index: 5;
-  text-align: center;
-  padding: 23px 0 0 0;
-  width: 70%;
-}
-
-#navbar-head .container-fluid {
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  bottom: 3px;
-}
-#navbar-head .container-fluid .navbar-brand {
-  font-weight: 500;
-}
-
-#navbar-head .container-fluid .contact-us {
-  background-color: rgb(120, 181, 51);
-  border-radius: 1rem;
-  padding: 0.3rem;
-  color: white;
-  text-decoration: none;
-  width: 6rem;
-  text-align: center;
-}
-
 /* section1 */
 
 .section1 {
   padding-left: 8rem;
-border-bottom: 1px solid black;
+  border-bottom: 1px solid black;
   padding-top: 8rem;
   padding-bottom: 3rem;
 }
@@ -170,4 +109,45 @@ border-bottom: 1px solid black;
 .more {
   font-size: 18px;
   color: rgb(158, 203, 91);
+}
+
+#artikel-head {
+  display: none;
+}
+@media only screen and (max-width: 600px) {
+  #artikel-head {
+    display: block;
+    margin-bottom: 1rem;
+  }
+  .section1 {
+    padding: 2rem;
+  }
+
+  .sec-kanan {
+    padding: 2rem;
+    width: 140%;
+    right: 3rem;
+  }
+  .sec-kanan img {
+    width: 117%;
+  }
+
+  .share img {
+  width: 14px;
+}
+.img2 {
+  width: 40%;
+}
+
+  #sec-content{
+    flex-direction: column;
+  }
+
+  .main {
+    width: 20rem;
+    position: relative;
+    right: 4rem;
+    top: 7rem;
+    margin-top: 4rem;
+  }
 }
