@@ -119,6 +119,10 @@ header .artikel:hover {
 #sec-content {
   margin-top: 2rem;
 }
+
+#icon-con {
+  gap: 5rem;
+}
 @media only screen and (max-width: 600px) {
   #artikel-head {
     display: block;
@@ -131,21 +135,40 @@ header .artikel:hover {
   }
 
   .judul {
-    font-size: 28px;
+    font-size: 27px;
 
+  }
+  .icon {
+    width: 30rem;
+    gap: 1px;
+  }
+
+  .share {
+    position: relative;
+    right: 8.7rem;
+    width: 4.5rem;
+    height: 1.6rem;
+  }
+
+  .share p {
+    font-size: 13px;
+  }
+
+  #icon-con{
+    gap: 1.2rem;
   }
 
   .sec-kanan {
     padding: 2rem;
-    width: 33rem;
+    width: 25.5rem;
     right: 3rem;
   }
   .sec-kanan img {
-    width: 30rem;
+    width: 22.5rem;
   }
 
   .share img {
-    width: 14px;
+    width: 13px;
   }
   #img-2-con {
     width: 100%;
@@ -161,7 +184,8 @@ header .artikel:hover {
     width: 20rem;
     position: relative;
     right: 0;
-    top:0;
+    top:-4rem;
+
     margin-top: 2rem;
   }
 }
