@@ -309,7 +309,7 @@ hr {
   }
 
   .card-body {
-    width: 24rem;
+    width: auto;
     height: 17rem;
   }
 
