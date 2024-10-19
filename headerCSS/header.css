@@ -160,8 +160,6 @@ nav .container-fluid .contact-us {
   color: white;
 }
 
-
-
 header .nav-text {
   color: white;
 }
@@ -188,26 +186,47 @@ header .nav-text:hover {
 }
 
 
+  .navbar-brand{
+    color: rgb(255, 255, 255);
+  }
+
 /* mobile version */
 @media only screen and (max-width: 600px) {
   header {
     width: 90%;
     padding: 5px;
+
   }
   nav {
-    background-color: rgba(255, 255, 255, 0);
+    background-color: rgba(255, 28, 28, 0);
     backdrop-filter: none;
     width: auto;
-
+    position: relative;
   }
 
   ul {
-    width: 100%;
-    padding: 2rem;
+    width: 25rem;
+    height: 30rem;
+    padding: 5rem;
+    position: absolute;
+    top: -0.5rem;
+    left: -3.5rem;
   }
 
   ul li {
     display: none;
+  }
+
+  ul li a {
+    font-weight: 600;
+    font-size: 22px;
+    text-align: start;
+    position: relative;
+    left: 1.5rem;
+  }
+  
+  .garis-navbar{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.321);
   }
 
   header .home {
@@ -223,10 +242,22 @@ header .nav-text:hover {
 
   .contact-us {
     display: none;
+    position: relative;
+    left: -2rem;
+    top: 21rem;
+
   }
 
   .logo-brand {
     display: none;
+    position: relative;
+    right: 3.2rem;
+    top: 5px;
+  }
+
+  .navbar-brand{
+    color: black;
+  
   }
 
   .logo-brand2 {
