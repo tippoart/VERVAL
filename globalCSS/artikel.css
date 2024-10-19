@@ -306,11 +306,11 @@ hr {
   .section1 {
     padding: 1rem;
     width: 100%;
+    overflow-x: hidden;
   }
 
   .card-body {
     width: auto;
-    overflow-x: hidden;
     height: 17rem;
   }
 
