@@ -309,17 +309,17 @@ hr {
   }
 
   .card-body {
-    width: 25rem;
-    height: 15rem;
+    width: 24rem;
+    height: 17rem;
   }
 
   .sec-img-thum {
     width: 7rem;
-    height: 7rem;
+    height: 8rem;
     object-fit: cover;
     border-radius: 20px;
     position: relative;
-    top: 2rem;
+    top: 2.7rem;
   }
 
   .judul-artikel {
@@ -334,11 +334,11 @@ hr {
     width: 11rem;
     padding: 15px;
     left: -0.5rem;
-    bottom: 2rem;
+    bottom: 0.5rem;
   }
 
   hr {
-    width: auto;
+    width: 100%;
     left: -2px;
   }
 }

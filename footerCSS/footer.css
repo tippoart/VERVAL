@@ -48,15 +48,33 @@ footer .footer-end .pripacy {
     top: 5rem;
   }
 
+  footer p{
+    font-size: 15px;
+  }
+
   .footer {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.3rem;
   }
   #copyright {
-    top: 24rem;
+    top: 20rem;
+    gap: 4px;
   }
   .help-and-support-footer {
     border-bottom: 1px solid rgba(0, 0, 0, 0.504);
+  }
+
+  #copy-verval{
+    border-right: 1.5px solid rgb(0, 0, 0);
+  }
+
+  .footer-end{
+    position: relative;
+    left: 3%;
+  }
+
+  .footer-end-p {
+    font-size: 13px;
   }
 
  
