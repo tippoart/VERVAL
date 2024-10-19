@@ -12,6 +12,10 @@
 #home-text {
   color: white;
 }
+
+.navbar-brand{
+  color: black;
+}
 form {
   display: flex;
   flex-direction: column;
