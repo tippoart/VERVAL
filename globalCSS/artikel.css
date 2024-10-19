@@ -310,12 +310,13 @@ hr {
 
   .card-body {
     width: auto;
+    overflow-x: hidden;
     height: 17rem;
   }
 
   .sec-img-thum {
     width: 7rem;
-    height: 9rem;
+    height: 8.5rem;
     object-fit: cover;
     border-radius: 20px;
     position: relative;
@@ -334,7 +335,7 @@ hr {
     width: 11rem;
     padding: 15px;
     left: -0.5rem;
-    bottom: 0.5rem;
+    bottom: 0.8rem;
   }
 
   hr {
