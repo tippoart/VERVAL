@@ -62,6 +62,9 @@ form button:hover {
 }
 
 @media screen and (max-width: 600px) {
+  .section1 {
+    height: 80vh;
+  }
   #home-text {
     color: rgb(0, 0, 0);
   }
