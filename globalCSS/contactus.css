@@ -12,8 +12,18 @@
 #home-text {
   color: white;
 }
+.our-company {
+  color: black;
 
-.navbar-brand{
+}
+.our-company:hover {
+  color: black;
+
+}
+.navbar-brand {
+  color: black;
+}
+.navbar-brand:hover {
   color: black;
 }
 form {

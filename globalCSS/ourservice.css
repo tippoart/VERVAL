@@ -484,6 +484,10 @@ nav ul .li {
   font-size: 20px;
 }
 
+.navbar-brand:hover {
+  color: rgb(255, 255, 255);
+}
+
 @media screen and (max-width: 600px) {
   header {
     width: 90%;
@@ -518,6 +522,9 @@ nav ul .li {
   }
 
   .navbar-brand {
+    color: black;
+  }
+  .navbar-brand:hover {
     color: black;
   }
 

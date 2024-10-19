@@ -734,7 +734,6 @@ header .home:hover {
     padding: 2rem;
     top: 17rem;
     margin-top: 15rem;
-   
   }
 
   .we-ofer,
@@ -746,7 +745,7 @@ header .home:hover {
     flex-direction: column;
     top: 2rem;
     gap: 1px;
-     margin-bottom: 1rem;
+    margin-bottom: 1rem;
   }
   #img-container img {
     width: 24rem;
@@ -786,7 +785,6 @@ header .home:hover {
     padding-left: 0;
     padding-right: 2%;
     height: 100vh;
-   
   }
 
   .verval3 .our {
@@ -795,7 +793,6 @@ header .home:hover {
     width: 24.5rem;
     padding: 4%;
     height: 35rem;
- 
   }
 
   #my-text {
@@ -846,7 +843,6 @@ header .home:hover {
   }
   .verval3 .verval3-card {
     top: 56%;
-    
   }
 
   .verval3 .verval3-card .verval3-card-img-1 {
@@ -923,7 +919,7 @@ header .home:hover {
   }
 
   /* verval 4 */
-  .verval4{
+  .verval4 {
     height: 100vh;
   }
 
@@ -965,31 +961,33 @@ header .home:hover {
   }
 
   .verval5 #carouselExampleControls .nice-to-now h3 {
-  padding: 10px;
-  width: 9rem;
-  font-size: 20px;
-  left:-1rem;
-  bottom: 1.2rem;
-}
- .verval5 #carouselExampleControls .nice-to-now a{
-  left: 1rem;
- }
+    padding: 10px;
+    width: 9rem;
+    font-size: 20px;
+    left: -1rem;
+    bottom: 1.2rem;
+  }
+  .verval5 #carouselExampleControls .nice-to-now a {
+    left: 1rem;
+  }
   .verval5 .container .card-img img {
     object-fit: cover;
     height: 10rem;
     border-radius: 10px;
   }
   .verval5 #carouselExampleControls {
-    background-color: rgba(255, 255, 255, 0.165);
-    padding: 2rem;
-    height: 30rem;
+    padding: 1.5rem;
+    height: 34rem;
   }
 
- .card {
-    flex: 0 0 100%; 
+  .card {
+    flex: 0 0 100%;
   }
 
-
+  .card-text-p{
+    position: relative;
+    left: 2rem;
+  }
 
 
 }

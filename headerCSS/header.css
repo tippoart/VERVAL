@@ -189,6 +189,10 @@ header .nav-text:hover {
   color: rgb(255, 255, 255);
 }
 
+.navbar-brand:hover {
+  color: rgb(250, 250, 250);
+}
+
 .bx-x {
   display: none;
 }
@@ -259,6 +263,9 @@ header .nav-text:hover {
   .navbar-brand {
     color: black;
   }
+  .navbar-brand:hover {
+    color: black;
+  }
 
   .logo-brand2 {
     display: block;
@@ -276,7 +283,7 @@ header .nav-text:hover {
   .bx {
     position: absolute;
   }
-  #close-x{
+  #close-x {
     display: none;
     color: black;
     font-size: 34px;

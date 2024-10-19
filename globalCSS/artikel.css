@@ -239,6 +239,9 @@ hr {
   .navbar-brand {
     color: black;
   }
+  .navbar-brand:hover {
+    color: black;
+  }
 
   header {
     width: 90%;

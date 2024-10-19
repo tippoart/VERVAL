@@ -12,7 +12,7 @@ header .home {
   color: white;
 }
 header .home:hover {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .section1 {
   background-image: url("../img/img-ourcompany/bgku-3.png");
@@ -208,7 +208,7 @@ header .home:hover {
   }
 @media screen and (max-width: 600px) {
   header .home {
-    color: black;
+    color: rgb(0, 0, 0);
   }
 
   .navbar-brand{
