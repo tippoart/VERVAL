@@ -114,6 +114,10 @@ header .artikel:hover {
 #artikel-head {
   display: none;
 }
+
+#sec-content {
+  margin-top: 2rem;
+}
 @media only screen and (max-width: 600px) {
   #artikel-head {
     display: block;
@@ -125,22 +129,23 @@ header .artikel:hover {
 
   .sec-kanan {
     padding: 2rem;
-    width: 140%;
+    width: 30rem;
     right: 3rem;
   }
   .sec-kanan img {
-    width: 117%;
+    width: 28.5rem;
   }
 
   .share img {
-  width: 14px;
-}
-.img2 {
-  width: 40%;
-}
+    width: 14px;
+  }
+  .img2 {
+    width: 40%;
+  }
 
-  #sec-content{
+  #sec-content {
     flex-direction: column;
+    margin-top: -2rem;
   }
 
   .main {
