@@ -53,5 +53,12 @@ KlikMenu.addEventListener("click", function () {
     }
   });
 
- 
+  // Toggle z-index for headerUtama and our
+  if (headerUtama.style.zIndex === "4") {
+    headerUtama.style.zIndex = "1";
+    our.style.zIndex = "4";
+  } else {
+    headerUtama.style.zIndex = "4";
+    our.style.zIndex = "0";
+  }
 });
