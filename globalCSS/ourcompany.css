@@ -287,4 +287,7 @@ header .home:hover {
   .faq-item h3 {
     font-size: 17px;
   }
+  .faq-content p {
+    font-size: 15px;
+  }
 }
