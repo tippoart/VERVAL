@@ -682,6 +682,10 @@ header .home:hover {
 /* mobile version */
 
 @media screen and (max-width: 600px) {
+  .bx-mouse {
+    position: relative;
+    top: 1rem;
+  }
   .verval1 {
     padding: 1rem;
     padding-top: 5rem;
@@ -984,10 +988,8 @@ header .home:hover {
     flex: 0 0 100%;
   }
 
-  .card-text-p{
+  .card-text-p {
     position: relative;
     left: 2rem;
   }
-
-
 }
