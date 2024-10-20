@@ -797,7 +797,9 @@ header .home:hover {
     width: 24.5rem;
     padding: 4%;
     height: 35rem;
+
   }
+
 
   #my-text {
     top: 10%;
@@ -813,21 +815,27 @@ header .home:hover {
 
   #sectiontigapart1 {
     top: -8.5rem;
-    left: -1.2rem;
+    left: -0.5rem;
   }
+
   #sectiontigapart2 {
-    left: 3.7rem;
+    left: 3.8rem;
+ 
   }
   #sectiontigapart3 {
     right: 0.1rem;
-  }
-  #sectiontigapart4 {
-    right: 22.4rem;
+    margin-top: -0.9rem;
   }
 
+  #sectiontigapart4 {
+    right: 22.4rem;
+    margin-top: -0.9rem;
+  }
+
+
   .verval3 .our .bumiku .icon {
-    top: -8.6rem;
-    left: -0.6rem;
+    top: -8.7rem;
+    left: 0.1rem;
   }
   .verval3 .our .bumiku .icon img {
     width: 10%;
