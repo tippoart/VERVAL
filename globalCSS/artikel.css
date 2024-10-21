@@ -293,6 +293,7 @@ hr {
     right: 14px;
   }
 
+
   .nav-ul-head {
     width: 25rem;
     height: 30rem;
@@ -339,6 +340,7 @@ hr {
     flex-direction: row;
     position: relative;
     bottom: 1.7rem;
+    left: -0.8rem;
   }
 
   #ul-2 #all-articles {
@@ -375,7 +377,7 @@ hr {
   }
 
   .card-body {
-    width: auto;
+    width: 22rem;
     height: 17rem;
   }
 
