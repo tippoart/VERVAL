@@ -340,7 +340,7 @@ hr {
     flex-direction: row;
     position: relative;
     bottom: 1.7rem;
-    left: -0.8rem;
+    left: -1%;
   }
 
   #ul-2 #all-articles {
