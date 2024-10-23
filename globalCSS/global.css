@@ -679,12 +679,25 @@ header .home:hover {
   bottom: 2rem;
 }
 
+#scroll-hand {
+  display: none;
+}
+
 /* mobile version */
 
 @media screen and (max-width: 600px) {
   .bx-mouse {
     position: relative;
     top: 1rem;
+  }
+
+  #scroll-hand {
+    display: block;
+    position: relative;
+    top: 0.5rem;
+  }
+  #bx-mouse {
+    display: none;
   }
   .verval1 {
     padding: 1rem;
@@ -797,9 +810,7 @@ header .home:hover {
     width: 24.5rem;
     padding: 4%;
     height: 35rem;
-
   }
-
 
   #my-text {
     top: 10%;
@@ -820,7 +831,6 @@ header .home:hover {
 
   #sectiontigapart2 {
     left: 3.8rem;
- 
   }
   #sectiontigapart3 {
     right: 0.1rem;
@@ -831,7 +841,6 @@ header .home:hover {
     right: 22.4rem;
     margin-top: -0.9rem;
   }
-
 
   .verval3 .our .bumiku .icon {
     top: -8.7rem;
