@@ -57,6 +57,7 @@ KlikMenu.addEventListener("click", function () {
   if (headerUtama.style.zIndex === "4") {
     headerUtama.style.zIndex = "1";
     our.style.zIndex = "4";
+    
   } else {
     headerUtama.style.zIndex = "4";
     our.style.zIndex = "0";

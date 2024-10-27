@@ -1,23 +1,84 @@
-// const ourNavbar = document.getElementById ("navbar")
-// const headerNavbar = document.getElementById("header-utama");
-
-// if(ourNavbar.style.zIndex==="3"){
-//   ourNavbar.style.zIndex = "0"
-//   headerNavbar.style.zIndex = "4"
-// }
-// else {
-  
-//   ourNavbar.style.zIndex = "3"
-//   headerNavbar.style.zIndex = "1"
-// }
-
-
-const img1 = document.querySelector(".img1");
-const img2 = document.querySelector(".img2");
-const validasicard = document.querySelector(".validasi");
 document.addEventListener("DOMContentLoaded", function () {
   const section = document.querySelector(".section2");
+
+  const img1 = document.querySelector(".img1");
+  const img2 = document.querySelector(".img2");
+  const validasicard = document.querySelector(".validasi");
   const verifikasicard = document.querySelector(".verifikasicard");
+
+  // Fungsi untuk mengatur transformasi geser secara horizontal
+  function handleScroll(imgElement, event) {
+    event.preventDefault();
+
+    let currentTransform = window.getComputedStyle(imgElement).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
+
+    const maxTranslate = 0;
+    const minTranslate = -(imgElement.offsetWidth - section.offsetWidth);
+
+    if (event.deltaY < 0) {
+      x += 150;
+    } else {
+      x -= 150;
+    }
+
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
+
+    imgElement.style.transform = `translateX(${x}px)`;
+  }
+
+  // Scroll pada img2
+  img2.addEventListener("wheel", (event) => handleScroll(img2, event));
+  // Scroll pada validasi
+  validasicard.addEventListener("wheel", (event) =>
+    handleScroll(validasicard, event)
+  );
+
+  // Menangani sentuhan geser pada validasi dan img2
+  function handleTouchMove(imgElement, event) {
+    event.preventDefault();
+    const touch = event.touches[0];
+    let currentTransform = window.getComputedStyle(imgElement).transform;
+    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
+    let x = 0;
+
+    if (matrix) {
+      x = parseFloat(matrix[1].split(", ")[4]);
+    }
+
+    const maxTranslate = 0;
+    const minTranslate = -(imgElement.offsetWidth - section.offsetWidth);
+    const deltaY = touch.clientY - imgElement.getBoundingClientRect().top;
+
+    if (deltaY < 0) {
+      x += 150;
+    } else {
+      x -= 150;
+    }
+
+    if (x > maxTranslate) {
+      x = maxTranslate;
+    } else if (x < minTranslate) {
+      x = minTranslate;
+    }
+
+    imgElement.style.transform = `translateX(${x}px)`;
+  }
+
+  // Geser horizontal untuk sentuhan
+  img2.addEventListener("touchmove", (event) => handleTouchMove(img2, event));
+  validasicard.addEventListener("touchmove", (event) =>
+    handleTouchMove(validasicard, event)
+  );
 
   img1.addEventListener("click", function () {
     img1.style.transform = "translateX(-125%)";
@@ -28,76 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
     validasicard.style.transform = "translateX(5%)";
     validasicard.style.transition = "0.7s";
     validasicard.style.opacity = "1";
-  });
-  img2.addEventListener("wheel", function (event) {
-    event.preventDefault();
-
-    // Ambil transformasi saat ini
-    let currentTransform = window.getComputedStyle(img2).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-
-    // Dapatkan posisi x saat ini jika ada transformasi
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
-
-    const maxTranslate = 0;
-    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
-
-    // Menyesuaikan nilai x berdasarkan scroll
-    if (event.deltaY < 0) {
-      x += 150; // Scroll ke atas
-    } else {
-      x -= 150; // Scroll ke bawah
-    }
-
-    // Batasan untuk nilai x
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
-
-    // Terapkan transformasi
-    img2.style.transform = `translateX(${x}px)`;
-  });
-
-  // Menangani sentuhan untuk perangkat mobile
-  img2.addEventListener("touchmove", function (event) {
-    event.preventDefault();
-
-    const touch = event.touches[0];
-    let currentTransform = window.getComputedStyle(img2).transform;
-    let matrix = currentTransform.match(/^matrix\((.+)\)$/);
-    let x = 0;
-
-    if (matrix) {
-      x = parseFloat(matrix[1].split(", ")[4]);
-    }
-
-    const maxTranslate = 0;
-    const minTranslate = -(img2.offsetWidth - section.offsetWidth);
-
-    // Menghitung pergerakan berdasarkan posisi sentuh
-    const deltaY = touch.clientY - img2.getBoundingClientRect().top;
-
-    // Sesuaikan nilai x
-    if (deltaY < 0) {
-      x += 150; // Scroll ke atas
-    } else {
-      x -= 150; // Scroll ke bawah
-    }
-
-    // Batasan untuk nilai x
-    if (x > maxTranslate) {
-      x = maxTranslate;
-    } else if (x < minTranslate) {
-      x = minTranslate;
-    }
-
-    // Terapkan transformasi
-    img2.style.transform = `translateX(${x}px)`;
   });
 
   const verifikasi = document.querySelector(".verifikasi");
@@ -170,7 +161,6 @@ document.addEventListener("DOMContentLoaded", function () {
       removeSelectedClass();
       validation.classList.add("active");
       validation.classList.add("selected");
-      verifikasi.classList.add("selected-verifikasi");
 
       setTimeout(() => {
         validation.classList.remove("selected");
@@ -190,7 +180,6 @@ document.addEventListener("DOMContentLoaded", function () {
       removeSelectedClass();
       training.classList.add("selected");
       training.classList.add("active");
-      verifikasi.classList.add("selected-verifikasi");
 
       setTimeout(() => {
         training.classList.remove("selected");
